@@ -115,7 +115,7 @@ Usage Example
         uint8_t varIndex;
         // Fill rawInput with signal data
 
-        FE_process(rawInput, extractedFeatures,varIndex);
+        FE_process(rawInput, extractedFeatures, varIndex);
 
 3. **Use extracted features for inference or further processing**
 
@@ -153,3 +153,12 @@ Best Practices
 -  Consider enabling normalization for consistent feature scaling
 -  Remove DC component when analyzing AC signals
 -  Use appropriate scaling factors to prevent numerical issues
+
+Important Note
+--------------
+
+This document describes the **on-device** feature extraction library that runs on the MSPM0 microcontroller during inference. The feature extraction parameters configured here must match the parameters used during model training to ensure consistent results.
+
+When using the `CLI Tools (tinyml-tensorlab) <https://github.com/TexasInstruments/tinyml-tensorlab>`__, the feature extraction configuration is specified in the YAML configuration file under the ``data_processing_feature_extraction`` section. The compiled model artifacts include a ``user_input_config.h`` file that contains the matching configuration for on-device feature extraction.
+
+For more details on the complete deployment workflow, refer to: - `Deploying Models Using CLI Tools <./EdgeAI_Deployment_Guide_CLI.md>`__ - `Deploying Models Using CCStudio™ Edge AI Studio GUI <./EdgeAI_Deployment_Guide_EdgeAI_Studio.md>`__

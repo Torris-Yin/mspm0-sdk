@@ -48,6 +48,7 @@
 <li>Get device info, start application</li>
 <li>Interactive menu or command-line flags</li>
 <li>Optional logging and “wrap only” (no send) mode</li>
+<li>Checksum verification on application image being programmed and readback</li>
 </ul>
 <hr />
 <h2 id="devices-supported">Devices supported</h2>
@@ -169,6 +170,14 @@
 <td>Only wrap file, do not send to device</td>
 </tr>
 <tr class="odd">
+<td><code>-m</code></td>
+<td>Calculate and display checksum of input file</td>
+</tr>
+<tr class="even">
+<td><code>-k</code></td>
+<td>Verifies the checksum of I/O file against the expected <checksum> value</td>
+</tr>
+<tr class="odd">
 <td><code>-h</code></td>
 <td>Show help message</td>
 </tr>
@@ -253,6 +262,9 @@
 <li>Standalone verification with <code>.txt</code> as output file format <code>sh   hostutility.exe -c CMD_STANDALONE_VERIFICATION -a &lt;start_address&gt; -l &lt;length&gt; -o &lt;file_name&gt;.txt</code></li>
 <li>Flash range erase <code>sh   hostutility.exe -c CMD_FLASH_RANGE_ERASE -a &lt;start_address&gt; -e &lt;end_address&gt;</code></li>
 <li>Get identity <code>sh   hostutility.exe -c CMD_GET_IDENTITY -o &lt;file_name&gt;.txt</code></li>
+<li>Calculate checksum of the given <code>.bin</code> file <code>sh   hostutility.exe -i &lt;file_name&gt;.bin -m</code></li>
+<li>Program with a <code>.bin</code> file (address required) after verifying the checksum: <code>sh   hostutility.exe -c CMD_PROGRAM_DATA -i &lt;file_name&gt;.bin -a &lt;start_address&gt; -k &lt;checksum&gt; -o &lt;output_file_name&gt;.dfu</code></li>
+<li>Read memory into <code>.bin</code> file (address and length required) and verify the data with expected checksum: <code>sh   hostutility.exe -c CMD_MEMORY_READ_BACK -a &lt;start_address&gt; -l &lt;length&gt; -o &lt;file_name&gt;.bin -k &lt;checksum&gt;</code></li>
 <li>For more options, run: <code>sh   hostutility.exe -h</code></li>
 </ul>
 <hr />
@@ -289,6 +301,9 @@ We do <strong>not</strong> distribute these tools directly. Customers need to in
 <li>For programming, all address and length should be 8-byte aligned.</li>
 <li>By defualt VendorID and ProductID is 2047 and 0210 respectively.</li>
 <li>The example.bat file is a batch script that demonstrates how to use the dfu host utility to perform a typical device update workflow.</li>
+<li>Checksum verification option is different from standalone verificaion feature supported by device Bootloader. Checksum verification checks the integrity of the application image before programming into the device and during readback it checks the integrity of the content read from the device, excluding addresses in case of <code>.txt</code> file.<br />
+</li>
+<li>When programming across different memory sectors, use <code>.bin</code> files rather than <code>.txt</code> files. This is because text files represent discontinuous memory segments, while memory readback operations return continuous memory blocks. As a result, CRC checksums for <code>.txt</code> files may not match the readback memory CRC even when the programming was successful.</li>
 </ul>
 <hr />
 <h2 id="troubleshooting">Troubleshooting</h2>
@@ -306,7 +321,7 @@ We do <strong>not</strong> distribute these tools directly. Customers need to in
   with 100,000+ analog ICs and embedded processors, along with software, tools
   and the industry‘s largest sales/support staff.</p>
   <p>
-    <a href="https://www.ti.com/corp/docs/legal/copyright.shtml">© Copyright 1995-2025</a>, Texas Instruments Incorporated. All rights reserved. <br>
+    <a href="https://www.ti.com/corp/docs/legal/copyright.shtml">© Copyright 1995-2026</a>, Texas Instruments Incorporated. All rights reserved. <br>
     <a href="https://www.ti.com/corp/docs/legal/trademark/trademrk.htm">Trademarks</a> | <a href="https://www.ti.com/corp/docs/legal/privacy.shtml">Privacy policy</a> | <a href="https://www.ti.com/corp/docs/legal/termsofuse.shtml">Terms of use</a> | <a href="https://www.ti.com/lsds/ti/legal/termsofsale.page">Terms of sale</a>
   </p>
 </footer>

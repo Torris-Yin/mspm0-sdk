@@ -31,6 +31,7 @@
             -march=thumbv6m
             -mfloat-abi=soft
             -mthumb
+            -Wall
         "
         linkerBuildOptions="
             -ldevice.cmd.genlibs
@@ -49,7 +50,6 @@
         "
         sourceLookupPath="${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/driverlib"
         description="Show correct wake-up mechanism for different power policies after SHUTDOWN vs STOP, STANDBY and SLEEP">
-
         <property name="buildProfile" value="release"/>
         <property name="isHybrid" value="true"/>
         <file path="../sysctl_shutdown.c" openOnCreation="false" excludeFromBuild="false" action="copy">

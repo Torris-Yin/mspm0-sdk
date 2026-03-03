@@ -100,7 +100,7 @@ When S2 button is pressed, the following LIN 2.0 packet will be transmitted:
   - Enhanced Checksum: 0xA2
 Each time the S2 button is pressed, LED1 will toggle and the value of the first and last data bytes will be incremented by one.
 
-When S2 button is pressed, the following LIN 2.0 packet will be transmitted:
+When S1 button is pressed, the following LIN 2.0 packet will be transmitted:
   - PID: 0x08
   - Data: None
   - Enhanced Checksum: None

@@ -125,18 +125,17 @@ exports = {
     isDeviceFamily_PARENT_MSPM0L211X        : isDeviceFamily_PARENT_MSPM0L211X,
     isDeviceFamily_PARENT_MSPM0L210X        : isDeviceFamily_PARENT_MSPM0L210X,
     isDeviceFamily_PARENT_MSPM0L112X        : isDeviceFamily_PARENT_MSPM0L112X,
-    // A2_256_3V
-    // - is this the proper top-level grouping ?
     isDeviceFamily_PARENT_MSPM0GX218_GX207  : isDeviceFamily_PARENT_MSPM0GX218_GX207,
     isDeviceFamily_PARENT_MSPM0G321X        : isDeviceFamily_PARENT_MSPM0G321X,
     isDeviceFamily_PARENT_MSPM0G121X        : isDeviceFamily_PARENT_MSPM0G121X,
     isDeviceFamily_PARENT_MSPM0G320X        : isDeviceFamily_PARENT_MSPM0G320X,
     isDeviceFamily_PARENT_MSPM0G120X        : isDeviceFamily_PARENT_MSPM0G120X,
-    // A2_128_3V
     isDeviceFamily_PARENT_MSPM0G122X        : isDeviceFamily_PARENT_MSPM0G122X,
-
-
     isDeviceFamily_MSPS003FX                : isDeviceFamily_MSPS003FX,
+    /* [IN DEVELOPMENT] N1_USB */
+    isDeviceFamily_PARENT_MSPM0C511X        : isDeviceFamily_PARENT_MSPM0C511X,
+    isDeviceFamily_MSP32G031CX              : isDeviceFamily_MSP32G031CX,
+    isDeviceFamily_MSP32C031CX              : isDeviceFamily_MSP32C031CX,
 
     I2CTargetWakeupWorkaroundFixed          : I2CTargetWakeupWorkaroundFixed,
 
@@ -224,6 +223,14 @@ exports = {
     hasNPU                  : hasNPU,
 
     isdeviceAffected_SYSPLL_ERR_01 : isdeviceAffected_SYSPLL_ERR_01,
+
+    isUSBHostModeSupported : isUSBHostModeSupported,
+
+    getUSBFLLFreq : getUSBFLLFreq,
+
+    getDefaultVDDA  : getDefaultVDDA,
+    getVDDARange    : getVDDARange,
+    getVDDAVoltage  : getVDDAVoltage,
 };
 
 /*
@@ -1843,10 +1850,24 @@ function isDeviceFamily_PARENT_MSPM0H321X(){
     var deviceName = system.deviceData.device;
     return (["MSPM0H321X"].includes(deviceName));
 }
+
+function isDeviceFamily_MSP32G031CX() {
+    var deviceName = system.deviceData.device;
+    return (["MSP32G031CX"].includes(deviceName));
+}
+
+function isDeviceFamily_MSP32C031CX() {
+    var deviceName = system.deviceData.device;
+    return (["MSP32C031CX"].includes(deviceName));
+}
+
 /* Checks if device is part of MSPM0C1105_C1106 family */
 function isDeviceFamily_PARENT_MSPM0C1105_C1106() {
     var deviceName = system.deviceData.device;
-    return(["MSPM0C1105_C1106", "MSPM0C1105", "MSPM0C1106"].includes(deviceName));
+    return((["MSPM0C1105_C1106", "MSPM0C1105", "MSPM0C1106"].includes(deviceName))
+        || isDeviceFamily_MSP32G031CX()
+        || isDeviceFamily_MSP32C031CX()
+    );
 }
 /* Checks if device is part of MSPS003FX device family */
 function isDeviceFamily_MSPS003FX(){
@@ -1929,6 +1950,12 @@ function isDeviceFamily_PARENT_MSPM0G122X(){
     return (["MSPM0G122X"].includes(deviceName));
 }
 
+/* Checks if current device is one of MSPM0C511X series */
+function isDeviceFamily_PARENT_MSPM0C511X(){
+    var deviceName = system.deviceData.device;
+    return (["MSPM0C511X"].includes(deviceName));
+}
+
 /* Generic Device Check Functions */
 /* checks if current device is one of MSPM0G-series */
 function isDeviceM0G()
@@ -1951,7 +1978,9 @@ function isDeviceM0L(){
 }
 /* checks if current device is one of MSPM0C-series */
 function isDeviceM0C(){
-    return (isDeviceFamily_PARENT_MSPM0C110X() || isDeviceFamily_PARENT_MSPM0C1105_C1106());
+    return (isDeviceFamily_PARENT_MSPM0C110X()
+        || isDeviceFamily_PARENT_MSPM0C1105_C1106()
+        || isDeviceFamily_PARENT_MSPM0C511X());
 }
 /* checks if current device is one of MSPM0H-series */
 function isDeviceM0H(){
@@ -2004,6 +2033,9 @@ function getDeviceFamily(){
     }
     else if(isDeviceFamily_PARENT_MSPM0G122X()) {
         return "MSPM0G122X";
+    }
+    else if(isDeviceFamily_PARENT_MSPM0C511X()) {
+        return "MSPM0C511X";
     }
     return undefined;
 }
@@ -2852,16 +2884,22 @@ function getBUSCLKFreq(inst, peripheralName){
     // Get Power Domain of selected peripheral via device data
     try{
         let peripheralIndex = system.deviceData.interfaces[peripheralName].peripherals.findIndex(object => { return object.name === inst.peripheral.$solution.peripheralName });
-        powerDomain = getAttribute((system.deviceData.interfaces[peripheralName].peripherals[peripheralIndex]),("power_domain"));
+
+        // (1) Access Updated Power Domain parameter (returns 0 / 1)
+        powerDomain = getAttribute((system.deviceData.interfaces[peripheralName].peripherals[peripheralIndex]),("power_domain_id"));
+        if(powerDomain == undefined){
+            // (2) Access Deprecated Power Domain parameter (returns PD_ULP_AON / PD_ULP_AAON)
+            powerDomain = getAttribute((system.deviceData.interfaces[peripheralName].peripherals[peripheralIndex]),("power_domain"));
+        }
     }catch (e) {
         // do nothing
     }
     // Power Domain 0 - ULPCLK
-    if(powerDomain == "PD_ULP_AON"){
+    if(powerDomain == "PD_ULP_AON" || powerDomain.toString() == "0"){
         busclkFreq = system.modules["/ti/driverlib/SYSCTL"].$static.ULPCLK_Freq;
     }
     // Power Domain 1 - MCLK
-    else if(powerDomain == "PD_ULP_AAON"){
+    else if(powerDomain == "PD_ULP_AAON" || powerDomain.toString() == "1"){
         busclkFreq = system.modules["/ti/driverlib/SYSCTL"].$static.MCLK_Freq;
     }
     return busclkFreq;
@@ -2905,11 +2943,28 @@ function getModuleKeys(){
  *
  */
 function getUsedPins(keys){
+
+    /*
+        Keys
+        - Keys object includes the basic peripheral modules
+        - for getUsedPins we want to include some child modules that have pinmuxRequirements
+            - this includes LCD's Com and Segment child modules
+    */
+   let keysVar = keys;
+    if(keys.includes("/ti/driverlib/LCD")){
+        keysVar = keys.concat(
+            [
+                "/ti/driverlib/lcd/LCDCom",
+                "/ti/driverlib/lcd/LCDSeg",
+            ]
+        )
+    }
+
     let usedPinNames = [];
     let usedPinIDs = [];
     let allPins = system.deviceData.devicePins;
     /* Special Case of GPIO module pins, get used pins */
-    if(keys.includes("/ti/driverlib/GPIO")){
+    if(keysVar.includes("/ti/driverlib/GPIO")){
         if(system.modules["/ti/driverlib/gpio/GPIOPin"].$instances){
             for(let currentInstance of system.modules["/ti/driverlib/gpio/GPIOPin"].$instances){
                 usedPinNames.push(currentInstance.pin.$solution.devicePinName);
@@ -2937,7 +2992,7 @@ function getUsedPins(keys){
         }
     }
 
-    for(let currentModule of keys){
+    for(let currentModule of keysVar){
         /* Special Case: Tamper IO pin filtering - only for MSPM0L122X_L222X family */
         if(currentModule == "/ti/driverlib/TAMPERIO"){
             try{
@@ -3332,6 +3387,22 @@ function getMainTriggerETSELValue(inst) {
                 break;
         }
     }
+    else if(isDeviceFamily_PARENT_MSPM0C511X()){
+        switch (true) {
+            case (main_timer == "TIMG0"):
+                return 0;
+                break;
+            case (main_timer == "TIMG6"):
+                return 1;
+                break;
+            case (main_timer == "TIMG7"):
+                return 2;
+                break;
+            default:
+                return 0;
+                break;
+        }
+    }
     // NOTE: not returning anything would lead to an undefined tool error with
     //       new devices.
     else{
@@ -3531,10 +3602,14 @@ function isValidInputStr(inputStr){
  *  @returns true if the pin can be multiplexed, false otherwise
  */
 function isPinMuxable(inst, pinName){
-    let pinObject = Object.keys(system.deviceData.devicePins[inst.peripheral[pinName]?.$solution?.packagePinName]?.mux?.muxSetting)?.includes("1")
-    if (pinObject){
-        return true;
+    let pinObject = system.deviceData.devicePins[inst.peripheral[pinName]?.$solution?.packagePinName]?.mux?.muxSetting;
+    if(pinObject){
+        let pinObjectKeys = Object.keys(pinObject)?.includes("1")
+        if (pinObjectKeys){
+            return true;
+        }
     }
+
     return false;
 }
 
@@ -3554,4 +3629,79 @@ function isdeviceAffected_SYSPLL_ERR_01(){
      *  - open to renaming this
      */
     return true;
+}
+
+function isUSBHostModeSupported(){
+    let peripherals = Object.keys(system.deviceData.peripherals);
+    return (/USB/.test(peripherals)) && (isDeviceFamily_PARENT_MSPM0G518X() || isDeviceFamily_PARENT_MSPM0G511X());
+    // Host Mode Configuration is not supported on MSPM0C511X
+}
+
+/*
+ *  ======== getUSBFLLFreq ========
+ *  Returns the USB Frequency Lock Loop (FLL) frequency for the current device family
+ *
+ *  This function checks the device family and returns the appropriate USB FLL frequency.
+ *  For MSPM0G518 and MSPM0G511X families, it returns 60 MHz.
+ *  For MSPM0C511X families, it returns 48 MHz.
+ *  For other device families, it returns 0.
+ *
+ *  @returns The USB FLL frequency in Hz for the current device family
+ */
+function getUSBFLLFreq(){
+    if(isDeviceFamily_PARENT_MSPM0G518X() || isDeviceFamily_PARENT_MSPM0G511X()){
+        return 60000000;
+    }
+    if(isDeviceFamily_PARENT_MSPM0C511X()){
+        return 48000000;
+    }
+    return 0;
+}
+
+/**
+ * Returns the default VDDA voltage value based on device family
+ *
+ * @returns {number} Default VDDA voltage value in volts (5V for MSPM0H321X family, 3.3V for others)
+ */
+function getDefaultVDDA() {
+    if(isDeviceFamily_PARENT_MSPM0H321X()) {
+        return 5;
+    }
+    else {
+        return 3.3;
+    }
+}
+
+/**
+ * Returns the valid VDDA voltage range based on device family
+ *
+ * @returns {Array<number>} Array containing [min, max] VDDA voltage values in volts
+ *                         ([4.5, 5.5] for MSPM0H321X family, [1.62, 3.6] for others)
+ */
+function getVDDARange() {
+    if(isDeviceFamily_PARENT_MSPM0H321X()) {
+        return [4.5, 5.5];
+    }
+    else {
+        return [1.62, 3.6];
+    }
+}
+
+/**
+ * Retrieves the VDDA reference voltage from the Board module
+ *
+ * @param {Object} inst - The instance object
+ * @returns {number} VDDA voltage value in volts, returns default value if Board module is not added
+ */
+function getVDDAVoltage(){
+
+    let vddaVoltage = getDefaultVDDA();
+
+    let vddaInstance = system.modules["/ti/driverlib/Board"];
+
+    if (vddaInstance){
+        vddaVoltage = (vddaInstance.$static.calculatedVDDA)
+    }
+
+    return vddaVoltage;
 }

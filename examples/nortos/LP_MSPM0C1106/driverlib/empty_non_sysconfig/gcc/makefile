@@ -5,8 +5,16 @@ include $(MSPM0_SDK_INSTALL_DIR)/imports.mak
 CC = "$(GCC_ARMCOMPILER)/bin/arm-none-eabi-gcc"
 LNK = "$(GCC_ARMCOMPILER)/bin/arm-none-eabi-gcc"
 
+# Enable verbose output by setting VERBOSE=1
+V := @
+ifeq ($(VERBOSE), 1)
+  V :=
+endif
+
 OBJECTS = ti_msp_dl_config.obj empty_non_sysconfig.obj gcc_startup_mspm0c1105_c1106_gcc.obj
+
 NAME = empty_non_sysconfig
+
 
 CFLAGS += -I.. \
     -D__MSPM0C1106__ \
@@ -48,22 +56,22 @@ all: $(NAME).out
 
 ti_msp_dl_config.obj: ../ti_msp_dl_config.c
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) $< -c -o $@
+	$(V) $(CC) $(CFLAGS) $< -c -o $@
 
 empty_non_sysconfig.obj: ../empty_non_sysconfig.c
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) $< -c -o $@
+	$(V) $(CC) $(CFLAGS) $< -c -o $@
 
 gcc_startup_mspm0c1105_c1106_gcc.obj: ../gcc/startup_mspm0c1105_c1106_gcc.c
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) $< -c -o $@
+	$(V) $(CC) $(CFLAGS) $< -c -o $@
 
 $(NAME).out: $(OBJECTS)
 	@ echo linking $@
-	@ $(LNK)  $(OBJECTS)  $(LFLAGS) -o $(NAME).out
+	$(V) $(LNK)  $(OBJECTS)  $(LFLAGS) -o $(NAME).out
 
 clean:
 	@ echo Cleaning...
-	@ $(RM) $(OBJECTS) > $(DEVNULL) 2>&1
-	@ $(RM) $(NAME).out > $(DEVNULL) 2>&1
-	@ $(RM) $(NAME).map > $(DEVNULL) 2>&1
+	$(V) $(RM) $(OBJECTS) > $(DEVNULL) 2>&1
+	$(V) $(RM) $(NAME).out > $(DEVNULL) 2>&1
+	$(V) $(RM) $(NAME).map > $(DEVNULL) 2>&1

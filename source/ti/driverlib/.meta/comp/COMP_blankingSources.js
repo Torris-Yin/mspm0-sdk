@@ -274,6 +274,9 @@ let blankingSources = {
             channel: "1",
         }
     },
+    MSPM0C511X: {
+        // N/A: COMP not available for this device
+    }
 }
 
 let index = Common.getDeviceFamily();

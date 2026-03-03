@@ -66,6 +66,8 @@
 % function printCall(){
 %   for (let i in instances) {
 %       let inst = instances[i];
+%		let counter_mod = system.modules["/ti/driverlib/timerb/TIMERBCounter"];
+%		if(!counter_mod) return;
     SYSCFG_DL_`inst.$name`_init();
 %   }
 % }

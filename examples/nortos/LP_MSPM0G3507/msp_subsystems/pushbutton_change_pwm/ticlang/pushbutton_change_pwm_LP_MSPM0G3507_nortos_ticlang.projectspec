@@ -31,6 +31,7 @@
             -march=thumbv6m
             -mfloat-abi=soft
             -mthumb
+            -Wall
         "
         linkerBuildOptions="
             -ldevice.cmd.genlibs
@@ -49,7 +50,6 @@
         "
         sourceLookupPath="${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/driverlib"
         description="This example demonstrates using the two switches on the MSPM0 Launchpad to change the period and duty cycle on TIMA1 PWM output channels CC0 and CC1.">
-
         <property name="buildProfile" value="release"/>
         <property name="isHybrid" value="true"/>
         <file path="../pushbutton_change_pwm.c" openOnCreation="false" excludeFromBuild="false" action="copy">

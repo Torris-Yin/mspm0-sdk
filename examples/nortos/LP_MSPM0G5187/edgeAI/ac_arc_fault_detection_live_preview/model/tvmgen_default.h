@@ -47,7 +47,7 @@ extern "C" {
 
 /* The generated model library expects the following inputs/outputs:
  * Inputs:
- *    Tensor[(1, 1, 1024, 1), int8]
+ *    Tensor[(1, 1, 256, 1), int8]
  * Outputs:
  *    Tensor[(1, 2), int8]
  */
@@ -59,9 +59,9 @@ extern "C" {
 #define TVMGEN_DEFAULT_BIAS_LEN 1
 #define TVMGEN_DEFAULT_SCALE_LEN 1
 #define TVMGEN_DEFAULT_SHIFT_LEN 1
-extern const float tvmgen_default_bias_data[] __attribute__((weak)) = {-72.457};
-extern const int32_t tvmgen_default_scale_data[] __attribute__((weak)) = {160};
-extern const int32_t tvmgen_default_shift_data[] __attribute__((weak)) = {14};
+extern const float tvmgen_default_bias_data[] __attribute__((weak)) = {-420.283};
+extern const int32_t tvmgen_default_scale_data[] __attribute__((weak)) = {216};
+extern const int32_t tvmgen_default_shift_data[] __attribute__((weak)) = {15};
 
 
 /* TI NPU hardware accelerator initialization */

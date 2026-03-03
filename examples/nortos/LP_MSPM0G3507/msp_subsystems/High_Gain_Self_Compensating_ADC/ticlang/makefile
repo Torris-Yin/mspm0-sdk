@@ -14,8 +14,16 @@ SYSCFG_C_FILES = $(filter %.c,$(SYSCFG_FILES))
 SYSCFG_H_FILES = $(filter %.h,$(SYSCFG_FILES))
 SYSCFG_OPT_FILES = $(filter %.opt,$(SYSCFG_FILES))
 
+# Enable verbose output by setting VERBOSE=1
+V := @
+ifeq ($(VERBOSE), 1)
+  V :=
+endif
+
 OBJECTS = cascade_input_voltage.obj dac_init.obj remove_dc_voltage.obj saturation_control.obj high_gain_self_compensating_adc.obj $(patsubst %.c,%.obj,$(notdir $(SYSCFG_C_FILES)))
+
 NAME = High_Gain_Self_Compensating_ADC
+
 
 CFLAGS += -I.. \
     -I. \
@@ -28,7 +36,8 @@ CFLAGS += -I.. \
     -mcpu=cortex-m0plus \
     -march=thumbv6m \
     -mfloat-abi=soft \
-    -mthumb
+    -mthumb \
+    -Wall
 
 LFLAGS += -ldevice.cmd.genlibs \
     "-L$(MSPM0_SDK_INSTALL_DIR)/source" \
@@ -48,7 +57,7 @@ $(SYSCFG_FILES): syscfg
 
 syscfg: ../high_gain_self_compensating_adc.syscfg
 	@ echo Generating configuration files...
-	@ $(SYSCFG_CMD_STUB) --output $(@D) $<
+	$(V) $(SYSCFG_CMD_STUB) --output $(@D) $<
 
 
 # Helpful hint that the user needs to use a standalone SysConfig installation
@@ -60,43 +69,44 @@ $(SYSCONFIG_GUI_TOOL):
 
 syscfg-gui: ../high_gain_self_compensating_adc.syscfg $(SYSCONFIG_GUI_TOOL)
 	@ echo Opening SysConfig GUI
-	@ $(SYSCFG_GUI_CMD_STUB) $<
+	$(V) $(SYSCFG_GUI_CMD_STUB) $<
+
 
 define C_RULE
 $(basename $(notdir $(1))).obj: $(1) $(SYSCFG_H_FILES)
 	@ echo Building $$@
-	@ $(CC) $(CFLAGS) -c $$< -o $$@
+	$(V) $(CC) $(CFLAGS) -c $$< -o $$@
 endef
 
 $(foreach c_file,$(SYSCFG_C_FILES),$(eval $(call C_RULE,$(c_file))))
 
 cascade_input_voltage.obj: ../cascade_input_voltage.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) -c $< -o $@
+	$(V) $(CC) $(CFLAGS) -c $< -o $@
 
 dac_init.obj: ../dac_init.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) -c $< -o $@
+	$(V) $(CC) $(CFLAGS) -c $< -o $@
 
 remove_dc_voltage.obj: ../remove_dc_voltage.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) -c $< -o $@
+	$(V) $(CC) $(CFLAGS) -c $< -o $@
 
 saturation_control.obj: ../saturation_control.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) -c $< -o $@
+	$(V) $(CC) $(CFLAGS) -c $< -o $@
 
 high_gain_self_compensating_adc.obj: ../high_gain_self_compensating_adc.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) -c $< -o $@
+	$(V) $(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME).out: $(OBJECTS)
 	@ echo linking $@
-	@ $(LNK) -Wl,-u,_c_int00 $(OBJECTS)  $(LFLAGS) -o $(NAME).out
+	$(V) $(LNK) -Wl,-u,_c_int00 $(OBJECTS)  $(LFLAGS) -o $(NAME).out
 
 clean:
 	@ echo Cleaning...
-	@ $(RM) $(OBJECTS) > $(DEVNULL) 2>&1
-	@ $(RM) $(NAME).out > $(DEVNULL) 2>&1
-	@ $(RM) $(NAME).map > $(DEVNULL) 2>&1
-	@ $(RM) $(SYSCFG_FILES)> $(DEVNULL) 2>&1
+	$(V) $(RM) $(OBJECTS) > $(DEVNULL) 2>&1
+	$(V) $(RM) $(NAME).out > $(DEVNULL) 2>&1
+	$(V) $(RM) $(NAME).map > $(DEVNULL) 2>&1
+	$(V) $(RM) $(call SLASH_FIXUP,$(SYSCFG_FILES)) > $(DEVNULL) 2>&1

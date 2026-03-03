@@ -2,11 +2,26 @@ MSPM0_SDK_INSTALL_DIR ?= $(abspath ../../../../../..)
 
 include $(MSPM0_SDK_INSTALL_DIR)/imports.mak
 
+ASM = "$(IAR_ARMCOMPILER)/bin/iasmarm"
 CC = "$(IAR_ARMCOMPILER)/bin/iccarm"
 LNK = "$(IAR_ARMCOMPILER)/bin/ilinkarm"
 
+# Enable verbose output by setting VERBOSE=1
+V := @
+ifeq ($(VERBOSE), 1)
+  V :=
+endif
+
 OBJECTS = ti_msp_dl_config.obj empty_non_sysconfig.obj iar_startup_mspm0l130x_iar.obj
+
 NAME = empty_non_sysconfig
+
+AFLAGS += -I.. \
+    -S \
+    --endian little \
+    --thumb \
+    "-I$(IAR_ARMCOMPILER)/inc/c" \
+    --cpu Cortex-M0+
 
 CFLAGS += -I.. \
     -D__MSPM0L1306__ \
@@ -35,22 +50,22 @@ all: $(NAME).out
 
 ti_msp_dl_config.obj: ../ti_msp_dl_config.c
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) $< -o $@
+	$(V) $(CC) $(CFLAGS) $< -o $@
 
 empty_non_sysconfig.obj: ../empty_non_sysconfig.c
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) $< -o $@
+	$(V) $(CC) $(CFLAGS) $< -o $@
 
 iar_startup_mspm0l130x_iar.obj: ../iar/startup_mspm0l130x_iar.c
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) $< -o $@
+	$(V) $(CC) $(CFLAGS) $< -o $@
 
 $(NAME).out: $(OBJECTS)
 	@ echo linking $@
-	@ $(LNK)  $(OBJECTS)  $(LFLAGS) -o $(NAME).out
+	$(V) $(LNK)  $(OBJECTS)  $(LFLAGS) -o $(NAME).out
 
 clean:
 	@ echo Cleaning...
-	@ $(RM) $(OBJECTS) > $(DEVNULL) 2>&1
-	@ $(RM) $(NAME).out > $(DEVNULL) 2>&1
-	@ $(RM) $(NAME).map > $(DEVNULL) 2>&1
+	$(V) $(RM) $(OBJECTS) > $(DEVNULL) 2>&1
+	$(V) $(RM) $(NAME).out > $(DEVNULL) 2>&1
+	$(V) $(RM) $(NAME).map > $(DEVNULL) 2>&1

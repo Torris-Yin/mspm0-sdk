@@ -2,8 +2,8 @@
  * These arguments were used when this file was generated. They will be automatically applied on subsequent loads
  * via the GUI or CLI. Run CLI with '--help' for additional information on how to override these arguments.
  */
-// @cliArgs --device "MSPM0L211X" --package "LQFP-64(PM)" --part "Default"
-// @v2CliArgs --device "MSPM0L2117" --package "LQFP-64(PM)"
+//@cliArgs --device "MSPM0L211X" --package "LQFP-64(PM)" --part "Default"
+//@v2CliArgs --device "MSPM0L2117" --package "LQFP-64(PM)"
 // @cliArgs --board /ti/boards/LP_MSPM0L2117 --rtos nortos
 
 /**
@@ -38,8 +38,8 @@ GPIO2.$name                         = "GPIO_LIN_ENABLE";
 GPIO2.port                          = "PORTB";
 GPIO2.portSegment                   = "Lower";
 GPIO2.associatedPins[0].$name       = "USER_LIN_ENABLE";
-GPIO2.associatedPins[0].assignedPin = "15";
-GPIO2.associatedPins[0].pin.$assign = "PB15";
+GPIO2.associatedPins[0].assignedPin = "14";
+GPIO2.associatedPins[0].pin.$assign = "PB14";
 
 SYSCTL.forceDefaultClkConfig = true;
 SYSCTL.enableEXCLK           = true;
@@ -67,4 +67,3 @@ uartLIN1.peripheral.txPin.$assign         = "PA10";
 
 const ProjectConfig              = scripting.addModule("/ti/project_config/ProjectConfig", {}, false);
 ProjectConfig.migrationCondition = true;
-

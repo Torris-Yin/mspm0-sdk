@@ -14,8 +14,16 @@ SYSCFG_C_FILES = $(filter %.c,$(SYSCFG_FILES))
 SYSCFG_H_FILES = $(filter %.h,$(SYSCFG_FILES))
 SYSCFG_OPT_FILES = $(filter %.opt,$(SYSCFG_FILES))
 
+# Enable verbose output by setting VERBOSE=1
+V := @
+ifeq ($(VERBOSE), 1)
+  V :=
+endif
+
 OBJECTS = motor_fault_ai_npu.obj ADXL355.obj ti_edgeAI_feature_extract_feature_extract.obj ti_edgeAI_npu_npu.obj $(patsubst %.c,%.obj,$(notdir $(SYSCFG_C_FILES)))
+
 NAME = motor_fault_ai_npu
+
 
 CFLAGS += -I.. \
     -I. \
@@ -33,7 +41,8 @@ CFLAGS += -I.. \
     -mcpu=cortex-m0plus \
     -march=thumbv6m \
     -mfloat-abi=soft \
-    -mthumb
+    -mthumb \
+    -Wall
 
 LFLAGS += -lmodel/model.a \
     -ldevice.cmd.genlibs \
@@ -54,7 +63,7 @@ $(SYSCFG_FILES): syscfg
 
 syscfg: ../motor_fault_ai_npu.syscfg
 	@ echo Generating configuration files...
-	@ $(SYSCFG_CMD_STUB) --output $(@D) $<
+	$(V) $(SYSCFG_CMD_STUB) --output $(@D) $<
 
 
 # Helpful hint that the user needs to use a standalone SysConfig installation
@@ -66,39 +75,40 @@ $(SYSCONFIG_GUI_TOOL):
 
 syscfg-gui: ../motor_fault_ai_npu.syscfg $(SYSCONFIG_GUI_TOOL)
 	@ echo Opening SysConfig GUI
-	@ $(SYSCFG_GUI_CMD_STUB) $<
+	$(V) $(SYSCFG_GUI_CMD_STUB) $<
+
 
 define C_RULE
 $(basename $(notdir $(1))).obj: $(1) $(SYSCFG_H_FILES)
 	@ echo Building $$@
-	@ $(CC) $(CFLAGS) -c $$< -o $$@
+	$(V) $(CC) $(CFLAGS) -c $$< -o $$@
 endef
 
 $(foreach c_file,$(SYSCFG_C_FILES),$(eval $(call C_RULE,$(c_file))))
 
 motor_fault_ai_npu.obj: ../motor_fault_ai_npu.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) -c $< -o $@
+	$(V) $(CC) $(CFLAGS) -c $< -o $@
 
 ADXL355.obj: ../ADXL355.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) -c $< -o $@
+	$(V) $(CC) $(CFLAGS) -c $< -o $@
 
-ti_edgeAI_feature_extract_feature_extract.obj: /home/a0226989/.cache/bazel/_bazel_a0226989/4d845513c594c2a2405290acdd717718/sandbox/linux-sandbox/12701/execroot/__main__/source/ti/edgeAI/feature_extract/feature_extract.c $(SYSCFG_H_FILES)
+ti_edgeAI_feature_extract_feature_extract.obj: /home/a0226989/.cache/bazel/_bazel_a0226989/4d845513c594c2a2405290acdd717718/sandbox/linux-sandbox/1640/execroot/__main__/source/ti/edgeAI/feature_extract/feature_extract.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) -c $< -o $@
+	$(V) $(CC) $(CFLAGS) -c $< -o $@
 
-ti_edgeAI_npu_npu.obj: /home/a0226989/.cache/bazel/_bazel_a0226989/4d845513c594c2a2405290acdd717718/sandbox/linux-sandbox/12701/execroot/__main__/source/ti/edgeAI/npu/npu.c $(SYSCFG_H_FILES)
+ti_edgeAI_npu_npu.obj: /home/a0226989/.cache/bazel/_bazel_a0226989/4d845513c594c2a2405290acdd717718/sandbox/linux-sandbox/1640/execroot/__main__/source/ti/edgeAI/npu/npu.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) -c $< -o $@
+	$(V) $(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME).out: $(OBJECTS)
 	@ echo linking $@
-	@ $(LNK) -Wl,-u,_c_int00 $(OBJECTS)  $(LFLAGS) -o $(NAME).out
+	$(V) $(LNK) -Wl,-u,_c_int00 $(OBJECTS)  $(LFLAGS) -o $(NAME).out
 
 clean:
 	@ echo Cleaning...
-	@ $(RM) $(OBJECTS) > $(DEVNULL) 2>&1
-	@ $(RM) $(NAME).out > $(DEVNULL) 2>&1
-	@ $(RM) $(NAME).map > $(DEVNULL) 2>&1
-	@ $(RM) $(SYSCFG_FILES)> $(DEVNULL) 2>&1
+	$(V) $(RM) $(OBJECTS) > $(DEVNULL) 2>&1
+	$(V) $(RM) $(NAME).out > $(DEVNULL) 2>&1
+	$(V) $(RM) $(NAME).map > $(DEVNULL) 2>&1
+	$(V) $(RM) $(call SLASH_FIXUP,$(SYSCFG_FILES)) > $(DEVNULL) 2>&1

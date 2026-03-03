@@ -14,8 +14,16 @@ SYSCFG_C_FILES = $(filter %.c,$(SYSCFG_FILES))
 SYSCFG_H_FILES = $(filter %.h,$(SYSCFG_FILES))
 SYSCFG_OPT_FILES = $(filter %.opt,$(SYSCFG_FILES))
 
+# Enable verbose output by setting VERBOSE=1
+V := @
+ifeq ($(VERBOSE), 1)
+  V :=
+endif
+
 OBJECTS = modules_Adc.obj modules_ControlPilot.obj modules_ControlPilot_HAL.obj modules_FirmwareUpdater.obj modules_Gpio.obj modules_MgmtLink.obj modules_PlugLock.obj modules_PowerSwitch.obj modules_Rcd.obj modules_RemoteControlRX.obj modules_RemoteControlTX.obj pb_nanopb_pb_common.obj pb_nanopb_pb_decode.obj pb_nanopb_pb_encode.obj pb_protobuf_tida010939.pb.obj main.obj $(patsubst %.c,%.obj,$(notdir $(SYSCFG_C_FILES)))
+
 NAME = evse_controller_TIDA-010939
+
 
 CFLAGS += -I.. \
     -I. \
@@ -32,7 +40,8 @@ CFLAGS += -I.. \
     -mcpu=cortex-m0plus \
     -march=thumbv6m \
     -mfloat-abi=soft \
-    -mthumb
+    -mthumb \
+    -Wall
 
 CPPFLAGS += -I.. \
     -I. \
@@ -49,7 +58,8 @@ CPPFLAGS += -I.. \
     -mcpu=cortex-m0plus \
     -march=thumbv6m \
     -mfloat-abi=soft \
-    -mthumb
+    -mthumb \
+    -Wall
 
 LFLAGS += -ldevice.cmd.genlibs \
     "-L$(MSPM0_SDK_INSTALL_DIR)/source" \
@@ -69,7 +79,7 @@ $(SYSCFG_FILES): syscfg
 
 syscfg: ../TIDA-010939.syscfg
 	@ echo Generating configuration files...
-	@ $(SYSCFG_CMD_STUB) --output $(@D) $<
+	$(V) $(SYSCFG_CMD_STUB) --output $(@D) $<
 
 
 # Helpful hint that the user needs to use a standalone SysConfig installation
@@ -81,83 +91,84 @@ $(SYSCONFIG_GUI_TOOL):
 
 syscfg-gui: ../TIDA-010939.syscfg $(SYSCONFIG_GUI_TOOL)
 	@ echo Opening SysConfig GUI
-	@ $(SYSCFG_GUI_CMD_STUB) $<
+	$(V) $(SYSCFG_GUI_CMD_STUB) $<
+
 
 define C_RULE
 $(basename $(notdir $(1))).obj: $(1) $(SYSCFG_H_FILES)
 	@ echo Building $$@
-	@ $(CC) $(CFLAGS) -c $$< -o $$@
+	$(V) $(CC) $(CFLAGS) -c $$< -o $$@
 endef
 
 $(foreach c_file,$(SYSCFG_C_FILES),$(eval $(call C_RULE,$(c_file))))
 
 pb_nanopb_pb_common.obj: ../pb/nanopb/pb_common.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) -c $< -o $@
+	$(V) $(CC) $(CFLAGS) -c $< -o $@
 
 pb_nanopb_pb_decode.obj: ../pb/nanopb/pb_decode.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) -c $< -o $@
+	$(V) $(CC) $(CFLAGS) -c $< -o $@
 
 pb_nanopb_pb_encode.obj: ../pb/nanopb/pb_encode.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) -c $< -o $@
+	$(V) $(CC) $(CFLAGS) -c $< -o $@
 
 modules_Adc.obj: ../modules/Adc.cpp $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CPPFLAGS) -c $< -o $@
+	$(V) $(CC) $(CPPFLAGS) -c $< -o $@
 
 modules_ControlPilot.obj: ../modules/ControlPilot.cpp $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CPPFLAGS) -c $< -o $@
+	$(V) $(CC) $(CPPFLAGS) -c $< -o $@
 
 modules_ControlPilot_HAL.obj: ../modules/ControlPilot_HAL.cpp $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CPPFLAGS) -c $< -o $@
+	$(V) $(CC) $(CPPFLAGS) -c $< -o $@
 
 modules_FirmwareUpdater.obj: ../modules/FirmwareUpdater.cpp $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CPPFLAGS) -c $< -o $@
+	$(V) $(CC) $(CPPFLAGS) -c $< -o $@
 
 modules_Gpio.obj: ../modules/Gpio.cpp $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CPPFLAGS) -c $< -o $@
+	$(V) $(CC) $(CPPFLAGS) -c $< -o $@
 
 modules_MgmtLink.obj: ../modules/MgmtLink.cpp $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CPPFLAGS) -c $< -o $@
+	$(V) $(CC) $(CPPFLAGS) -c $< -o $@
 
 modules_PlugLock.obj: ../modules/PlugLock.cpp $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CPPFLAGS) -c $< -o $@
+	$(V) $(CC) $(CPPFLAGS) -c $< -o $@
 
 modules_PowerSwitch.obj: ../modules/PowerSwitch.cpp $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CPPFLAGS) -c $< -o $@
+	$(V) $(CC) $(CPPFLAGS) -c $< -o $@
 
 modules_Rcd.obj: ../modules/Rcd.cpp $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CPPFLAGS) -c $< -o $@
+	$(V) $(CC) $(CPPFLAGS) -c $< -o $@
 
 modules_RemoteControlRX.obj: ../modules/RemoteControlRX.cpp $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CPPFLAGS) -c $< -o $@
+	$(V) $(CC) $(CPPFLAGS) -c $< -o $@
 
 modules_RemoteControlTX.obj: ../modules/RemoteControlTX.cpp $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CPPFLAGS) -c $< -o $@
+	$(V) $(CC) $(CPPFLAGS) -c $< -o $@
 
 main.obj: ../main.cpp $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CPPFLAGS) -c $< -o $@
+	$(V) $(CC) $(CPPFLAGS) -c $< -o $@
 
 $(NAME).out: $(OBJECTS)
 	@ echo linking $@
-	@ $(LNK) -Wl,-u,_c_int00 $(OBJECTS)  $(LFLAGS) -o $(NAME).out
+	$(V) $(LNK) -Wl,-u,_c_int00 $(OBJECTS)  $(LFLAGS) -o $(NAME).out
 
 clean:
 	@ echo Cleaning...
-	@ $(RM) $(OBJECTS) > $(DEVNULL) 2>&1
-	@ $(RM) $(NAME).out > $(DEVNULL) 2>&1
-	@ $(RM) $(NAME).map > $(DEVNULL) 2>&1
-	@ $(RM) $(SYSCFG_FILES)> $(DEVNULL) 2>&1
+	$(V) $(RM) $(OBJECTS) > $(DEVNULL) 2>&1
+	$(V) $(RM) $(NAME).out > $(DEVNULL) 2>&1
+	$(V) $(RM) $(NAME).map > $(DEVNULL) 2>&1
+	$(V) $(RM) $(call SLASH_FIXUP,$(SYSCFG_FILES)) > $(DEVNULL) 2>&1

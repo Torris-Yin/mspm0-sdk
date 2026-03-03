@@ -57,7 +57,6 @@
         "
         sourceLookupPath="${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/driverlib"
         description="Demonstrates Type B EEPROM emulation to store user data">
-
         <property name="buildProfile" value="release"/>
         <property name="isHybrid" value="true"/>
         <file path="../ti_msp_dl_config.h" openOnCreation="false" excludeFromBuild="false" action="copy">

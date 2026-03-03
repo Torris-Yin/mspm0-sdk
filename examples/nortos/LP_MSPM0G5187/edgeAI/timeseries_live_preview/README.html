@@ -35,129 +35,30 @@
 <div id="content">
   <h1>Readme</h1>
 <h2 id="example-summary">Example Summary</h2>
-<p>This example demonstrates the live preview feature on EdgeAI studio using MSPM0 devices. The application captures an input waveform via the ADC, extracts relevant features using the feature_extract library, and performs inference with a model that is functionally equivalent to the waveform_classifier_ai_npu model. The final output is then streamed to EdgeAI Studio for real-time visualization</p>
-<p>This example is built for the Hardware accelerated inference using a Neural network Processing Unit (NPU).</p>
-<h2 id="peripherals-pin-functions-mcu-pins-launchpad-pins">Peripherals, Pin Functions, MCU Pins, Launchpad Pins</h2>
-<table>
-<thead>
-<tr class="header">
-<th>Peripheral</th>
-<th>Function</th>
-<th>MCU Pin</th>
-<th>Launchpad Pin</th>
-<th>Launchpad Settings</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>GPIOA</td>
-<td>Standard with Wake Output</td>
-<td>PA17</td>
-<td>LED2 Red</td>
-<td>Populate Jumper(s): J12[2:1]</td>
-</tr>
-<tr class="even">
-<td>GPIOA</td>
-<td>Standard Output</td>
-<td>PA24</td>
-<td>LED2 Green</td>
-<td>Populate Jumper(s): J13[2:1]</td>
-</tr>
-<tr class="odd">
-<td>GPIOB</td>
-<td>Standard Output</td>
-<td>PB13</td>
-<td>LED2 Blue</td>
-<td>Populate Jumper(s): J11[2:1]</td>
-</tr>
-<tr class="even">
-<td>VREF</td>
-<td>VREF Positive (VREF+)</td>
-<td>PA23</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>VREF</td>
-<td>VREF Negative (VREF-)</td>
-<td>PA21</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>SYSCTL</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>UC0</td>
-<td>RX Pin</td>
-<td>PA11</td>
-<td>Back-Channel UART RXD</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>UC0</td>
-<td>TX Pin</td>
-<td>PA10</td>
-<td>Back-Channel UART TXD</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>ADC0</td>
-<td>ADC12 Channel 5 Pin</td>
-<td>PB24</td>
-<td>J2_18</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>EVENT</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>DMA</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>BOARD</td>
-<td>Debug Clock</td>
-<td>PA20</td>
-<td>J101_16</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>BOARD</td>
-<td>Debug Data In Out</td>
-<td>PA19</td>
-<td>J101_14</td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<p>This example demonstrates the live preview feature on CCStudio™ Edge AI Studio using MSPM0 devices. The application captures an input waveform via the ADC, extracts relevant features using the feature_extract library, and performs inference with a model that is functionally equivalent to the waveform_classifier_ai_npu model. The final output is then streamed to CCStudio™ Edge AI Studio for real-time visualization</p>
+<p>This example is built for the Hardware accelerated inference using TinyEngine™ NPU.</p>
 <h3 id="device-migration-recommendations">Device Migration Recommendations</h3>
 <p>This project was developed for a superset device included in the MSPM0 LaunchPad. Please visit the <a href="https://software-dl.ti.com/msp430/esd/MSPM0-SDK/latest/docs/english/tools/ccs_ide_guide/doc_guide/doc_guide-srcs/ccs_ide_guide.html#sysconfig-project-migration">CCS User’s Guide</a> for information about migrating to other MSPM0 devices.</p>
 <h3 id="low-power-recommendations">Low-Power Recommendations</h3>
 <p>TI recommends to terminate unused pins by setting the corresponding functions to GPIO and configure the pins to output low or input with internal pullup/pulldown resistor.</p>
 <p>SysConfig allows developers to easily configure unused pins by selecting <strong>Board</strong>→<strong>Configure Unused Pins</strong>.</p>
-<p>For more information about jumper configuration to achieve low-power using the MSPM0 LaunchPad, please visit the LP-MSPM0G5187 User’s Guide.</p>
+<p>For more information about jumper configuration to achieve low-power using the MSPM0 LaunchPad, please visit the <a href="https://www.ti.com/lit/slau967">LP-MSPM0G5187 User’s Guide</a>.</p>
+<h2 id="hardware-requirements">Hardware Requirements</h2>
+<ol>
+<li>LP-MSPM0G5187 LaunchPad</li>
+<li>Function Generator</li>
+</ol>
 <h2 id="example-usage">Example Usage</h2>
 <p>To initiate the live preview:</p>
 <ol>
-<li>Configure the serial port in EdgeAI Studio. Confirm that the port and baud rate (115200 bps) are selected to match the device’s UART baudrate.</li>
-<li>Before starting, check the status bar in EdgeAI studio for the message “<strong>Hardware connected</strong>”</li>
+<li>Configure the serial port in CCStudio™ Edge AI Studio. Confirm that the port and baud rate (115200 bps) are selected to match the device’s UART baudrate.</li>
+<li>Before starting, check the status bar in CCStudio™ Edge AI Studio for the message “<strong>Hardware connected</strong>”</li>
 <li>Navigate to the <strong>Live preview</strong> tab</li>
 <li>Click <strong>Start Preview</strong> to begin viewing the real-time model output.</li>
 </ol>
 <h2 id="references">References</h2>
 <ul>
+<li><a href="https://github.com/TexasInstruments/tinyml-tensorlab/tree/main/tinyml-modelzoo/examples">ModelZoo Example</a></li>
 <li>MSPM0G5187 Technical Reference Manual <a href="https://www.ti.com/product/MSPM0G5187">Link</a></li>
 <li><a href="https://software-dl.ti.com/mctools/nnc/mcu/users_guide/">TI Neural Network Compiler Guide</a></li>
 <li>TI Model Training Guide: <a href="https://github.com/TexasInstruments/tinyml-tensorlab/tree/main">tinyml-tensorlab</a></li>
@@ -170,7 +71,7 @@
   with 100,000+ analog ICs and embedded processors, along with software, tools
   and the industry‘s largest sales/support staff.</p>
   <p>
-    <a href="https://www.ti.com/corp/docs/legal/copyright.shtml">© Copyright 1995-2025</a>, Texas Instruments Incorporated. All rights reserved. <br>
+    <a href="https://www.ti.com/corp/docs/legal/copyright.shtml">© Copyright 1995-2026</a>, Texas Instruments Incorporated. All rights reserved. <br>
     <a href="https://www.ti.com/corp/docs/legal/trademark/trademrk.htm">Trademarks</a> | <a href="https://www.ti.com/corp/docs/legal/privacy.shtml">Privacy policy</a> | <a href="https://www.ti.com/corp/docs/legal/termsofuse.shtml">Terms of use</a> | <a href="https://www.ti.com/lsds/ti/legal/termsofsale.page">Terms of sale</a>
   </p>
 </footer>

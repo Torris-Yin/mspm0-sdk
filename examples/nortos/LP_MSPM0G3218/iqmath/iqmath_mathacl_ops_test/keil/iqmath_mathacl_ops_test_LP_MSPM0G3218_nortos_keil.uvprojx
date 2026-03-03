@@ -68,7 +68,7 @@
             <RepFail>1</RepFail>
             <useFile>0</useFile>
             <ScatterFile>./mspm0g3218.sct</ScatterFile>
-            <Misc>../../../../../../source/ti/iqmath/lib/keil/m0p/mathacl/mspm0gx218_gx207/iqmath.a ../../../../../../source/ti/driverlib/lib/keil/m0p/mspm0gx218_gx207/driverlib.a</Misc>
+            <Misc>../../../../../../source/ti/driverlib/lib/keil/m0p/mspm0gx218_gx207/driverlib.a ../../../../../../source/ti/iqmath/lib/keil/m0p/mathacl/mspm0gx218_gx207/iqmath.a</Misc>
           </LDads>
         </TargetArmAds>
       </TargetOption>

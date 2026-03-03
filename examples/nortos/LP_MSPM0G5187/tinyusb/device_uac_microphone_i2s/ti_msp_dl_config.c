@@ -98,9 +98,9 @@ SYSCONFIG_WEAK void SYSCFG_DL_GPIO_init(void)
 
     DL_GPIO_initPeripheralInputFunction(
         GPIO_I2S_0_IOMUX_AD0, GPIO_I2S_0_IOMUX_AD0_FUNC);
-    DL_GPIO_initPeripheralOutputFunction(
+    DL_GPIO_initPeripheralInputFunction(
         GPIO_I2S_0_IOMUX_BCLK, GPIO_I2S_0_IOMUX_BCLK_FUNC);
-    DL_GPIO_initPeripheralOutputFunction(
+    DL_GPIO_initPeripheralInputFunction(
         GPIO_I2S_0_IOMUX_WCLK, GPIO_I2S_0_IOMUX_WCLK_FUNC);
 
 
@@ -127,6 +127,7 @@ SYSCONFIG_WEAK bool SYSCFG_DL_SYSCTL_SYSPLL_init(void)
     uint32_t fFCCSysoscCount;
     uint32_t fFCCPllCount;
     uint32_t fFCCRatio;
+    uint32_t fccTimeOutCounter;
 
     DL_SYSCTL_setFCCPeriods( DL_SYSCTL_FCC_TRIG_CNT_01 );
 
@@ -135,8 +136,16 @@ SYSCONFIG_WEAK bool SYSCFG_DL_SYSCTL_SYSPLL_init(void)
                         DL_SYSCTL_FCC_TRIG_SOURCE_LFCLK,
                         DL_SYSCTL_FCC_CLOCK_SOURCE_SYSPLLCLK0);
     /* Get SYSPLL frequency using FCC */
+    fccTimeOutCounter = 0;
     DL_SYSCTL_startFCC();
-    while (DL_SYSCTL_isFCCDone() == 0);
+    while (DL_SYSCTL_isFCCDone() == 0) {
+        delay_cycles(977);  /* 1x LFCLK cycle = 32MHz/32.768kHz = 977, 30.5us */
+        fccTimeOutCounter++;
+        if(fccTimeOutCounter > 65){
+            /* Timeout set to approximately 2ms (user-customizable) */
+            break;
+        }
+    }
 
     /* get measA= SYSPLLCLK0 freq wrt LFOSC*/
     fFCCPllCount = DL_SYSCTL_readFCC();
@@ -146,8 +155,16 @@ SYSCONFIG_WEAK bool SYSCFG_DL_SYSCTL_SYSPLL_init(void)
                         DL_SYSCTL_FCC_TRIG_SOURCE_LFCLK,
                         DL_SYSCTL_FCC_CLOCK_SOURCE_SYSOSC);
     /* Get SYSPLL frequency using FCC */
+    fccTimeOutCounter = 0;
     DL_SYSCTL_startFCC();
-    while (DL_SYSCTL_isFCCDone() == 0 );
+    while (DL_SYSCTL_isFCCDone() == 0) {
+        delay_cycles(977);  /* 1x LFCLK cycle = 32MHz/32.768kHz = 977, 30.5us */
+        fccTimeOutCounter++;
+        if(fccTimeOutCounter > 65){
+            /* Timeout set to approximately 2ms (user-customizable) */
+            break;
+        }
+    }
 
     /* get measB= SYSOSC freq wrt LFOSC*/
     fFCCSysoscCount = DL_SYSCTL_readFCC();
@@ -195,8 +212,8 @@ SYSCONFIG_WEAK void SYSCFG_DL_SYSCTL_init(void)
         while ((DL_SYSCTL_getClockStatus() & SYSCTL_CLKSTATUS_SYSPLLGOOD_MASK) != DL_SYSCTL_CLK_STATUS_SYSPLL_GOOD){}
     }
     DL_SYSCTL_setULPCLKDivider(DL_SYSCTL_ULPCLK_DIV_2);
-    DL_SYSCTL_setMCLKSource(SYSOSC, HSCLK, DL_SYSCTL_HSCLK_SOURCE_SYSPLL);
     DL_SYSCTL_configUSBFLL(DL_SYSCTL_USBFLL_REFERENCE_SOF);
+    DL_SYSCTL_setMCLKSource(SYSOSC, HSCLK, DL_SYSCTL_HSCLK_SOURCE_SYSPLL);
     DL_SYSCTL_setUSBCLKSource(DL_SYSCTL_USBCLK_SOURCE_USBFLL);
 
 }

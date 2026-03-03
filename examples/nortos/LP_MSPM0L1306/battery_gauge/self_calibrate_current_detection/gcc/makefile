@@ -5,8 +5,16 @@ include $(MSPM0_SDK_INSTALL_DIR)/imports.mak
 CC = "$(GCC_ARMCOMPILER)/bin/arm-none-eabi-gcc"
 LNK = "$(GCC_ARMCOMPILER)/bin/arm-none-eabi-gcc"
 
+# Enable verbose output by setting VERBOSE=1
+V := @
+ifeq ($(VERBOSE), 1)
+  V :=
+endif
+
 OBJECTS = Driver_MSPM0Lxx_BSP.obj Driver_MSPM0Lxx_Driver.obj UserConfig_UserConfig.obj main.obj App.obj gcc_startup_mspm0l130x_gcc.obj
+
 NAME = self_calibrate_current_detection
+
 
 CFLAGS += -I.. \
     -D__MSPM0L1306__ \
@@ -50,34 +58,34 @@ all: $(NAME).out
 
 Driver_MSPM0Lxx_BSP.obj: ../Driver/MSPM0Lxx_BSP.c
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) $< -c -o $@
+	$(V) $(CC) $(CFLAGS) $< -c -o $@
 
 Driver_MSPM0Lxx_Driver.obj: ../Driver/MSPM0Lxx_Driver.c
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) $< -c -o $@
+	$(V) $(CC) $(CFLAGS) $< -c -o $@
 
 UserConfig_UserConfig.obj: ../UserConfig/UserConfig.c
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) $< -c -o $@
+	$(V) $(CC) $(CFLAGS) $< -c -o $@
 
 main.obj: ../main.c
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) $< -c -o $@
+	$(V) $(CC) $(CFLAGS) $< -c -o $@
 
 App.obj: ../App.c
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) $< -c -o $@
+	$(V) $(CC) $(CFLAGS) $< -c -o $@
 
 gcc_startup_mspm0l130x_gcc.obj: ../gcc/startup_mspm0l130x_gcc.c
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) $< -c -o $@
+	$(V) $(CC) $(CFLAGS) $< -c -o $@
 
 $(NAME).out: $(OBJECTS)
 	@ echo linking $@
-	@ $(LNK)  $(OBJECTS)  $(LFLAGS) -o $(NAME).out
+	$(V) $(LNK)  $(OBJECTS)  $(LFLAGS) -o $(NAME).out
 
 clean:
 	@ echo Cleaning...
-	@ $(RM) $(OBJECTS) > $(DEVNULL) 2>&1
-	@ $(RM) $(NAME).out > $(DEVNULL) 2>&1
-	@ $(RM) $(NAME).map > $(DEVNULL) 2>&1
+	$(V) $(RM) $(OBJECTS) > $(DEVNULL) 2>&1
+	$(V) $(RM) $(NAME).out > $(DEVNULL) 2>&1
+	$(V) $(RM) $(NAME).map > $(DEVNULL) 2>&1

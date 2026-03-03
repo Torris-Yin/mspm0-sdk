@@ -61,6 +61,7 @@
             -I${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/devices/msp
             -gdwarf-3
             -march=thumbv6m
+            -Wall
         "
         linkerBuildOptions="
             -Wl,-Map=.map
@@ -87,7 +88,6 @@
         "
         sourceLookupPath="${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/driverlib"
         description="TinyUSB Device USB Audio Class 2.0 Headset Example">
-
         <property name="buildProfile" value="release"/>
         <property name="isHybrid" value="true"/>
         <file path="../main.c" openOnCreation="false" excludeFromBuild="false" action="copy">

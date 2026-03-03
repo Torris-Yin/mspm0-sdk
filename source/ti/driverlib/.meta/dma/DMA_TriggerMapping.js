@@ -198,6 +198,15 @@ let DMA_TRIGGERS = {
         // TBA
         undefined,
     },
+    MSPM0C511X: {
+        "SW"    : ["DMA_SOFTWARE_TRIG"],
+        "UC16"   : ["DMA_UC16_TX_TRIG","DMA_UC16_RX_TRIG"],
+        "UC17"   : ["DMA_UC17_TX_TRIG","DMA_UC17_RX_TRIG"],
+        "UC18"   : ["DMA_UC18_TX_TRIG","DMA_UC18_RX_TRIG"],
+        "UC19"   : ["DMA_UC19_TX_TRIG","DMA_UC19_RX_TRIG"],
+        "USBLC0": ["DMA_USBLC0_EVT_0_TRIG","DMA_USBLC0_EVT_1_TRIG","DMA_USBLC0_EVT_2_TRIG","DMA_USBLC0_EVT_3_TRIG","DMA_USBLC0_EVT_4_TRIG","DMA_USBLC0_EVT_5_TRIG", "DMA_USBLC0_EVT_6_TRIG","DMA_USBLC0_EVT_7_TRIG"],
+        "ADC0"  : ["DMA_ADC0_EVT_GEN_TRIG"],
+    }
 };
 
 let index = Common.getDeviceFamily();

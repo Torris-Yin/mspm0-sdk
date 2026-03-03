@@ -16,8 +16,16 @@ SYSCFG_C_FILES = $(filter %.c,$(SYSCFG_FILES))
 SYSCFG_H_FILES = $(filter %.h,$(SYSCFG_FILES))
 SYSCFG_OPT_FILES = $(filter %.opt,$(SYSCFG_FILES))
 
+# Enable verbose output by setting VERBOSE=1
+V := @
+ifeq ($(VERBOSE), 1)
+  V :=
+endif
+
 OBJECTS = main.obj main-blinky.obj freertos_ticlang_startup_mspm0l111x_ticlang.obj $(patsubst %.c,%.obj,$(notdir $(SYSCFG_C_FILES)))
+
 NAME = blink_led
+
 
 CFLAGS += -I../.. \
     -I. \
@@ -34,7 +42,8 @@ CFLAGS += -I../.. \
     -mcpu=cortex-m0plus \
     -march=thumbv6m \
     -mfloat-abi=soft \
-    -mthumb
+    -mthumb \
+    -Wall
 
 LFLAGS += -i${WORKSPACE_LOC}/freertos_builds_LP_MSPM0L1117_release_ticlang/Debug \
     -lfreertos_builds_LP_MSPM0L1117_release_ticlang.lib \
@@ -62,7 +71,7 @@ $(SYSCFG_FILES): syscfg
 
 syscfg: ../../blink_led.syscfg
 	@ echo Generating configuration files...
-	@ $(SYSCFG_CMD_STUB) --output $(@D) $<
+	$(V) $(SYSCFG_CMD_STUB) --output $(@D) $<
 
 
 # Helpful hint that the user needs to use a standalone SysConfig installation
@@ -74,35 +83,36 @@ $(SYSCONFIG_GUI_TOOL):
 
 syscfg-gui: ../../blink_led.syscfg $(SYSCONFIG_GUI_TOOL)
 	@ echo Opening SysConfig GUI
-	@ $(SYSCFG_GUI_CMD_STUB) $<
+	$(V) $(SYSCFG_GUI_CMD_STUB) $<
+
 
 define C_RULE
 $(basename $(notdir $(1))).obj: $(1) $(SYSCFG_H_FILES)
 	@ echo Building $$@
-	@ $(CC) $(CFLAGS) -c $$< -o $$@
+	$(V) $(CC) $(CFLAGS) -c $$< -o $$@
 endef
 
 $(foreach c_file,$(SYSCFG_C_FILES),$(eval $(call C_RULE,$(c_file))))
 
 main.obj: ../../main.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) -c $< -o $@
+	$(V) $(CC) $(CFLAGS) -c $< -o $@
 
 main-blinky.obj: ../../main-blinky.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) -c $< -o $@
+	$(V) $(CC) $(CFLAGS) -c $< -o $@
 
 freertos_ticlang_startup_mspm0l111x_ticlang.obj: ../../freertos/ticlang/startup_mspm0l111x_ticlang.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) -c $< -o $@
+	$(V) $(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME).out: $(OBJECTS) $(KERNEL_BUILD)/ticlang/freertos.lib
 	@ echo linking $@
-	@ $(LNK) -Wl,-u,_c_int00 $(OBJECTS)  $(LFLAGS) -o $(NAME).out
+	$(V) $(LNK) -Wl,-u,_c_int00 $(OBJECTS)  $(LFLAGS) -o $(NAME).out
 
 clean:
 	@ echo Cleaning...
-	@ $(RM) $(OBJECTS) > $(DEVNULL) 2>&1
-	@ $(RM) $(NAME).out > $(DEVNULL) 2>&1
-	@ $(RM) $(NAME).map > $(DEVNULL) 2>&1
-	@ $(RM) $(SYSCFG_FILES)> $(DEVNULL) 2>&1
+	$(V) $(RM) $(OBJECTS) > $(DEVNULL) 2>&1
+	$(V) $(RM) $(NAME).out > $(DEVNULL) 2>&1
+	$(V) $(RM) $(NAME).map > $(DEVNULL) 2>&1
+	$(V) $(RM) $(call SLASH_FIXUP,$(SYSCFG_FILES)) > $(DEVNULL) 2>&1

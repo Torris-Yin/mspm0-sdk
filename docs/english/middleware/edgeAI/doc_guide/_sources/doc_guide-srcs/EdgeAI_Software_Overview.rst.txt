@@ -23,22 +23,22 @@ The Feature Extraction module provides capabilities to process raw sensor data a
 
 The feature extraction library leverages ARM CMSIS-DSP functions for efficient signal processing operations on MSPM0 devices.
 
-2. Neural Processing Unit (NPU) Driver
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2. TinyEngine™ NPU Driver
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The NPU component provides hardware acceleration for neural network inference by interfacing with the MSPM0's Neural Processing Unit. This driver:
+The NPU component provides hardware acceleration for neural network inference by interfacing with MSPM0's TinyEngine™ NPU. This driver:
 
 -  Handles instruction memory management
 -  Manages parameter memory
 -  Provides control interfaces for NPU operations
 -  Optimizes execution of neural network operations
 
-The NPU driver is designed to be called by compiled neural network libraries built using TI's Neural Network Compiler (NNC) for MCUs. Note the NPU driver is only applicable for MSP devices with NPU.
+The NPU driver is designed to be called by compiled neural network libraries built using TI's Neural Network Compiler (NNC) for MCUs. Note: The NPU driver is only applicable for MSPM0 devices with NPU.
 
 3. Device Agent Protocol (Optional)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Communication interfaces for device management and data exchange between the MSPM0 device and Model Composer GUI. This is needed for the data capture and live preview features of the Model Composer. The communication interface is implemented using UART and is configurable for different data formats and baud rates.
+Communication interfaces for device management and data exchange between the MSPM0 device and CCStudio™ Edge AI Studio GUI. This is needed for the data capture and live preview features of CCStudio™ Edge AI Studio. The communication interface is implemented using UART and is configurable for different data formats and baud rates.
 
 4. Examples
 ~~~~~~~~~~~
@@ -57,7 +57,10 @@ Advanced Examples
 
 -  **Character Recognition**: Basic OCR capabilities
 -  **Motor Fault AI**: Detection of motor faults through vibration analysis
--  **AC Arc Fault Detection**: Safety-critical application for electrical systems
+-  **ECG Anomaly Detection AI**: Heart rhythm anomaly classification from ECG data (Normal, Mild, Severe, Emergency)
+-  **Gearbox Fault Diagnosis AI**: Vibration-based gearbox fault detection (Healthy vs Broken Tooth)
+-  **Linear Actuator Fault AI**: Detection of linear actuator faults (Normal, Spalling, Lack of Lubrication, Backlash)
+-  **Motor Temperature AI**: PMSM motor temperature prediction using regression model
 
 NPU-Accelerated Variants
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -66,17 +69,27 @@ NPU-Accelerated Variants
 -  **Character Recognition NPU**: NPU-accelerated optical character recognition
 -  **Motor Fault AI NPU**: NPU-accelerated motor fault detection
 -  **Waveform Classifier AI NPU**: NPU-accelerated waveform classification
--  **Non-intrusive Load Monitoring (NILM)**: NPU-accelerated non-intrusive load monitoring (NILM) appliance usage classification
+-  **AC Arc Fault Detection AI NPU**: Safety-critical arc fault detection for electrical systems (NPU-only)
+-  **ECG Anomaly Detection AI NPU**: NPU-accelerated ECG anomaly classification
+-  **Gearbox Fault Diagnosis AI NPU**: NPU-accelerated gearbox fault detection
+-  **Linear Actuator Fault AI NPU**: NPU-accelerated linear actuator fault detection
+-  **Motor Temperature AI NPU**: NPU-accelerated motor temperature prediction
+-  **Electrical Fault AI NPU**: NPU-accelerated power system transmission line fault detection
+-  **Non-intrusive Load Monitoring (NILM) NPU**: NPU-accelerated appliance usage classification
 -  **PIR based Motion Detection AI NPU**: NPU-accelerated PIR based motion detection
 
 Data Collection and Visualization
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  **AC Arc Fault Data Capture**: Tools for capturing arc fault data for training
+-  **AC Arc Fault Detection Live Preview**: Real-time visualization of arc fault detection
 -  **Motor Fault AI Data Capture**: Utilities for collecting motor vibration data
 -  **Motor Fault AI Live Preview**: Real-time visualization of motor fault detection
+-  **ECG Anomaly Detection Data Capture**: Tools for capturing ECG data for training
+-  **ECG Anomaly Detection Live Preview**: Real-time visualization of ECG anomaly detection
 -  **Time Series Data Capture**: General-purpose time series data collection
 -  **Time Series Live Preview**: Visualization tools for time series analysis
+-  **TIDA-010997 Data Capture**: Multi-sensor data capture for TIDA-010997 reference design (PIR, temperature, humidity, pressure, ambient light, microphone, IMU, hall effect sensor)
 
 Hardware Support
 ----------------
@@ -84,6 +97,7 @@ Hardware Support
 The Edge AI software solution is designed for MSPM0 microcontroller units, currently supporting:
 
 -  MSPM0G3507 LaunchPad development kit
+-  MSPM0G3519 LaunchPad development kit
 -  MSPM0G5187 LaunchPad development kit
 
 Development Environment
@@ -95,7 +109,7 @@ The solution is designed to be used with:
 -  TI MSPM0 SDK
 -  ARM CMSIS-DSP library
 -  CLI Tools (Pytorch based framework to train and develop AI/ML Models)
--  Model Composer (EdgeAI Studio GUI which enables accelerated development by enabling data capture)
+-  CCStudio™ Edge AI Studio (GUI which enables accelerated development by enabling data capture)
 
 Development Workflow
 --------------------
@@ -118,6 +132,15 @@ When implementing Edge AI applications on MSPM0 devices, consider:
 3. **Energy Efficiency**: Leverage low-power modes when inference is not needed
 4. **NPU Acceleration**: Use NPU-optimized versions for computationally intensive models
 5. **Real-time Requirements**: Consider sampling rates and processing latency for your application
+
+Related Documentation
+---------------------
+
+For detailed deployment instructions, refer to the following guides:
+
+-  `Deploying Models Using CLI Tools <./EdgeAI_Deployment_Guide_CLI.md>`__ - Command-line interface workflow for model training and deployment
+-  `Deploying Models Using CCStudio™ Edge AI Studio GUI <./EdgeAI_Deployment_Guide_EdgeAI_Studio.md>`__ - GUI-based workflow
+-  `Feature Extraction Library Guide <./EdgeAI_Feature_Extraction_Library.md>`__ - Detailed documentation on the feature extraction module
 
 Conclusion
 ----------

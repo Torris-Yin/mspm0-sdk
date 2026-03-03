@@ -37,109 +37,15 @@
 <h2 id="example-summary">Example Summary</h2>
 <p>This example implements a data-capture for motor fault demo for the MSPM0G5187.<br />
 The device acquires vibration samples from an ADXL355 accelerometer and streams raw time-domain samples to a host over the Device Agent Protocol (DAP) via UART/USB. The host tool records and visualizes the acquired samples for offline model training, verification, or analysis.</p>
-<h2 id="peripherals-pin-functions-mcu-pins-launchpad-pins">Peripherals, Pin Functions, MCU Pins, Launchpad Pins</h2>
-<table>
-<thead>
-<tr class="header">
-<th>Peripheral</th>
-<th>Function</th>
-<th>MCU Pin</th>
-<th>Launchpad Pin</th>
-<th>Launchpad Settings</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>GPIOA</td>
-<td>High-Speed Input</td>
-<td>PA12</td>
-<td>J3_28</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>SYSCTL</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>UC0</td>
-<td>RX Pin</td>
-<td>PA11</td>
-<td>Back-Channel UART RXD</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>UC0</td>
-<td>TX Pin</td>
-<td>PA10</td>
-<td>Back-Channel UART TXD</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>UC2</td>
-<td>SPI SCLK (Clock)</td>
-<td>PB18</td>
-<td>J1_7</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>UC2</td>
-<td>SPI PICO (Peripheral In, Controller Out)</td>
-<td>PB17</td>
-<td>J2_15</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>UC2</td>
-<td>SPI POCI (Peripheral Out, Controller In)</td>
-<td>PB19</td>
-<td>J2_14</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>UC2</td>
-<td>SPI CS1 (Chip Select 1)</td>
-<td>PB0</td>
-<td>J4_38</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>EVENT</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>DMA</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>BOARD</td>
-<td>Debug Clock</td>
-<td>PA20</td>
-<td>J101_16</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>BOARD</td>
-<td>Debug Data In Out</td>
-<td>PA19</td>
-<td>J101_14</td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<h3 id="device-migration-recommendations">Device Migration Recommendations</h3>
+<p>This project was developed for a superset device included in the MSPM0 LaunchPad. Please visit the <a href="https://software-dl.ti.com/msp430/esd/MSPM0-SDK/latest/docs/english/tools/ccs_ide_guide/doc_guide/doc_guide-srcs/ccs_ide_guide.html#sysconfig-project-migration">CCS User’s Guide</a> for information about migrating to other MSPM0 devices.</p>
 <h3 id="low-power-recommendations">Low-Power Recommendations</h3>
-<p>Terminate unused pins as GPIO outputs driven low or configure as inputs with pull-ups/pull-downs. Use SysConfig “Board → Configure Unused Pins” to apply recommended settings. Consult the LP-MSPM0G5187 user guide for jumper settings to reduce power.</p>
-<h2 id="hardware-requirements">Hardware requirements</h2>
+<p>TI recommends to terminate unused pins by setting the corresponding functions to GPIO and configure the pins to output low or input with internal pullup/pulldown resistor.</p>
+<p>SysConfig allows developers to easily configure unused pins by selecting <strong>Board</strong>→<strong>Configure Unused Pins</strong>.</p>
+<p>For more information about jumper configuration to achieve low-power using the MSPM0 LaunchPad, please visit the <a href="https://www.ti.com/lit/slau967">LP-MSPM0G5187 User’s Guide</a>.</p>
+<h2 id="hardware-requirements">Hardware Requirements</h2>
 <ol>
-<li>MSPM0G5187 development board / LaunchPad</li>
+<li>LP-MSPM0G5187 LaunchPad</li>
 <li>ADXL355 accelerometer connected over SPI</li>
 <li>Host PC with a USB/serial connection to the board (or USB DFU supporting the live DAP bridge)</li>
 </ol>
@@ -168,8 +74,8 @@ The device acquires vibration samples from an ADXL355 accelerometer and streams 
 </ol>
 <ul>
 <li>Build and flash the firmware to the MSPM0G5187.</li>
-<li>On the host PC run the provided capture/listen tool or Model Composer Edge AI Studio Live Preview set to “Data Capture” mode.</li>
-<li>From Model Composer / Edge AI Studio connect to the device and request a data capture session via the GUI.</li>
+<li>On the host PC run the provided capture/listen tool or CCStudio™ Edge AI Studio Live Preview set to “Data Capture” mode.</li>
+<li>From CCStudio™ Edge AI Studio connect to the device and request a data capture session via the GUI.</li>
 <li>Make sure that the correct baudrate (115200) and COM ports are selected before connecting to the device.</li>
 </ul>
 <h2 id="software-details">Software Details</h2>
@@ -177,7 +83,7 @@ The device acquires vibration samples from an ADXL355 accelerometer and streams 
 <li>Data acquisition reads ADXL355 XYZ samples on each DRDY event using SPI.</li>
 <li>Samples are packed as 16-bit signed integers (high byte first) and streamed in DAP frames.</li>
 <li>UART settings: 115200 baud.</li>
-<li>Key configurable property: “time” — the host sets how many samples to stream/transfer based on sampling rate (1024 deafult)*time.</li>
+<li>Key configurable property: “time” — the host sets how many samples to stream/transfer based on sampling rate (1024 default)*time.</li>
 </ul>
 <h2 id="notes">Notes</h2>
 <ul>
@@ -187,6 +93,12 @@ The device acquires vibration samples from an ADXL355 accelerometer and streams 
 <li><a href="https://www.digikey.in/en/htmldatasheets/production/2012480/0/0/1/eval-adxl354-355-user-guide">User guide</a></li>
 <li>ADXL355 manufacturer page <a href="https://www.analog.com/en/index.html">link</a></li>
 </ul>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://github.com/TexasInstruments/tinyml-tensorlab/tree/main/tinyml-modelzoo/examples">ModelZoo Example</a></li>
+<li>MSPM0G5187 Technical Reference Manual <a href="https://www.ti.com/product/MSPM0G5187">Link</a></li>
+<li>EdgeAI Software Guide: SDK_INSTALL_DIR/docs/english/middleware/edgeAI/MSPM0_EdgeAI_User_Guide.html</li>
+</ul>
 <!-- Close div from before_body_template.html -->
 </div>
 <footer id="tiFooter">
@@ -194,7 +106,7 @@ The device acquires vibration samples from an ADXL355 accelerometer and streams 
   with 100,000+ analog ICs and embedded processors, along with software, tools
   and the industry‘s largest sales/support staff.</p>
   <p>
-    <a href="https://www.ti.com/corp/docs/legal/copyright.shtml">© Copyright 1995-2025</a>, Texas Instruments Incorporated. All rights reserved. <br>
+    <a href="https://www.ti.com/corp/docs/legal/copyright.shtml">© Copyright 1995-2026</a>, Texas Instruments Incorporated. All rights reserved. <br>
     <a href="https://www.ti.com/corp/docs/legal/trademark/trademrk.htm">Trademarks</a> | <a href="https://www.ti.com/corp/docs/legal/privacy.shtml">Privacy policy</a> | <a href="https://www.ti.com/corp/docs/legal/termsofuse.shtml">Terms of use</a> | <a href="https://www.ti.com/lsds/ti/legal/termsofsale.page">Terms of sale</a>
   </p>
 </footer>

@@ -31,6 +31,7 @@
             -march=thumbv6m
             -mfloat-abi=soft
             -mthumb
+            -Wall
         "
         linkerBuildOptions="
             -ldevice.cmd.genlibs
@@ -49,7 +50,6 @@
         "
         sourceLookupPath="${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/driverlib"
         description="This example shows a closed-loop control method for BDC motor.">
-
         <property name="buildProfile" value="release"/>
         <property name="isHybrid" value="true"/>
         <file path="../motor_control_bdc_sensor.c" openOnCreation="false" excludeFromBuild="false" action="copy">

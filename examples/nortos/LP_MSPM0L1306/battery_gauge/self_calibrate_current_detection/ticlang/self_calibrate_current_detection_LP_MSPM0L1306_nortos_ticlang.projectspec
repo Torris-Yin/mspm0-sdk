@@ -30,6 +30,7 @@
             -march=thumbv6m
             -mfloat-abi=soft
             -mthumb
+            -Wall
         "
         linkerBuildOptions="
             -l${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/iqmath/lib/ticlang/m0p/rts/mspm0l11xx_l13xx/iqmath.a
@@ -43,7 +44,6 @@
         "
         sourceLookupPath="${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/driverlib"
         description="This example demonstrates a self-calibratable, high precision and low-cost current detection solution based on MSPM0 internal OPAs">
-
         <property name="buildProfile" value="release"/>
         <property name="isHybrid" value="true"/>
         <file path="../Driver/MSPM0Lxx_BSP.c" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="Driver">

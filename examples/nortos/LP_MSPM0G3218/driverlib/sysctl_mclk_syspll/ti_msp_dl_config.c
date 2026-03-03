@@ -131,6 +131,7 @@ SYSCONFIG_WEAK bool SYSCFG_DL_SYSCTL_SYSPLL_init(void)
     uint32_t fFCCSysoscCount;
     uint32_t fFCCPllCount;
     uint32_t fFCCRatio;
+    uint32_t fccTimeOutCounter;
 
     DL_SYSCTL_setFCCPeriods( DL_SYSCTL_FCC_TRIG_CNT_01 );
 
@@ -139,8 +140,16 @@ SYSCONFIG_WEAK bool SYSCFG_DL_SYSCTL_SYSPLL_init(void)
                         DL_SYSCTL_FCC_TRIG_SOURCE_LFCLK,
                         DL_SYSCTL_FCC_CLOCK_SOURCE_SYSPLLCLK1);
     /* Get SYSPLL frequency using FCC */
+    fccTimeOutCounter = 0;
     DL_SYSCTL_startFCC();
-    while (DL_SYSCTL_isFCCDone() == 0);
+    while (DL_SYSCTL_isFCCDone() == 0) {
+        delay_cycles(977);  /* 1x LFCLK cycle = 32MHz/32.768kHz = 977, 30.5us */
+        fccTimeOutCounter++;
+        if(fccTimeOutCounter > 65){
+            /* Timeout set to approximately 2ms (user-customizable) */
+            break;
+        }
+    }
 
     /* get measA= SYSPLLCLK1 freq wrt LFOSC*/
     fFCCPllCount = DL_SYSCTL_readFCC();
@@ -150,8 +159,16 @@ SYSCONFIG_WEAK bool SYSCFG_DL_SYSCTL_SYSPLL_init(void)
                         DL_SYSCTL_FCC_TRIG_SOURCE_LFCLK,
                         DL_SYSCTL_FCC_CLOCK_SOURCE_SYSOSC);
     /* Get SYSPLL frequency using FCC */
+    fccTimeOutCounter = 0;
     DL_SYSCTL_startFCC();
-    while (DL_SYSCTL_isFCCDone() == 0 );
+    while (DL_SYSCTL_isFCCDone() == 0) {
+        delay_cycles(977);  /* 1x LFCLK cycle = 32MHz/32.768kHz = 977, 30.5us */
+        fccTimeOutCounter++;
+        if(fccTimeOutCounter > 65){
+            /* Timeout set to approximately 2ms (user-customizable) */
+            break;
+        }
+    }
 
     /* get measB= SYSOSC freq wrt LFOSC*/
     fFCCSysoscCount = DL_SYSCTL_readFCC();

@@ -31,6 +31,7 @@
             -march=thumbv6m
             -mfloat-abi=soft
             -mthumb
+            -Wall
         "
         linkerBuildOptions="
             -ldevice.cmd.genlibs
@@ -49,7 +50,6 @@
         "
         sourceLookupPath="${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/driverlib"
         description="RTC sets calendar alarm and toggles GPIO when alarm is triggered in low power STANDBY mode">
-
         <property name="buildProfile" value="release"/>
         <property name="isHybrid" value="true"/>
         <file path="../rtc_calendar_alarm_standby.c" openOnCreation="false" excludeFromBuild="false" action="copy">

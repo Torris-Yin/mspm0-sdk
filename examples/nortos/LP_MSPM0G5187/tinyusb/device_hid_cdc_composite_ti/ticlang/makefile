@@ -14,8 +14,16 @@ SYSCFG_C_FILES = $(filter %.c,$(SYSCFG_FILES))
 SYSCFG_H_FILES = $(filter %.h,$(SYSCFG_FILES))
 SYSCFG_OPT_FILES = $(filter %.opt,$(SYSCFG_FILES))
 
+# Enable verbose output by setting VERBOSE=1
+V := @
+ifeq ($(VERBOSE), 1)
+  V :=
+endif
+
 OBJECTS = main.obj third_party_tinyusb_hw_bsp_board.obj third_party_tinyusb_hw_bsp_mspm0_family.obj third_party_tinyusb_src_class_audio_audio_device.obj third_party_tinyusb_src_class_bth_bth_device.obj third_party_tinyusb_src_class_cdc_cdc_device.obj third_party_tinyusb_src_class_cdc_cdc_host.obj third_party_tinyusb_src_class_cdc_cdc_rndis_host.obj third_party_tinyusb_src_class_dfu_dfu_device.obj third_party_tinyusb_src_class_dfu_dfu_rt_device.obj third_party_tinyusb_src_class_hid_hid_device.obj third_party_tinyusb_src_class_hid_hid_host.obj third_party_tinyusb_src_class_midi_midi_device.obj third_party_tinyusb_src_class_msc_msc_device.obj third_party_tinyusb_src_class_msc_msc_host.obj third_party_tinyusb_src_class_net_ecm_rndis_device.obj third_party_tinyusb_src_class_net_ncm_device.obj third_party_tinyusb_src_class_usbtmc_usbtmc_device.obj third_party_tinyusb_src_class_vendor_vendor_device.obj third_party_tinyusb_src_class_vendor_vendor_host.obj third_party_tinyusb_src_class_video_video_device.obj third_party_tinyusb_src_common_tusb_fifo.obj third_party_tinyusb_src_device_usbd.obj third_party_tinyusb_src_device_usbd_control.obj third_party_tinyusb_src_host_hub.obj third_party_tinyusb_src_host_usbh.obj third_party_tinyusb_src_portable_mentor_musb_dcd_musb.obj third_party_tinyusb_src_portable_mentor_musb_hcd_musb.obj third_party_tinyusb_src_tusb.obj $(patsubst %.c,%.obj,$(notdir $(SYSCFG_C_FILES)))
+
 NAME = device_hid_cdc_composite_ti
+
 
 CFLAGS += -I.. \
     -I. \
@@ -59,7 +67,8 @@ CFLAGS += -I.. \
     -I${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/devices/msp \
     "-I$(MSPM0_SDK_INSTALL_DIR)/source" \
     -gdwarf-3 \
-    -march=thumbv6m
+    -march=thumbv6m \
+    -Wall
 
 LFLAGS += -Wl,-Map=.map \
     -Wl,--unused_section_elimination=on \
@@ -87,7 +96,7 @@ $(SYSCFG_FILES): syscfg
 
 syscfg: ../device_hid_cdc_composite_ti.syscfg
 	@ echo Generating configuration files...
-	@ $(SYSCFG_CMD_STUB) --output $(@D) $<
+	$(V) $(SYSCFG_CMD_STUB) --output $(@D) $<
 
 
 # Helpful hint that the user needs to use a standalone SysConfig installation
@@ -99,139 +108,140 @@ $(SYSCONFIG_GUI_TOOL):
 
 syscfg-gui: ../device_hid_cdc_composite_ti.syscfg $(SYSCONFIG_GUI_TOOL)
 	@ echo Opening SysConfig GUI
-	@ $(SYSCFG_GUI_CMD_STUB) $<
+	$(V) $(SYSCFG_GUI_CMD_STUB) $<
+
 
 define C_RULE
 $(basename $(notdir $(1))).obj: $(1) $(SYSCFG_H_FILES)
 	@ echo Building $$@
-	@ $(CC) $(CFLAGS) -c $$< -o $$@
+	$(V) $(CC) $(CFLAGS) -c $$< -o $$@
 endef
 
 $(foreach c_file,$(SYSCFG_C_FILES),$(eval $(call C_RULE,$(c_file))))
 
 main.obj: ../main.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) -c $< -o $@
+	$(V) $(CC) $(CFLAGS) -c $< -o $@
 
 third_party_tinyusb_hw_bsp_board.obj: ../third_party/tinyusb/hw/bsp/board.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) -c $< -o $@
+	$(V) $(CC) $(CFLAGS) -c $< -o $@
 
 third_party_tinyusb_hw_bsp_mspm0_family.obj: ../third_party/tinyusb/hw/bsp/mspm0/family.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) -c $< -o $@
+	$(V) $(CC) $(CFLAGS) -c $< -o $@
 
 third_party_tinyusb_src_class_audio_audio_device.obj: ../third_party/tinyusb/src/class/audio/audio_device.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) -c $< -o $@
+	$(V) $(CC) $(CFLAGS) -c $< -o $@
 
 third_party_tinyusb_src_class_bth_bth_device.obj: ../third_party/tinyusb/src/class/bth/bth_device.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) -c $< -o $@
+	$(V) $(CC) $(CFLAGS) -c $< -o $@
 
 third_party_tinyusb_src_class_cdc_cdc_device.obj: ../third_party/tinyusb/src/class/cdc/cdc_device.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) -c $< -o $@
+	$(V) $(CC) $(CFLAGS) -c $< -o $@
 
 third_party_tinyusb_src_class_cdc_cdc_host.obj: ../third_party/tinyusb/src/class/cdc/cdc_host.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) -c $< -o $@
+	$(V) $(CC) $(CFLAGS) -c $< -o $@
 
 third_party_tinyusb_src_class_cdc_cdc_rndis_host.obj: ../third_party/tinyusb/src/class/cdc/cdc_rndis_host.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) -c $< -o $@
+	$(V) $(CC) $(CFLAGS) -c $< -o $@
 
 third_party_tinyusb_src_class_dfu_dfu_device.obj: ../third_party/tinyusb/src/class/dfu/dfu_device.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) -c $< -o $@
+	$(V) $(CC) $(CFLAGS) -c $< -o $@
 
 third_party_tinyusb_src_class_dfu_dfu_rt_device.obj: ../third_party/tinyusb/src/class/dfu/dfu_rt_device.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) -c $< -o $@
+	$(V) $(CC) $(CFLAGS) -c $< -o $@
 
 third_party_tinyusb_src_class_hid_hid_device.obj: ../third_party/tinyusb/src/class/hid/hid_device.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) -c $< -o $@
+	$(V) $(CC) $(CFLAGS) -c $< -o $@
 
 third_party_tinyusb_src_class_hid_hid_host.obj: ../third_party/tinyusb/src/class/hid/hid_host.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) -c $< -o $@
+	$(V) $(CC) $(CFLAGS) -c $< -o $@
 
 third_party_tinyusb_src_class_midi_midi_device.obj: ../third_party/tinyusb/src/class/midi/midi_device.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) -c $< -o $@
+	$(V) $(CC) $(CFLAGS) -c $< -o $@
 
 third_party_tinyusb_src_class_msc_msc_device.obj: ../third_party/tinyusb/src/class/msc/msc_device.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) -c $< -o $@
+	$(V) $(CC) $(CFLAGS) -c $< -o $@
 
 third_party_tinyusb_src_class_msc_msc_host.obj: ../third_party/tinyusb/src/class/msc/msc_host.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) -c $< -o $@
+	$(V) $(CC) $(CFLAGS) -c $< -o $@
 
 third_party_tinyusb_src_class_net_ecm_rndis_device.obj: ../third_party/tinyusb/src/class/net/ecm_rndis_device.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) -c $< -o $@
+	$(V) $(CC) $(CFLAGS) -c $< -o $@
 
 third_party_tinyusb_src_class_net_ncm_device.obj: ../third_party/tinyusb/src/class/net/ncm_device.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) -c $< -o $@
+	$(V) $(CC) $(CFLAGS) -c $< -o $@
 
 third_party_tinyusb_src_class_usbtmc_usbtmc_device.obj: ../third_party/tinyusb/src/class/usbtmc/usbtmc_device.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) -c $< -o $@
+	$(V) $(CC) $(CFLAGS) -c $< -o $@
 
 third_party_tinyusb_src_class_vendor_vendor_device.obj: ../third_party/tinyusb/src/class/vendor/vendor_device.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) -c $< -o $@
+	$(V) $(CC) $(CFLAGS) -c $< -o $@
 
 third_party_tinyusb_src_class_vendor_vendor_host.obj: ../third_party/tinyusb/src/class/vendor/vendor_host.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) -c $< -o $@
+	$(V) $(CC) $(CFLAGS) -c $< -o $@
 
 third_party_tinyusb_src_class_video_video_device.obj: ../third_party/tinyusb/src/class/video/video_device.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) -c $< -o $@
+	$(V) $(CC) $(CFLAGS) -c $< -o $@
 
 third_party_tinyusb_src_common_tusb_fifo.obj: ../third_party/tinyusb/src/common/tusb_fifo.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) -c $< -o $@
+	$(V) $(CC) $(CFLAGS) -c $< -o $@
 
 third_party_tinyusb_src_device_usbd.obj: ../third_party/tinyusb/src/device/usbd.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) -c $< -o $@
+	$(V) $(CC) $(CFLAGS) -c $< -o $@
 
 third_party_tinyusb_src_device_usbd_control.obj: ../third_party/tinyusb/src/device/usbd_control.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) -c $< -o $@
+	$(V) $(CC) $(CFLAGS) -c $< -o $@
 
 third_party_tinyusb_src_host_hub.obj: ../third_party/tinyusb/src/host/hub.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) -c $< -o $@
+	$(V) $(CC) $(CFLAGS) -c $< -o $@
 
 third_party_tinyusb_src_host_usbh.obj: ../third_party/tinyusb/src/host/usbh.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) -c $< -o $@
+	$(V) $(CC) $(CFLAGS) -c $< -o $@
 
 third_party_tinyusb_src_portable_mentor_musb_dcd_musb.obj: ../third_party/tinyusb/src/portable/mentor/musb/dcd_musb.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) -c $< -o $@
+	$(V) $(CC) $(CFLAGS) -c $< -o $@
 
 third_party_tinyusb_src_portable_mentor_musb_hcd_musb.obj: ../third_party/tinyusb/src/portable/mentor/musb/hcd_musb.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) -c $< -o $@
+	$(V) $(CC) $(CFLAGS) -c $< -o $@
 
 third_party_tinyusb_src_tusb.obj: ../third_party/tinyusb/src/tusb.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) -c $< -o $@
+	$(V) $(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME).out: $(OBJECTS)
 	@ echo linking $@
-	@ $(LNK) -Wl,-u,_c_int00 $(OBJECTS)  $(LFLAGS) -o $(NAME).out
+	$(V) $(LNK) -Wl,-u,_c_int00 $(OBJECTS)  $(LFLAGS) -o $(NAME).out
 
 clean:
 	@ echo Cleaning...
-	@ $(RM) $(OBJECTS) > $(DEVNULL) 2>&1
-	@ $(RM) $(NAME).out > $(DEVNULL) 2>&1
-	@ $(RM) $(NAME).map > $(DEVNULL) 2>&1
-	@ $(RM) $(SYSCFG_FILES)> $(DEVNULL) 2>&1
+	$(V) $(RM) $(OBJECTS) > $(DEVNULL) 2>&1
+	$(V) $(RM) $(NAME).out > $(DEVNULL) 2>&1
+	$(V) $(RM) $(NAME).map > $(DEVNULL) 2>&1
+	$(V) $(RM) $(call SLASH_FIXUP,$(SYSCFG_FILES)) > $(DEVNULL) 2>&1

@@ -69,7 +69,6 @@
         "
         sourceLookupPath="${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/driverlib"
         description="The level2 gauge solution utilizes the ADC and OPAs on MSPM0 for high precision voltage and current detection">
-
         <property name="buildProfile" value="release"/>
         <property name="isHybrid" value="true"/>
         <file path="../Driver/MSPM0Lxx_BSP.c" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="Driver">

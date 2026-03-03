@@ -68,7 +68,7 @@
             <RepFail>1</RepFail>
             <useFile>0</useFile>
             <ScatterFile>./mspm0h3216.sct</ScatterFile>
-            <Misc>../../../../../../source/ti/iqmath/lib/keil/m0p/rts/mspm0h321x/iqmath.a ../../../../../../source/ti/driverlib/lib/keil/m0p/mspm0h321x/driverlib.a</Misc>
+            <Misc>../../../../../../source/ti/driverlib/lib/keil/m0p/mspm0h321x/driverlib.a ../../../../../../source/ti/iqmath/lib/keil/m0p/rts/mspm0h321x/iqmath.a</Misc>
           </LDads>
         </TargetArmAds>
       </TargetOption>

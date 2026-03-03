@@ -22,7 +22,7 @@ To spin the BLDC motor with DRV8329AEVM the user needs to modify some jumpers on
 1. If using external ADC reference, apply the external reference voltage to PA22, which is accessible on the bottom header row of the Launchpad.
 2. Connect the LP-MSPM0H3216 to the DRV8329AEVM using jumper wires as shown in the table below. Refer to the schematic connector pinout for the locations of the DRV8329AEVM signals.
 
-.. figure:: images/schematic.png
+.. figure:: ../images/schematic.png
    :alt: 
 
 +---------------------+--------------+---------------+----------------+

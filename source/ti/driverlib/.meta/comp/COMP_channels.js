@@ -72,6 +72,7 @@ let COMP_POS_internalSignals = {
         COMP0: undefined,
         COMP1: undefined,
     },
+    MSPM0C511X: undefined,
 }
 
 let COMP_NEG_internalSignals = {
@@ -154,6 +155,7 @@ let COMP_NEG_internalSignals = {
         },
         COMP1: undefined,
     },
+        MSPM0C511X: undefined,
 }
 
 /* Pin Channels */

@@ -1528,31 +1528,6 @@ function calculateVoltage(inst, adcMemIdx){
     return calcVoltage/1000;
 }
 
-/*
- *  ======== getVDDAVoltage ========
- *  get VDDA reference voltage from Board module.
- *  requires Board module to be added.
- *
- *
- */
-function getVDDAVoltage(inst, adcMemIdx){
-
-    let vddaVoltage = 3.3;
-
-    /* VDDA voltage default to 5V for M0H321X */
-    if(Common.isDeviceFamily_PARENT_MSPM0H321X()) {
-        vddaVoltage = 5;
-    }
-
-    let vddaInstance = system.modules["/ti/driverlib/Board"];
-
-    if (vddaInstance && (vddaInstance.$static.configureVDDA == true)){
-        vddaVoltage = (vddaInstance.$static.voltageVDDA)
-    }
-
-    return vddaVoltage;
-}
-
 function getPinName(inst,adcMemIdx){
     let pinInfo =  "-"
     if(inst.peripheral.$solution){
@@ -1695,7 +1670,7 @@ function addADCMEMGroup(adcMemIdx, hiddenStatus){
             displayName : "VDDA",
             default     : "3.3V",
             getValue    : (inst) => {
-                let returnVoltage = Common.getUnitPrefix(getVDDAVoltage(inst,adcMemIdx)).str+"V";
+                let returnVoltage = Common.getUnitPrefix(Common.getVDDAVoltage()).str+"V";
                 return returnVoltage;
             },
             hidden      : hiddenStatus||Common.hasExpandedADCVRSEL(),

@@ -81,7 +81,10 @@ int main(void){
                DL_UART_transmitDataBlocking(UART_DAP_INST,FRAME_START_BYTE);
                /* Send channel number */
                DL_UART_transmitDataBlocking(UART_DAP_INST, Serial_Resp_receiveData | Resp_CMD_Channel_sensor_signal);
-               uint32_t payloadLen = ((gProperties[0]->value.u16)*getDataLen(gProperties[0]->type))*2;
+
+               /* 2 Axis current + voltage */
+               uint8_t numAxes = 2;
+               uint32_t payloadLen = numAxes * (gProperties[0]->value.u32) * getDataLen(gSensors[gPipelineConfig.sensorIndex[0]]->format);
 
                /* Send Payload length */               
                if(IN_RANGE(payloadLen, PAYLOAD_FIELD_1B_MIN_LEN, PAYLOAD_FIELD_1B_MAX_LEN)) 

@@ -31,6 +31,7 @@
             -march=thumbv6m
             -mfloat-abi=soft
             -mthumb
+            -Wall
         "
         linkerBuildOptions="
             -ldevice.cmd.genlibs
@@ -49,7 +50,6 @@
         "
         sourceLookupPath="${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/driverlib"
         description="ADC capture 1024 samples of a single channel at maximum sampling rate using the DMA and hardware averaging to achieve 14-bit resolution">
-
         <property name="buildProfile" value="release"/>
         <property name="isHybrid" value="true"/>
         <file path="../adc12_14bit_resolution.c" openOnCreation="false" excludeFromBuild="false" action="copy">

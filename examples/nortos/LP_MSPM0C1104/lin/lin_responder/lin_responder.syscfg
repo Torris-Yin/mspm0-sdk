@@ -49,5 +49,3 @@ uartLIN1.tbitVal                          = 9.5;
 uartLIN1.enabledInterrupts                = ["BREAK_ERROR","LINC0_MATCH","LIN_COUNTER_OVERFLOW","LIN_FALLING_EDGE"];
 uartLIN1.peripheral.rxPin.$assign         = "PA26";
 uartLIN1.peripheral.txPin.$assign         = "PA27";
-
-

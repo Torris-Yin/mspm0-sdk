@@ -67,8 +67,8 @@ const char *const gInferenceValues[TOTAL_INFERENCE_VALUES] = {"inference_result"
 
 PropertyInfo property1 = {
     .name = "samples",
-    .type = DATA_FORMAT_INT16,
-    .value.u16 = 0,  
+    .type = DATA_FORMAT_UINT32,
+    .value.u32 = 0,  
 };
 
 PropertyInfo* gProperties[TOTAL_PROPERTY_COUNT] = {&property1};

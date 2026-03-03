@@ -172,6 +172,19 @@ const ClockSignals = {
         "ROSC",
         ... commonClockSignals,
     ],
+    "MSPM0C511X": [
+        "MFPCLK",
+        "ADCCLK_1",
+        "RTCCLK",
+        "HFCLK",
+        "HFXT",
+        "LFXT",
+        "HSCLK",
+        "UDIV",
+        "ROSC",
+        "USBCLK",
+        ... commonClockSignals,
+    ],
 };
 
 const clkValidationSuperset = {
@@ -302,6 +315,13 @@ FCC to check for the validity of the SYSPLL frequency
             }
         )
     }
+
+/* USBCLK options vary per device */
+let USBCLKSourceOptions = [];
+if(ClockSignals[index].includes("SYSPLL")){
+    USBCLKSourceOptions.push({ name: "SYSPLLCLK1" });
+}
+USBCLKSourceOptions.push({ name: "USBFLL" });
 
 const clkConfigSuperset = {
     "SYSOSC": [
@@ -716,13 +736,10 @@ such as DAC.
             name: "USBCLKSource",
             displayName: "USBCLK Source",
             description: "Specifies the clock source of the USB Clock",
-            default: "SYSPLLCLK1",
+            default: USBCLKSourceOptions[0].name,
             // Check if USBCLK exists on device
             hidden: (!ClockSignals[index].includes("USBCLK")),
-            options: [
-                { name: "SYSPLLCLK1" },
-                { name: "USBFLL" },
-            ]
+            options: USBCLKSourceOptions,
         },
         {
             name: "enableUSBFLL",
@@ -770,7 +787,7 @@ such as DAC.
                         return inst.SYSPLLSource != "Disabled"? inst.SYSPLL_Freq_CLK2X : 0;
                         break;
                     case "USBFLL":
-                        return 60000000;
+                        return Common.getUSBFLLFreq();
                     default:
                         return 0;
                 }
@@ -800,6 +817,12 @@ such as DAC.
                 }
                 if(inst.CANCLKSource === "SYSPLLCLK1"){
                     return true;
+                }
+                if(ClockSignals[index].includes("USBCLK")){
+                    let USBMod = system.modules["/ti/driverlib/USB"];
+                    if (USBMod && (inst.USBCLKSource === "SYSPLLCLK1")){
+                        return true;
+                    }
                 }
                 return false;
             }
@@ -1392,7 +1415,7 @@ const clkFreqSuperset = {
                     case "SYSOSC":
                         return inst.MDIV == "DISABLE" ? inst.SYSOSC_Freq : inst.SYSOSC_Freq / parseInt(inst.MDIV);
                     case "HSCLK":
-                        if(Common.isDeviceM0G()){
+                        if(ClockSignals[index].includes("HSCLK")){
                             return inst.MDIV == "DISABLE" ? inst.HSCLK_Freq : inst.HSCLK_Freq / parseInt(inst.MDIV);
                         }
                         else{
@@ -1456,13 +1479,13 @@ const clkFreqSuperset = {
                 if(inst.clockTreeEn){
                     return system.clockTree["net_ulpclk"].in * 1000000;
                 }
-                if(Common.isDeviceM0G()){
+                if( ClockSignals[index].includes("UDIV") ){
                     return inst.MCLK_Freq / parseInt(inst.UDIV);
                 }
-                else if(Common.isDeviceM0L() || Common.isDeviceM0C() || Common.isDeviceM0H()){
+                else{
                     return inst.MCLK_Freq;
                 }
-                else return 0;
+                return 0;
             }
         },
         { name: "ULPCLK_Freq_unit", displayName: "ULPCLK", default: "32 MHz", readOnly: true, getValue: (inst)=>{return (Common.getUnitPrefix(inst.ULPCLK_Freq)).str+"Hz"}},
@@ -1489,13 +1512,19 @@ const clkFreqSuperset = {
                 if(inst.clockTreeEn){
                     return system.clockTree["net_usbclk"].in * 1000000;
                 }else{
-                    if(inst.USBCLKSource == "SYSPLLCLK1")
-                    {
-                        return inst.SYSPLL_Freq_CLK1;
-                    }else if(inst.USBCLKSource == "USBFLL"){
-                        return 60000000;
-                    }else{
-                        return 0;
+                    if( ClockSignals[index].includes("SYSPLL") ){
+                        if(inst.USBCLKSource == "SYSPLLCLK1")
+                        {
+                            return inst.SYSPLL_Freq_CLK1;
+                        }else if(inst.USBCLKSource == "USBFLL"){
+                            return Common.getUSBFLLFreq();
+                        }else{
+                            return 0;
+                        }
+                    }
+                    else{
+                        // Without SYSPLL, USBCLK defaults to USBFLL
+                        return Common.getUSBFLLFreq();
                     }
                 }
             }},

@@ -42,8 +42,9 @@ DL_OPA_GAIN DL_OPA_increaseGain(OA_Regs *opa)
     if (currentGain == DL_OPA_GAIN_N31_P32) {
         return DL_OPA_GAIN_N31_P32;
     } else {
-        DL_OPA_setGain(opa,
-            (uint32_t)(currentGain + (((uint32_t) 0x1) << OA_CFG_GAIN_OFS)));
+        DL_OPA_setGain(
+            opa, (DL_OPA_GAIN)(
+                     currentGain + (((uint32_t) 0x1) << OA_CFG_GAIN_OFS)));
         return DL_OPA_getGain(opa);
     }
 }
@@ -56,8 +57,9 @@ DL_OPA_GAIN DL_OPA_decreaseGain(OA_Regs *opa)
     if (currentGain == DL_OPA_GAIN_N1_P2) {
         return DL_OPA_GAIN_N1_P2;
     } else {
-        DL_OPA_setGain(opa,
-            (uint32_t)(currentGain - (((uint32_t) 0x1) << OA_CFG_GAIN_OFS)));
+        DL_OPA_setGain(
+            opa, (DL_OPA_GAIN)(
+                     currentGain - (((uint32_t) 0x1) << OA_CFG_GAIN_OFS)));
         return DL_OPA_getGain(opa);
     }
 }

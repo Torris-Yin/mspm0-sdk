@@ -171,7 +171,7 @@ int main(void)
             {
                 if_map[0][i][0][0] = totalFeatures[i];
             }
-            
+
             /* Run Inference */
             tvmgen_default_run(&tvm_if_map, &tvm_of_map);
 
@@ -204,9 +204,9 @@ void ADC12_0_INST_IRQHandler(void)
                 /* Reset the flag */
                 ADC_bufferState[prodBufferIndex] = false;
                 dataIndex = 0;
-            }            
+            }
             break;
-            
+
         default:
             break;
     }

@@ -58,6 +58,13 @@
     *(((unsigned char *)(ptr)) + 1) = (((num) >> 8) & 0xFF);                  \
 }
 
+// Forward declarations
+int checkFileExtension(const char *filename);
+unsigned long CalculateCRC32OnBuffer(unsigned char *data, unsigned long length);
+unsigned long CalculateCRC32(unsigned char* data, unsigned long length);
+unsigned long CalculateFileChecksum(char *filename);
+int ParseTextFileToBuffer(char *filename, unsigned char *buffer, int maxSize);
+
 //structure to get command code from command string
 typedef struct {
     char *name;
@@ -93,7 +100,7 @@ CommandMap commandMap[] = {
 //USB identifiers
 unsigned short g_usVendorID  = 0x2047;    
 unsigned short g_usProductID = 0x0210;    
-unsigned short g_usDeviceID  = 0x0001;
+unsigned short g_usDeviceID  = 0x0110;
 
 char *g_inputFile    = "empty.bin";   //input name(image file)
 unsigned long g_inputFileSize = 0;
@@ -103,6 +110,8 @@ int fileType=0;  //0 - not supported 1 - txt 2 - bin
 int g_logsEnabled = 0;    //disabled by default
 int sendFile=1;          //send file to device after processing, enabled by default pass -s flag to just wrap
 int sendStatus=0;       //flag to stop readback if the download request fails
+int g_checksumEnabled = 0;   //checksum validation flag, disabled by default
+unsigned long g_expectedChecksum = 0;  //expected checksum value for validation
 
 //DFU prefix and suffix
 unsigned char *g_pcDFUPrefix=NULL;        
@@ -163,6 +172,11 @@ void showHelp(void) {
     printf("  -p <product_id>   Product ID in hex format (default: 0x0210)\n");
     printf("  -v                Enable verbose logging\n");
     printf("  -s                Only wrap file, do not send to device\n");
+    printf("  -m                Calculate and display checksum of input file\n");
+    printf("  -k <checksum>     Verifies the checksum of the input or output file against the <checksum>,Expected checksum value in hex format (e.g., 0x1234ABCD)\n");
+    printf("                    For programming: Operation will halt, if input file checksum doesn't match with the expected value.\n");
+    printf("                    For readback: Data will be read from memory and checksum is calculated on the output file and verified against the expected value\n");
+    printf("                    For output files (readback): Will verify and report if match/mismatch\n");
     printf("  -h                Show this help message\n\n");
 
     printf("Supported Commands:\n");
@@ -198,7 +212,16 @@ void showHelp(void) {
     printf("  - For .bin input, address (-a) is required for programming.\n");
     printf("  - Output file (-o) is required for readback and recommended for other commands.\n");
     printf("  - Use -s to only wrap the file without sending to the device.\n");
-    printf("  - Verbose output can be enabled with -v for debugging.\n\n");
+    printf("  - Verbose output can be enabled with -v for debugging.\n");
+    printf("  - Use -m to calculate and display CRC32 checksum of input file for validation.\n");
+    printf("  - Use -k <checksum> to validate files against an expected checksum:\n");
+    printf("    * For programming: Operation will halt, if input file checksum doesn't match with the expected value.\n");
+    printf("    * For readback: Data will be read from memory and checksum is calculated on the output file and verified against the expected value\n");
+    printf("    * Checksums are calculated on the actual binary data content for both .bin and .txt files.\n");
+    printf("    * This ensures consistent checksum values regardless of file format.\n");
+    printf("  - Example usages for checksum verification:\n");
+    printf("    * Programming: hostutility -c CMD_PROGRAM_DATA -i firmware.bin -a 0x8000 -k 0x1234ABCD\n");
+    printf("    * Memory readback: hostutility -c CMD_MEMORY_READ_BACK -a 0x8000 -l 0x1000 -o readback.bin -k 0x1234ABCD\n\n");
 }
 
 // Converts bin to text format
@@ -346,12 +369,19 @@ void setPrefix(Command C){
 unsigned long
 CalculateCRC32(unsigned char* data, unsigned long length)
 {
-    unsigned long ii, jj, byte, crc, mask;;
-    unsigned long CRC32_POLY = 0xEDB88320; 
+    // Use our common implementation
+    return CalculateCRC32OnBuffer(data, length);
+}
+
+// Calculate CRC32 on binary data buffer
+unsigned long CalculateCRC32OnBuffer(unsigned char *data, unsigned long length)
+{
+    unsigned long ii, jj, byte, crc, mask;
+    unsigned long CRC32_POLY = 0xEDB88320;
 
     crc = 0xFFFFFFFF;
 
-    for(ii=0;ii<length;ii++)
+    for(ii=0; ii<length; ii++)
     {
         byte = data[ii];
         crc = crc ^ byte;
@@ -361,10 +391,169 @@ CalculateCRC32(unsigned char* data, unsigned long length)
             mask = -(crc & 1);
             crc = (crc >> 1) ^ (CRC32_POLY & mask);
         }
-
     }
 
     return crc;
+}
+
+// Parse a text file containing hex values and extract the binary data
+// Returns number of bytes extracted or -1 on error
+// For input files, excludes address line at start and 'q' at end for CRC calculation
+int ParseTextFileToBuffer(char *filename, unsigned char *buffer, int maxSize)
+{
+    FILE *fh = fopen(filename, "r");
+    if (!fh) {
+        printf("Error: Could not open file %s for parsing\n", filename);
+        return -1;
+    }
+
+    char line[1024];
+    int byteCount = 0;
+    int lineNum = 0;
+
+    // Read the file line by line
+    while (fgets(line, sizeof(line), fh) && byteCount < maxSize) {
+        lineNum++;
+
+        // Skip lines starting with '@' (address markers in text files)
+        if (line[0] == '@') {
+            continue;
+        }
+
+        // Skip lines containing just 'q' (end marker in text files)
+        if (line[0] == 'q' && (line[1] == '\n' || line[1] == '\r' || line[1] == '\0')) {
+            continue;
+        }
+
+        // Process each token (hex byte) in the line
+        char *token = strtok(line, " \t\n\r");
+        while (token && byteCount < maxSize) {
+            // Skip 'q' token if it's at the end of the file
+            if (strcmp(token, "q") == 0) {
+                continue;
+            }
+
+            // Convert hex string to byte
+            unsigned int value;
+            if (sscanf(token, "%x", &value) == 1) {
+                if (value > 0xFF) {
+                    printf("Warning: Invalid byte value 0x%X at line %d, truncating to 0xFF\n", value, lineNum);
+                    value = 0xFF;
+                }
+                buffer[byteCount++] = (unsigned char)value;
+            } else {
+                printf("Warning: Invalid hex value '%s' at line %d, skipping\n", token, lineNum);
+            }
+
+            // Get next token
+            token = strtok(NULL, " \t\n\r");
+        }
+    }
+
+    fclose(fh);
+    return byteCount;
+}
+
+// Calculate checksum of a file's content (handles both binary and text files)
+// Returns the checksum value, or 0xFFFFFFFF if file cannot be opened or processed
+// For text files, excludes address lines and 'q' markers from CRC calculation
+unsigned long CalculateFileChecksum(char *filename)
+{
+    int fileExt = checkFileExtension(filename);
+    unsigned char *buffer;
+    unsigned long checksum = 0xFFFFFFFF;
+
+    if (fileExt == fileTypeBin) {
+        // Handle binary file directly
+        FILE *fh = fopen(filename, "rb");
+        if (!fh) {
+            printf("Error: Could not open file %s for checksum calculation\n", filename);
+            return checksum;
+        }
+
+        // Get file size
+        fseek(fh, 0, SEEK_END);
+        long fileSize = ftell(fh);
+        fseek(fh, 0, SEEK_SET);
+
+        // Allocate buffer for entire file
+        buffer = (unsigned char *)malloc(fileSize);
+        if (!buffer) {
+            printf("Error: Memory allocation failed for file %s\n", filename);
+            fclose(fh);
+            return checksum;
+        }
+
+        // Read file into buffer
+        if (fread(buffer, 1, fileSize, fh) != fileSize) {
+            printf("Error: Could not read entire file %s\n", filename);
+            free(buffer);
+            fclose(fh);
+            return checksum;
+        }
+
+        // Calculate checksum on buffer
+        checksum = CalculateCRC32OnBuffer(buffer, fileSize);
+
+        free(buffer);
+        fclose(fh);
+    }
+    else if (fileExt == fileTypeTxt) {
+        // Handle text file by parsing hex values
+        buffer = (unsigned char *)malloc(1024 * 1024);  // Allocate 1MB buffer (adjust as needed)
+        if (!buffer) {
+            printf("Error: Memory allocation failed for parsing text file\n");
+            return checksum;
+        }
+
+        // Parse text file and extract binary data
+        // This will automatically exclude address lines starting with '@' and 'q' markers
+        // as configured in ParseTextFileToBuffer
+        int byteCount = ParseTextFileToBuffer(filename, buffer, 1024 * 1024);
+        if (byteCount <= 0) {
+            printf("Error: Failed to parse text file %s or file is empty\n", filename);
+            free(buffer);
+            return checksum;
+        }
+
+        // Calculate checksum only on the actual data bytes
+        checksum = CalculateCRC32OnBuffer(buffer, byteCount);
+
+        free(buffer);
+    }
+    else {
+        printf("Error: Unsupported file format for checksum calculation\n");
+    }
+
+    return checksum;
+}
+
+// Verify file checksum against expected value
+// Returns 1 if checksum matches or no expected checksum provided, 0 if mismatch
+int VerifyFileChecksum(char *filename)
+{
+    // Skip verification if checksum validation is not enabled
+    if (!g_checksumEnabled || g_expectedChecksum == 0) {
+        return 1;
+    }
+
+    // Calculate actual checksum
+    unsigned long actualChecksum = CalculateFileChecksum(filename);
+
+    // Display both checksums
+    printf("Input file: %s\n", filename);
+    printf("Calculated checksum: 0x%08lX\n", actualChecksum);
+    printf("Expected checksum:   0x%08lX\n", g_expectedChecksum);
+
+    // Compare checksums
+    if (actualChecksum != g_expectedChecksum) {
+        printf("ERROR: Checksum verification failed! File may be corrupted or modified.\n");
+        printf("Operation halted for safety.\n");
+        return 0;
+    }
+
+    printf("Checksum verification successful.\n");
+    return 1;
 }
 
 
@@ -411,7 +600,7 @@ ParseCommandLine(int argc, char *argv[])
         showHelp();
         return 0;
     }
-        iRetcode = getopt(argc, argv, "c:i:a:e:o:d:p:l:hvs");
+        iRetcode = getopt(argc, argv, "c:i:a:e:o:d:p:l:hvsmk:");
 
         if(iRetcode == -1)
         {
@@ -445,7 +634,23 @@ ParseCommandLine(int argc, char *argv[])
             case 's':   //disable sending file to device after processing
                 sendFile = 0;
                 break;
-            case 'h':  
+            case 'm':   //enable checksum validation for input file
+                g_checksumEnabled = 1;
+                break;
+            case 'k':   //expected checksum value for validation
+                if (!optarg || *optarg == '\0' || *optarg == '-') {
+                    printf("Error: -k option requires a valid checksum value in hexadecimal format.\n");
+                    printf("Example: -k 0x1234ABCD or -k 1234ABCD\n");
+                    exit(1);
+                }
+                g_expectedChecksum = (unsigned long)strtoul(optarg, NULL, 16);
+                if (g_expectedChecksum == 0) {
+                    printf("Warning: Expected checksum is 0x00000000. This might not be intentional.\n");
+                    printf("If you intended to provide a non-zero checksum, make sure the format is correct.\n");
+                }
+                g_checksumEnabled = 1;  // Automatically enable checksum validation
+                break;
+            case 'h':
                 showHelp();
                 break;
             case 'p':  //product id
@@ -596,6 +801,25 @@ void uploadRequest(char *filename, int file_type) {
             copyFile(tempbinfile, filename);
         }
     }
+
+    // Verify output file checksum only for read_back and programming commands if an expected checksum was provided
+    if ((currentCommand == CMD_MEMORY_READ_BACK) &&
+        g_checksumEnabled && g_expectedChecksum != 0) {
+        printf("\n--- Output File Checksum Verification ---\n");
+        unsigned long outputFileChecksum = CalculateFileChecksum(filename);
+        printf("Output file: %s\n", filename);
+        printf("Calculated checksum: 0x%08lX\n", outputFileChecksum);
+        printf("Expected checksum:   0x%08lX\n", g_expectedChecksum);
+
+        if (outputFileChecksum == g_expectedChecksum) {
+            printf("Output file checksum verification SUCCESSFUL.\n");
+        } else {
+            printf("WARNING: Output file checksum verification FAILED!\n");
+            printf("The output file does not match the expected checksum.\n");
+            printf("This might indicate data corruption or unexpected content.\n");
+        }
+        printf("----------------------------------------\n\n");
+    }
 }
 
 //Parsing the txt file functions
@@ -653,10 +877,21 @@ void parseInputFile(char *filename) {
 
             // Add a new block
             addBlock(addr);
-        } else if (blockCount > 0) {
+        }
+        // Skip lines containing just 'q' (end marker in text files)
+        else if (line[0] == 'q' && (line[1] == '\n' || line[1] == '\r' || line[1] == '\0')) {
+            continue;
+        }
+        else if (blockCount > 0) {
             // Tokenize the line
             char *token = strtok(line, " \n\r");
             while (token) {
+                // Skip 'q' token if it's at the end of the file
+                if (strcmp(token, "q") == 0) {
+                    token = strtok(NULL, " \n\r");
+                    continue;
+                }
+
                 // Convert the token to a byte
                 unsigned int byte;
                 if (sscanf(token, "%x", &byte) == 1) {
@@ -795,6 +1030,17 @@ void handleTxt(void) {
     unsigned long ulFileLen;
     int num = 0;
 
+    // Only verify checksum for read_back and programming commands
+    if ((currentCommand == CMD_PROGRAM_DATA) && g_checksumEnabled) {
+        // Verify checksum if expected checksum is provided
+        if (g_expectedChecksum != 0) {
+            if (!VerifyFileChecksum(g_inputFile)) {
+                // Exit the function if checksum verification fails
+                return;
+            }
+        }
+    }
+
     parseInputFile(g_inputFile);
 
     // For password commands, only one block should be present
@@ -883,6 +1129,19 @@ void handleBin(void) {
     if (g_ulAddress == -1 && fileType == fileTypeBin && currentCommand == CMD_PROGRAM_DATA) {
         printf("You need to provide address\n");
         return;
+    }
+
+    // Skip checksum for empty.bin (used for factory reset) and only verify for read_back and programming commands
+    if (strcmp(g_inputFile, "empty.bin") != 0 &&
+        (currentCommand == CMD_PROGRAM_DATA) &&
+        g_checksumEnabled) {
+        // Verify checksum if expected checksum is provided
+        if (g_expectedChecksum != 0) {
+            if (!VerifyFileChecksum(g_inputFile)) {
+                // Exit the function if checksum verification fails
+                return;
+            }
+        }
     }
 
     unsigned long ulFileLen;
@@ -1006,6 +1265,21 @@ int main(int argc, char *argv[]) {
 
     iRetcode = ParseCommandLine(argc, argv);
     if (argc == 1) return 0;
+
+    // Handle standalone checksum calculation/verification if only -m/-k flag and -i are provided
+    if ((g_checksumEnabled || g_expectedChecksum != 0) && g_inputFile && strcmp(g_inputFile, "empty.bin") != 0 && currentCommand == 0) {
+        // If expected checksum is provided, verify against it
+        if (g_expectedChecksum != 0) {
+            VerifyFileChecksum(g_inputFile);
+        }
+        // Otherwise just calculate and display checksum
+        else {
+            unsigned long fileChecksum = CalculateFileChecksum(g_inputFile);
+            printf("File: %s\n", g_inputFile);
+            printf("Checksum (CRC32): 0x%08lX\n", fileChecksum);
+        }
+        return 0;
+    }
 
     fileType = checkFileExtension(g_inputFile);
     // Check for required input file for specific commands

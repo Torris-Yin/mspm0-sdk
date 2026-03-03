@@ -38,6 +38,7 @@
             -march=thumbv6m
             -mfloat-abi=soft
             -mthumb
+            -Wall
         "
         linkerBuildOptions="
             -i${WORKSPACE_LOC}/freertos_builds_LP_MSPM0G3519_release_ticlang/Debug
@@ -58,7 +59,6 @@
         "
         sourceLookupPath="${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/driverlib"
         description="Simple Posix FreeRTOS blinky LED demo">
-
         <property name="buildProfile" value="release"/>
         <property name="isHybrid" value="true"/>
         <file path="../../main.c" openOnCreation="false" excludeFromBuild="false" action="copy">

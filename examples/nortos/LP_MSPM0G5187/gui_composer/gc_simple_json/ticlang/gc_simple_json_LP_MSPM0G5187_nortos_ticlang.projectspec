@@ -31,6 +31,7 @@
             -march=thumbv6m
             -mfloat-abi=soft
             -mthumb
+            -Wall
         "
         linkerBuildOptions="
             -l${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/gui_composer/lib/ticlang/m0p/gui_composer.a
@@ -50,7 +51,6 @@
         "
         sourceLookupPath="${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/driverlib"
         description="Demonstrates basic usage of GUI Composer communication using JSON-formatted strings">
-
         <property name="buildProfile" value="release"/>
         <property name="isHybrid" value="true"/>
         <file path="../HAL_UART_M0G5187.c" openOnCreation="false" excludeFromBuild="false" action="copy">

@@ -2,6 +2,7 @@ MSPM0_SDK_INSTALL_DIR ?= $(abspath ../../../../../..)
 
 include $(MSPM0_SDK_INSTALL_DIR)/imports.mak
 
+ASM = "$(IAR_ARMCOMPILER)/bin/iasmarm"
 CC = "$(IAR_ARMCOMPILER)/bin/iccarm"
 LNK = "$(IAR_ARMCOMPILER)/bin/ilinkarm"
 
@@ -14,8 +15,25 @@ SYSCFG_C_FILES = $(filter %.c,$(SYSCFG_FILES))
 SYSCFG_H_FILES = $(filter %.h,$(SYSCFG_FILES))
 SYSCFG_OPT_FILES = $(filter %.opt,$(SYSCFG_FILES))
 
+# Enable verbose output by setting VERBOSE=1
+V := @
+ifeq ($(VERBOSE), 1)
+  V :=
+endif
+
 OBJECTS = mcan_message_rx_tcan114x.obj ti_boosterpacks_tcan114x_tcan114x.obj ti_boosterpacks_tcan114x_tcan114x_spi.obj ti_boosterpacks_tcan114x_tcan114x_wdt.obj iar_startup_mspm0g350x_iar.obj $(patsubst %.c,%.obj,$(notdir $(SYSCFG_C_FILES)))
+SYSCFG_ASM_FILES = $(filter %.s,$(SYSCFG_FILES))
+OBJECTS += $(patsubst %.s,%.obj,$(notdir $(SYSCFG_ASM_FILES)))
+
+
 NAME = mcan_message_rx_tcan114x
+
+AFLAGS += -I.. \
+    -S \
+    --endian little \
+    --thumb \
+    "-I$(IAR_ARMCOMPILER)/inc/c" \
+    --cpu Cortex-M0+
 
 CFLAGS += -I.. \
     -I. \
@@ -50,7 +68,7 @@ $(SYSCFG_FILES): syscfg
 
 syscfg: ../mcan_message_rx_tcan114x.syscfg
 	@ echo Generating configuration files...
-	@ $(SYSCFG_CMD_STUB) --output $(@D) $<
+	$(V) $(SYSCFG_CMD_STUB) --output $(@D) $<
 
 
 # Helpful hint that the user needs to use a standalone SysConfig installation
@@ -62,43 +80,51 @@ $(SYSCONFIG_GUI_TOOL):
 
 syscfg-gui: ../mcan_message_rx_tcan114x.syscfg $(SYSCONFIG_GUI_TOOL)
 	@ echo Opening SysConfig GUI
-	@ $(SYSCFG_GUI_CMD_STUB) $<
+	$(V) $(SYSCFG_GUI_CMD_STUB) $<
+
+define ASM_RULE
+$(basename $(notdir $(1))).obj: $(1)
+	@ echo Building $$@
+	$(V) $(ASM) $(AFLAGS) $$< -o $$@
+endef
+
+$(foreach asm_file,$(SYSCFG_ASM_FILES),$(eval $(call ASM_RULE,$(asm_file))))
 
 define C_RULE
 $(basename $(notdir $(1))).obj: $(1) $(SYSCFG_H_FILES)
 	@ echo Building $$@
-	@ $(CC) $(CFLAGS) $$< -o $$@
+	$(V) $(CC) $(CFLAGS) $$< -o $$@
 endef
 
 $(foreach c_file,$(SYSCFG_C_FILES),$(eval $(call C_RULE,$(c_file))))
 
 mcan_message_rx_tcan114x.obj: ../mcan_message_rx_tcan114x.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) $< -o $@
+	$(V) $(CC) $(CFLAGS) $< -o $@
 
 ti_boosterpacks_tcan114x_tcan114x.obj: ../ti/boosterpacks/tcan114x/tcan114x.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) $< -o $@
+	$(V) $(CC) $(CFLAGS) $< -o $@
 
 ti_boosterpacks_tcan114x_tcan114x_spi.obj: ../ti/boosterpacks/tcan114x/tcan114x_spi.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) $< -o $@
+	$(V) $(CC) $(CFLAGS) $< -o $@
 
 ti_boosterpacks_tcan114x_tcan114x_wdt.obj: ../ti/boosterpacks/tcan114x/tcan114x_wdt.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) $< -o $@
+	$(V) $(CC) $(CFLAGS) $< -o $@
 
 iar_startup_mspm0g350x_iar.obj: ../iar/startup_mspm0g350x_iar.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) $< -o $@
+	$(V) $(CC) $(CFLAGS) $< -o $@
 
 $(NAME).out: $(OBJECTS)
 	@ echo linking $@
-	@ $(LNK)  $(OBJECTS)  $(LFLAGS) -o $(NAME).out
+	$(V) $(LNK)  $(OBJECTS)  $(LFLAGS) -o $(NAME).out
 
 clean:
 	@ echo Cleaning...
-	@ $(RM) $(OBJECTS) > $(DEVNULL) 2>&1
-	@ $(RM) $(NAME).out > $(DEVNULL) 2>&1
-	@ $(RM) $(NAME).map > $(DEVNULL) 2>&1
-	@ $(RM) $(SYSCFG_FILES)> $(DEVNULL) 2>&1
+	$(V) $(RM) $(OBJECTS) > $(DEVNULL) 2>&1
+	$(V) $(RM) $(NAME).out > $(DEVNULL) 2>&1
+	$(V) $(RM) $(NAME).map > $(DEVNULL) 2>&1
+	$(V) $(RM) $(call SLASH_FIXUP,$(SYSCFG_FILES)) > $(DEVNULL) 2>&1

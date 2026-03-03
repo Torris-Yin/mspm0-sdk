@@ -19,6 +19,7 @@ let CRC_polynomial32Support = {
     MSPM0L210X: false,
     MSPM0GX218_GX207: true,
     MSPM0G122X: true,
+    MSPM0C511X: false,
 };
 
 let index = Common.getDeviceFamily();

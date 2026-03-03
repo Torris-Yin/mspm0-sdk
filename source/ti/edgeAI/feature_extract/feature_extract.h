@@ -41,11 +41,12 @@
 #include "arm_const_structs.h"
 #include "arm_math.h"
 
-
+#if defined(FE_RFFT) || defined(FE_COMPLEX_MAG_SCALE) || defined(FE_DC_REM) || defined(FE_MAG) || defined(FE_BIN) ||defined(FE_PIR_Q15)
 q15_t scratchBuffer1[2*FE_FRAME_SIZE];
 q15_t scratchBuffer2[2*FE_FRAME_SIZE];
+#endif
 
-#if defined(FE_RFFT) || defined(FE_PIR)
+#if defined(FE_RFFT) || defined(FE_PIR_Q15)
 arm_rfft_instance_q15 varInstRfftQ15;
 #endif
 

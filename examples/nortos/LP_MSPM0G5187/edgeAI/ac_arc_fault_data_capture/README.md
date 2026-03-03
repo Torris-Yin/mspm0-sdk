@@ -1,21 +1,6 @@
 ## Example Summary
 
-This example demonstrates the process of capturing timeseries data from MSPM0 devices using EdgeAI Studio. This example captures AC current and voltage waveforms using an ADC channel 4 and channel 2 respectively, converts the samples to Q15 format, and streams the data to EdgeAI Studio for data acquisition.
-
-
-## Peripherals, Pin Functions, MCU Pins, Launchpad Pins
-| Peripheral | Function | MCU Pin | Launchpad Pin | Launchpad Settings |
-| --- | --- | --- | --- | --- |
-| TIMG0 |  |  |  |  |
-| UC3 | RX Pin | PA13 | Back-Channel UART RXD |  |
-| UC3 | TX Pin | PA10 | Back-Channel UART TXD |  |
-| ADC0 | ADC12 Channel 4 Pin | PB25 | J1_8 |  |
-| ADC0 | ADC12 Channel 2 Pin | PA25 | J1_2 |  |
-| EVENT |  |  |  |  |
-| DMA |  |  |  |  |
-| CRCP |  |  |  |  |
-| BOARD | Debug Clock | PA20 | J101_16 |  |
-| BOARD | Debug Data In Out | PA19 | J101_14 |  |
+This example demonstrates the process of capturing timeseries data from MSPM0 devices using CCStudio™ Edge AI Studio. This example captures AC current and voltage waveforms using an ADC channel 8 and channel 2 respectively, converts the samples to Q15 format, and streams the data to CCStudio™ Edge AI Studio for data acquisition.
 
 ### Device Migration Recommendations
 This project was developed for a superset device included in the MSPM0 LaunchPad. Please
@@ -29,19 +14,23 @@ pullup/pulldown resistor.
 
 SysConfig allows developers to easily configure unused pins by selecting **Board**→**Configure Unused Pins**.
 
-For more information about jumper configuration to achieve low-power using the
-MSPM0 LaunchPad, please visit the LP-MSPM0G5187 User's Guide.
+For more information about jumper configuration to achieve low-power using the MSPM0 LaunchPad, please visit the [LP-MSPM0G5187 User's Guide](https://www.ti.com/lit/slau967).
+
+## Hardware Requirements
+
+1. LP-MSPM0G5187 LaunchPad
 
 ## Example Usage
 
 To capture data:
-1. Configure the serial port in EdgeAI Studio. Confirm that the port and baud rate (5820000 bps) are selected to match the device's UART baudrate.
-2. Before capturing, check the status bar in EdgeAI studio for the message "**Hardware connected**"
+1. Configure the serial port in CCStudio™ Edge AI Studio. Confirm that the port and baud rate (5820000 bps) are selected to match the device's UART baudrate.
+2. Before capturing, check the status bar in CCStudio™ Edge AI Studio for the message "**Hardware connected**"
 3. Navigate to the **Capture** tab
     1. Specify the number of samples to capture and a label for the dataset.
-    2. click **Start Capture** to start data acquistion.
+    2. Click **Start Capture** to start data acquisition.
 
 ## References
 
+- [AFCI ModelZoo Example](https://github.com/TexasInstruments/tinyml-tensorlab/tree/r1.3/tinyml-modelzoo/examples/ac_arc_fault)
 - MSPM0G5187 Technical Reference Manual [Link](https://www.ti.com/product/MSPM0G5187)
 - EdgeAI Software Guide: SDK_INSTALL_DIR/docs/english/middleware/edgeAI/MSPM0_EdgeAI_User_Guide.html

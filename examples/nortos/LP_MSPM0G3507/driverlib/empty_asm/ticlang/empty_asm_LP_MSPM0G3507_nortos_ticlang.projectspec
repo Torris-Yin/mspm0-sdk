@@ -16,14 +16,13 @@
         toolChain="TICLANG"
         connection="TIXDS110_Connection.xml"
         device="MSPM0G3507"
-        ignoreDefaultDeviceSettings="true"
+        ignoreDefaultDeviceSettings="false"
         ignoreDefaultCCSSettings="true"
-        products="MSPM0-SDK;sysconfig"
+        products="MSPM0-SDK"
         compilerBuildOptions="
             -I${PROJECT_ROOT}
-            -I${PROJECT_ROOT}/${ConfigName}
+            -D__MSPM0G3507__
             -O2
-            @device.opt
             -I${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/third_party/CMSIS/Core/Include
             -I${COM_TI_MSPM0_SDK_INSTALL_DIR}/source
             -gdwarf-3
@@ -31,25 +30,19 @@
             -march=thumbv6m
             -mfloat-abi=soft
             -mthumb
+            -Wall
         "
         linkerBuildOptions="
-            -ldevice.cmd.genlibs
+            -l${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/driverlib/lib/ticlang/m0p/mspm0g1x0x_g3x0x/driverlib.a
             -L${COM_TI_MSPM0_SDK_INSTALL_DIR}/source
             -L${PROJECT_ROOT}
-            -L${PROJECT_BUILD_DIR}/syscfg
             -Wl,--rom_model
             -Wl,--warn_sections
             -L${CG_TOOL_ROOT}/lib
             -llibc.a
         "
-        sysConfigBuildOptions="
-            --output .
-            --product ${COM_TI_MSPM0_SDK_INSTALL_DIR}/.metadata/product.json
-            --compiler ticlang
-        "
         sourceLookupPath="${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/driverlib"
         description="Empty example with assembly file to be used as a starting point for new development">
-
         <property name="buildProfile" value="release"/>
         <property name="isHybrid" value="true"/>
         <file path="../empty_asm.asm" openOnCreation="false" excludeFromBuild="false" action="copy">
@@ -57,8 +50,6 @@
         <file path="../README.md" openOnCreation="true" excludeFromBuild="false" action="copy">
         </file>
         <file path="../README.html" openOnCreation="false" excludeFromBuild="false" action="copy">
-        </file>
-        <file path="../empty_asm.syscfg" openOnCreation="true" excludeFromBuild="false" action="copy">
         </file>
     </project>
 </projectSpec>

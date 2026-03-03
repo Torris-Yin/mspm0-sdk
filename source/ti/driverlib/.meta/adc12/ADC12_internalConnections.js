@@ -124,6 +124,13 @@ let ADC12_internalSignals = {
             CH31: "Supply Monitor",
         }
     },
+    MSPM0C511X: {
+        ADC0: {
+            CH28: "Internal VREF",
+            CH29: "Temperature Sensor",
+            CH31: "Supply/Battery Monitor",
+        }
+    }
 
 
 }
@@ -151,6 +158,7 @@ let ADC12_adcMemRange = {
     MSPM0L210X          : 11,
     MSPM0GX218_GX207    : 11,
     MSPM0G122X          : 11,
+    MSPM0C511X          : 11,
 }
 
 /*

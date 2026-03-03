@@ -65,7 +65,6 @@
         "
         sourceLookupPath="${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/driverlib"
         description="I2C Target receives I2C transmissions and sends them on requested I2C interface">
-
         <property name="buildProfile" value="release"/>
         <property name="isHybrid" value="true"/>
         <file path="../i2c_expander.c" openOnCreation="false" excludeFromBuild="false" action="copy">

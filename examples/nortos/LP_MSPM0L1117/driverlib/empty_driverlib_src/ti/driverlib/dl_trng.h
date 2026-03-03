@@ -247,7 +247,7 @@ __STATIC_INLINE void DL_TRNG_disablePower(TRNG_Regs *trng)
  */
 __STATIC_INLINE bool DL_TRNG_isPowerEnabled(TRNG_Regs *trng)
 {
-    return ((TRNG->GPRCM.PWREN & TRNG_PWREN_ENABLE_MASK) ==
+    return ((trng->GPRCM.PWREN & TRNG_PWREN_ENABLE_MASK) ==
             TRNG_PWREN_ENABLE_ENABLE);
 }
 

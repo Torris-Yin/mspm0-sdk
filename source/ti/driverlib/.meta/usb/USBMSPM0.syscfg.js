@@ -145,6 +145,14 @@ let clockConfig = {
     ],
 };
 
+/* Mode Options vary per device */
+let modeOptions = [
+    { name: "device",   displayName: "Device"},
+];
+if(Common.isUSBHostModeSupported()){
+    modeOptions.push({ name: "host",     displayName: "Host"});
+}
+
 /* PROFILES CONFIGURATION */
 let modConfig = [
     /* Show selected peripheral below instance name */
@@ -167,10 +175,7 @@ let modConfig = [
         name: "mode",
         displayName: "Mode",
         default: "device",
-        options: [
-            { name: "device",   displayName: "Device"},
-            { name: "host",     displayName: "Host"},
-        ],
+        options: modeOptions,
         // onChange: onChangeMode,
     },
     deviceConfig,
@@ -212,6 +217,21 @@ function moduleInstances(inst){
 
 }
 
+// Peripheral IP can vary per device
+let peripherals = Object.keys(system.deviceData.peripherals);
+let maxPeripheralCount = 0;
+let peripheralIPName = undefined;
+if(/USBLC/.test(peripherals)){
+    maxPeripheralCount = Common.peripheralCount("USBLC");
+    peripheralIPName = "USBLC";
+}
+else if(/USB/.test(peripherals)){
+    maxPeripheralCount = Common.peripheralCount("USB");
+    peripheralIPName = "USB";
+}
+
+
+
 /*
  *  ======== devSpecific ========
  *  Device-specific extensions to be added to base module configuration
@@ -221,7 +241,7 @@ let devSpecific = {
     config: modConfig,
 
 
-    maxInstances: Common.peripheralCount("USB"),
+    maxInstances: maxPeripheralCount,
 
    /* override generic requirements with  device-specific reqs (if any) */
    validate: validate,
@@ -300,7 +320,7 @@ function pinmuxRequirements(inst)
     let usb = {
         name: "peripheral",
         displayName: "USB Peripheral",
-        interfaceName: "USB",
+        interfaceName: peripheralIPName,
         resources: resources,
         signalTypes: {
             DMPin: ["DM"],

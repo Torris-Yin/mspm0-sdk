@@ -388,25 +388,6 @@ for(let i = 0; i < MasterList.length; i ++){
     })
 }
 
-function getDefaultVDDA() {
-    if(Common.isDeviceFamily_PARENT_MSPM0H321X()) {
-        return 5;
-    }
-    else {
-        return 3.3;
-    }
-}
-
-function getVDDARange() {
-    if(Common.isDeviceFamily_PARENT_MSPM0H321X()) {
-        return [4.5, 5.5];
-    }
-    else {
-        return [1.62, 3.6];
-    }
-}
-
-
 let config = [
     {
         name: "GROUP_DEBUG",
@@ -575,6 +556,23 @@ Any conflicting configurations will be overriden by these settings.`,
                 default: false,
                 onChange: (inst,ui) => {
                     ui.voltageVDDA.hidden = !inst.configureVDDA;
+                    ui.calculatedVDDA.hidden = inst.configureVDDA;
+                }
+            },
+            {
+                name: "calculatedVDDA",
+                displayName: "VDDA (V)",
+                description: "Configured VDDA",
+                longDescription: ``,
+                default: Common.getDefaultVDDA(),
+                hidden: false,
+                getValue: (inst) => {
+                    if(inst.configureVDDA){
+                        return inst.voltageVDDA;
+                    }
+                    else{
+                        return Common.getDefaultVDDA();
+                    }
                 }
             },
             {
@@ -588,9 +586,9 @@ Any conflicting configurations will be overriden by these settings.`,
                         name: "voltageVDDA",
                         displayName: "VDDA (V)",
                         description: "Configure VDDA",
-                        default: getDefaultVDDA(),
+                        default: Common.getDefaultVDDA(),
                         hidden: true,
-                        range: getVDDARange(),
+                        range: Common.getVDDARange(),
                     },
                 ],
             },

@@ -111,9 +111,9 @@ extern "C" {
 /* Port definition for Pin Group GPIO_LIN_ENABLE */
 #define GPIO_LIN_ENABLE_PORT                                             (GPIOB)
 
-/* Defines for USER_LIN_ENABLE: GPIOB.15 with pinCMx 32 on package pin 3 */
-#define GPIO_LIN_ENABLE_USER_LIN_ENABLE_PIN                     (DL_GPIO_PIN_15)
-#define GPIO_LIN_ENABLE_USER_LIN_ENABLE_IOMUX                    (IOMUX_PINCM32)
+/* Defines for USER_LIN_ENABLE: GPIOB.14 with pinCMx 31 on package pin 2 */
+#define GPIO_LIN_ENABLE_USER_LIN_ENABLE_PIN                     (DL_GPIO_PIN_14)
+#define GPIO_LIN_ENABLE_USER_LIN_ENABLE_IOMUX                    (IOMUX_PINCM31)
 /* Port definition for Pin Group GPIO_SWITCHES1 */
 #define GPIO_SWITCHES1_PORT                                              (GPIOB)
 

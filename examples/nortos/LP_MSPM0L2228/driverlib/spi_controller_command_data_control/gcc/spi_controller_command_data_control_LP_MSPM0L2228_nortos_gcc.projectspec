@@ -65,7 +65,6 @@
         "
         sourceLookupPath="${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/driverlib"
         description="SPI Controller transmit using command data (CD) control">
-
         <property name="buildProfile" value="release"/>
         <property name="isHybrid" value="true"/>
         <file path="../spi_controller_command_data_control.c" openOnCreation="false" excludeFromBuild="false" action="copy">

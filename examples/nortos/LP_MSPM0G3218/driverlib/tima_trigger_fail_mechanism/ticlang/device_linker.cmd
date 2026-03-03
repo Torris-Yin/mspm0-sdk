@@ -37,7 +37,7 @@
 
 MEMORY
 {
-    FLASH           (RX)  : origin = 0x00000000, length = 262144
+    FLASH           (RX)  : origin = 0x00000000, length = 0x00040000
     SRAM            (RWX) : origin = 0x20200000, length = 0x00008000
     BCR_CONFIG      (R)   : origin = 0x41C00000, length = 0x000000FF
     BSL_CONFIG      (R)   : origin = 0x41C00100, length = 0x00000080

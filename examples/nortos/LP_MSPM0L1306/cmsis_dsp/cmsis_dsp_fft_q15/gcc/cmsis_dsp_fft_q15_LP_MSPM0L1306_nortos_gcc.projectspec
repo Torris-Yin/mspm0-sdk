@@ -69,7 +69,6 @@
         "
         sourceLookupPath="${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/driverlib"
         description="FFT of fixed point array using CMSIS-DSP">
-
         <property name="buildProfile" value="release"/>
         <property name="isHybrid" value="true"/>
         <file path="../cmsis_dsp_fft_q15.c" openOnCreation="false" excludeFromBuild="false" action="copy">

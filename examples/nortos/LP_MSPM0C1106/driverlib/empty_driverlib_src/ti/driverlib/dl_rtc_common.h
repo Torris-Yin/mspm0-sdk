@@ -3357,7 +3357,7 @@ __STATIC_INLINE void DL_RTC_Common_disableWriteProtect(RTC_Regs *rtc_common)
 {
     rtc_common->RTCLOCK = (RTC_RTCLOCK_PROTECT_CLR | RTC_RTCLOCK_KEY_UNLOCK_W);
 }
-#endif
+#endif /* #ifdef __MSPM0_HAS_RTC_A__ */
 
 #ifdef __cplusplus
 }

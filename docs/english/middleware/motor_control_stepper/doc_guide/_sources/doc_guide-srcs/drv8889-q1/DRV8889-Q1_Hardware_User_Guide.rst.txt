@@ -147,7 +147,7 @@ DRV8889-Q1 Hardware User Guide
 +----------------------------+--------------+-----------------+----------------+
 | Chip Select                | PA13         | nSCS            |                |
 +----------------------------+--------------+-----------------+----------------+
-| Logic level for SDO        | 5V           | VSDO            |                |
+| Logic level for SDO        | 3V3          | VSDO            |                |
 +----------------------------+--------------+-----------------+----------------+
 | Serial data output         | PA8          | SDO             |                |
 +----------------------------+--------------+-----------------+----------------+
@@ -167,6 +167,44 @@ DRV8889-Q1 Hardware User Guide
 +----------------------------+--------------+-----------------+----------------+
 
 \*\*In LP\_MSPM0L2117 the VREF voltage is generated using a PWM signal thus will require an RC network in the connection from PA25 to VREF as shown below, Refer to DRV8889-Q1 datasheet for more details.
+
+.. figure:: images/DRV8889-Q1EVM-VREF_with_PWM_resource.png
+   :alt: Controlling VREF With a PWM Resource in DRV8889-Q1EVM
+
+   Controlling VREF With a PWM Resource in DRV8889-Q1EVM
+
+2.5 LP-MSPM0G3218
+~~~~~~~~~~~~~~~~~
+
++----------------------------+--------------+-----------------+--------------------------+
+| Connection                 | MSPM0G3218   | DRV8889-Q1EVM   | Jumper Notes             |
++============================+==============+=================+==========================+
+| Fault Input                | PB8          | nFAULT          |                          |
++----------------------------+--------------+-----------------+--------------------------+
+| Current reference output   | PA8\*\*      | VREF            |                          |
++----------------------------+--------------+-----------------+--------------------------+
+| Chip Select                | PA18         | nSCS            |                          |
++----------------------------+--------------+-----------------+--------------------------+
+| Logic level for SDO        | 3V3          | VSDO            |                          |
++----------------------------+--------------+-----------------+--------------------------+
+| Serial data output         | PA10         | SDO             | Connect J21 to BP side   |
++----------------------------+--------------+-----------------+--------------------------+
+| Serial data input          | PB2          | SDI             |                          |
++----------------------------+--------------+-----------------+--------------------------+
+| Serial clock input         | PA11         | SCLK            | Connect J22 to BP side   |
++----------------------------+--------------+-----------------+--------------------------+
+| Step input                 | PA12         | STEP            |                          |
++----------------------------+--------------+-----------------+--------------------------+
+| Direction input            | PA31         | DIR             |                          |
++----------------------------+--------------+-----------------+--------------------------+
+| Disable output             | PA17         | DRVOFF          |                          |
++----------------------------+--------------+-----------------+--------------------------+
+| Sleep mode input           | PA27         | nSLEEP          |                          |
++----------------------------+--------------+-----------------+--------------------------+
+| Common Ground              | GND          | GND             |                          |
++----------------------------+--------------+-----------------+--------------------------+
+
+\*\*In LP\_MSPM0G3218 the VREF voltage is generated using a PWM signal thus will require an RC network in the connection from PA25 to VREF as shown below, Refer to DRV8889-Q1 datasheet for more details.
 
 .. figure:: images/DRV8889-Q1EVM-VREF_with_PWM_resource.png
    :alt: Controlling VREF With a PWM Resource in DRV8889-Q1EVM

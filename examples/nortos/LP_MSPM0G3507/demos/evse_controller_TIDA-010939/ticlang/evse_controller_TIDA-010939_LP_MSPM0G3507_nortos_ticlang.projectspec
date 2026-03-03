@@ -35,6 +35,7 @@
             -march=thumbv6m
             -mfloat-abi=soft
             -mthumb
+            -Wall
         "
         linkerBuildOptions="
             -ldevice.cmd.genlibs
@@ -53,7 +54,6 @@
         "
         sourceLookupPath="${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/driverlib"
         description="This reference design demonstrates the MSPM0 as an Electric Vehicle Supply Equipment (EVSE) front-end controller which acts as the central communication module for the EV charging process">
-
         <property name="buildProfile" value="release"/>
         <property name="isHybrid" value="true"/>
         <file path="../modules/Adc.cpp" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="modules">

@@ -2,11 +2,26 @@ MSPM0_SDK_INSTALL_DIR ?= $(abspath ../../../../../..)
 
 include $(MSPM0_SDK_INSTALL_DIR)/imports.mak
 
+ASM = "$(IAR_ARMCOMPILER)/bin/iasmarm"
 CC = "$(IAR_ARMCOMPILER)/bin/iccarm"
 LNK = "$(IAR_ARMCOMPILER)/bin/ilinkarm"
 
+# Enable verbose output by setting VERBOSE=1
+V := @
+ifeq ($(VERBOSE), 1)
+  V :=
+endif
+
 OBJECTS = ti_msp_dl_config.obj main.obj ti_eeprom_emulation_type_a_eeprom_emulation_type_a.obj ti_eeprom_emulation_type_b_eeprom_emulation_type_b.obj iar_startup_mspm0l130x_iar.obj
+
 NAME = eeprom_emulation_type_b_test
+
+AFLAGS += -I.. \
+    -S \
+    --endian little \
+    --thumb \
+    "-I$(IAR_ARMCOMPILER)/inc/c" \
+    --cpu Cortex-M0+
 
 CFLAGS += -I.. \
     -D__MSPM0L1306__ \
@@ -35,30 +50,30 @@ all: $(NAME).out
 
 ti_msp_dl_config.obj: ../ti_msp_dl_config.c
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) $< -o $@
+	$(V) $(CC) $(CFLAGS) $< -o $@
 
 main.obj: ../main.c
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) $< -o $@
+	$(V) $(CC) $(CFLAGS) $< -o $@
 
 ti_eeprom_emulation_type_a_eeprom_emulation_type_a.obj: ../ti/eeprom/emulation_type_a/eeprom_emulation_type_a.c
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) $< -o $@
+	$(V) $(CC) $(CFLAGS) $< -o $@
 
 ti_eeprom_emulation_type_b_eeprom_emulation_type_b.obj: ../ti/eeprom/emulation_type_b/eeprom_emulation_type_b.c
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) $< -o $@
+	$(V) $(CC) $(CFLAGS) $< -o $@
 
 iar_startup_mspm0l130x_iar.obj: ../iar/startup_mspm0l130x_iar.c
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) $< -o $@
+	$(V) $(CC) $(CFLAGS) $< -o $@
 
 $(NAME).out: $(OBJECTS)
 	@ echo linking $@
-	@ $(LNK)  $(OBJECTS)  $(LFLAGS) -o $(NAME).out
+	$(V) $(LNK)  $(OBJECTS)  $(LFLAGS) -o $(NAME).out
 
 clean:
 	@ echo Cleaning...
-	@ $(RM) $(OBJECTS) > $(DEVNULL) 2>&1
-	@ $(RM) $(NAME).out > $(DEVNULL) 2>&1
-	@ $(RM) $(NAME).map > $(DEVNULL) 2>&1
+	$(V) $(RM) $(OBJECTS) > $(DEVNULL) 2>&1
+	$(V) $(RM) $(NAME).out > $(DEVNULL) 2>&1
+	$(V) $(RM) $(NAME).map > $(DEVNULL) 2>&1

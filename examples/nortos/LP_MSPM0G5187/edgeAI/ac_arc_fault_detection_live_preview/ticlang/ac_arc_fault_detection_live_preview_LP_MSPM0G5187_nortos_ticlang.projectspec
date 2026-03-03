@@ -27,7 +27,6 @@
             @device.opt
             -I${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/third_party/CMSIS/Core/Include
             -I${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/third_party/CMSIS/DSP/Include
-            -Iexamples/edgeAI/ac_arc_fault_detection_live_preview/device_agent_protocol
             -I${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/edgeAI/device_agent_protocol/core
             -I${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/edgeAI/device_agent_protocol/uart_comm
             -I${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/edgeAI/feature_extract
@@ -38,6 +37,7 @@
             -march=thumbv6m
             -mfloat-abi=soft
             -mthumb
+            -Wall
         "
         linkerBuildOptions="
             -lmodel/model.a
@@ -57,7 +57,6 @@
         "
         sourceLookupPath="${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/driverlib"
         description="Example to demonstrate live preview on EdgeAI studio for AC Arc Fault detection applications on MSPM0">
-
         <property name="buildProfile" value="release"/>
         <property name="isHybrid" value="true"/>
         <file path="../ac_arc_fault_detection_live_preview.c" openOnCreation="false" excludeFromBuild="false" action="copy">

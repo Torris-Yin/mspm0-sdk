@@ -123,7 +123,7 @@ let M0G511X_Simple_reasonableLayout = {
 
 	"SYSOSC": { layer: 1, position: 3 },
 
-	"PLLGroup": { layer: 4, position: 0 },
+	"PLLGroup": { layer: 4, position: 1 },
 
 	"EXLFMUX": { layer: 1, position: 1 },
 	"LFXTMUX": { layer: 7, position: 0 },
@@ -134,7 +134,7 @@ let M0G511X_Simple_reasonableLayout = {
 	"SYSCTLMUX": { layer: 9, position: 2 },
 
 	"RTCCLKGATE": { layer: 10, position: 0 },
-	"MDIV": { layer: 8, position: 4 },
+	"MDIV": { layer: 2, position: 0 },
 	"UDIV": { layer: 10, position: 1 },
 	"HFCLK4MFPCLKDIV": { layer: 7, position: 7 },
 	//"MCLKGATE": { layer: 11, position: 2 },
@@ -173,11 +173,11 @@ let M0G511X_Simple_reasonableLayout = {
 	"net_mfpclkGate": {layer: 9, position: 6 },
 	"net_mfpclk": { layer: 11, position: 6 },
 	"net_sysosc": { layer: 2, position: 4 },
-	"net_syspll0": {layer: 5, position: 3 },
-	"net_syspll1": {layer: 5, position: 4 },
-	"net_syspll2x": {layer: 5, position: 3 },
-	"USBFLLGATE": {layer: 4, position: 3 },
-	"net_usbfll": {layer: 5, position: 3 },
+	"net_syspll0": {layer: 6, position: 3 },
+	"net_syspll1": {layer: 6, position: 4 },
+	"net_syspll2x": {layer: 6, position: 3 },
+	"USBFLLGATE": {layer: 5, position: 3 },
+	"net_usbfll": {layer: 6, position: 3 },
 	"net_ulpclk": {layer: 11, position: 1},
 	"net_cpuclk": {layer: 11, position: 3},
 	"sysosc_4m1": { layer: 2, position: 3 },

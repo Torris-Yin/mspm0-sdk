@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['rxmsg',['rxMsg',['../struct_u_a_r_t___instance.html#ac15e555998be0aec432eaaca20bb7b31',1,'UART_Instance']]],
-  ['rxstatus',['RxStatus',['../struct_u_a_r_t___instance.html#a88a4195d9cfb6b6b17e32cd4cdf68e4c',1,'UART_Instance']]]
+  ['inited',['inited',['../struct_f_b_f_e___ctx.html#a5e7956233acd946503b7e30e7505da17',1,'FBFE_Ctx']]],
+  ['iscrc',['isCrc',['../struct_u_a_r_t___instance.html#a688ceaea98ecaf4d26270f9009eae75b',1,'UART_Instance']]]
 ];

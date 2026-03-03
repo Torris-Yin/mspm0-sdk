@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectSpec>
+    <applicability>
+        <when>
+            <context
+                deviceFamily="ARM"
+                deviceId="MSPM0G3507"
+            />
+        </when>
+    </applicability>
+
+    <project
+        title="ecg_anomaly_detection_ai"
+        name="ecg_anomaly_detection_ai_LP_MSPM0G3507_nortos_ticlang"
+        configurations="Debug"
+        toolChain="TICLANG"
+        connection="TIXDS110_Connection.xml"
+        device="MSPM0G3507"
+        ignoreDefaultDeviceSettings="true"
+        ignoreDefaultCCSSettings="true"
+        products="MSPM0-SDK;sysconfig"
+        compilerBuildOptions="
+            -I${PROJECT_ROOT}
+            -I${PROJECT_ROOT}/${ConfigName}
+            -DARM_MATH_CM0
+            @device.opt
+            -I${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/third_party/CMSIS/Core/Include
+            -I${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/third_party/CMSIS/DSP/Include
+            -I${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/edgeAI/feature_extract
+            -I${COM_TI_MSPM0_SDK_INSTALL_DIR}/source
+            -gdwarf-3
+            -mcpu=cortex-m0plus
+            -march=thumbv6m
+            -mfloat-abi=soft
+            -mthumb
+            -Wall
+        "
+        linkerBuildOptions="
+            -lmodel/model.a
+            -lAFE1594_lib.a
+            -ldevice.cmd.genlibs
+            -L${COM_TI_MSPM0_SDK_INSTALL_DIR}/source
+            -L${PROJECT_ROOT}
+            -L${PROJECT_BUILD_DIR}/syscfg
+            -Wl,--rom_model
+            -Wl,--warn_sections
+            -L${CG_TOOL_ROOT}/lib
+            -llibc.a
+        "
+        sysConfigBuildOptions="
+            --output .
+            --product ${COM_TI_MSPM0_SDK_INSTALL_DIR}/.metadata/product.json
+            --compiler ticlang
+        "
+        sourceLookupPath="${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/driverlib"
+        description="Demonstrates basic implementation of ECG anomaly detection using AI on MSPM0 device">
+        <property name="buildProfile" value="release"/>
+        <property name="isHybrid" value="true"/>
+        <file path="../model/tvmgen_default.h" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="model">
+        </file>
+        <file path="../model/model.a" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="model">
+        </file>
+        <file path="../model/user_input_config.h" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="model">
+        </file>
+        <file path="../ecg_anomaly_detection_ai.c" openOnCreation="false" excludeFromBuild="false" action="copy">
+        </file>
+        <file path="../H_AFE1594_functions.h" openOnCreation="false" excludeFromBuild="false" action="copy">
+        </file>
+        <file path="../H_AFE1594_preset_modes.h" openOnCreation="false" excludeFromBuild="false" action="copy">
+        </file>
+        <file path="../H_AFE1594_SPI_functions.h" openOnCreation="false" excludeFromBuild="false" action="copy">
+        </file>
+        <file path="../AFE1594_lib.a" openOnCreation="false" excludeFromBuild="false" action="copy">
+        </file>
+        <file path="${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/edgeAI/feature_extract/feature_extract.c" openOnCreation="false" excludeFromBuild="false" action="link" targetDirectory="ti/edgeAI/feature_extract">
+        </file>
+        <file path="${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/edgeAI/feature_extract/feature_extract.h" openOnCreation="false" excludeFromBuild="false" action="link" targetDirectory="ti/edgeAI/feature_extract">
+        </file>
+        <file path="../README.md" openOnCreation="true" excludeFromBuild="false" action="copy">
+        </file>
+        <file path="../README.html" openOnCreation="false" excludeFromBuild="false" action="copy">
+        </file>
+        <file path="../ecg_anomaly_detection_ai.syscfg" openOnCreation="true" excludeFromBuild="false" action="copy">
+        </file>
+    </project>
+</projectSpec>

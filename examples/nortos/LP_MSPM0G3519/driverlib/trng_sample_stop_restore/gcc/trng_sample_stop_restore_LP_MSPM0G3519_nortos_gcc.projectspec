@@ -65,7 +65,6 @@
         "
         sourceLookupPath="${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/driverlib"
         description="TRNG sample random data after coming out of STOP low power mode with retention in software">
-
         <property name="buildProfile" value="release"/>
         <property name="isHybrid" value="true"/>
         <file path="../trng_sample_stop_restore.c" openOnCreation="false" excludeFromBuild="false" action="copy">

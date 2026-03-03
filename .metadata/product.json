@@ -1,7 +1,7 @@
 {
     "name": "mspm0_sdk",
     "displayName": "MSPM0 SDK",
-    "version": "2.09.00.00",
+    "version": "2.10.00.04",
     "documentationPath": "../docs",
     "includePaths": [
         "../source",
@@ -18,7 +18,30 @@
     ],
     "devices": [
         "MSPM0.*",
-        "MSPS.*"
+        "MSPS.*",
+        "MSP32.*"
     ],
-    "minToolVersion": "1.21.0"
+    "minToolVersion": "1.26.0",
+    "tableMigration": {
+        "hiddenColumns": [
+            "variant"
+        ],
+        "ticomColumns": [
+            "opn",
+            "price",
+            "packageArea",
+            "flashMemory",
+            "opTempRange"
+        ],
+        "columnOrder": [
+            "switch",
+            "gpn",
+            "pkg",
+            "opn",
+            "compatibility",
+            "price",
+            "packageArea",
+            "flashMemory"
+        ]
+    }
 }

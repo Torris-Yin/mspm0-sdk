@@ -241,7 +241,7 @@ __STATIC_INLINE void DL_VREF_disablePower(VREF_Regs *vref)
  */
 __STATIC_INLINE bool DL_VREF_isPowerEnabled(VREF_Regs *vref)
 {
-    return ((VREF->GPRCM.PWREN & VREF_PWREN_ENABLE_MASK) ==
+    return ((vref->GPRCM.PWREN & VREF_PWREN_ENABLE_MASK) ==
             VREF_PWREN_ENABLE_ENABLE);
 }
 

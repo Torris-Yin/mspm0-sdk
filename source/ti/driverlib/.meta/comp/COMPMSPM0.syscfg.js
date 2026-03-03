@@ -915,26 +915,6 @@ function getBlankingOptions(inst){
 }
 
 /*
- *  ======== getVDDAVoltage ========
- *  get VDDA reference voltage from Board module.
- *  requires Board module to be added.
- *
- *
- */
-function getVDDAVoltage(inst){
-
-    let vddaVoltage = 3.3;
-
-    let vddaInstance = system.modules["/ti/driverlib/Board"];
-
-    if (vddaInstance && (vddaInstance.$static.configureVDDA == true)){
-        vddaVoltage = (vddaInstance.$static.voltageVDDA)
-    }
-
-    return vddaVoltage;
-}
-
-/*
  *  ======== calculateVoltage ========
  *  calculate voltage based on user provided parameters
  */
@@ -944,7 +924,7 @@ function calculateVoltage(inst){
     let vrefVoltage = 0;
     let dacCode = 0;
     if(inst.vSource == "DL_COMP_REF_SOURCE_VDDA_DAC"){
-        vrefVoltage = getVDDAVoltage(inst);
+        vrefVoltage = Common.getVDDAVoltage();
     }
     else{
         let vrefInstance = system.modules["/ti/driverlib/VREF"];

@@ -65,7 +65,6 @@
         "
         sourceLookupPath="${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/driverlib"
         description="Comparator in high-speed mode triggers a PWM fault">
-
         <property name="buildProfile" value="release"/>
         <property name="isHybrid" value="true"/>
         <file path="../comp_hs_tima_pwm_fault.c" openOnCreation="false" excludeFromBuild="false" action="copy">

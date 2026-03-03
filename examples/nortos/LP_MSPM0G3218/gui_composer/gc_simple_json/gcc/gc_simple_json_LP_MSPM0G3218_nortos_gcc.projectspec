@@ -66,7 +66,6 @@
         "
         sourceLookupPath="${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/driverlib"
         description="Demonstrates basic usage of GUI Composer communication using JSON-formatted strings">
-
         <property name="buildProfile" value="release"/>
         <property name="isHybrid" value="true"/>
         <file path="../HAL_UART_M0G3218.c" openOnCreation="false" excludeFromBuild="false" action="copy">

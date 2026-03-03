@@ -2,6 +2,7 @@ MSPM0_SDK_INSTALL_DIR ?= $(abspath ../../../../../..)
 
 include $(MSPM0_SDK_INSTALL_DIR)/imports.mak
 
+ASM = "$(IAR_ARMCOMPILER)/bin/iasmarm"
 CC = "$(IAR_ARMCOMPILER)/bin/iccarm"
 LNK = "$(IAR_ARMCOMPILER)/bin/ilinkarm"
 
@@ -14,8 +15,25 @@ SYSCFG_C_FILES = $(filter %.c,$(SYSCFG_FILES))
 SYSCFG_H_FILES = $(filter %.h,$(SYSCFG_FILES))
 SYSCFG_OPT_FILES = $(filter %.opt,$(SYSCFG_FILES))
 
+# Enable verbose output by setting VERBOSE=1
+V := @
+ifeq ($(VERBOSE), 1)
+  V :=
+endif
+
 OBJECTS = cascade_input_voltage.obj dac_init.obj remove_dc_voltage.obj saturation_control.obj high_gain_self_compensating_adc.obj iar_startup_mspm0g350x_iar.obj $(patsubst %.c,%.obj,$(notdir $(SYSCFG_C_FILES)))
+SYSCFG_ASM_FILES = $(filter %.s,$(SYSCFG_FILES))
+OBJECTS += $(patsubst %.s,%.obj,$(notdir $(SYSCFG_ASM_FILES)))
+
+
 NAME = High_Gain_Self_Compensating_ADC
+
+AFLAGS += -I.. \
+    -S \
+    --endian little \
+    --thumb \
+    "-I$(IAR_ARMCOMPILER)/inc/c" \
+    --cpu Cortex-M0+
 
 CFLAGS += -I.. \
     -I. \
@@ -50,7 +68,7 @@ $(SYSCFG_FILES): syscfg
 
 syscfg: ../high_gain_self_compensating_adc.syscfg
 	@ echo Generating configuration files...
-	@ $(SYSCFG_CMD_STUB) --output $(@D) $<
+	$(V) $(SYSCFG_CMD_STUB) --output $(@D) $<
 
 
 # Helpful hint that the user needs to use a standalone SysConfig installation
@@ -62,47 +80,55 @@ $(SYSCONFIG_GUI_TOOL):
 
 syscfg-gui: ../high_gain_self_compensating_adc.syscfg $(SYSCONFIG_GUI_TOOL)
 	@ echo Opening SysConfig GUI
-	@ $(SYSCFG_GUI_CMD_STUB) $<
+	$(V) $(SYSCFG_GUI_CMD_STUB) $<
+
+define ASM_RULE
+$(basename $(notdir $(1))).obj: $(1)
+	@ echo Building $$@
+	$(V) $(ASM) $(AFLAGS) $$< -o $$@
+endef
+
+$(foreach asm_file,$(SYSCFG_ASM_FILES),$(eval $(call ASM_RULE,$(asm_file))))
 
 define C_RULE
 $(basename $(notdir $(1))).obj: $(1) $(SYSCFG_H_FILES)
 	@ echo Building $$@
-	@ $(CC) $(CFLAGS) $$< -o $$@
+	$(V) $(CC) $(CFLAGS) $$< -o $$@
 endef
 
 $(foreach c_file,$(SYSCFG_C_FILES),$(eval $(call C_RULE,$(c_file))))
 
 cascade_input_voltage.obj: ../cascade_input_voltage.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) $< -o $@
+	$(V) $(CC) $(CFLAGS) $< -o $@
 
 dac_init.obj: ../dac_init.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) $< -o $@
+	$(V) $(CC) $(CFLAGS) $< -o $@
 
 remove_dc_voltage.obj: ../remove_dc_voltage.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) $< -o $@
+	$(V) $(CC) $(CFLAGS) $< -o $@
 
 saturation_control.obj: ../saturation_control.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) $< -o $@
+	$(V) $(CC) $(CFLAGS) $< -o $@
 
 high_gain_self_compensating_adc.obj: ../high_gain_self_compensating_adc.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) $< -o $@
+	$(V) $(CC) $(CFLAGS) $< -o $@
 
 iar_startup_mspm0g350x_iar.obj: ../iar/startup_mspm0g350x_iar.c $(SYSCFG_H_FILES)
 	@ echo Building $@
-	@ $(CC) $(CFLAGS) $< -o $@
+	$(V) $(CC) $(CFLAGS) $< -o $@
 
 $(NAME).out: $(OBJECTS)
 	@ echo linking $@
-	@ $(LNK)  $(OBJECTS)  $(LFLAGS) -o $(NAME).out
+	$(V) $(LNK)  $(OBJECTS)  $(LFLAGS) -o $(NAME).out
 
 clean:
 	@ echo Cleaning...
-	@ $(RM) $(OBJECTS) > $(DEVNULL) 2>&1
-	@ $(RM) $(NAME).out > $(DEVNULL) 2>&1
-	@ $(RM) $(NAME).map > $(DEVNULL) 2>&1
-	@ $(RM) $(SYSCFG_FILES)> $(DEVNULL) 2>&1
+	$(V) $(RM) $(OBJECTS) > $(DEVNULL) 2>&1
+	$(V) $(RM) $(NAME).out > $(DEVNULL) 2>&1
+	$(V) $(RM) $(NAME).map > $(DEVNULL) 2>&1
+	$(V) $(RM) $(call SLASH_FIXUP,$(SYSCFG_FILES)) > $(DEVNULL) 2>&1

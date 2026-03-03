@@ -249,12 +249,12 @@
       <topic label="DL_ADC12_isPowerEnabled" href="group___a_d_c12.html#ga0bedae45a68e77a53315b681ed96e413"/>
       <topic label="DL_ADC12_reset" href="group___a_d_c12.html#ga1c2fc688349088875b8dd1744054654f"/>
       <topic label="DL_ADC12_isReset" href="group___a_d_c12.html#ga95e5cf05dcfe80f7bab1adc1123374d9"/>
-      <topic label="DL_ADC12_initSingleSample" href="group___a_d_c12.html#gac71c58178d557f5393da8c9840edf123"/>
+      <topic label="DL_ADC12_initSingleSample" href="group___a_d_c12.html#ga48c9456daac5448854a3fded0959d40c"/>
       <topic label="DL_ADC12_setStartAddress" href="group___a_d_c12.html#gabfacc849f3c69b2e3ec3af53643eeb70"/>
       <topic label="DL_ADC12_getStartAddress" href="group___a_d_c12.html#ga760cde8f152427bcacb2ea33c4fec663"/>
       <topic label="DL_ADC12_setEndAddress" href="group___a_d_c12.html#ga8d9825330a9294fc058aceb0f8bc2165"/>
       <topic label="DL_ADC12_getEndAddress" href="group___a_d_c12.html#ga5234a85e8317ea2026ce941200defaea"/>
-      <topic label="DL_ADC12_initSeqSample" href="group___a_d_c12.html#gacaedd12e82217c794bc40573cd45a8a1"/>
+      <topic label="DL_ADC12_initSeqSample" href="group___a_d_c12.html#gadc4975f7231e048164a9baab37f937ea"/>
       <topic label="DL_ADC12_getResolution" href="group___a_d_c12.html#ga61fee1bb93868623d7ef7a07d0b016ed"/>
       <topic label="DL_ADC12_getDataFormat" href="group___a_d_c12.html#gace8d839d99268810594bccd213321132"/>
       <topic label="DL_ADC12_getSamplingSource" href="group___a_d_c12.html#ga3ea5063aa23387d1c3d1616bd8f98413"/>
@@ -4570,9 +4570,9 @@
         <topic label="DL_UART_Extend_enableMSBFirst" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#gaae080d141dd7629079bce8ca6d6361cc"/>
         <topic label="DL_UART_Extend_isMSBFirstEnabled" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga072bf23e683e649b605f30733728f8bd"/>
         <topic label="DL_UART_Extend_disableMSBFirst" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga033785ed748eee497746176485319fb4"/>
-        <topic label="DL_UART_Extend_enableTransmitPinManualContro" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#gabf829990c7af98b61e0b2446ee6c0096"/>
-        <topic label="DL_UART_Extend_isTransmitPinManualControlEna" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga4915607eb1fc57c630f692fa782fa839"/>
-        <topic label="DL_UART_Extend_disableTransmitPinManualContr" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga8934e5f846abf3fb8c968e5484f8d949"/>
+        <topic label="DL_UART_Extend_enableTransmitPinManualControl" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga3edd91729043fa267268692eac0aea35"/>
+        <topic label="DL_UART_Extend_isTransmitPinManualControlEnabled" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga28dd5621010f6423f59689c8e1813055"/>
+        <topic label="DL_UART_Extend_disableTransmitPinManualControl" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga1c42bf3ced434695ad62dfe08272ee79"/>
         <topic label="DL_UART_Extend_setTransmitPinManualOutput" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga89d40b9e7ee2a9d8d8cd9be1b1573410"/>
         <topic label="DL_UART_Extend_getTransmitPinManualOutput" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga711304fd14631f837b8909caaae34ee8"/>
         <topic label="DL_UART_Extend_setCommunicationMode" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga4d089753f8c3ffae37ec7198a828ca24"/>
@@ -4636,8 +4636,8 @@
         <topic label="DL_UART_Extend_disableDMATransmitEvent" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga37dea1df95972306e05fccc408747e6a"/>
         <topic label="DL_UART_Extend_getEnabledDMAReceiveEvent" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#gad5f109ae7cde3dff96f8c48dc453bb58"/>
         <topic label="DL_UART_Extend_getEnabledDMATransmitEvent" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#gaeecb55c2801ee1aa39b5bf6cb157f601"/>
-        <topic label="DL_UART_Extend_getEnabledDMAReceiveEventStat" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga84b5a279f56386c5f19157ee6ee3dca3"/>
-        <topic label="DL_UART_Extend_getEnabledDMATransmitEventSta" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#gaf7bca55854da70823cfbac7bdb450700"/>
+        <topic label="DL_UART_Extend_getEnabledDMAReceiveEventStatus" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga1f3b6065b528d03c31b922cac2454376"/>
+        <topic label="DL_UART_Extend_getEnabledDMATransmitEventStatus" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga90fb42edcb7d165767dc853d5f9f34ab"/>
         <topic label="DL_UART_Extend_getRawDMAReceiveEventStatus" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#gad5326109d1857e83bceb621de6c0a4fa"/>
         <topic label="DL_UART_Extend_getRawDMATransmitEventStatus" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga433db51259ae9fb18466bac15a1b6ac0"/>
         <topic label="DL_UART_Extend_setLINCounterValue" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#gaa179c08fe11084a5965560de34d495dd"/>
@@ -4645,22 +4645,22 @@
         <topic label="DL_UART_Extend_enableLINCounter" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga4ec8e51a005fa955e4583403780c3ca5"/>
         <topic label="DL_UART_Extend_isLINCounterEnabled" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga7e6c657a2b92878b099dc970d8bea316"/>
         <topic label="DL_UART_Extend_disableLINCounter" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga231c90fd74f2dc1e87ea4e09a8c048cb"/>
-        <topic label="DL_UART_Extend_enableLINCounterClearOnFallin" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#gae4df7efef09a1a1dcde97662bc3baf07"/>
-        <topic label="DL_UART_Extend_isLINCounterClearOnFallingEdg" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga027e6d69aae0ac3c798927d2ef4cea06"/>
-        <topic label="DL_UART_Extend_disableLINCounterClearOnFalli" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga2614b7c372cb90f1e4f9d6df9eda54b7"/>
+        <topic label="DL_UART_Extend_enableLINCounterClearOnFallingEdge" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga00344b1402a4410e92f1ba65b2a7b322"/>
+        <topic label="DL_UART_Extend_isLINCounterClearOnFallingEdge" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga8e87cd6b0592dd0b6c87f3f42ff48bb8"/>
+        <topic label="DL_UART_Extend_disableLINCounterClearOnFallingEdge" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#gae34f8c02e08efbe1b7457069798e3587"/>
         <topic label="DL_UART_Extend_enableLINCountWhileLow" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga50e33f4774189ff2abe034345445d6dc"/>
         <topic label="DL_UART_Extend_isLINCountWhileLowEnabled" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga380f2d6ca93a6b925f1f1773358e2aa3"/>
         <topic label="DL_UART_Extend_disableLINCountWhileLow" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga8cfd86b3e2becffb1b3f25db4b6177e9"/>
         <topic label="DL_UART_Extend_enableLINFallingEdgeCapture" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#gac19742d6bf0ef0b8d3f01f36df87b6e9"/>
-        <topic label="DL_UART_Extend_isLINFallingEdgeCaptureEnable" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga106981860070750a7a3585c2d7708991"/>
+        <topic label="DL_UART_Extend_isLINFallingEdgeCaptureEnabled" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#gaf078e2b1e8de5197fa72bf3eb821c3fd"/>
         <topic label="DL_UART_Extend_disableLINFallingEdgeCapture" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga921ccdaf8b10d6bfeebcd98ad52f3c30"/>
         <topic label="DL_UART_Extend_enableLINRisingEdgeCapture" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga19b2c4b639354909bec13ac5b37000ee"/>
         <topic label="DL_UART_Extend_isLINRisingEdgeCaptureEnabled" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#gacbfe9153444363deb902962e53654e4e"/>
         <topic label="DL_UART_Extend_disableLINRisingEdgeCapture" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga3592412f96ee7727df7058803a2ac082"/>
         <topic label="DL_UART_Extend_enableLINCounterCompareMatch" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#gab4f2838d1f97b06a4c39cde94814e854"/>
-        <topic label="DL_UART_Extend_enableLINSyncFieldValidationC" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga20648b9e16093e89b84f5bb6286a0dc9"/>
-        <topic label="DL_UART_Extend_enableLINReceptionCountContro" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga209c5025131b15840ea3b482579e2dce"/>
-        <topic label="DL_UART_Extend_isLINCounterCompareMatchEnabl" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#gab0f42c85770ec5ec67869b1a12a404e3"/>
+        <topic label="DL_UART_Extend_enableLINSyncFieldValidationCounterControl" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga433b69c2deb4aef503540e19832b4b8c"/>
+        <topic label="DL_UART_Extend_enableLINReceptionCountControl" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga3c44fa4e5656b414309e6cfcef7c0aff"/>
+        <topic label="DL_UART_Extend_isLINCounterCompareMatchEnabled" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga6a8c2303c4c6d4bad1ce318192ed90b6"/>
         <topic label="DL_UART_Extend_disableLINCounterCompareMatch" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga89a78a197c03b6ded7351035a7cbdbca"/>
         <topic label="DL_UART_Extend_setLINCounterCompareValue" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga858458bfb6094e3c5f76739b1d1e050c"/>
         <topic label="DL_UART_Extend_getLINFallingEdgeCaptureValue" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga0770682ded9cf2e5259a8117eaf1ad5c"/>
@@ -6867,12 +6867,12 @@
         <topic label="DL_ADC12_isPowerEnabled" href="group___a_d_c12.html#ga0bedae45a68e77a53315b681ed96e413"/>
         <topic label="DL_ADC12_reset" href="group___a_d_c12.html#ga1c2fc688349088875b8dd1744054654f"/>
         <topic label="DL_ADC12_isReset" href="group___a_d_c12.html#ga95e5cf05dcfe80f7bab1adc1123374d9"/>
-        <topic label="DL_ADC12_initSingleSample" href="group___a_d_c12.html#gac71c58178d557f5393da8c9840edf123"/>
+        <topic label="DL_ADC12_initSingleSample" href="group___a_d_c12.html#ga48c9456daac5448854a3fded0959d40c"/>
         <topic label="DL_ADC12_setStartAddress" href="group___a_d_c12.html#gabfacc849f3c69b2e3ec3af53643eeb70"/>
         <topic label="DL_ADC12_getStartAddress" href="group___a_d_c12.html#ga760cde8f152427bcacb2ea33c4fec663"/>
         <topic label="DL_ADC12_setEndAddress" href="group___a_d_c12.html#ga8d9825330a9294fc058aceb0f8bc2165"/>
         <topic label="DL_ADC12_getEndAddress" href="group___a_d_c12.html#ga5234a85e8317ea2026ce941200defaea"/>
-        <topic label="DL_ADC12_initSeqSample" href="group___a_d_c12.html#gacaedd12e82217c794bc40573cd45a8a1"/>
+        <topic label="DL_ADC12_initSeqSample" href="group___a_d_c12.html#gadc4975f7231e048164a9baab37f937ea"/>
         <topic label="DL_ADC12_getResolution" href="group___a_d_c12.html#ga61fee1bb93868623d7ef7a07d0b016ed"/>
         <topic label="DL_ADC12_getDataFormat" href="group___a_d_c12.html#gace8d839d99268810594bccd213321132"/>
         <topic label="DL_ADC12_getSamplingSource" href="group___a_d_c12.html#ga3ea5063aa23387d1c3d1616bd8f98413"/>
@@ -11616,9 +11616,9 @@
         <topic label="DL_UART_Extend_enableMSBFirst" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#gaae080d141dd7629079bce8ca6d6361cc"/>
         <topic label="DL_UART_Extend_isMSBFirstEnabled" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga072bf23e683e649b605f30733728f8bd"/>
         <topic label="DL_UART_Extend_disableMSBFirst" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga033785ed748eee497746176485319fb4"/>
-        <topic label="DL_UART_Extend_enableTransmitPinManualContro" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#gabf829990c7af98b61e0b2446ee6c0096"/>
-        <topic label="DL_UART_Extend_isTransmitPinManualControlEna" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga4915607eb1fc57c630f692fa782fa839"/>
-        <topic label="DL_UART_Extend_disableTransmitPinManualContr" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga8934e5f846abf3fb8c968e5484f8d949"/>
+        <topic label="DL_UART_Extend_enableTransmitPinManualControl" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga3edd91729043fa267268692eac0aea35"/>
+        <topic label="DL_UART_Extend_isTransmitPinManualControlEnabled" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga28dd5621010f6423f59689c8e1813055"/>
+        <topic label="DL_UART_Extend_disableTransmitPinManualControl" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga1c42bf3ced434695ad62dfe08272ee79"/>
         <topic label="DL_UART_Extend_setTransmitPinManualOutput" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga89d40b9e7ee2a9d8d8cd9be1b1573410"/>
         <topic label="DL_UART_Extend_getTransmitPinManualOutput" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga711304fd14631f837b8909caaae34ee8"/>
         <topic label="DL_UART_Extend_setCommunicationMode" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga4d089753f8c3ffae37ec7198a828ca24"/>
@@ -11682,8 +11682,8 @@
         <topic label="DL_UART_Extend_disableDMATransmitEvent" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga37dea1df95972306e05fccc408747e6a"/>
         <topic label="DL_UART_Extend_getEnabledDMAReceiveEvent" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#gad5f109ae7cde3dff96f8c48dc453bb58"/>
         <topic label="DL_UART_Extend_getEnabledDMATransmitEvent" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#gaeecb55c2801ee1aa39b5bf6cb157f601"/>
-        <topic label="DL_UART_Extend_getEnabledDMAReceiveEventStat" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga84b5a279f56386c5f19157ee6ee3dca3"/>
-        <topic label="DL_UART_Extend_getEnabledDMATransmitEventSta" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#gaf7bca55854da70823cfbac7bdb450700"/>
+        <topic label="DL_UART_Extend_getEnabledDMAReceiveEventStatus" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga1f3b6065b528d03c31b922cac2454376"/>
+        <topic label="DL_UART_Extend_getEnabledDMATransmitEventStatus" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga90fb42edcb7d165767dc853d5f9f34ab"/>
         <topic label="DL_UART_Extend_getRawDMAReceiveEventStatus" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#gad5326109d1857e83bceb621de6c0a4fa"/>
         <topic label="DL_UART_Extend_getRawDMATransmitEventStatus" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga433db51259ae9fb18466bac15a1b6ac0"/>
         <topic label="DL_UART_Extend_setLINCounterValue" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#gaa179c08fe11084a5965560de34d495dd"/>
@@ -11691,22 +11691,22 @@
         <topic label="DL_UART_Extend_enableLINCounter" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga4ec8e51a005fa955e4583403780c3ca5"/>
         <topic label="DL_UART_Extend_isLINCounterEnabled" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga7e6c657a2b92878b099dc970d8bea316"/>
         <topic label="DL_UART_Extend_disableLINCounter" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga231c90fd74f2dc1e87ea4e09a8c048cb"/>
-        <topic label="DL_UART_Extend_enableLINCounterClearOnFallin" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#gae4df7efef09a1a1dcde97662bc3baf07"/>
-        <topic label="DL_UART_Extend_isLINCounterClearOnFallingEdg" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga027e6d69aae0ac3c798927d2ef4cea06"/>
-        <topic label="DL_UART_Extend_disableLINCounterClearOnFalli" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga2614b7c372cb90f1e4f9d6df9eda54b7"/>
+        <topic label="DL_UART_Extend_enableLINCounterClearOnFallingEdge" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga00344b1402a4410e92f1ba65b2a7b322"/>
+        <topic label="DL_UART_Extend_isLINCounterClearOnFallingEdge" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga8e87cd6b0592dd0b6c87f3f42ff48bb8"/>
+        <topic label="DL_UART_Extend_disableLINCounterClearOnFallingEdge" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#gae34f8c02e08efbe1b7457069798e3587"/>
         <topic label="DL_UART_Extend_enableLINCountWhileLow" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga50e33f4774189ff2abe034345445d6dc"/>
         <topic label="DL_UART_Extend_isLINCountWhileLowEnabled" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga380f2d6ca93a6b925f1f1773358e2aa3"/>
         <topic label="DL_UART_Extend_disableLINCountWhileLow" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga8cfd86b3e2becffb1b3f25db4b6177e9"/>
         <topic label="DL_UART_Extend_enableLINFallingEdgeCapture" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#gac19742d6bf0ef0b8d3f01f36df87b6e9"/>
-        <topic label="DL_UART_Extend_isLINFallingEdgeCaptureEnable" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga106981860070750a7a3585c2d7708991"/>
+        <topic label="DL_UART_Extend_isLINFallingEdgeCaptureEnabled" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#gaf078e2b1e8de5197fa72bf3eb821c3fd"/>
         <topic label="DL_UART_Extend_disableLINFallingEdgeCapture" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga921ccdaf8b10d6bfeebcd98ad52f3c30"/>
         <topic label="DL_UART_Extend_enableLINRisingEdgeCapture" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga19b2c4b639354909bec13ac5b37000ee"/>
         <topic label="DL_UART_Extend_isLINRisingEdgeCaptureEnabled" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#gacbfe9153444363deb902962e53654e4e"/>
         <topic label="DL_UART_Extend_disableLINRisingEdgeCapture" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga3592412f96ee7727df7058803a2ac082"/>
         <topic label="DL_UART_Extend_enableLINCounterCompareMatch" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#gab4f2838d1f97b06a4c39cde94814e854"/>
-        <topic label="DL_UART_Extend_enableLINSyncFieldValidationC" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga20648b9e16093e89b84f5bb6286a0dc9"/>
-        <topic label="DL_UART_Extend_enableLINReceptionCountContro" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga209c5025131b15840ea3b482579e2dce"/>
-        <topic label="DL_UART_Extend_isLINCounterCompareMatchEnabl" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#gab0f42c85770ec5ec67869b1a12a404e3"/>
+        <topic label="DL_UART_Extend_enableLINSyncFieldValidationCounterControl" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga433b69c2deb4aef503540e19832b4b8c"/>
+        <topic label="DL_UART_Extend_enableLINReceptionCountControl" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga3c44fa4e5656b414309e6cfcef7c0aff"/>
+        <topic label="DL_UART_Extend_isLINCounterCompareMatchEnabled" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga6a8c2303c4c6d4bad1ce318192ed90b6"/>
         <topic label="DL_UART_Extend_disableLINCounterCompareMatch" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga89a78a197c03b6ded7351035a7cbdbca"/>
         <topic label="DL_UART_Extend_setLINCounterCompareValue" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga858458bfb6094e3c5f76739b1d1e050c"/>
         <topic label="DL_UART_Extend_getLINFallingEdgeCaptureValue" href="group___d_l___u_a_r_t___e_x_t_e_n_d___m_a_c_r_o_s.html#ga0770682ded9cf2e5259a8117eaf1ad5c"/>

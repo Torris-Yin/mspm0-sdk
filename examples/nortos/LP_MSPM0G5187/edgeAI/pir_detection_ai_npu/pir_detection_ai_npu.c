@@ -51,7 +51,7 @@
 #define NUM_BUFFER              (2)
 
 /* Global Variable to store input to the Model */
-int8_t if_map_int8[1][1][25][20];
+int8_t if_map_int8[1][1][25][25];
 
 /* Global variable to store Model output */
 int8_t of_map[1][3] = {0,0,0};
@@ -62,7 +62,8 @@ volatile q15_t featuresPerWindow[FEATURE_SIZE_PER_WINDOW];
 /* ADC related Params */
 /* Ping pong buffers for storing data from the ADC */
 volatile q15_t ADC_buffers[NUM_BUFFER][ADC_BUFFER_SIZE];
-volatile uint32_t dataIndex = 0;
+/* Start with index 4, first 4 elements should be zero */
+volatile uint32_t dataIndex = 4;
 volatile q15_t prodBufferIndex = 0,conBufferIndex = 0;
 
 /* Flag to indicate whether the buffer is full */
@@ -122,8 +123,6 @@ int main(void)
 
     NVIC_EnableIRQ(ADC12_0_INST_INT_IRQN);
 
-    DL_ADC12_startConversion(ADC12_0_INST);
-
     /* Power up the neural processing unit (NPU) module.
      * Clear and enable the NPU interrupt.
      * NPU interrupts will be handled inside the NPU
@@ -142,11 +141,13 @@ int main(void)
 
     FE_init();
 
+    DL_Timer_startCounter(SAMPLING_TIMER_INST);
+
     while (1) {
         /* Check if the current ADC buffer is full and ready for processing */
         if(ADC_bufferState[conBufferIndex])
-        {
-            for(int i = 0 ; (i + WINDOW_SIZE) < FE_FRAME_SIZE ; i+= SLIDING_WINDOW_SIZE)
+        {            
+            for(int i = 0 ; (i + WINDOW_SIZE) < FE_FRAME_SIZE ; i += SLIDING_WINDOW_SIZE)
             {
                 for(int j = 0; j < WINDOW_SIZE; j++)
                 {
@@ -169,7 +170,7 @@ int main(void)
                 __NOP();
             }
 
-            postProcessing();
+            postProcessing();            
         }
     }
 }
@@ -178,7 +179,7 @@ int main(void)
 void ADC12_0_INST_IRQHandler(void)
 {
     switch (DL_ADC12_getPendingInterrupt(ADC12_0_INST)) {
-        case DL_ADC12_IIDX_MEM0_RESULT_LOADED:
+        case DL_ADC12_IIDX_MEM0_RESULT_LOADED:            
             gADCresult = DL_ADC12_getMemResult(ADC12_0_INST, ADC12_0_ADCMEM_0);
 
             /* Check if whole ADC Buffer data is captured */
@@ -197,7 +198,8 @@ void ADC12_0_INST_IRQHandler(void)
 
                 /* Reset the flag */
                 ADC_bufferState[prodBufferIndex] = false;
-                dataIndex = 0;
+                /* Start with index 4, first 4 elements should be zero */
+                dataIndex = 4;
             }
             break;
 

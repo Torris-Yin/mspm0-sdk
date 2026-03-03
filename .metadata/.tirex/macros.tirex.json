@@ -94,7 +94,10 @@
     "arraymacro": "MSPM0C1105_C1106_devices",
     "value": [
       "MSPM0C1105",
-      "MSPM0C1106"
+      "MSPM0C1106",
+      "MSP32G031C8",
+      "MSP32G031C6",
+      "MSP32C031C6"
     ]
   },
   {

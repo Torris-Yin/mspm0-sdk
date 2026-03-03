@@ -264,11 +264,12 @@ function validatePinmux(inst, validation){
             if (USBMod){
                 let USBInsts = USBMod.$instances
                 for(let singleInst of USBInsts){
-                    if(singleInst.peripheral?.$solution?.peripheralName == "USBFS0"){
+                    let usbPeripheralName = singleInst.peripheral?.$solution?.peripheralName;
+                    if(usbPeripheralName == "USBFS0" || usbPeripheralName == "USBLC0"){
                         // USBFS0 Validation
                         // Frequency Check
-                        if(inst.USBCLK_Freq !== 60000000){
-                            validation.logError("USBCLK frequency must be 60MHz.", inst, ["USBCLK_Freq_unit","USBCLKSource"]);
+                        if(inst.USBCLK_Freq !== Common.getUSBFLLFreq()){
+                            validation.logError("USBCLK frequency must be "+Common.getUSBFLLFreq()/1000000+"MHz.", inst, ["USBCLK_Freq_unit","USBCLKSource"]);
                         }
                         // Host Mode Validation
                         if(singleInst.mode == "host"){
@@ -400,22 +401,14 @@ function validateSYSCTL(inst, validation)
                 validation.logError("HSCLK has selected SYSPLL Clock 2 as its source, which is currently disabled.", inst, "SYSPLL_CLK2XEn");
             }
         }
-        if (inst.SYSPLL_Freq_CLK0 > 80000000) {
-            validation.logError("Calculated frequency is greater than 80MHz, which is a spec violation for this device.", inst, "SYSPLL_Freq_CLK0");
-        }
-        if (inst.SYSPLL_Freq_CLK1 > 80000000) {
-            validation.logError("Calculated frequency is greater than 80MHz, which is a spec violation for this device.", inst, "SYSPLL_Freq_CLK1");
-        }
-        if (inst.SYSPLL_Freq_CLK2X > 80000000) {
-            validation.logError("Calculated frequency is greater than 80MHz, which is a spec violation for this device.", inst, "SYSPLL_Freq_CLK2X");
-        }
+        if(inst.useSYSPLL || inst.SYSPLL_CLK0En || inst.SYSPLL_CLK1En || inst.SYSPLL_CLK2XEn){
+            if(inst.SYSPLL_VCOFreq < 80000000) {
+                validation.logError("The combination of PDIV and QDIV values drives the output frequency to VCO below minimum possible value (80 MHz). Please refer to device datasheet for exact operating range.", inst, "SYSPLL_VCOFreq_disp");
+            }
 
-        if(inst.SYSPLL_VCOFreq < 80000000) {
-            validation.logError("The combination of PDIV and QDIV values drives the output frequency to VCO below minimum possible value. Please refer to device datasheet for exact operating range.", inst, "SYSPLL_VCOFreq_disp");
-        }
-
-        if(inst.SYSPLL_VCOFreq > 400000000) {
-            validation.logError("The combination of PDIV and QDIV values drives the output frequency to VCO above maximum possible value. Please refer to device datasheet for exact operating range.", inst, "SYSPLL_VCOFreq_disp");
+            if(inst.SYSPLL_VCOFreq > 160000000) {
+                validation.logError("The combination of PDIV and QDIV values drives the output frequency to VCO above maximum possible value (160 MHz). Please refer to device datasheet for exact operating range.", inst, "SYSPLL_VCOFreq_disp");
+            }
         }
 
         // CAN CLK specific validation
@@ -618,9 +611,12 @@ function validateSYSCTL(inst, validation)
                 validation.logError("USBFLL is not enabled", inst, ["HSCLKSource"]);
                 validation.logError("USBFLL is required for the current configuration (HSCLK)", inst, ["enableUSBFLL"]);
             }
-            if(inst.USBCLKSource == "USBFLL" && !inst.enableUSBFLL){
-                validation.logError("USBFLL is not enabled", inst, ["USBCLKSource"]);
-                validation.logError("USBFLL is required for the current configuration (USBCLK)", inst, ["enableUSBFLL"]);
+            let USBMod = system.modules["/ti/driverlib/USB"];
+            if (USBMod){
+                if(inst.USBCLKSource == "USBFLL" && !inst.enableUSBFLL){
+                    validation.logError("USBFLL is not enabled", inst, ["USBCLKSource"]);
+                    validation.logError("USBFLL is required for the current configuration (USBCLK)", inst, ["enableUSBFLL"]);
+                }
             }
         }
     }

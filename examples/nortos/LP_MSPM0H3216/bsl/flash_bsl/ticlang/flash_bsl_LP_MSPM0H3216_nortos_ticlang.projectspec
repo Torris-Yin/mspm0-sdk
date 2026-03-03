@@ -32,6 +32,7 @@
             -march=thumbv6m
             -mfloat-abi=soft
             -mthumb
+            -Wall
         "
         linkerBuildOptions="
             -Wl,--stack_size=0
@@ -51,7 +52,6 @@
         "
         sourceLookupPath="${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/driverlib"
         description="Provides BSL suport from flash memory">
-
         <property name="buildProfile" value="release"/>
         <property name="isHybrid" value="true"/>
         <file path="../flashBSL_ci.c" openOnCreation="false" excludeFromBuild="false" action="copy">

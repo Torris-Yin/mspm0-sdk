@@ -332,6 +332,15 @@ The USB mass storage device class (MSC)`,
     config: hostMSCConfig,
 };
 
+/* Only add the groups that are available on device */
+let activeDeviceConfig = [
+        devCDCGroup,
+        devHIDGroup,
+];
+if(tusbCommon.isAudioSupported()){
+    activeDeviceConfig.push(devAUDIOGroup);
+}
+activeDeviceConfig.push(devMSCGroup,devBILLBOARDGroup);
 
 /* Mode Configuration Groups */
 let deviceConfig = {
@@ -340,13 +349,7 @@ let deviceConfig = {
     description: "",
     longDescription: ``,
     collapsed: false,
-    config: [
-        devCDCGroup,
-        devHIDGroup,
-        devAUDIOGroup,
-        devMSCGroup,
-        devBILLBOARDGroup,
-    ],
+    config: activeDeviceConfig,
 };
 
 let hostConfig = {
@@ -424,6 +427,14 @@ configuration. If the user disables this option, they should take care to handle
     ],
 }
 
+/* Mode Options vary per device */
+let modeOptions = [
+    { name: "device",   displayName: "Device"},
+];
+if(Common.isUSBHostModeSupported()){
+    modeOptions.push({ name: "host",     displayName: "Host"});
+}
+
 /* Main Module Config */
 let modConfig = [
     /* Show selected peripheral below instance name */
@@ -448,10 +459,7 @@ let modConfig = [
         default: "device",
         longDescription: `
 Configure USB to act as either device or host.`,
-        options: [
-            { name: "device",   displayName: "Device"},
-            { name: "host",     displayName: "Host"},
-        ],
+        options: modeOptions,
         onChange: onChangeMode,
     },
     {
@@ -641,7 +649,9 @@ function moduleInstances(inst) {
             group: "GROUP_DEV_AUDIO",
 
         };
-        modInstances.push(modInst);
+        if(tusbCommon.isAudioSupported()){
+            modInstances.push(modInst);
+        }
         modInst = {
             name: "associated_devMSC",
             displayName: "MSC Instance Configuration",

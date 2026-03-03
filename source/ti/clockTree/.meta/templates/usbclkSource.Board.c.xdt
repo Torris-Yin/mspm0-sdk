@@ -37,20 +37,42 @@
  */
 
     let Common = system.getScript("/ti/driverlib/Common.js");
+    let { ClockSignals } = system.getScript("/ti/driverlib/sysctl/SYSCTLMSPM0Clocks.js");
+
+    let content = args[0]; // passed by SYSCTLclockTree.Board.c.xdt
+
+    /* shorthand names for some common references in template below */
+    // since sysctl is static we don't use the inst variable
+
+    switch(content){
+        case "USBFLL":
+            printUSBFLL();
+            break;
+        case "USBCLK":
+            printUSBCLK();
+            break;
+        default:
+            /* do nothing */
+            return;
+            break;
+    }
 
     let mod = system.modules["/ti/clockTree/mux.js"];
 
-    let usbclkMuxInst   = system.clockTree?.USBCLKMUX;
-    let usbfllGateInst  = system.clockTree?.USBFLLGATE;
 
-    let syspllMuxInst   = system.clockTree?.SYSPLLMUX;
-    let exhfMuxInst   = system.clockTree?.EXFHMUX;
+
+
+
+
+
+
+
+%%}
+% /* USBFLL Config */
+% function printUSBFLL() {
+%%{
     let usbfllStr = "";
-    let usbclkStr = "";
-
-    let USBMod = system.modules["/ti/driverlib/USB"];
-
-
+    let usbfllGateInst  = system.clockTree?.USBFLLGATE;
     /*
         USBFLL
             - is USBFLL enabled?
@@ -58,6 +80,23 @@
                 - generate the configUSBFLL function call
             - Validation
                 - is the source enabled? (LFXT)
+    */
+    if(usbfllGateInst.enable){
+        let usbfllReference = usbfllGateInst.referenceSource;
+        usbfllStr = "DL_SYSCTL_configUSBFLL(DL_SYSCTL_USBFLL_REFERENCE_"+usbfllReference+");"
+    }
+%%}
+% if(usbfllGateInst.enable){
+    `usbfllStr`
+% }
+%}
+% /* USBCLK Config */
+% function printUSBCLK() {
+%%{
+    let usbclkMuxInst   = system.clockTree?.USBCLKMUX;
+    let USBMod = system.modules["/ti/driverlib/USB"];
+    let usbclkStr = "";
+    /*
         USBCLK
             - is USB peripheral configured?
                 - get USBCLKMUX choice from mux
@@ -66,23 +105,13 @@
                 - is the source enabled (USBFLL, SYSPLL1)
                 - host : is it using HFXT through SYSPLL1 ?
     */
-
-    // USBFLL
-    if(usbfllGateInst.enable){
-        let usbfllReference = usbfllGateInst.referenceSource;
-        usbfllStr = "DL_SYSCTL_configUSBFLL(DL_SYSCTL_USBFLL_REFERENCE_"+usbfllReference+");"
-    }
-    // USBCLK
-    if(USBMod){
+    if(USBMod && (ClockSignals.includes("SYSPLL"))){
         let usbclkSource = (_.endsWith(usbclkMuxInst.inputSelect, "USBFLL"))?"USBFLL":"PLLCLK1";
         usbclkStr = "DL_SYSCTL_setUSBCLKSource(DL_SYSCTL_USBCLK_SOURCE_"+usbclkSource+");"
     }
 %%}
-%
-% if(usbfllGateInst.enable){
-    `usbfllStr`
-% }
 % if(USBMod){
     `usbclkStr`
 % }
+%}
 %

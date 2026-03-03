@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['uart_5fcomm_5ftarget_2eh',['uart_comm_target.h',['../uart__comm__target_8h.html',1,'']]]
+  ['npu_2ec',['npu.c',['../npu_8c.html',1,'']]],
+  ['npu_2eh',['npu.h',['../npu_8h.html',1,'']]]
 ];

@@ -36,6 +36,7 @@
             -march=thumbv6m
             -mfloat-abi=soft
             -mthumb
+            -Wall
         "
         linkerBuildOptions="
             -lmodel/model.a
@@ -55,7 +56,6 @@
         "
         sourceLookupPath="${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/driverlib"
         description="Demonstrates basic implementation motor fault detection using AI (with NPU hardware) on MSPM0 device">
-
         <property name="buildProfile" value="release"/>
         <property name="isHybrid" value="true"/>
         <file path="../motor_fault_ai_npu.c" openOnCreation="false" excludeFromBuild="false" action="copy">

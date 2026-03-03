@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectSpec>
+    <applicability>
+        <when>
+            <context
+                deviceFamily="ARM"
+                deviceId="MSPM0G5187"
+            />
+        </when>
+    </applicability>
+
+    <project
+        title="glass_break_detection_ai_npu"
+        name="glass_break_detection_ai_npu_LP_MSPM0G5187_nortos_ticlang"
+        configurations="Debug"
+        toolChain="TICLANG"
+        connection="TIXDS110_Connection.xml"
+        device="MSPM0G5187"
+        ignoreDefaultDeviceSettings="true"
+        ignoreDefaultCCSSettings="true"
+        products="MSPM0-SDK;sysconfig"
+        compilerBuildOptions="
+            -I${PROJECT_ROOT}
+            -I${PROJECT_ROOT}/${ConfigName}
+            @device.opt
+            -I${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/third_party/CMSIS/Core/Include
+            -I${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/edgeAI/filterbank_feature_extract
+            -I${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/edgeAI/npu
+            -I${COM_TI_MSPM0_SDK_INSTALL_DIR}/source
+            -gdwarf-3
+            -mcpu=cortex-m0plus
+            -march=thumbv6m
+            -mfloat-abi=soft
+            -mthumb
+            -Wall
+        "
+        linkerBuildOptions="
+            -lmain_model_glass_break/model.a
+            -lfe_model/fe_model.a
+            -ldevice.cmd.genlibs
+            -L${COM_TI_MSPM0_SDK_INSTALL_DIR}/source
+            -L${PROJECT_ROOT}
+            -L${PROJECT_BUILD_DIR}/syscfg
+            -Wl,--rom_model
+            -Wl,--warn_sections
+            -L${CG_TOOL_ROOT}/lib
+            -llibc.a
+        "
+        sysConfigBuildOptions="
+            --output .
+            --product ${COM_TI_MSPM0_SDK_INSTALL_DIR}/.metadata/product.json
+            --compiler ticlang
+        "
+        sourceLookupPath="${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/driverlib"
+        description="Demonstrates NPU-accelerated glass break detection for security and building automation on MSPM0 device">
+        <property name="buildProfile" value="release"/>
+        <property name="isHybrid" value="true"/>
+        <file path="../model_AUTOGEN.h" openOnCreation="false" excludeFromBuild="false" action="copy">
+        </file>
+        <file path="../constants.h" openOnCreation="false" excludeFromBuild="false" action="copy">
+        </file>
+        <file path="../glass_break_detection_ai_npu.c" openOnCreation="false" excludeFromBuild="false" action="copy">
+        </file>
+        <file path="../glass_break_detection_testvector.h" openOnCreation="false" excludeFromBuild="false" action="copy">
+        </file>
+        <file path="../main_model_glass_break/tvmgen_default.h" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="main_model_glass_break">
+        </file>
+        <file path="../main_model_glass_break/model.a" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="main_model_glass_break">
+        </file>
+        <file path="../fe_model/fe_model.h" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="fe_model">
+        </file>
+        <file path="../fe_model/fe_model.a" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="fe_model">
+        </file>
+        <file path="${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/edgeAI/filterbank_feature_extract/filterbank_feature_extract.c" openOnCreation="false" excludeFromBuild="false" action="link" targetDirectory="ti/edgeAI/filterbank_feature_extract">
+        </file>
+        <file path="${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/edgeAI/filterbank_feature_extract/filterbank_feature_extract.h" openOnCreation="false" excludeFromBuild="false" action="link" targetDirectory="ti/edgeAI/filterbank_feature_extract">
+        </file>
+        <file path="${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/edgeAI/npu/npu.c" openOnCreation="false" excludeFromBuild="false" action="link" targetDirectory="ti/edgeAI/npu">
+        </file>
+        <file path="${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/edgeAI/npu/npu.h" openOnCreation="false" excludeFromBuild="false" action="link" targetDirectory="ti/edgeAI/npu">
+        </file>
+        <file path="../README.md" openOnCreation="true" excludeFromBuild="false" action="copy">
+        </file>
+        <file path="../README.html" openOnCreation="false" excludeFromBuild="false" action="copy">
+        </file>
+        <file path="../glass_break_detection_ai_npu.syscfg" openOnCreation="true" excludeFromBuild="false" action="copy">
+        </file>
+    </project>
+</projectSpec>

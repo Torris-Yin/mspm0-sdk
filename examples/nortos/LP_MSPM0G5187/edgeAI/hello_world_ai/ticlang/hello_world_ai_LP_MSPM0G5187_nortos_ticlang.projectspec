@@ -31,6 +31,7 @@
             -march=thumbv6m
             -mfloat-abi=soft
             -mthumb
+            -Wall
         "
         linkerBuildOptions="
             -lmodel/model.a
@@ -49,11 +50,12 @@
             --compiler ticlang
         "
         sourceLookupPath="${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/driverlib"
-        description="Demonstrates basic implementation of AI on MSPM0 device">
-
+        description="Simple hello world example demonstrating basic AI inference setup on MSPM0 device">
         <property name="buildProfile" value="release"/>
         <property name="isHybrid" value="true"/>
         <file path="../hello_world_ai.c" openOnCreation="false" excludeFromBuild="false" action="copy">
+        </file>
+        <file path="../hello_world_testvector.h" openOnCreation="false" excludeFromBuild="false" action="copy">
         </file>
         <file path="../model/tvmgen_default.h" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="model">
         </file>

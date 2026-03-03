@@ -8,8 +8,8 @@ Table of Contents
 
 1. `Introduction <#introduction>`__
 2. `Environment Setup and Installation <#environment-setup-and-installation>`__
-3. `Train Your Own Model(Simple Native Pytorch Quantization) <#train-your-own-model-simple-native-pytorch-quantization>`__
-4. `Train Your Own Model(Using EdgeAI Studio CLI: tinyml-tensorlab) <#train-your-own-model-using-edgeai-studio-cli-tinyml-tensorlab>`__
+3. `Train Your Own Model (Simple Native Pytorch Quantization) <#train-your-own-model-simple-native-pytorch-quantization>`__
+4. `Train Your Own Model (Using EdgeAI Studio CLI: tinyml-tensorlab) <#train-your-own-model-using-edgeai-studio-cli-tinyml-tensorlab>`__
 5. `Bring Your Own Model <#bring-your-own-model>`__
 6. `Bring Your Own Dataset <#bring-your-own-dataset>`__
 7. `Deploying Compiled Models into an MCU Application <#deploying-compiled-models-into-an-mcu-application>`__
@@ -39,7 +39,7 @@ This document does not go into detail on front-end aspects of the machine learni
 1.2 Target Hardware
 ~~~~~~~~~~~~~~~~~~~
 
-This guide targets deployment of models onto TI's MSPM0 microcontrollers which are based on the Arm Cortex-M0+ CPU core. Variants are available in this family with 24, 32, and 80MHz CPU performance. In the example discussed in this guide, the MSPM0G5187 microcontroller will be used to execute the inference with the trained model. The MSPM0G5187 microcontroller includes an 80MHz Arm CPU, 128kB of flash memory, 32kB of SRAM memory and TI NPU hardware accelerator, and is available on the easy-to-use `LP-MSPM0G5187 <https://www.ti.com/tool/LP-MSPM0G5187>`__ TI Launchpad hardware development kit.
+This guide targets deployment of models onto TI's MSPM0 microcontrollers which are based on the Arm Cortex-M0+ CPU core. Variants are available in this family with 24, 32, and 80MHz CPU performance. In the example discussed in this guide, the MSPM0G5187 microcontroller will be used to execute the inference with the trained model. The MSPM0G5187 microcontroller includes an 80MHz Arm CPU, 128kB of flash memory, 32kB of SRAM memory and TinyEngine™ NPU hardware accelerator, and is available on the easy-to-use `LP-MSPM0G5187 <https://www.ti.com/tool/LP-MSPM0G5187>`__ TI Launchpad hardware development kit.
 
 1.3 CLI-based Machine Learning Workflow
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -99,15 +99,17 @@ The table below lists all of the tools used in this guide. Windows and Linux env
 +-------------------------------------------------+--------------------------------------+-------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
 | PyTorch                                         | 2.7.1 (tested with)                  | Deep learning framework for defining and training models based around tensors                   | Installed via Python PIP                                                                          |
 +-------------------------------------------------+--------------------------------------+-------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
+| Torchvision                                     | 0.22.1 (tested with)                 | PyTorch package providing datasets and image transformations for computer vision                | Installed via Python PIP                                                                          |
++-------------------------------------------------+--------------------------------------+-------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
 | ONNX                                            | 1.18.0 (tested with)                 | Export of trained model for transfer from PyTorch to neural network compiler                    | Installed via Python PIP                                                                          |
 +-------------------------------------------------+--------------------------------------+-------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
 | TI Neural Network Compiler for MCUs             | 2.0.0 RC4 (minimum)                  | Compilation of ONNX trained model into an executable library                                    | Installed via Python PIP, supplied by TI                                                          |
 +-------------------------------------------------+--------------------------------------+-------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
-| TI MSPM0-SDK                                    | 2.08.00.xx(minimum)                  | Software development kit for TI MSPM0 MCUs                                                      | Available at `SDK Link <https://www.ti.com/tool/MSPM0-SDK>`__                                     |
+| TI MSPM0-SDK                                    | 2.08.00.xx (minimum)                 | Software development kit for TI MSPM0 MCUs                                                      | Available at `SDK Link <https://www.ti.com/tool/MSPM0-SDK>`__                                     |
 +-------------------------------------------------+--------------------------------------+-------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
 | TI Code Composer Studio IDE                     | 20.x.x (tested with)                 | Integrated development environment for MSPM0 MCUs                                               | Available at `CCS Link <https://www.ti.com/tool/CCSTUDIO>`__                                      |
 +-------------------------------------------------+--------------------------------------+-------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
-| TI EdgeAI studio CLI tools (tinyml-tensorlab)   | r1.2 (minimum)                       | TI provided CLI tools for developing ML models on TI MCUs                                       | Available at `tinyml-tensorlab github <https://github.com/TexasInstruments/tinyml-tensorlab>`__   |
+| TI EdgeAI studio CLI tools (tinyml-tensorlab)   | r1.3 (minimum)                       | TI provided CLI tools for developing ML models on TI MCUs                                       | Available at `tinyml-tensorlab github <https://github.com/TexasInstruments/tinyml-tensorlab>`__   |
 +-------------------------------------------------+--------------------------------------+-------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+
 
 2.2 Tool Installation and Configuration
@@ -163,17 +165,19 @@ Linux (Bash):
 
 From within the virtual environment (ti-ml-venv), execute a Python PIP installation command to install PyTorch and Torchvision packages. PyTorch is the ML framework, and Torchvision provides the MNIST data set that will be trained on in this guide. The Python ONNX package is used for managing exportation of trained models for subsequent compilation.
 
+**Note:** It is recommended to install specific versions of these libraries to avoid dependency issues. The versions below have been tested with this workflow.
+
 Windows (PowerShell):
 
 ::
 
-      (ti-ml-venv) PS > pip3 install torch torchvision onnx
+      (ti-ml-venv) PS > pip3 install torch==2.7.1 torchvision==0.22.1 onnx==1.18.0
 
 Linux (Bash):
 
 ::
 
-      (ti-ml-venv) $ pip3 install torch torchvision onnx
+      (ti-ml-venv) $ pip3 install torch==2.7.1 torchvision==0.22.1 onnx==1.18.0
 
 For more information on installing PyTorch for your hardware, review the detailed information at `pytorch.org <https://pytorch.org/get-started/locally/>`__.
 
@@ -206,8 +210,8 @@ Obtain Code Composer Studio from TI.com (for Linux or Windows) and run the respe
 
 When you are done working in the Python virtual environment (ti-ml-venv) created in Step 2, you can exit the venv and return back to the shell by simply running the command "deactivate" from within the venv.
 
-3. Train Your Own Model(Simple Native Pytorch Quantization)
------------------------------------------------------------
+3. Train Your Own Model (Simple Native Pytorch Quantization)
+------------------------------------------------------------
 
 With an installed and configured environment, it's possible to begin the training process. In this section, an overview of the LeNet-5 model will be provided. First, the model will be presented without quantization. Then, quantization to 8-bit integer data size will be added. The process of modifying the model definition for quantization will be shown and can be applied to other models.
 
@@ -350,7 +354,7 @@ In order to properly export a quantized model to ONNX format for subsequent comp
     modelInst.qconfig = quantization.get_default_qconfig('x86')
     modelPrepared = quantization.prepare(modelInst)
     modelPrepared(inData)
-    modelInt8 = quantization.prepare(modelPrepared)
+    modelInt8 = quantization.convert(modelPrepared)
     modelInt8(inData)
 
     # Export the Int8 quantized model to ONNX format
@@ -369,7 +373,7 @@ Once the training process has generated a \*.onnx output file, the next step in 
 
 **Calling the TI Neural Network Compiler for MCUs**
 
-TI's Neural Network Compiler may be called from the command line inside the Python virtual environment. Several critical command line flags must be set for proper compilation: Primary compilation command: tmvc compile Typical parameters for compiling to MSPM0 for execution on the Arm Cortex-M0+ CPU include the following:
+TI's Neural Network Compiler may be called from the command line inside the Python virtual environment. Several critical command line flags must be set for proper compilation: Primary compilation command: tvmc compile Typical parameters for compiling to MSPM0 for execution on the Arm Cortex-M0+ CPU include the following:
 
 -  ``--target="c, ti-npu type=soft"`` run layers with an optimized software implementation on a host processor or use ``--target="c, ti-npu"`` run layers on an NPU (if exists on the target MCU device).
 -  ``--target-c-mcpu=cortex-m0plus``
@@ -412,23 +416,19 @@ These files are the outputs which are taken into the MSPM0 software development 
 
 For a complete detailed description of TI's neural network compiler for MCUs, including additional configuration options and guidelines for use, visit the `TI NNC for MCUs User's Guide <https://software-dl.ti.com/mctools/nnc/mcu/users_guide/>`__.
 
-4. Train Your Own Model(Using EdgeAI Studio CLI: tinyml-tensorlab)
-------------------------------------------------------------------
-
-The Tiny ML Tensorlab repository is meant to be as a starting point to install and explore TI's AI offering for MCUs. It helps to install all the required repositories to get started. Currently, it can handle Time series Classification, Regression and Anomaly Detection tasks.
-
-Once you clone this repository, you will find the following repositories present within the tinyml-tensorlab directory:
+4. Train Your Own Model (Using EdgeAI Studio CLI: tinyml-tensorlab)
+-------------------------------------------------------------------
 
 4.1 tinyml-tensorlab
 ~~~~~~~~~~~~~~~~~~~~
 
-The Tiny ML Tensorlab repository available on `GitHub <https://github.com/TexasInstruments/tinyml-tensorlab/>`__ is meant to be as a starting point to install and explore TI's AI offering for MCUs. It helps to install all the required repositories to get started. Currently, it can handle Image Classification, Time series Classification, Regression and Anomaly Detection tasks.
+The Tiny ML Tensorlab repository available on `GitHub <https://github.com/TexasInstruments/tinyml-tensorlab/>`__ is meant to be a starting point to install and explore TI's AI offering for MCUs. It helps to install all the required repositories to get started. Currently, it can handle Image Classification, Time Series Classification, Regression and Anomaly Detection tasks.
 
 Once you clone this repository, you will find the following repositories present within the tinyml-tensorlab directory:
 
 -  tinyml-modelmaker: Based on user configuration (yaml files), stitches a flow with relevant scripts to call from tinyverse. This stitches the scripts into a flow of data loading/training/compilation **This is your home repo. Most of your work will be taking place from this directory.**
--  tinyml-tinyverse: Individual scripts to load data, do preprocessing, AI training, compilation(using NNC/TVM)
--  tinyml-modeloptimization: Model optimization toolkit that is necessary for quantization for 2bit/4bit/8bit weights in QAT(Quantization Aware Training)/PTQ(Post Training Quantization) flows for TI devices with or without NPU. As a customer developing models/flows, it is highly likely that you would not have to edit files in this repo.
+-  tinyml-tinyverse: Individual scripts to load data, do preprocessing, AI training, compilation (using NNC/TVM)
+-  tinyml-modeloptimization: Model optimization toolkit that is necessary for quantization for 2bit/4bit/8bit weights in QAT (Quantization Aware Training)/PTQ (Post Training Quantization) flows for TI devices with or without NPU. As a customer developing models/flows, it is highly likely that you would not have to edit files in this repo.
 
 **Python Environment**
 
@@ -465,8 +465,8 @@ Once you clone this repository, you will find the following repositories present
 -  Please download and install `TI Arm Codegen Tools (TI Arm CGT Clang) <https://www.ti.com/tool/download/ARM-CGT-CLANG>`__
 
    -  Please set the installed path in your terminal:
-   -  Linux: ``export MSPM0_C2000_CG_ROOT="/path/to/ti-cgt-armllvm_4.0.3.LTS"``
-   -  Windows: ``$env:MSPM0_C2000_CG_ROOT="C:\path\to\wherever\present\ti-cgt-armllvm_4.0.3.LTS"``
+   -  Linux: ``export ARM_LLVM_CGT_PATH="/path/to/ti-cgt-armllvm_4.0.3.LTS"``
+   -  Windows: ``$env:ARM_LLVM_CGT_PATH="C:\path\to\wherever\present\ti-cgt-armllvm_4.0.3.LTS"``
 
 Installation
 ^^^^^^^^^^^^
@@ -480,7 +480,7 @@ Steps to set up the repositories
 1. Clone this repository
 2. ``cd tinyml-tensorlab/tinyml-modelmaker``
 3. Execute: ``./setup_all.sh``
-4. Run the following (to install local repositories, ideal for developers): ``bash   cd ../tinyml-tinyverse   pip install -e .   cd tinyml-modeloptimization/torchmodelopt   pip install -e .   cd ../tinyml-modelmaker``
+4. Run the following (to install local repositories, ideal for developers): ``bash   cd ../tinyml-tinyverse   pip install -e .   cd ../tinyml-modeloptimization/torchmodelopt   pip install -e .   cd ../../tinyml-modelmaker``
 5. Now you're ready to go! ``bash   run_tinyml_modelmaker.sh examples/dc_arc_fault/config_dsk.yaml``
 
 **Windows OS**
@@ -536,11 +536,11 @@ This repository can be used from native Windows terminal directly.
 Keeping up to date
 ^^^^^^^^^^^^^^^^^^
 
-Since these repositories are undergoing a massive feature addition stage, it is recommended to keep your codes up to date by running the following command:
+Since these repositories are undergoing a massive feature addition stage, it is recommended to keep your codes up to date.
 
-::
+**Linux (Bash):** ``bash    ./git_pull_all.sh``
 
-    git_pull_all.sh
+**Windows (PowerShell):** Navigate to each repository (tinyml-modelmaker, tinyml-tinyverse, tinyml-modeloptimization) and run ``git pull`` to update.
 
 4.2 Example Run
 ~~~~~~~~~~~~~~~
@@ -559,20 +559,20 @@ These options are about the overall run
 .. code:: yaml
 
     common:
-       target_module: 'vision'             # timeseries and vision modules are currently supported, more modules to come soon. 
-       task_type: 'image_classification'                  # vision->image_classification| timeseries->arc_fault/motor_fault
-       target_device: 'MSPM0G5187'        #Target TI Device
-       run_name: '{date-time}/{model_name}'    # Run directory name is based on this, you can provide your own name, recommended to keep as is
+       target_module: 'vision'                # timeseries and vision modules are currently supported, more modules to come soon. 
+       task_type: 'image_classification'      # vision->image_classification| timeseries->arc_fault/motor_fault
+       target_device: 'MSPM0G5187'            # Target TI Device
+       run_name: '{date-time}/{model_name}'   # Run directory name is based on this, you can provide your own name, recommended to keep as is
 
 Section 2: Dataset
 ^^^^^^^^^^^^^^^^^^
 
 .. code:: yaml
 
-    dataset:                                    # Enable/disable dataset loading
-       enable: True                            # True to enable dataset loading, else will directly start from training step
-       dataset_name: 'mnist_image_classification'     # You can give any name you want, for folder naming purpose
-       input_data_path: 'https://software-dl.ti.com/C2000/esd/mcu_ai/01_02_00/datasets/mnist_classes.zip'  # Can be a url/local folder location to a .zip file or a normal directory 
+    dataset:                                           # Enable/disable dataset loading
+       enable: True                                    # True to enable dataset loading, else will directly start from training step
+       dataset_name: 'mnist_image_classification'      # You can give any name you want, for folder naming purpose
+       input_data_path: 'https://software-dl.ti.com/C2000/esd/mcu_ai/01_03_00/datasets/mnist_classes.zip'  # Can be a url/local folder location to a .zip file or a normal directory 
 
 Section 3: Data Processing and Feature Extraction
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -594,12 +594,12 @@ Section 4: Training
 .. code:: yaml
 
     training:  
-       enable: True                            # Enable/disable training
-       model_name: 'Lenet5' # refer to tinyml-tinyverse\tinyml_tinyverse\common\models\generic_image_models.py for exact model architecture
-       batch_size: 64                      # Batch size to train
-       training_epochs: 14                    # Number of epochs to run training 
-       quantization: 2             # 0->no quantization(simple fp32 training)| 1->quantized models that can run on CPU| 2->TI NPU Aware quantization
-       num_gpus: 1                             # 0 -> use CPU training. 1 -> Use GPU training (System needs to have GPU)
+       enable: True               # Enable/disable training
+       model_name: 'Lenet5'       # refer to tinyml-tinyverse\tinyml_tinyverse\common\models\generic_image_models.py for exact model architecture
+       batch_size: 64             # Batch size to train
+       training_epochs: 14        # Number of epochs to run training 
+       quantization: 2            # 0->no quantization (simple fp32 training) | 1->quantized models that can run on CPU | 2->TinyEngine™ NPU Aware quantization
+       num_gpus: 1                # 0 -> use CPU training. 1 -> Use GPU training (System needs to have GPU)
        learning_rate: 0.1
 
 Section 5: Testing
@@ -608,15 +608,15 @@ Section 5: Testing
 .. code:: yaml
 
     testing:  
-       enable: True                            # Enable/disable testing
+       enable: True               # Enable/disable testing
 
 Section 6: Compilation
 ^^^^^^^^^^^^^^^^^^^^^^
 
 .. code:: yaml
 
-    compilation:  # To enable/disable compilation
-       enable: True                            # Enable/disable compilation of onnx model-> device runnable libraries 
+    compilation:                  # To enable/disable compilation
+       enable: True               # Enable/disable compilation of onnx model-> device runnable libraries 
 
 4.3 Executing the Workflow
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -632,7 +632,7 @@ At the end of the run, both the trained model and compiled artifacts (for deploy
 5. Bring Your Own Model
 -----------------------
 
-Model optimization toolkit that is necessary for quantization for 2bit/4bit/8bit weights in QAT(Quantization Aware Training)/PTQ(Post Training Quantization) flows for TI devices with or without NPU. The following package provides wrappers for models running on TI-NPU (HW Accelerator) or CPU. The wrappers for TI-NPU starts from TINPU whereas for CPU starts from GENERIC.
+Model optimization toolkit that is necessary for quantization for 2bit/4bit/8bit weights in QAT (Quantization Aware Training)/PTQ (Post Training Quantization) flows for TI devices with or without NPU. The following package provides wrappers for models running on TinyEngine™ NPU (HW Accelerator) or CPU. The wrappers for TinyEngine™ NPU start from TINPU whereas for CPU start from GENERIC.
 
 -  `Tiny ML TorchModelOpt <https://github.com/TexasInstruments/tinyml-tensorlab/tree/main/tinyml-modeloptimization>`__ - Tools and utilities to help the development of embedded Models in `Pytorch <https://pytorch.org>`__ - we call these **model optimization tools**.
 -  This repository helps you to quantize (with Quantization Aware Training - QAT or Post Training Quantization - PTQ) your model to formats that can run optimally on TI's MCUs
@@ -644,7 +644,7 @@ If you want to use the repository as it is, i.e a Python package, then you can s
 
 .. code:: bash
 
-    pip install git+https://github.com/TexasInstruments/tinyml-tensorlab.git@r1.2#subdirectory=tinyml-modeloptimization/torchmodelopt
+    pip install git+https://github.com/TexasInstruments/tinyml-tensorlab.git@r1.3#subdirectory=tinyml-modeloptimization/torchmodelopt
 
 To setup the repository for development, this python package and the dependencies can be installed by using the setup file.
 
@@ -658,12 +658,12 @@ To setup the repository for development, this python package and the dependencie
 
 This repository helps you to quantize your model to formats that can run optimally on TI's MCUs
 
-**Note**: Please consult the device and SDK documentation to understand whether Hardware based TI NPU acceleration is supported in that device.
+**Note**: Please consult the device and SDK documentation to understand whether Hardware based acceleration is supported in that device.
 
-1. ARM devices with Hardware based TI NPU acceleration (TINPUTinyMLQATFxModule / TINPUTinyMLPTQFxModule)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1. ARM devices with Hardware based TinyEngine™ NPU acceleration (TINPUTinyMLQATFxModule / TINPUTinyMLPTQFxModule)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
--  TINPUTinyMLQATFxModule / TINPUTinyMLPTQFxModule is a PyTorch module that incorporates the constraints of TI NPU Hardware accelerator. We call this a wrapper as it wraps your PyTorch module and induces the constraints of the hardware.
+-  TINPUTinyMLQATFxModule / TINPUTinyMLPTQFxModule is a PyTorch module that incorporates the constraints of TinyEngine™ NPU hardware accelerator. We call this a wrapper as it wraps your PyTorch module and induces the constraints of the hardware.
 -  It can be imported as follows. from tinyml\_torchmodelopt.quantization import TINPUTinyMLQATFxModule
 
 The following is a sample usage of how to incorporate this module.
@@ -702,8 +702,8 @@ The following is a sample usage of how to incorporate this module.
     # export the quantized model to onnx format
     model.export(dummy_input, os.path.join(save_path,'model_int8.onnx'), input_names=['input'])
 
-2. ARM MCUs without using Hardware based TI NPU acceleration (GenericTinyMLQATFxModule / GenericTinyMLPTQFxModule)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2. ARM MCUs without using Hardware based TinyEngine™ NPU acceleration (GenericTinyMLQATFxModule / GenericTinyMLPTQFxModule)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 -  GenericTinyMLQATFxModule / GenericTinyMLPTQFxModule is a PyTorch module that incorporates the constraints of typical INT8 quantization in PyTorch. This makes use of the PyTorch quantization APIs, but makes it easy to do QAT with minimal code changes. For more details of `PyTorch quantization, see its documentation <https://pytorch.org/docs/stable/quantization.html>`__
 -  The wrapper module can be imported as follows. from tinyml\_torchmodelopt.quantization import GenericTinyMLQATFxModule
@@ -760,7 +760,7 @@ You can now use ``model`` for evaluation before compiling and running on device
     ort_session_options.graph_optimization_level = ort.GraphOptimizationLevel.ORT_ENABLE_EXTENDED
 
     ort_session = ort.InferenceSession(model_name, ort_session_options)
-    prediction = ort_session.run(None, {INPUT_NAME: example_input})
+    prediction = ort_session.run(None, {'input': example_input.numpy()})
 
     print(prediction)
 
@@ -865,7 +865,7 @@ Detailed examples for using this Quantization wrapper is present at `examples <h
 5.4 Compilation
 ~~~~~~~~~~~~~~~
 
-Refer to Section `Compiling Trained Models with TI's Neural Network Compiler for MCU <##compiling-trained-models-with-ti-s-neural-network-compiler-for-mcus>`__ of this user guide for a detailed explanation of the model compilation workflow to generate the artifacts for the ONNX generated in the previous section using the Quantization Wrapper.
+Refer to Section `Compiling Trained Models with TI's Neural Network Compiler for MCUs <#32-compiling-trained-models-with-tis-neural-network-compiler-for-mcus>`__ of this user guide for a detailed explanation of the model compilation workflow to generate the artifacts for the ONNX generated in the previous section using the Quantization Wrapper.
 
 6. Bring Your Own Dataset
 -------------------------
@@ -895,7 +895,7 @@ The prepared dataset should have the following structure for it to be consumed b
 
 -  *annotations* folder is **optional**. If the folder is not provided, the Modelmaker tool automatically generates one.
 -  *classes* folder is mandatory.
--  Look at the example dataset `Arc Fault Classification <https://software-dl.ti.com/C2000/esd/mcu_ai/01_02_00/datasets/arc_fault_classification_dsk.zip>`__ to understand further.
+-  Look at the example dataset `Arc Fault Classification <https://software-dl.ti.com/C2000/esd/mcu_ai/01_03_00/datasets/arc_fault_classification_dsk.zip>`__ to understand further.
 
 Notes
 ~~~~~
@@ -916,7 +916,7 @@ There are two accepted formats for how the file can look in the dataset:
 
 -  **Headerless format**: There is **no header row** and **no index column** in the file.
 
-   -  This is usually suitable for single column files (where only one variable is measured) like the `Arc Fault Classification <https://software-dl.ti.com/C2000/esd/mcu_ai/01_02_00/datasets/arc_fault_classification_dsk.zip>`__ dataset.
+   -  This is usually suitable for single column files (where only one variable is measured) like the `Arc Fault Classification <https://software-dl.ti.com/C2000/esd/mcu_ai/01_03_00/datasets/arc_fault_classification_dsk.zip>`__ dataset.
 
       .. raw:: html
 
@@ -1083,7 +1083,7 @@ A modified main.c from the DriverLib empty example for the LP-MSPM0G3507 with th
        }
     }
 
-NOTE: The above example main.c demonstrates a software-only implementation (executed on the host processor) — applicable when the compiler flag is set to "c, ti-npu type=soft". If instead you compile with the flag "c, ti-npu", refer to the `NPU Inference Guide <https://software-dl.ti.com/mctools/nnc/mcu/users_guide/infering.html#running-model-on-hardware-npu-accelerator-ti-npu>`__ for instructions on integrating and executing the generated artifacts for hardware-accelerated inference on the TI NPU.
+NOTE: The above example main.c demonstrates a software-only implementation (executed on the host processor) — applicable when the compiler flag is set to "c, ti-npu type=soft". If instead you compile with the flag "c, ti-npu", refer to the `NPU Inference Guide <https://software-dl.ti.com/mctools/nnc/mcu/users_guide/infering.html#running-model-on-hardware-npu-accelerator-ti-npu>`__ for instructions on integrating and executing the generated artifacts for hardware-accelerated inference on the TinyEngine™ NPU.
 
 **Application Statistics**
 

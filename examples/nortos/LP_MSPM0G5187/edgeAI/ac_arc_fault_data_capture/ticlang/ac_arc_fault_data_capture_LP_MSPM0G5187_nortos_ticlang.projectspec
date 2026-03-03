@@ -25,7 +25,6 @@
             -DDEVICE_NAME=MSPM0G5187
             @device.opt
             -I${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/third_party/CMSIS/Core/Include
-            -Iexamples/edgeAI/ac_arc_fault_data_capture/device_agent_protocol
             -I${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/edgeAI/device_agent_protocol/core
             -I${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/edgeAI/device_agent_protocol/uart_comm
             -I${COM_TI_MSPM0_SDK_INSTALL_DIR}/source
@@ -34,6 +33,7 @@
             -march=thumbv6m
             -mfloat-abi=soft
             -mthumb
+            -Wall
         "
         linkerBuildOptions="
             -ldevice.cmd.genlibs
@@ -52,7 +52,6 @@
         "
         sourceLookupPath="${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/driverlib"
         description="Example to demonstrate data capture on EdgeAI studio for AC Arc Fault application on MSPM0">
-
         <property name="buildProfile" value="release"/>
         <property name="isHybrid" value="true"/>
         <file path="../ac_arc_fault_data_capture.c" openOnCreation="false" excludeFromBuild="false" action="copy">

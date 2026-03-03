@@ -33,6 +33,7 @@
             -march=thumbv6m
             -mfloat-abi=soft
             -mthumb
+            -Wall
         "
         linkerBuildOptions="
             -Wl,--stack_size=0
@@ -52,7 +53,6 @@
         "
         sourceLookupPath="${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/driverlib"
         description="Shows an implementation of a BSL CAN Flash interface">
-
         <property name="buildProfile" value="release"/>
         <property name="isHybrid" value="true"/>
         <file path="../bsl_mcan.c" openOnCreation="false" excludeFromBuild="false" action="copy">

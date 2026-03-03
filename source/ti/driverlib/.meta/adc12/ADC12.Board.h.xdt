@@ -129,11 +129,7 @@
 % else{
 % if (inst["adcMem"+adcMemIdx+"vref"] === "VDDA") {
 `adcMemREFStr.padEnd(40, " ")+(inst["adcMem"+adcMemIdx+"vrefDependency"]).padStart(40, " ")`
-% let vddaInstance = system.modules["/ti/driverlib/Board"]
-% let vddaVoltage = 3.3
-% if (vddaInstance && (vddaInstance.$static.configureVDDA == true)){
-%   vddaVoltage = (vddaInstance.$static.voltageVDDA)
-% }
+% let vddaVoltage = Common.getVDDAVoltage()
 `adcMemREFVoltageStr.padEnd(40, " ")+(vddaVoltage).toString().padStart(40, " ")`
 % } else {
 `adcMemREFStr.padEnd(40, " ")+(inst["adcMem"+adcMemIdx+"vrefDependency"]).padStart(40, " ")`

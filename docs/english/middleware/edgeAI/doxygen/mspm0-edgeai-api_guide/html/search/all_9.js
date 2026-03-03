@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['max_5fbuffer_5fsize',['MAX_BUFFER_SIZE',['../uart__comm__target_8h.html#ad4d796b98c583d49e83adabd74a63bf6',1,'uart_comm_target.h']]],
-  ['max_5flen_5fidx',['MAX_LEN_IDX',['../uart__comm__target_8h.html#a34425a7ef595f9cf70ab575679e1f5e8',1,'uart_comm_target.h']]]
+  ['len',['len',['../struct_buffer_info.html#a0d41fe464e9eb7cd5bcf0460c54b85fa',1,'BufferInfo']]],
+  ['len_5fidx',['LEN_IDX',['../uart__comm__target_8h.html#a20de465bb4e98d7d9efacb2da1904183',1,'uart_comm_target.h']]],
+  ['ls_5fbytes',['ls_bytes',['../struct_f_b_f_e___ctx.html#ae62273e106e999a3fde4d522831eab85',1,'FBFE_Ctx']]],
+  ['ls_5fmask',['ls_mask',['../struct_f_b_f_e___config.html#aed449beb140624985e264d0ae8490e43',1,'FBFE_Config']]],
+  ['lsb_5ftemp',['lsb_temp',['../struct_f_b_f_e___ctx.html#a7218e85434e3f1d90fe69dfee954a973',1,'FBFE_Ctx']]]
 ];

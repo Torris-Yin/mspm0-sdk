@@ -278,6 +278,9 @@ void DL_RTC_Common_disableCalendarAlarm2(RTC_Regs *rtc_common)
     }
 }
 
+#endif /* __MSPM0_HAS_RTC_A__ || __MSPM0_HAS_RTC_B__ || defined __MSPM0_HAS_RTC__ */
+
+#ifdef __MSPM0_HAS_RTC_A__
 DL_RTC_Common_Calendar DL_RTC_Common_getTimeStampCalendar(
     const RTC_Regs *rtc_common)
 {
@@ -315,4 +318,4 @@ DL_RTC_Common_Calendar DL_RTC_Common_getTimeStampCalendar(
     return calendarTime;
 }
 
-#endif /* __MSPM0_HAS_RTC_A__ || __MSPM0_HAS_RTC_B__ || defined __MSPM0_HAS_RTC__ */
+#endif /* #ifdef __MSPM0_HAS_RTC_A__ */

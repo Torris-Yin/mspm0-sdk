@@ -65,7 +65,6 @@
         "
         sourceLookupPath="${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/driverlib"
         description="Timer updating PWM duty cycle using shadow load and shadow capture compare features">
-
         <property name="buildProfile" value="release"/>
         <property name="isHybrid" value="true"/>
         <file path="../timx_timer_mode_pwm_edge_sleep_shadow.c" openOnCreation="false" excludeFromBuild="false" action="copy">

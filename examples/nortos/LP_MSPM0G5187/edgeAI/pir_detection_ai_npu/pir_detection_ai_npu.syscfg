@@ -14,6 +14,8 @@ const ADC121        = ADC12.addInstance();
 const GPIO          = scripting.addModule("/ti/driverlib/GPIO", {}, false);
 const GPIO1         = GPIO.addInstance();
 const SYSCTL        = scripting.addModule("/ti/driverlib/SYSCTL");
+const TIMER         = scripting.addModule("/ti/driverlib/TIMER", {}, false);
+const TIMER1        = TIMER.addInstance();
 const VREF          = scripting.addModule("/ti/driverlib/VREF");
 const ProjectConfig = scripting.addModule("/ti/project_config/ProjectConfig");
 
@@ -29,16 +31,22 @@ multiplier2.multiplyValue = 5;
 const mux7       = system.clockTree["HSCLKMUX"];
 mux7.inputSelect = "HSCLKMUX_SYSPLL0";
 
-ADC121.$name               = "ADC12_0";
-ADC121.repeatMode          = true;
-ADC121.adcMem0vrefm        = "VREFM";
-ADC121.resolution          = "DL_ADC12_SAMP_CONV_RES_8_BIT";
-ADC121.sampleTime0         = "32 ms";
-ADC121.sampClkDiv          = "DL_ADC12_CLOCK_DIVIDE_16";
-ADC121.enabledInterrupts   = ["DL_ADC12_INTERRUPT_MEM0_RESULT_LOADED"];
-ADC121.adcMem0chansel      = "DL_ADC12_INPUT_CHAN_7";
-ADC121.peripheral.$assign  = "ADC0";
-ADC121.peripheral.adcPin7.$assign = "PA22";
+ADC121.$name                      = "ADC12_0";
+ADC121.adcMem0vrefm               = "VREFM";
+ADC121.resolution                 = "DL_ADC12_SAMP_CONV_RES_8_BIT";
+ADC121.sampClkDiv                 = "DL_ADC12_CLOCK_DIVIDE_16";
+ADC121.enabledInterrupts          = ["DL_ADC12_INTERRUPT_MEM0_RESULT_LOADED"];
+ADC121.subChanID                  = 1;
+ADC121.sampleTime0                = "40 us";
+ADC121.adcMem0chansel             = "DL_ADC12_INPUT_CHAN_2";
+ADC121.trigSrc                    = "DL_ADC12_TRIG_SRC_EVENT";
+ADC121.adcMem0trig                = "DL_ADC12_TRIGGER_MODE_TRIGGER_NEXT";
+ADC121.repeatMode                 = true;
+ADC121.peripheral.$assign         = "ADC0";
+ADC121.peripheral.adcPin2.$assign = "PA25";
+ADC121.adcPin2Config.$name        = "ti_driverlib_gpio_GPIOPinGeneric0";
+
+const Board = scripting.addModule("/ti/driverlib/Board", {}, false);
 
 GPIO1.$name                              = "LED";
 GPIO1.associatedPins.create(3);
@@ -53,11 +61,21 @@ GPIO1.associatedPins[2].pin.$assign      = "PA24";
 SYSCTL.forceDefaultClkConfig = true;
 SYSCTL.clockTreeEn           = true;
 
-VREF.basicExtVolt                  = 3.3;
-VREF.basicMode                     = "DL_VREF_ENABLE_ENABLE_DL_VREF_ENABLE_DISABLE";
-VREF.basicVrefPins                 = "VREF+-";
-VREF.peripheral.$assign            = "VREF";
+TIMER1.$name                       = "SAMPLING_TIMER";
+TIMER1.timerClkPrescale            = 8;
+TIMER1.timerMode                   = "PERIODIC";
+TIMER1.timerClkDiv                 = 8;
+TIMER1.event1PublisherChannel      = 1;
+TIMER1.event1ControllerInterruptEn = ["ZERO_EVENT"];
+TIMER1.timerPeriod                 = "33 ms";
+TIMER1.peripheral.$assign          = "TIMA0";
+
+VREF.basicExtVolt       = 3.3;
+VREF.basicMode          = "DL_VREF_ENABLE_ENABLE_DL_VREF_ENABLE_DISABLE";
+VREF.basicVrefPins      = "VREF+-";
+VREF.peripheral.$assign = "VREF";
 
 ProjectConfig.genLibCMSIS        = true;
 ProjectConfig.migrationCondition = true;
 ProjectConfig.genLibNPU          = true;
+

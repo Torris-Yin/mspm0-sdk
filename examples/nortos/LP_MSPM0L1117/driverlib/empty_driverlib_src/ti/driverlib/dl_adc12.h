@@ -1246,8 +1246,9 @@ __STATIC_INLINE bool DL_ADC12_isReset(const ADC12_Regs *adc12)
  *
  */
 __STATIC_INLINE void DL_ADC12_initSingleSample(ADC12_Regs *adc12,
-    uint32_t repeatMode, uint32_t sampleMode, uint32_t trigSrc,
-    uint32_t resolution, uint32_t dataFormat)
+    DL_ADC12_REPEAT_MODE repeatMode, DL_ADC12_SAMPLING_SOURCE sampleMode,
+    DL_ADC12_TRIG_SRC trigSrc, DL_ADC12_SAMP_CONV_RES resolution,
+    DL_ADC12_SAMP_CONV_DATA_FORMAT dataFormat)
 {
     DL_Common_updateReg(&adc12->ULLMEM.CTL1,
         (repeatMode | sampleMode | trigSrc),
@@ -1340,9 +1341,10 @@ __STATIC_INLINE uint32_t DL_ADC12_getEndAddress(const ADC12_Regs *adc12)
  *                        @ref DL_ADC12_SAMP_CONV_DATA_FORMAT
  */
 __STATIC_INLINE void DL_ADC12_initSeqSample(ADC12_Regs *adc12,
-    uint32_t repeatMode, uint32_t sampleMode, uint32_t trigSrc,
-    uint32_t startAdd, uint32_t endAdd, uint32_t resolution,
-    uint32_t dataFormat)
+    DL_ADC12_REPEAT_MODE repeatMode, DL_ADC12_SAMPLING_SOURCE sampleMode,
+    DL_ADC12_TRIG_SRC trigSrc, uint32_t startAdd, uint32_t endAdd,
+    DL_ADC12_SAMP_CONV_RES resolution,
+    DL_ADC12_SAMP_CONV_DATA_FORMAT dataFormat)
 {
     DL_Common_updateReg(&adc12->ULLMEM.CTL1,
         (ADC12_CTL1_CONSEQ_SEQUENCE | repeatMode | sampleMode | trigSrc),

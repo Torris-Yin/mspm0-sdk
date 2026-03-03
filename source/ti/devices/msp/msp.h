@@ -62,7 +62,8 @@
 #include <ti/devices/msp/m0p/mspm0l130x.h>
 #elif (DeviceFamily_ID == DeviceFamily_ID_MSPM0L134X)
 #include <ti/devices/msp/m0p/mspm0l134x.h>
-#elif (DeviceFamily_ID == DeviceFamily_ID_MSPM0C110X) || (DeviceFamily_ID == DeviceFamily_ID_MSPS003FX)
+#elif (DeviceFamily_ID == DeviceFamily_ID_MSPM0C110X) \
+    || (DeviceFamily_ID == DeviceFamily_ID_MSPS003FX)
 #include <ti/devices/msp/m0p/mspm0c110x.h>
 #elif (DeviceFamily_ID == DeviceFamily_ID_MSPM0L222X)
 #include <ti/devices/msp/m0p/mspm0l222x.h>
@@ -78,7 +79,9 @@
 #include <ti/devices/msp/m0p/mspm0l111x.h>
 #elif (DeviceFamily_ID == DeviceFamily_ID_MSPM0H321X)
 #include <ti/devices/msp/m0p/mspm0h321x.h>
-#elif (DeviceFamily_ID == DeviceFamily_ID_MSPM0C1105_C1106)
+#elif (DeviceFamily_ID == DeviceFamily_ID_MSPM0C1105_C1106) \
+    || (DeviceFamily_ID == DeviceFamily_ID_MSP32G031CX) \
+    || (DeviceFamily_ID == DeviceFamily_ID_MSP32C031CX)
 #include <ti/devices/msp/m0p/mspm0c1105_c1106.h>
 #elif (DeviceFamily_ID == DeviceFamily_ID_MSPM0G511X)
 #include <ti/devices/msp/m0p/mspm0g511x.h>

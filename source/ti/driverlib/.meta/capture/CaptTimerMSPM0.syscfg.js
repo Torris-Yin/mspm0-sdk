@@ -603,17 +603,13 @@ configAdvanced.push(
     {
         name           : "repeatCounter",
         displayName    : "Times to Repeat Counter",
-        description    : "Timer to Repeat Counter",
+        description    : "Times to Repeat Counter",
         longDescription: `Specifies number of timer reloads events before
         triggering repeat counter interrupt.`,
         default        : 1,
         hidden         : true,
-        options        : [
-            { name: 1, displayName: "1" },
-            { name: 2, displayName: "2" },
-            { name: 3, displayName: "3" },
-            { name: 4, displayName: "4" },
-        ],
+        range          : [1, 255],
+        isInteger      : true,
         onChange       : onChangeSetCustomProfile
     },
 );

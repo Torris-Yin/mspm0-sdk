@@ -16,10 +16,12 @@ function validateMultiplier(inst, validation){
 		let sysctl = system.modules["/ti/driverlib/SYSCTL"];
 		if(sysctl && sysctl.$static.clockTreeEn && pllEnabled) {
 			if(inst.PLL_QDIV_OUT < 80) {
-				validation.logError("The combination of PDIV and QDIV values drives the output frequency to VCO below minimum possible value. Please refer to device datasheet for exact operating range.", inst, "PLL_QDIV_OUT");
+				validation.logError("The combination of PDIV and QDIV values drives the output frequency to VCO below minimum possible value (80 MHz). Please refer to device datasheet for exact operating range.", inst, "PLL_QDIV_OUT");
+				validation.logError("The combination of PDIV and QDIV values drives the output frequency to VCO below minimum possible value (80 MHz). Please refer to device datasheet for exact operating range.", system.clockTree.net_vco);
 			}
-			else if(inst.PLL_QDIV_OUT > 400) {
-				validation.logError("The combination of PDIV and QDIV values drives the output frequency to VCO above maximum possible value. Please refer to device datasheet for exact operating range.", inst, "PLL_QDIV_OUT");
+			else if(inst.PLL_QDIV_OUT > 160) {
+				validation.logError("The combination of PDIV and QDIV values drives the output frequency to VCO above maximum possible value (160 MHz). Please refer to device datasheet for exact operating range.", inst, "PLL_QDIV_OUT");
+				validation.logError("The combination of PDIV and QDIV values drives the output frequency to VCO above maximum possible value (160 MHz). Please refer to device datasheet for exact operating range.", system.clockTree.net_vco);
 			}
 		}
 	}

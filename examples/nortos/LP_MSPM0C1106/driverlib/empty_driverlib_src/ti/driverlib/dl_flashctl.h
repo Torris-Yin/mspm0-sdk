@@ -962,6 +962,7 @@ __STATIC_INLINE void DL_FlashCTL_executeClearStatus(FLASHCTL_Regs *flashctl)
 __STATIC_INLINE uint32_t DL_FlashCTL_getFlashSectorNumber(
     FLASHCTL_Regs *flashctl, uint32_t addr)
 {
+    (void)flashctl; /* Suppress unused parameter warning */
     return (addr >> (uint32_t) 10);
 }
 

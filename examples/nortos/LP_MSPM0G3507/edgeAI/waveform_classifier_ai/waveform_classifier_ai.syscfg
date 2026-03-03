@@ -29,20 +29,23 @@ ADC121.enabledDMATriggers         = ["DL_ADC12_DMA_MEM0_RESULT_LOADED"];
 ADC121.sampleTime0                = "198 us";
 ADC121.peripheral.$assign         = "ADC0";
 ADC121.peripheral.adcPin0.$assign = "PA27";
+ADC121.adcPin0Config.$name        = "ti_driverlib_gpio_GPIOPinGeneric0";
 
-GPIO1.$name                               = "LED";
-GPIO1.associatedPins.create(3);
-GPIO1.associatedPins[0].launchPadShortcut = "LED2RedEn";
-GPIO1.associatedPins[0].$name             = "RED";
-GPIO1.associatedPins[0].pin.$assign       = "PB26";
-GPIO1.associatedPins[1].launchPadShortcut = "LED2BlueEn";
-GPIO1.associatedPins[1].$name             = "BLUE";
-GPIO1.associatedPins[1].pin.$assign       = "PB22";
-GPIO1.associatedPins[2].$name             = "GREEN";
-GPIO1.associatedPins[2].launchPadShortcut = "LED2GreenEn";
-GPIO1.associatedPins[2].pin.$assign       = "PB27";
+GPIO1.$name                         = "LED";
+GPIO1.associatedPins.create(4);
+GPIO1.associatedPins[0].$name       = "RED";
+GPIO1.associatedPins[0].pin.$assign = "PB26";
+GPIO1.associatedPins[1].$name       = "BLUE";
+GPIO1.associatedPins[1].pin.$assign = "PB22";
+GPIO1.associatedPins[2].$name       = "GREEN";
+GPIO1.associatedPins[2].pin.$assign = "PB27";
+GPIO1.associatedPins[3].$name       = "PIN_0";
+GPIO1.associatedPins[3].pin.$assign = "PA0";
 
-SYSCTL.MFPCLKEn = true;
+SYSCTL.MFPCLKEn              = true;
+SYSCTL.forceDefaultClkConfig = true;
+SYSCTL.clockTreeEn           = true;
 
-ProjectConfig.genLibCMSIS = true;
+ProjectConfig.genLibCMSIS        = true;
+ProjectConfig.migrationCondition = true;
 

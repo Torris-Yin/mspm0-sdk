@@ -138,6 +138,11 @@ function getGenericBufferSizeConfig(){
     ];
 }
 
+function isAudioSupported(){
+    let peripherals = Object.keys(system.deviceData.peripherals);
+    return (/USB/.test(peripherals)) &&(Common.isDeviceFamily_PARENT_MSPM0G518X() || Common.isDeviceFamily_PARENT_MSPM0G511X());
+    // Audio Configuration is not supported on MSPM0C511X
+}
 
 exports = {
     getEndpointCode : getEndpointCode,
@@ -153,4 +158,5 @@ exports = {
     getClassStringConfigTemplate: getClassStringConfigTemplate,
     getEndpointConfigTemplate: getEndpointConfigTemplate,
     validateClassStr: validateClassStr,
+    isAudioSupported: isAudioSupported,
 };

@@ -25,10 +25,10 @@ function validate(inst, validation){
 		let USBMod = system.modules["/ti/driverlib/USB"];
 		if(USBMod && clockTreeEn){
 			// Frequency Validation
-			if(inst?.USBCLKMUX_out !== 60){
-				validation.logError("USBCLK must be set to 60.000 MHz", inst, "USBCLKMUX_out");
+			if(inst?.USBCLKMUX_out !== Common.getUSBFLLFreq()/1000000){
+				validation.logError("USBCLK must be set to "+Common.getUSBFLLFreq()/1000000+" MHz", inst, "USBCLKMUX_out");
 				if(system.clockTree.net_usbclk){
-					validation.logError("USBCLK must be set to 60.000 MHz", system.clockTree.net_usbclk, "in");
+					validation.logError("USBCLK must be set to "+Common.getUSBFLLFreq()/1000000+" MHz", system.clockTree.net_usbclk, "in");
 				}
 			}
 		}

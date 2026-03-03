@@ -1,10 +1,12 @@
- /**
+/**
  * These arguments were used when this file was generated. They will be automatically applied on subsequent loads
  * via the GUI or CLI. Run CLI with '--help' for additional information on how to override these arguments.
  */
-// @cliArgs --device "MSPM0C110X" --package "VSSOP-20(DGS20)" --part "Default"
-// @v2CliArgs --device "MSPM0C1104" --package "VSSOP-20(DGS20)"
+//@cliArgs --device "MSPM0C110X" --package "VSSOP-20(DGS20)" --part "Default"
+//@v2CliArgs --device "MSPM0C1104" --package "VSSOP-20(DGS20)"
 // @cliArgs --board /ti/boards/LP_MSPM0C1104 --rtos nortos
+
+
 
 /**
  * Import the modules used in this configuration.
@@ -64,4 +66,3 @@ uartLIN1.targetBaudRate           = 19200;
 uartLIN1.enabledInterrupts        = ["RX"];
 uartLIN1.peripheral.rxPin.$assign = "PA26";
 uartLIN1.peripheral.txPin.$assign = "PA27";
-

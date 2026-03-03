@@ -1951,7 +1951,7 @@ __STATIC_INLINE void DL_GPIO_setDigitalInternalResistor(
     uint32_t pincmIndex, DL_GPIO_RESISTOR internalResistor)
 {
     IOMUX->SECCFG.PINCM[pincmIndex] &=
-        ~(DL_GPIO_RESISTOR_PULL_UP | DL_GPIO_RESISTOR_PULL_DOWN);
+        ~((uint32_t)(DL_GPIO_RESISTOR_PULL_UP | DL_GPIO_RESISTOR_PULL_DOWN));
     IOMUX->SECCFG.PINCM[pincmIndex] |=
         IOMUX_PINCM_PC_CONNECTED | (uint32_t) internalResistor;
 }

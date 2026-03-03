@@ -15,6 +15,7 @@ This is a user guide on how to use MSPM0 DFU Host Utility to program, erase, unl
 - Get device info, start application
 - Interactive menu or command-line flags
 - Optional logging and "wrap only" (no send) mode
+- Checksum verification on application image being programmed and readback
 
 ---
 
@@ -114,6 +115,8 @@ dfu_host_utility
   | `-o` | Output file name (for response/readback or wrapped image)                 |
   | `-v` | Enable verbose logging of dfu-util                                        |
   | `-s` | Only wrap file, do not send to device                                     |
+  | `-m` | Calculate and display checksum of input file                              |
+  | `-k` | Verifies the checksum of I/O file against the expected <checksum> value   |
   | `-h` | Show help message                                                         |
   | `-d` | Sets Device Id                                                            |
   | `-v` | Sets Vendor ID                                                            |
@@ -195,6 +198,18 @@ Format for the commands are as follows:
   ```sh
   hostutility.exe -c CMD_GET_IDENTITY -o <file_name>.txt
   ```
+- Calculate checksum of the given `.bin` file 
+  ```sh
+  hostutility.exe -i <file_name>.bin -m 
+  ```
+- Program with a `.bin` file (address required) after verifying the checksum:
+  ```sh
+  hostutility.exe -c CMD_PROGRAM_DATA -i <file_name>.bin -a <start_address> -k <checksum> -o <output_file_name>.dfu
+  ```
+  - Read memory into `.bin` file (address and length required) and verify the data with expected checksum:
+  ```sh
+  hostutility.exe -c CMD_MEMORY_READ_BACK -a <start_address> -l <length> -o <file_name>.bin -k <checksum>
+  ```
 - For more options, run:
   ```sh
   hostutility.exe -h
@@ -242,6 +257,9 @@ Double click on dfu_host_utility_exe_update.bat. If there are no errors then the
 - For programming, all address and length should be 8-byte aligned.
 - By defualt VendorID and ProductID is 2047 and 0210 respectively.
 - The example.bat file is a batch script that demonstrates how to use the dfu host utility to perform a typical device update workflow.
+- Checksum verification option is different from standalone verificaion feature supported by device Bootloader. Checksum verification checks the integrity of the application image before programming into the device and during readback it checks the integrity of the content read from the device, excluding addresses in case of `.txt` file.   
+- When programming across different memory sectors, use `.bin` files rather than `.txt` files. This is because text files represent discontinuous memory segments, while memory readback operations return continuous memory blocks. As a result, CRC checksums for `.txt` files may not match the readback memory CRC even when the programming was successful.
+
 
 ---
 

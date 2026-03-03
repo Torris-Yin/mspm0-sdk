@@ -65,7 +65,6 @@
         "
         sourceLookupPath="${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/driverlib"
         description="UART Extend instance using Manchester encoding and decoding, send a packet of data">
-
         <property name="buildProfile" value="release"/>
         <property name="isHybrid" value="true"/>
         <file path="../uart_extend_manchester_send_packet.c" openOnCreation="false" excludeFromBuild="false" action="copy">

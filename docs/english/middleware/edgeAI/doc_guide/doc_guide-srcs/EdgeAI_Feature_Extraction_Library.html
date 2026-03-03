@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Feature Extraction User Guide for EdgeAI Applications on MSPM0 &mdash; MSPM0 EdgeAI User Guide 1.1.0 documentation</title>
+  <title>Feature Extraction User Guide for EdgeAI Applications on MSPM0 &mdash; MSPM0 EdgeAI User Guide 1.3.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
@@ -22,7 +22,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Edge AI Software Solution for MSPM0 Devices" href="EdgeAI_Software_Overview.html" />
-    <link rel="prev" title="Deploying Machine Learning Models on TI MSPM0 Microcontrollers Using EdgeAI Studio GUI Tools" href="EdgeAI_Deployment_Guide_EdgeAI_Studio.html" /> 
+    <link rel="prev" title="Deploying Machine Learning Models on TI MSPM0 Microcontrollers Using CCStudio™ Edge AI Studio GUI Tools" href="EdgeAI_Deployment_Guide_EdgeAI_Studio.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -33,7 +33,7 @@
             <a href="index.html" class="icon icon-home"> MSPM0 EdgeAI User Guide
           </a>
               <div class="version">
-                1.1.0
+                1.3.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -45,7 +45,7 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="EdgeAI_Deployment_Guide_CLI.html">Deploying Machine Learning Models on TI MSPM0 Microcontrollers Using CLI Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="EdgeAI_Deployment_Guide_EdgeAI_Studio.html">Deploying Machine Learning Models on TI MSPM0 Microcontrollers Using EdgeAI Studio GUI Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EdgeAI_Deployment_Guide_EdgeAI_Studio.html">Deploying Machine Learning Models on TI MSPM0 Microcontrollers Using CCStudio™ Edge AI Studio GUI Tools</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Feature Extraction User Guide for EdgeAI Applications on MSPM0</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#available-feature-extraction-functions">Available Feature Extraction Functions</a><ul>
@@ -61,6 +61,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#processing-pipeline">Processing Pipeline</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#performance-considerations">Performance Considerations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#best-practices">Best Practices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#important-note">Important Note</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="EdgeAI_Software_Overview.html">Edge AI Software Solution for MSPM0 Devices</a></li>
@@ -205,7 +206,7 @@
 <span class="n">uint8_t</span> <span class="n">varIndex</span><span class="p">;</span>
 <span class="o">//</span> <span class="n">Fill</span> <span class="n">rawInput</span> <span class="k">with</span> <span class="n">signal</span> <span class="n">data</span>
 
-<span class="n">FE_process</span><span class="p">(</span><span class="n">rawInput</span><span class="p">,</span> <span class="n">extractedFeatures</span><span class="p">,</span><span class="n">varIndex</span><span class="p">);</span>
+<span class="n">FE_process</span><span class="p">(</span><span class="n">rawInput</span><span class="p">,</span> <span class="n">extractedFeatures</span><span class="p">,</span> <span class="n">varIndex</span><span class="p">);</span>
 </pre></div>
 </div>
 </li>
@@ -250,13 +251,19 @@
 <li><p>Use appropriate scaling factors to prevent numerical issues</p></li>
 </ul>
 </section>
+<section id="important-note">
+<h2>Important Note<a class="headerlink" href="#important-note" title="Permalink to this heading">¶</a></h2>
+<p>This document describes the <strong>on-device</strong> feature extraction library that runs on the MSPM0 microcontroller during inference. The feature extraction parameters configured here must match the parameters used during model training to ensure consistent results.</p>
+<p>When using the <a class="reference external" href="https://github.com/TexasInstruments/tinyml-tensorlab">CLI Tools (tinyml-tensorlab)</a>, the feature extraction configuration is specified in the YAML configuration file under the <code class="docutils literal notranslate"><span class="pre">data_processing_feature_extraction</span></code> section. The compiled model artifacts include a <code class="docutils literal notranslate"><span class="pre">user_input_config.h</span></code> file that contains the matching configuration for on-device feature extraction.</p>
+<p>For more details on the complete deployment workflow, refer to: - <a class="reference external" href="./EdgeAI_Deployment_Guide_CLI.md">Deploying Models Using CLI Tools</a> - <a class="reference external" href="./EdgeAI_Deployment_Guide_EdgeAI_Studio.md">Deploying Models Using CCStudio™ Edge AI Studio GUI</a></p>
+</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="EdgeAI_Deployment_Guide_EdgeAI_Studio.html" class="btn btn-neutral float-left" title="Deploying Machine Learning Models on TI MSPM0 Microcontrollers Using EdgeAI Studio GUI Tools" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="EdgeAI_Deployment_Guide_EdgeAI_Studio.html" class="btn btn-neutral float-left" title="Deploying Machine Learning Models on TI MSPM0 Microcontrollers Using CCStudio™ Edge AI Studio GUI Tools" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="EdgeAI_Software_Overview.html" class="btn btn-neutral float-right" title="Edge AI Software Solution for MSPM0 Devices" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

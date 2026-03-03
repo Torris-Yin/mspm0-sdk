@@ -249,12 +249,12 @@
       <topic label="DL_ADC12_isPowerEnabled" href="group___a_d_c12.html#ga0bedae45a68e77a53315b681ed96e413"/>
       <topic label="DL_ADC12_reset" href="group___a_d_c12.html#ga1c2fc688349088875b8dd1744054654f"/>
       <topic label="DL_ADC12_isReset" href="group___a_d_c12.html#ga95e5cf05dcfe80f7bab1adc1123374d9"/>
-      <topic label="DL_ADC12_initSingleSample" href="group___a_d_c12.html#gac71c58178d557f5393da8c9840edf123"/>
+      <topic label="DL_ADC12_initSingleSample" href="group___a_d_c12.html#ga48c9456daac5448854a3fded0959d40c"/>
       <topic label="DL_ADC12_setStartAddress" href="group___a_d_c12.html#gabfacc849f3c69b2e3ec3af53643eeb70"/>
       <topic label="DL_ADC12_getStartAddress" href="group___a_d_c12.html#ga760cde8f152427bcacb2ea33c4fec663"/>
       <topic label="DL_ADC12_setEndAddress" href="group___a_d_c12.html#ga8d9825330a9294fc058aceb0f8bc2165"/>
       <topic label="DL_ADC12_getEndAddress" href="group___a_d_c12.html#ga5234a85e8317ea2026ce941200defaea"/>
-      <topic label="DL_ADC12_initSeqSample" href="group___a_d_c12.html#gacaedd12e82217c794bc40573cd45a8a1"/>
+      <topic label="DL_ADC12_initSeqSample" href="group___a_d_c12.html#gadc4975f7231e048164a9baab37f937ea"/>
       <topic label="DL_ADC12_getResolution" href="group___a_d_c12.html#ga61fee1bb93868623d7ef7a07d0b016ed"/>
       <topic label="DL_ADC12_getDataFormat" href="group___a_d_c12.html#gace8d839d99268810594bccd213321132"/>
       <topic label="DL_ADC12_getSamplingSource" href="group___a_d_c12.html#ga3ea5063aa23387d1c3d1616bd8f98413"/>
@@ -5444,12 +5444,12 @@
         <topic label="DL_ADC12_isPowerEnabled" href="group___a_d_c12.html#ga0bedae45a68e77a53315b681ed96e413"/>
         <topic label="DL_ADC12_reset" href="group___a_d_c12.html#ga1c2fc688349088875b8dd1744054654f"/>
         <topic label="DL_ADC12_isReset" href="group___a_d_c12.html#ga95e5cf05dcfe80f7bab1adc1123374d9"/>
-        <topic label="DL_ADC12_initSingleSample" href="group___a_d_c12.html#gac71c58178d557f5393da8c9840edf123"/>
+        <topic label="DL_ADC12_initSingleSample" href="group___a_d_c12.html#ga48c9456daac5448854a3fded0959d40c"/>
         <topic label="DL_ADC12_setStartAddress" href="group___a_d_c12.html#gabfacc849f3c69b2e3ec3af53643eeb70"/>
         <topic label="DL_ADC12_getStartAddress" href="group___a_d_c12.html#ga760cde8f152427bcacb2ea33c4fec663"/>
         <topic label="DL_ADC12_setEndAddress" href="group___a_d_c12.html#ga8d9825330a9294fc058aceb0f8bc2165"/>
         <topic label="DL_ADC12_getEndAddress" href="group___a_d_c12.html#ga5234a85e8317ea2026ce941200defaea"/>
-        <topic label="DL_ADC12_initSeqSample" href="group___a_d_c12.html#gacaedd12e82217c794bc40573cd45a8a1"/>
+        <topic label="DL_ADC12_initSeqSample" href="group___a_d_c12.html#gadc4975f7231e048164a9baab37f937ea"/>
         <topic label="DL_ADC12_getResolution" href="group___a_d_c12.html#ga61fee1bb93868623d7ef7a07d0b016ed"/>
         <topic label="DL_ADC12_getDataFormat" href="group___a_d_c12.html#gace8d839d99268810594bccd213321132"/>
         <topic label="DL_ADC12_getSamplingSource" href="group___a_d_c12.html#ga3ea5063aa23387d1c3d1616bd8f98413"/>

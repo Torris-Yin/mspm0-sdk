@@ -65,7 +65,6 @@
         "
         sourceLookupPath="${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/driverlib"
         description="Configure the BEEPER to output a square wave at 1 kHz">
-
         <property name="buildProfile" value="release"/>
         <property name="isHybrid" value="true"/>
         <file path="../beeper_output.c" openOnCreation="false" excludeFromBuild="false" action="copy">

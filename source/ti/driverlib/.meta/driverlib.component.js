@@ -105,7 +105,10 @@ if(/LCD/.test(peripherals)){
 };
 
 /* System (SYSTICK): Devices with SysTick support */
-if(Common.isDeviceM0G() || Common.isDeviceM0L() || Common.isDeviceFamily_PARENT_MSPM0C1105_C1106()){
+if(Common.isDeviceM0G() ||
+    Common.isDeviceM0L() ||
+    Common.isDeviceFamily_PARENT_MSPM0C1105_C1106() ||
+    Common.isDeviceFamily_PARENT_MSPM0C511X()){
     systemModulesList.push(
         "/ti/driverlib/SYSTICK",
     );
@@ -153,7 +156,7 @@ let commModulesList = [
     "/ti/driverlib/SPI",
 ];
 
-if(/USB/.test(peripherals)){
+if(/USB/.test(peripherals) || /USBLC/.test(peripherals)){
     commModulesList.push(
         "/ti/driverlib/USB",
     )

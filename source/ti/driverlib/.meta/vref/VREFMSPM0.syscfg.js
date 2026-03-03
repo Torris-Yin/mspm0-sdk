@@ -456,7 +456,7 @@ vrefBasicConfig = vrefBasicConfig.concat([
                 description : 'Defines the external voltage on VREF+-',
                 longDescription: basicExtVoltLongDesc,
                 hidden      : true,
-                range       : [0, 3.6],
+                range       : [0, Common.getVDDARange()[1]],
                 default     : 2,
                 onChange    : onChangeBasicExtVolt,
             },

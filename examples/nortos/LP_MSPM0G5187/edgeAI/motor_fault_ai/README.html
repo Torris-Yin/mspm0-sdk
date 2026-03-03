@@ -36,121 +36,90 @@
   <h1>Readme</h1>
 <h2 id="example-summary">Example Summary</h2>
 <p>This example demonstrates a motor fault detection application using an AI model on MSPM0G5187 microcontroller. The system collects vibration data from an ADXL355 accelerometer, extracts frequency-domain features using FFT, and performs inference using a pre-trained neural network model. The detected fault class is indicated by toggling onboard LEDs.</p>
-<p>In this example the inference happens using the M0+ CPU itself and not hardware accelerator is used.</p>
+<p>In this example the inference happens using the M0+ CPU itself and no hardware accelerator is used.</p>
 <p>The class to LED color mapping is shown below:</p>
 <ul>
-<li><strong>Blue</strong>: Class 0 (Normal)</li>
-<li><strong>Red</strong>: Class 1 (Blade Damage)</li>
-<li><strong>Green</strong>: Class 2 (Blade Imbalance)</li>
-<li><strong>White</strong>: Class 3 (others or unknown)</li>
+<li><strong>Blue</strong>: Class 0 (Blade Damage)</li>
+<li><strong>Red</strong>: Class 1 (Blade Imbalance)</li>
+<li><strong>Green</strong>: Class 2 (Blade Obstruction)</li>
+<li><strong>White</strong>: Class 3 (Normal)</li>
 </ul>
-<h2 id="peripherals-pin-functions-mcu-pins-launchpad-pins">Peripherals, Pin Functions, MCU Pins, Launchpad Pins</h2>
+<h2 id="ai-model-information">AI Model Information</h2>
 <table>
 <thead>
 <tr class="header">
-<th>Peripheral</th>
-<th>Function</th>
-<th>MCU Pin</th>
-<th>Launchpad Pin</th>
-<th>Launchpad Settings</th>
+<th>Property</th>
+<th>Value</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>GPIOA</td>
-<td>High-Speed Input</td>
-<td>PA12</td>
-<td>J3_28</td>
-<td></td>
+<td>Model Architecture</td>
+<td>MLP</td>
 </tr>
 <tr class="even">
-<td>GPIOA</td>
-<td>Standard with Wake Output</td>
-<td>PA17</td>
-<td>LED2 Red</td>
-<td>Populate Jumper(s): J12[2:1]</td>
+<td>Number of Parameters</td>
+<td>5,228</td>
 </tr>
 <tr class="odd">
-<td>GPIOA</td>
-<td>Standard Output</td>
-<td>PA24</td>
-<td>LED2 Green</td>
-<td>Populate Jumper(s): J13[2:1]</td>
+<td>Input Shape</td>
+<td>(1, 256)</td>
 </tr>
 <tr class="even">
-<td>GPIOB</td>
-<td>Standard Output</td>
-<td>PB13</td>
-<td>LED2 Blue</td>
-<td>Populate Jumper(s): J11[2:1]</td>
+<td>Output Classes</td>
+<td>4</td>
 </tr>
 <tr class="odd">
-<td>SYSCTL</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>UC2</td>
-<td>SPI SCLK (Clock)</td>
-<td>PB18</td>
-<td>J1_7</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>UC2</td>
-<td>SPI PICO (Peripheral In, Controller Out)</td>
-<td>PB17</td>
-<td>J2_15</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>UC2</td>
-<td>SPI POCI (Peripheral Out, Controller In)</td>
-<td>PB19</td>
-<td>J2_14</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>UC2</td>
-<td>SPI CS1 (Chip Select 1)</td>
-<td>PB0</td>
-<td>J4_38</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>EVENT</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>BOARD</td>
-<td>Debug Clock</td>
-<td>PA20</td>
-<td>J101_16</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>BOARD</td>
-<td>Debug Data In Out</td>
-<td>PA19</td>
-<td>J101_14</td>
-<td></td>
+<td>Quantization</td>
+<td>INT8</td>
 </tr>
 </tbody>
 </table>
+<p>In the PyTorch training framework, neural networks are trained with optimizations (for example, aggressive quantization) that target TI MCUs. After training, the neural networks are compiled by the <a href="https://software-dl.ti.com/mctools/nnc/mcu/users_guide/index.html">TI Neural Network Compiler</a>. Options passed to the compiler determine which of the following actions the generated inference library performs:</p>
+<ol>
+<li>Hardware accelerated inference using TinyEngine™ NPU.</li>
+<li>Software-only inference using the CPU on the MCU.</li>
+</ol>
+<p>The output from the TI Neural Network Compiler is an artifacts directory that will contain: A header file (for example, tvmgen_default.h), and a library file (for example, model.a). This makes the output from the compiler easier to integrate with the project.</p>
+<h2 id="ai-performance">AI Performance</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Metric</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Accuracy</td>
+<td>~99%</td>
+</tr>
+<tr class="even">
+<td>Flash Usage</td>
+<td>1.4 kB</td>
+</tr>
+<tr class="odd">
+<td>RAM Usage</td>
+<td>1 kB</td>
+</tr>
+<tr class="even">
+<td>Inference Latency (CPU)</td>
+<td>2.09 ms</td>
+</tr>
+</tbody>
+</table>
+<p><em>Note: Performance metrics measured on LP-MSPM0G5187.</em></p>
+<h3 id="device-migration-recommendations">Device Migration Recommendations</h3>
+<p>This project was developed for a superset device included in the MSPM0 LaunchPad. Please visit the <a href="https://software-dl.ti.com/msp430/esd/MSPM0-SDK/latest/docs/english/tools/ccs_ide_guide/doc_guide/doc_guide-srcs/ccs_ide_guide.html#sysconfig-project-migration">CCS User’s Guide</a> for information about migrating to other MSPM0 devices.</p>
 <h3 id="low-power-recommendations">Low-Power Recommendations</h3>
-<p>Terminate unused pins by configuring them as GPIO outputs low or inputs with internal pull-up/pull-down resistors. Use SysConfig to easily configure unused pins.</p>
+<p>TI recommends to terminate unused pins by setting the corresponding functions to GPIO and configure the pins to output low or input with internal pullup/pulldown resistor.</p>
 <p>SysConfig allows developers to easily configure unused pins by selecting <strong>Board</strong>→<strong>Configure Unused Pins</strong>.</p>
 <p>For more information about jumper configuration to achieve low-power using the MSPM0 LaunchPad, please visit the <a href="https://www.ti.com/lit/slau967">LP-MSPM0G5187 User’s Guide</a>.</p>
-<h2 id="hardware-requirements">Hardware requirements</h2>
+<h2 id="hardware-requirements">Hardware Requirements</h2>
 <ol>
-<li>MSPM0G5187 microcontroller</li>
-<li>ADXL355 accelerometer (sensor) <a href="https://www.digikey.in/en/products/detail/analog-devices-inc/EVAL-ADXL355-PMDZ/7324256?s=N4IgTCBcDaIKIDUCCAZAtEgIgDRQZgFYC0AFAWUwC0QBdAXyA">Link</a></li>
-<li>EF80251S1-1000U-A99 (DC Brushless Fans - BLDC) <a href="https://www.digikey.in/en/products/detail/sunon-fans/EF80251S1-1000U-A99/6198727">Link</a></li>
+<li>LP-MSPM0G5187 LaunchPad</li>
+<li>ADXL355 accelerometer <a href="https://www.digikey.in/en/products/detail/analog-devices-inc/EVAL-ADXL355-PMDZ/7324256">Link</a></li>
+<li>DC Brushless Fan (BLDC) for motor fault testing <a href="https://www.digikey.in/en/products/detail/sunon-fans/EF80251S1-1000U-A99/6198727">Link</a></li>
 </ol>
 <h2 id="example-usage">Example Usage</h2>
 <ol>
@@ -164,13 +133,10 @@
 <li>Controller POCI &lt;- Peripheral POCI</li>
 <li>Controller CS -&gt; Peripheral CS</li>
 </ul></li>
-<li>Connect the sensor ready pin (Data Ready - DRDY) to the designated GPIO interrupt pin (PA12).
-<ul>
-<li>DRDY -&gt; Standard Input</li>
-</ul></li>
+<li>Connect the sensor ready pin (Data Ready - DRDY) to the designated GPIO interrupt pin (PA12).</li>
 <li>Ensure LEDs are connected to the appropriate GPIO pins for class indication.</li>
-<li>Ensure that the digital ground and power from the microntroller is connected to respective pins on the sensor.</li>
-<li>Stick the sensor to the top of the motor.</li>
+<li>Ensure that the digital ground and power from the microcontroller is connected to respective pins on the sensor.</li>
+<li>Mount the sensor on top of the motor.</li>
 </ul>
 <ol>
 <li><strong>Operation</strong></li>
@@ -182,13 +148,7 @@
 <li>The application performs feature extraction using FFT and bins the frequency magnitudes.</li>
 <li>Extracted features are fed to the AI model for inference.</li>
 <li>The output class (fault type) is determined and stored in a circular buffer.</li>
-<li>The LED corresponding to the most frequently detected class in the buffer is toggled:
-<ul>
-<li><strong>LED1 (Blue)</strong>: Class 0 (Normal)</li>
-<li><strong>LED2 (Red)</strong>: Class 1 (Blade Damage)</li>
-<li><strong>LED3 (Green)</strong>: Class 2 (Blade Imbalance)</li>
-<li><strong>All LEDs (White)</strong>: Class 3 (others or unknown)</li>
-</ul></li>
+<li>The LED corresponding to the most frequently detected class in the buffer is toggled.</li>
 </ul>
 <ol>
 <li><strong>Running the Example</strong></li>
@@ -199,29 +159,29 @@
 </ul>
 <h2 id="software-details">Software Details</h2>
 <ul>
+<li><strong>Data Acquisition</strong>: Vibration data collected from ADXL355 accelerometer via SPI.</li>
 <li><strong>Feature Extraction</strong>: Uses ARM CMSIS-DSP library for real FFT and magnitude calculation.</li>
-<li><strong>AI Inference</strong>: Runs a pre-trained model using TVM runtime.</li>
+<li><strong>AI Inference</strong>: Runs a pre-trained MLP model using TVM runtime.</li>
 <li><strong>Interrupt Handling</strong>: Efficient data collection via GPIO interrupts.</li>
 <li><strong>LED Indication</strong>: Fault class is indicated by toggling onboard LEDs.</li>
-<li><strong>AI model used</strong>: Model details are available on <a href="https://github.com/TexasInstruments/tinyml-tensorlab/tree/r1.2/tinyml-modelzoo">Model Zoo</a></li>
+<li><strong>AI Model</strong>: Model details are available on <a href="https://github.com/TexasInstruments/tinyml-tensorlab/tree/r1.3/tinyml-modelzoo">Model Zoo</a></li>
 </ul>
 <h2 id="notes">Notes</h2>
 <ul>
 <li>Ensure the ADXL355 sensor is properly powered and connected.</li>
 <li>Adjust LED and GPIO pin assignments as needed for your hardware.</li>
+<li>The model uses frequency-domain features extracted from accelerometer data.</li>
 </ul>
 <h2 id="references">References</h2>
 <ul>
+<li><a href="https://github.com/TexasInstruments/tinyml-tensorlab/tree/main/tinyml-modelzoo/examples">ModelZoo Example</a></li>
 <li>MSPM0G5187 Technical Reference Manual <a href="https://www.ti.com/product/MSPM0G5187">Link</a></li>
 <li><a href="https://software-dl.ti.com/mctools/nnc/mcu/users_guide/">TI Neural Network Compiler Guide</a></li>
 <li>TI Model Training Guide: <a href="https://github.com/TexasInstruments/tinyml-tensorlab/tree/main">tinyml-tensorlab</a></li>
-<li>EdgeAI Software Guide: SDK_INSTALL_DIR/docs/english/middleware/edgeAI/MSPM0_EdgeAI_User_Guide.html</li>
-<li>For more information on the ADXL355, refer to the datasheets and user guides.
-<ul>
-<li><a href="https://www.analog.com/media/en/technical-documentation/data-sheets/adxl354_adxl355.pdf">Datasheet</a></li>
-<li><a href="https://www.digikey.in/en/htmldatasheets/production/2012480/0/0/1/eval-adxl354-355-user-guide">User guide</a></li>
-</ul></li>
-<li>ADXL355 manufacturer page <a href="https://www.analog.com/en/index.html">link</a></li>
+<li>EdgeAI Software Guide:<a href="https://dev.ti.com/tirex/explore/node?node=A__AKCnvqDed-Plz2JO5Umb3Q__MSPM0-SDK__a3PaaoK__LATEST">Link</a></li>
+<li>ADXL355 Datasheet: <a href="https://www.analog.com/media/en/technical-documentation/data-sheets/adxl354_adxl355.pdf">Link</a></li>
+<li>ADXL355 User Guide: <a href="https://www.digikey.in/en/htmldatasheets/production/2012480/0/0/1/eval-adxl354-355-user-guide">Link</a></li>
+<li>Tensorlab User Guide <a href="https://software-dl.ti.com/C2000/esd/mcu_ai/01_03_00/user_guide/index.html">Link</a></li>
 </ul>
 <!-- Close div from before_body_template.html -->
 </div>
@@ -230,7 +190,7 @@
   with 100,000+ analog ICs and embedded processors, along with software, tools
   and the industry‘s largest sales/support staff.</p>
   <p>
-    <a href="https://www.ti.com/corp/docs/legal/copyright.shtml">© Copyright 1995-2025</a>, Texas Instruments Incorporated. All rights reserved. <br>
+    <a href="https://www.ti.com/corp/docs/legal/copyright.shtml">© Copyright 1995-2026</a>, Texas Instruments Incorporated. All rights reserved. <br>
     <a href="https://www.ti.com/corp/docs/legal/trademark/trademrk.htm">Trademarks</a> | <a href="https://www.ti.com/corp/docs/legal/privacy.shtml">Privacy policy</a> | <a href="https://www.ti.com/corp/docs/legal/termsofuse.shtml">Terms of use</a> | <a href="https://www.ti.com/lsds/ti/legal/termsofsale.page">Terms of sale</a>
   </p>
 </footer>

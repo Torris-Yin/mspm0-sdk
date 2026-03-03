@@ -3,29 +3,21 @@
 This example implements a data-capture for motor fault demo for the MSPM0G5187.  
 The device acquires vibration samples from an ADXL355 accelerometer and streams raw time-domain samples to a host over the Device Agent Protocol (DAP) via UART/USB. The host tool records and visualizes the acquired samples for offline model training, verification, or analysis.
 
-## Peripherals, Pin Functions, MCU Pins, Launchpad Pins
-| Peripheral | Function | MCU Pin | Launchpad Pin | Launchpad Settings |
-| --- | --- | --- | --- | --- |
-| GPIOA | High-Speed Input | PA12 | J3_28 |  |
-| SYSCTL |  |  |  |  |
-| UC0 | RX Pin | PA11 | Back-Channel UART RXD |  |
-| UC0 | TX Pin | PA10 | Back-Channel UART TXD |  |
-| UC2 | SPI SCLK (Clock) | PB18 | J1_7 |  |
-| UC2 | SPI PICO (Peripheral In, Controller Out) | PB17 | J2_15 |  |
-| UC2 | SPI POCI (Peripheral Out, Controller In) | PB19 | J2_14 |  |
-| UC2 | SPI CS1 (Chip Select 1) | PB0 | J4_38 |  |
-| EVENT |  |  |  |  |
-| DMA |  |  |  |  |
-| BOARD | Debug Clock | PA20 | J101_16 |  |
-| BOARD | Debug Data In Out | PA19 | J101_14 |  |
+### Device Migration Recommendations
+
+This project was developed for a superset device included in the MSPM0 LaunchPad. Please visit the [CCS User's Guide](https://software-dl.ti.com/msp430/esd/MSPM0-SDK/latest/docs/english/tools/ccs_ide_guide/doc_guide/doc_guide-srcs/ccs_ide_guide.html#sysconfig-project-migration) for information about migrating to other MSPM0 devices.
 
 ### Low-Power Recommendations
 
-Terminate unused pins as GPIO outputs driven low or configure as inputs with pull-ups/pull-downs. Use SysConfig "Board → Configure Unused Pins" to apply recommended settings. Consult the LP-MSPM0G5187 user guide for jumper settings to reduce power.
+TI recommends to terminate unused pins by setting the corresponding functions to GPIO and configure the pins to output low or input with internal pullup/pulldown resistor.
 
-## Hardware requirements
+SysConfig allows developers to easily configure unused pins by selecting **Board**→**Configure Unused Pins**.
 
-1. MSPM0G5187 development board / LaunchPad
+For more information about jumper configuration to achieve low-power using the MSPM0 LaunchPad, please visit the [LP-MSPM0G5187 User's Guide](https://www.ti.com/lit/slau967).
+
+## Hardware Requirements
+
+1. LP-MSPM0G5187 LaunchPad
 2. ADXL355 accelerometer connected over SPI
 3. Host PC with a USB/serial connection to the board (or USB DFU supporting the live DAP bridge)
 
@@ -46,8 +38,8 @@ Terminate unused pins as GPIO outputs driven low or configure as inputs with pul
 
 3. **Running the Example (Host)**
    - Build and flash the firmware to the MSPM0G5187.
-   - On the host PC run the provided capture/listen tool or Model Composer Edge AI Studio Live Preview set to "Data Capture" mode.
-   - From Model Composer / Edge AI Studio connect to the device and request a data capture session via the GUI.
+   - On the host PC run the provided capture/listen tool or CCStudio™ Edge AI Studio Live Preview set to "Data Capture" mode.
+   - From CCStudio™ Edge AI Studio connect to the device and request a data capture session via the GUI.
    - Make sure that the correct baudrate (115200) and COM ports are selected before connecting to the device.
 
 ## Software Details
@@ -55,7 +47,7 @@ Terminate unused pins as GPIO outputs driven low or configure as inputs with pul
 - Data acquisition reads ADXL355 XYZ samples on each DRDY event using SPI.
 - Samples are packed as 16-bit signed integers (high byte first) and streamed in DAP frames.
 - UART settings: 115200 baud.
-- Key configurable property: "time" — the host sets how many samples to stream/transfer based on sampling rate (1024 deafult)*time.
+- Key configurable property: "time" — the host sets how many samples to stream/transfer based on sampling rate (1024 default)*time.
 
 ## Notes
 
@@ -64,3 +56,9 @@ Terminate unused pins as GPIO outputs driven low or configure as inputs with pul
    - [Datasheet](https://www.analog.com/media/en/technical-documentation/data-sheets/adxl354_adxl355.pdf)
    - [User guide](https://www.digikey.in/en/htmldatasheets/production/2012480/0/0/1/eval-adxl354-355-user-guide)
 - ADXL355 manufacturer page [link](https://www.analog.com/en/index.html)
+
+## References
+
+- [ModelZoo Example](https://github.com/TexasInstruments/tinyml-tensorlab/tree/main/tinyml-modelzoo/examples)
+- MSPM0G5187 Technical Reference Manual [Link](https://www.ti.com/product/MSPM0G5187)
+- EdgeAI Software Guide: SDK_INSTALL_DIR/docs/english/middleware/edgeAI/MSPM0_EdgeAI_User_Guide.html

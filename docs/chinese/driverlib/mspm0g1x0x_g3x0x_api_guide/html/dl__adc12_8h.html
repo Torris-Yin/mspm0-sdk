@@ -29,7 +29,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">MSPM0G1X0X_G3X0X Driver Library
-   &#160;<span id="projectnumber">2.09.00.01</span>
+   &#160;<span id="projectnumber">2.10.00.04</span>
    </div>
   </td>
  </tr>
@@ -761,9 +761,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga95e5cf05dcfe80f7bab1adc1123374d9"><td class="memItemLeft" align="right" valign="top">__STATIC_INLINE bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___a_d_c12.html#ga95e5cf05dcfe80f7bab1adc1123374d9">DL_ADC12_isReset</a> (const ADC12_Regs *adc12)</td></tr>
 <tr class="memdesc:ga95e5cf05dcfe80f7bab1adc1123374d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns if adc12 peripheral was reset.  <a href="group___a_d_c12.html#ga95e5cf05dcfe80f7bab1adc1123374d9">More...</a><br /></td></tr>
 <tr class="separator:ga95e5cf05dcfe80f7bab1adc1123374d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac71c58178d557f5393da8c9840edf123"><td class="memItemLeft" align="right" valign="top">__STATIC_INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___a_d_c12.html#gac71c58178d557f5393da8c9840edf123">DL_ADC12_initSingleSample</a> (ADC12_Regs *adc12, uint32_t repeatMode, uint32_t sampleMode, uint32_t trigSrc, uint32_t resolution, uint32_t dataFormat)</td></tr>
-<tr class="memdesc:gac71c58178d557f5393da8c9840edf123"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes ADC12 for single sampling mode operation. This initialization configures MEMCTL0 as the default memory control register for the conversion. If the conversion needs use a different memory control register the user can call <a class="el" href="group___a_d_c12.html#gabfacc849f3c69b2e3ec3af53643eeb70">DL_ADC12_setStartAddress</a> to specify a different control register.  <a href="group___a_d_c12.html#gac71c58178d557f5393da8c9840edf123">More...</a><br /></td></tr>
-<tr class="separator:gac71c58178d557f5393da8c9840edf123"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga48c9456daac5448854a3fded0959d40c"><td class="memItemLeft" align="right" valign="top">__STATIC_INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___a_d_c12.html#ga48c9456daac5448854a3fded0959d40c">DL_ADC12_initSingleSample</a> (ADC12_Regs *adc12, <a class="el" href="group___a_d_c12.html#gac8bcfb092e31aef3f0576ecd38b78d90">DL_ADC12_REPEAT_MODE</a> repeatMode, <a class="el" href="group___a_d_c12.html#ga5de83e25a73e57e66c93d6074b45881a">DL_ADC12_SAMPLING_SOURCE</a> sampleMode, <a class="el" href="group___a_d_c12.html#gaf0b2935830126ca220da9911a27d0fae">DL_ADC12_TRIG_SRC</a> trigSrc, <a class="el" href="group___a_d_c12.html#ga1e6fff7bd0d98ee314a0a0a89da7b7fa">DL_ADC12_SAMP_CONV_RES</a> resolution, <a class="el" href="group___a_d_c12.html#ga18251bee9a7a19dd0f9bf2ba963061a2">DL_ADC12_SAMP_CONV_DATA_FORMAT</a> dataFormat)</td></tr>
+<tr class="memdesc:ga48c9456daac5448854a3fded0959d40c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes ADC12 for single sampling mode operation. This initialization configures MEMCTL0 as the default memory control register for the conversion. If the conversion needs use a different memory control register the user can call <a class="el" href="group___a_d_c12.html#gabfacc849f3c69b2e3ec3af53643eeb70">DL_ADC12_setStartAddress</a> to specify a different control register.  <a href="group___a_d_c12.html#ga48c9456daac5448854a3fded0959d40c">More...</a><br /></td></tr>
+<tr class="separator:ga48c9456daac5448854a3fded0959d40c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gabfacc849f3c69b2e3ec3af53643eeb70"><td class="memItemLeft" align="right" valign="top">__STATIC_INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___a_d_c12.html#gabfacc849f3c69b2e3ec3af53643eeb70">DL_ADC12_setStartAddress</a> (ADC12_Regs *adc12, uint32_t startAdd)</td></tr>
 <tr class="memdesc:gabfacc849f3c69b2e3ec3af53643eeb70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the start address for ADC conversion.  <a href="group___a_d_c12.html#gabfacc849f3c69b2e3ec3af53643eeb70">More...</a><br /></td></tr>
 <tr class="separator:gabfacc849f3c69b2e3ec3af53643eeb70"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -776,9 +776,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga5234a85e8317ea2026ce941200defaea"><td class="memItemLeft" align="right" valign="top">__STATIC_INLINE uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___a_d_c12.html#ga5234a85e8317ea2026ce941200defaea">DL_ADC12_getEndAddress</a> (const ADC12_Regs *adc12)</td></tr>
 <tr class="memdesc:ga5234a85e8317ea2026ce941200defaea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets end address for ADC conversion.  <a href="group___a_d_c12.html#ga5234a85e8317ea2026ce941200defaea">More...</a><br /></td></tr>
 <tr class="separator:ga5234a85e8317ea2026ce941200defaea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gacaedd12e82217c794bc40573cd45a8a1"><td class="memItemLeft" align="right" valign="top">__STATIC_INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___a_d_c12.html#gacaedd12e82217c794bc40573cd45a8a1">DL_ADC12_initSeqSample</a> (ADC12_Regs *adc12, uint32_t repeatMode, uint32_t sampleMode, uint32_t trigSrc, uint32_t startAdd, uint32_t endAdd, uint32_t resolution, uint32_t dataFormat)</td></tr>
-<tr class="memdesc:gacaedd12e82217c794bc40573cd45a8a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes ADC12 for sequence sampling mode operation.  <a href="group___a_d_c12.html#gacaedd12e82217c794bc40573cd45a8a1">More...</a><br /></td></tr>
-<tr class="separator:gacaedd12e82217c794bc40573cd45a8a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadc4975f7231e048164a9baab37f937ea"><td class="memItemLeft" align="right" valign="top">__STATIC_INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___a_d_c12.html#gadc4975f7231e048164a9baab37f937ea">DL_ADC12_initSeqSample</a> (ADC12_Regs *adc12, <a class="el" href="group___a_d_c12.html#gac8bcfb092e31aef3f0576ecd38b78d90">DL_ADC12_REPEAT_MODE</a> repeatMode, <a class="el" href="group___a_d_c12.html#ga5de83e25a73e57e66c93d6074b45881a">DL_ADC12_SAMPLING_SOURCE</a> sampleMode, <a class="el" href="group___a_d_c12.html#gaf0b2935830126ca220da9911a27d0fae">DL_ADC12_TRIG_SRC</a> trigSrc, uint32_t startAdd, uint32_t endAdd, <a class="el" href="group___a_d_c12.html#ga1e6fff7bd0d98ee314a0a0a89da7b7fa">DL_ADC12_SAMP_CONV_RES</a> resolution, <a class="el" href="group___a_d_c12.html#ga18251bee9a7a19dd0f9bf2ba963061a2">DL_ADC12_SAMP_CONV_DATA_FORMAT</a> dataFormat)</td></tr>
+<tr class="memdesc:gadc4975f7231e048164a9baab37f937ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes ADC12 for sequence sampling mode operation.  <a href="group___a_d_c12.html#gadc4975f7231e048164a9baab37f937ea">More...</a><br /></td></tr>
+<tr class="separator:gadc4975f7231e048164a9baab37f937ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga61fee1bb93868623d7ef7a07d0b016ed"><td class="memItemLeft" align="right" valign="top">__STATIC_INLINE uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___a_d_c12.html#ga61fee1bb93868623d7ef7a07d0b016ed">DL_ADC12_getResolution</a> (const ADC12_Regs *adc12)</td></tr>
 <tr class="memdesc:ga61fee1bb93868623d7ef7a07d0b016ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns ADC12 resolution.  <a href="group___a_d_c12.html#ga61fee1bb93868623d7ef7a07d0b016ed">More...</a><br /></td></tr>
 <tr class="separator:ga61fee1bb93868623d7ef7a07d0b016ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -979,7 +979,7 @@ Functions</h2></td></tr>
 <!-- HTML footer for doxygen 1.8.9.1-->
 <!-- start footer part -->
 <hr class="footer"/><small>
-  <a href="https://www.ti.com/corp/docs/legal/copyright.shtml">© Copyright 1995-2025</a>, Texas Instruments Incorporated. All rights reserved. <br/>
+  <a href="https://www.ti.com/corp/docs/legal/copyright.shtml">© Copyright 1995-2026</a>, Texas Instruments Incorporated. All rights reserved. <br/>
   <a href="https://www.ti.com/corp/docs/legal/trademark/trademrk.htm">Trademarks</a> | <a href="https://www.ti.com/corp/docs/legal/privacy.shtml">Privacy policy</a> | <a href="https://www.ti.com/corp/docs/legal/termsofuse.shtml">Terms of use</a> | <a href="https://www.ti.com/lsds/ti/legal/termsofsale.page">Terms of sale</a>
 </small>
 </body>

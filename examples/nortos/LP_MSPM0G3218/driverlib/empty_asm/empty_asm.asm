@@ -38,38 +38,7 @@
 
     .type main, %function
 main:
-    @ Call SYSCFG_DL_init()
-    bl      SYSCFG_DL_init
+
 loop:
-    BL   GPIO_clearPA0 // turn on LED0
-    LDR  R0,= 40000000 // 500msec delay
-    BL   Delay
-    BL   GPIO_setPA0   // turn off LED0
-    LDR  R0,= 40000000 // 500msec sec
-    BL   Delay
+
     B    loop
-
-
-GPIO_clearPA0:
-    LDR  R1, = 0x400A1280
-    LDR  R0, [R1]
-    MOVS R2, #0x01
-    BICS R0, R0, R2
-    STR  R0, [R1]
-    BX   LR
-
-GPIO_setPA0:
-    LDR  R1, = 0x400A1280
-    LDR  R0, [R1]
-    MOVS R2, #0x01
-    ORRS R0, R0, R2
-    STR  R0, [R1]
-    BX   LR
-
-Delay:
-    SUBS R0,R0,#2
-dloop:
-    SUBS R0,R0,#4
-    NOP
-    BHS  dloop
-    BX   LR

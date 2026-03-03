@@ -65,7 +65,6 @@
         "
         sourceLookupPath="${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/driverlib"
         description="SYSCTL switches the power policy between SLEEP mode and STOP modes">
-
         <property name="buildProfile" value="release"/>
         <property name="isHybrid" value="true"/>
         <file path="../sysctl_power_policy_sleep_to_stop.c" openOnCreation="false" excludeFromBuild="false" action="copy">

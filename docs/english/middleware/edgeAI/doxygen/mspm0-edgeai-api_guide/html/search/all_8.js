@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['len',['len',['../struct_buffer_info.html#a0d41fe464e9eb7cd5bcf0460c54b85fa',1,'BufferInfo']]],
-  ['len_5fidx',['LEN_IDX',['../uart__comm__target_8h.html#a20de465bb4e98d7d9efacb2da1904183',1,'uart_comm_target.h']]]
+  ['inited',['inited',['../struct_f_b_f_e___ctx.html#a5e7956233acd946503b7e30e7505da17',1,'FBFE_Ctx']]],
+  ['iscrc',['isCrc',['../struct_u_a_r_t___instance.html#a688ceaea98ecaf4d26270f9009eae75b',1,'UART_Instance']]]
 ];

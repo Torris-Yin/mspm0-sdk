@@ -67,7 +67,6 @@
         "
         sourceLookupPath="${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/driverlib"
         description="ADC12 sampling the internal temperature sensor and converts reading to Celsius and Fahrenheit degrees using the IQMath Library and integrated math accelerator">
-
         <property name="buildProfile" value="release"/>
         <property name="isHybrid" value="true"/>
         <file path="../adc12_internal_temp_sensor_mathacl.c" openOnCreation="false" excludeFromBuild="false" action="copy">

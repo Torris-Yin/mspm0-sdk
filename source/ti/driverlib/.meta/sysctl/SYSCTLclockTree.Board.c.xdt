@@ -142,6 +142,11 @@
 %     let genMFPCLK = system.getTemplate("/ti/clockTree/templates/mfpclk.Board.c.xdt");
 %  tempStr = _.trimEnd(genMFPCLK());
 %  funcStr += tempStr != ""?tempStr + "\n":"";
+% if(ClockSignals.includes("USBCLK")) {
+%   let genUSBCLK = system.getTemplate("/ti/clockTree/templates/usbclkSource.Board.c.xdt");
+%   tempStr = _.trimEnd(genUSBCLK("USBFLL"));
+%   funcStr += tempStr != ""?tempStr + "\n":"";
+% }
 %     let genMCLK = system.getTemplate("/ti/clockTree/templates/mclkSource.Board.c.xdt");
 %  tempStr = _.trimEnd(genMCLK());
 %  funcStr += tempStr != ""?tempStr + "\n":"";
@@ -150,7 +155,7 @@
 %  funcStr += tempStr != ""?tempStr + "\n":"";
 % if(ClockSignals.includes("USBCLK")) {
 %   let genUSBCLK = system.getTemplate("/ti/clockTree/templates/usbclkSource.Board.c.xdt");
-%   tempStr = _.trimEnd(genUSBCLK());
+%   tempStr = _.trimEnd(genUSBCLK("USBCLK"));
 %   funcStr += tempStr != ""?tempStr + "\n":"";
 % }
 `funcStr`

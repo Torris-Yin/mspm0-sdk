@@ -372,7 +372,7 @@ function moduleInstances(inst){
 
     /* SCL */
     Common.pushGPIOConfigInst(inst, modInstances,   true,    "sclPin",
-     "SCL", "I2C Serial Clock line (SDL)",
+     "SCL", "I2C Serial Clock line (SCL)",
      "INPUT");
 
     return modInstances;

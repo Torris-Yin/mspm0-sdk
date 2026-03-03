@@ -1,10 +1,10 @@
 var indexSectionsWithContent =
 {
-  0: "_bcdefhilmnprstu",
-  1: "bu",
-  2: "nu",
-  3: "_cdnu",
-  4: "deilprt",
+  0: "_bcdefghilmnprstuw",
+  1: "bfu",
+  2: "fnu",
+  3: "_cdfntu",
+  4: "cdefgilmprstw",
   5: "eu",
   6: "eu",
   7: "cdefhlmpst",

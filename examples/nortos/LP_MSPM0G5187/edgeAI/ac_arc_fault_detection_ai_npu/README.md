@@ -1,14 +1,14 @@
 ## Example Summary
 
-This example demonstrates AC arc fault detection using the Neural Processing Unit (NPU) on the TIDA-971 Board. The application captures AC current waveforms using an ADC, extracts relevant features using the feature_extract library, and uses a neural network model to classify the waveform as either normal operation or containing an arc fault signature. When an arc fault is detected, a GPIO PA31 is set to high state.
+This example demonstrates AC arc fault detection using the TinyEngine™ NPU on the TIDA-971 Board. The application captures AC current waveforms using an ADC, extracts relevant features using the feature_extract library, and uses a neural network model to classify the waveform as either normal operation or containing an arc fault signature. When an arc fault is detected, a GPIO PA31 is set to high state.
 
 A specialized TI handcrafted model with approximately 14,000+ parameters is used for the detection. The model is designed to identify the unique spectral and temporal characteristics that distinguish arc faults from normal AC current waveforms.
 
 In the PyTorch training framework, neural networks are trained with optimizations (for example, aggressive quantization) that target TI MCUs. After training, the neural networks are compiled by the 'TI Neural Network Compiler' (https://software-dl.ti.com/mctools/nnc/mcu/users_guide/index.html). Options passed to the compiler determine which of the following actions the generated inference library performs:
-1. Hardware accelerated inference using a Neural network Processing Unit (NPU).
+1. Hardware accelerated inference using TinyEngine™ NPU.
 2. Software-only inference using the CPU on the MCU.
 
-This example is built for the Hardware accelerated inference using a Neural network Processing Unit (NPU).
+This example is built for the Hardware accelerated inference using TinyEngine™ NPU.
 
 The output from the TI Neural Network Compiler is an artifacts directory that will contain: A header file (for example, tvmgen_default.h), and a library file (for example, model.a). This makes the output from the compiler easier to integrate with the project.
 
@@ -22,12 +22,34 @@ and input/output data structures and the inference function are defined.
 - Low power consumption suitable for safety-critical applications
 - Configurable sensitivity and detection thresholds
 
-## Hardware Required
+## AI Model Information
 
-- TIDA-010971 Board
-- AC power source (for testing)
-- Current sensing circuitry (e.g., current transformer or shunt resistor)
-- Optional: Arc fault generation test equipment (for validation)
+| Property | Value |
+| --- | --- |
+| Model Architecture | CNN |
+| Number of Parameters | ~14,000+ |
+| Input Shape | (1,1,256,1) |
+| Output Classes | 2 (Normal, Arc Fault) |
+| Quantization | INT8 |
+
+## AI Performance
+
+| Metric | Value |
+| --- | --- |
+| Accuracy | ~99.8% |
+| Flash Usage | 5.5 kB |
+| RAM Usage | 2.4 kB |
+| Inference Latency (NPU) | 0.71 ms |
+
+*Note: Performance metrics measured on LP-MSPM0G5187.*
+
+## Hardware Requirements
+
+1. LP-MSPM0G5187 LaunchPad
+2. TIDA-010971 Board
+3. AC power source (for testing)
+4. Current sensing circuitry (e.g., current transformer or shunt resistor)
+5. Optional: Arc fault generation test equipment (for validation)
 
 ## Setup
 
@@ -64,17 +86,6 @@ The application uses a trained neural network model optimized for the NPU. The m
 - Response time: <100ms
 - Power consumption: <10mW during active monitoring
 
-## Peripherals, Pin Functions, MCU Pins, Launchpad Pins
-| Peripheral | Function | MCU Pin | Launchpad Pin | Launchpad Settings |
-| --- | --- | --- | --- | --- |
-| GPIOA | Standard with Wake Output | PA31 | J4_35 | <ul><li>PA31 can be connected to LED <ul><li> |
-| ADC0 | A0 | PA21 | J2_18 |  |
-| SYSCTL |  |  |  |  |
-| EVENT |  |  |  |  |
-| DMA |  |  |  |  |
-| BOARD | Debug Clock | PA20 | J101_16 |  |
-| BOARD | Debug Data In Out | PA19 | J101_14 |  |
-
 ### Device Migration Recommendations
 This project was developed for a superset device included in the MSPM0 LaunchPad. Please
 visit the [CCS User's Guide](https://software-dl.ti.com/msp430/esd/MSPM0-SDK/latest/docs/english/tools/ccs_ide_guide/doc_guide/doc_guide-srcs/ccs_ide_guide.html#sysconfig-project-migration)
@@ -87,8 +98,7 @@ pullup/pulldown resistor.
 
 SysConfig allows developers to easily configure unused pins by selecting **Board**→**Configure Unused Pins**.
 
-For more information about jumper configuration to achieve low-power using the
-MSPM0 LaunchPad, please visit the LP-MSPM0G5187 User's Guide.
+For more information about jumper configuration to achieve low-power using the MSPM0 LaunchPad, please visit the [LP-MSPM0G5187 User's Guide](https://www.ti.com/lit/slau967).
 
 ## Example Usage
 1. Connect a current sensor to the ADC input pin PA21. The sensor should be capable of safely measuring AC current in the circuit being monitored.
@@ -99,15 +109,14 @@ During operation:
 - GPIO PA31 is set to high state when an arc fault is detected.
 
 Note: This example has been trained and validated with typical household AC circuits (120V/60Hz and 230V/50Hz). For optimal performance in different electrical environments, the model may need to be retrained with application-specific data.
-This README follows the format of the example provided, adapting it for the AC arc fault detection application while maintaining the same structure and level of detail. It includes all the necessary sections: example summary, peripherals and pin assignments, board resources and jumper settings, device migration recommendations, low-power recommendations, and usage instructions.
 
 ## References
 
+- [AFCI ModelZoo Example](https://github.com/TexasInstruments/tinyml-tensorlab/tree/r1.3/tinyml-modelzoo/examples/ac_arc_fault)
 - MSPM0G5187 Technical Reference Manual [Link](https://www.ti.com/product/MSPM0G5187)
 - UL 1699 Standard for Arc-Fault Circuit Interrupters [Link](https://code-authorities.ul.com/wp-content/uploads/2014/05/Dini2.pdf)
 - [TI Neural Network Compiler Guide](https://software-dl.ti.com/mctools/nnc/mcu/users_guide/)
 - TI Model Training Guide: [tinyml-tensorlab](https://github.com/TexasInstruments/tinyml-tensorlab/tree/main)
 - [AC Arc Fault Detection Theory](https://en.wikipedia.org/wiki/Arc-fault_circuit_interrupter)
-- EdgeAI Software Guide: SDK_INSTALL_DIR/docs/english/middleware/edgeAI/MSPM0_EdgeAI_User_Guide.html
-
-This README provides a comprehensive overview of the AC arc fault detection application using the NPU. It follows the standard format with introduction, features, hardware/software requirements, setup instructions, usage information, implementation details, and references. You can adjust any specific technical parameters or features to match the actual implementation of your example.
+- EdgeAI Software Guide:[Link](https://dev.ti.com/tirex/explore/node?node=A__AKCnvqDed-Plz2JO5Umb3Q__MSPM0-SDK__a3PaaoK__LATEST)
+- Tensorlab User Guide [Link](https://software-dl.ti.com/C2000/esd/mcu_ai/01_03_00/user_guide/index.html)

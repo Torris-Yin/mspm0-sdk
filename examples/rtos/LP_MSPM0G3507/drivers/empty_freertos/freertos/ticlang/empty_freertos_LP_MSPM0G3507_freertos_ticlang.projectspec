@@ -36,6 +36,7 @@
             -march=thumbv6m
             -mfloat-abi=soft
             -mthumb
+            -Wall
         "
         linkerBuildOptions="
             -l${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/drivers/lib/ticlang/m0p/drivers_mspm0g1x0x_g3x0x.a
@@ -51,7 +52,6 @@
         "
         sourceLookupPath="${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/driverlib"
         description="Empty example to be used as a starting point for new development using FreeRTOS">
-
         <property name="buildProfile" value="release"/>
         <property name="isHybrid" value="true"/>
         <file path="../../ti_drivers_config.h" openOnCreation="false" excludeFromBuild="false" action="copy">

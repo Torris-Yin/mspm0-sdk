@@ -37,6 +37,7 @@
             -march=thumbv6m
             -mfloat-abi=soft
             -mthumb
+            -Wall
         "
         linkerBuildOptions="
             -l${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/boot_manager/lib/ticlang/m0p/bimsupport.a
@@ -58,7 +59,6 @@
         "
         sourceLookupPath="${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/driverlib"
         description="Boot Image Manager Using MCUBoot">
-
         <property name="buildProfile" value="release"/>
         <property name="isHybrid" value="true"/>
         <file path="../flash_map_backend/flash_map_backend.c" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="flash_map_backend">

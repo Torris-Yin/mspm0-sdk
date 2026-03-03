@@ -142,7 +142,7 @@
 %   let BCLKEnable = true;
 %   if (BCLKEnable) {
 %       let pinResourceName = "BCLK";
-%       let pinDirection = (inst.mode=="TARGET")?"Input":"Output";
+%       let pinDirection = "Input";
 %       /* If Pin Configuration enabled, do not generate duplicate call */
 %       if(!inst[pinResourceName+"PinConfig"]?.enableConfig){
     DL_GPIO_initPeripheral`pinDirection`Function(
@@ -167,7 +167,7 @@
 %   let WCLKEnable = true;
 %   if (WCLKEnable) {
 %       let pinResourceName = "WCLK";
-%       let pinDirection = (inst.mode=="TARGET")?"Input":"Output";
+%       let pinDirection = "Input";
 %       /* If Pin Configuration enabled, do not generate duplicate call */
 %       if(!inst[pinResourceName+"PinConfig"]?.enableConfig){
     DL_GPIO_initPeripheral`pinDirection`Function(

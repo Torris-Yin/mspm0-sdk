@@ -6,7 +6,6 @@
 //@v2CliArgs --device "MSPM0C1106" --package "VQFN-48(RGZ)"
 // @cliArgs --board /ti/boards/LP_MSPM0C1106 --rtos nortos
 
-
 /**
  * Import the modules used in this configuration.
  */

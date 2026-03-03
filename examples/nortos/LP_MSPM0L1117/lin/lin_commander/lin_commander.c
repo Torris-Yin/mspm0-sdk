@@ -102,22 +102,16 @@ int main(void)
 void GROUP1_IRQHandler(void)
 {
     switch (DL_Interrupt_getPendingGroup(DL_INTERRUPT_GROUP_1)) {
-        case DL_INTERRUPT_GROUP1_IIDX_GPIOB:
-            switch (DL_GPIO_getPendingInterrupt(GPIO_SWITCHES1_PORT)) {
-                case GPIO_SWITCHES1_USER_SWITCH_1_IIDX:
-                    /* When USER_SWITCH_1_INST is pressed, send PID 0x39 */
-                    gSendMessage1 = true;
-
-                    break;
-                default:
-                    break;
-            }
-            break;
         case DL_INTERRUPT_GROUP1_IIDX_GPIOA:
             switch (DL_GPIO_getPendingInterrupt(GPIO_SWITCHES2_PORT)) {
                 case GPIO_SWITCHES2_USER_SWITCH_2_IIDX:
                     /* When USER_SWITCH_2_INST is pressed, send PID 0x08 */
                     gSendMessage2 = true;
+                    break;
+                case GPIO_SWITCHES1_USER_SWITCH_1_IIDX:
+                    /* When USER_SWITCH_1_INST is pressed, send PID 0x39 */
+                    gSendMessage1 = true;
+
                     break;
                 default:
                     break;

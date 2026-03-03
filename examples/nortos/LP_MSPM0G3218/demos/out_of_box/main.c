@@ -37,19 +37,19 @@
 //
 //  This demo presents the basic peripherals of MSPM0G3218 (pressing S2 cycles to the next demo)
 //  - Blink_LED: A blinking LED that toggles every second based on a timer
-//  - RGB Cycling: each of the three colors are cycled through, changing every second to the 
+//  - RGB Cycling: each of the three colors are cycled through, changing every second to the
 //    next color in the RGB pattern.
-//  - Thermistor ADC Read: The ADC takes a sample of the value of the thermistor circuit. If 
+//  - Thermistor ADC Read: The ADC takes a sample of the value of the thermistor circuit. If
 //    the value falls below 1500, the RGB LED turns Blue, green from 1500-2500, and red for >2500
 // *******************************************************************************************
 #include "ti_msp_dl_config.h"
 
-#define RedLED   	(0)
-#define GreenLED 	(1)
-#define BlueLED  	(2)
-#define LED_BLINK 	(0)
-#define RGB_CYCLE 	(1)
-#define ADC_READ 	(2)
+#define RedLED (0)
+#define GreenLED (1)
+#define BlueLED (2)
+#define LED_BLINK (0)
+#define RGB_CYCLE (1)
+#define ADC_READ (2)
 
 volatile bool gCheckADC;
 volatile uint16_t gAdcResult;
@@ -61,11 +61,11 @@ void readADC(void)
     DL_GPIO_clearPins(GPIO_TEMP_PORT, GPIO_TEMP_R_LED_PIN);
     DL_GPIO_clearPins(GPIO_TEMP_PORT, GPIO_TEMP_G_LED_PIN);
     DL_GPIO_clearPins(GPIO_TEMP_PORT, GPIO_TEMP_B_LED_PIN);
-    
-  	/* Start the ADC0 conversion on pin PA22 */
-  	DL_ADC12_startConversion(ADC12_0_INST);
-	
-  	/* Wait until we have acquired teh ADC data from MEM_IDX_0*/
+
+    /* Start the ADC0 conversion on pin PA22 */
+    DL_ADC12_startConversion(ADC12_0_INST);
+
+    /* Wait until we have acquired teh ADC data from MEM_IDX_0*/
     while (false == gCheckADC) {
         __WFE();
     }
@@ -87,12 +87,12 @@ void readADC(void)
     }
 
     gCheckADC = false;
-  	/* Enable the ADC for the next iteration*/
+    /* Enable the ADC for the next iteration*/
     DL_ADC12_enableConversions(ADC12_0_INST);
 }
 
 void rgbLED(void)
-{	/* Put LED pins in known state before cycling */
+{ /* Put LED pins in known state before cycling */
     DL_GPIO_setPins(GPIO_LEDS_PORT, GPIO_LEDS_USER_LED_1_PIN);
     DL_GPIO_clearPins(GPIO_TEMP_PORT, GPIO_TEMP_R_LED_PIN);
     DL_GPIO_clearPins(GPIO_TEMP_PORT, GPIO_TEMP_G_LED_PIN);
@@ -100,59 +100,59 @@ void rgbLED(void)
 
     switch (count) {
         case RedLED:
-        	/* Set LED to Red*/  
+            /* Set LED to Red*/
             DL_GPIO_setPins(GPIO_TEMP_PORT, GPIO_TEMP_R_LED_PIN);
-        	/* Increment counter for next iteration*/    
-        	count++; 
+            /* Increment counter for next iteration*/
+            count++;
             break;
 
         case GreenLED:
-        	/* Set LED to Green*/  
+            /* Set LED to Green*/
             DL_GPIO_setPins(GPIO_TEMP_PORT, GPIO_TEMP_G_LED_PIN);
-        	/* Increment counter for next iteration*/  
+            /* Increment counter for next iteration*/
             count++;
             break;
 
         case BlueLED:
-        	/* Set LED to Blue*/  
+            /* Set LED to Blue*/
             DL_GPIO_setPins(GPIO_TEMP_PORT, GPIO_TEMP_B_LED_PIN);
             /* Reset count after reaching last color in cycle */
-        	count = 0;
+            count = 0;
             break;
     }
 }
 
 int main(void)
 {
-  /* Initialize variables and start in LED_BLINK mode */
+    /* Initialize variables and start in LED_BLINK mode */
     mode      = LED_BLINK;
     count     = 0;
     gCheckADC = false;
 
     SYSCFG_DL_init();
-	
-  	/* Enable interrupt on the S2 button */
+
+    /* Enable interrupt on the S2 button */
     NVIC_EnableIRQ(GPIO_SWITCHES_INT_IRQN);
-  	/* Start timer for LED_BLINK and RGB_CYCLE modes */
+    /* Start timer for LED_BLINK and RGB_CYCLE modes */
     DL_TimerA_startCounter(TIMER_0_INST);
 
     while (1) {
         switch (mode) {
             case LED_BLINK:  // Blink Red LED once per second
                 /* Disable/enable interrupt routines based on mode*/
-            	NVIC_DisableIRQ(ADC12_0_INST_INT_IRQN);
+                NVIC_DisableIRQ(ADC12_0_INST_INT_IRQN);
                 NVIC_EnableIRQ(TIMER_0_INST_INT_IRQN);
                 break;
 
             case RGB_CYCLE:  // RGB Color switch
-            	/* Disable/enable interrupt routines based on mode*/
+                /* Disable/enable interrupt routines based on mode*/
                 NVIC_DisableIRQ(ADC12_0_INST_INT_IRQN);
                 NVIC_EnableIRQ(TIMER_0_INST_INT_IRQN);
                 break;
 
             case ADC_READ:  // PA22 ADC read thermistor and change RGB based on ADC value
                 /* Disable/enable interrupt routines based on mode*/
-            	NVIC_DisableIRQ(TIMER_0_INST_INT_IRQN);
+                NVIC_DisableIRQ(TIMER_0_INST_INT_IRQN);
                 NVIC_EnableIRQ(ADC12_0_INST_INT_IRQN);
                 readADC();
                 break;
@@ -178,11 +178,11 @@ void TIMER_0_INST_IRQHandler(void)
     switch (DL_TimerA_getPendingInterrupt(TIMER_0_INST)) {
         case DL_TIMERA_IIDX_ZERO:
             if (mode == LED_BLINK) {
-              	/* Turn of the RGB LEDs*/
+                /* Turn of the RGB LEDs*/
                 DL_GPIO_clearPins(GPIO_TEMP_PORT, GPIO_TEMP_R_LED_PIN);
                 DL_GPIO_clearPins(GPIO_TEMP_PORT, GPIO_TEMP_G_LED_PIN);
                 DL_GPIO_clearPins(GPIO_TEMP_PORT, GPIO_TEMP_B_LED_PIN);
-              	/* Begin toggling the red LED for MODE_BLINK*/
+                /* Begin toggling the red LED for MODE_BLINK*/
                 DL_GPIO_togglePins(GPIO_LEDS_PORT, GPIO_LEDS_USER_LED_1_PIN);
             } else if (mode == RGB_CYCLE) {
                 rgbLED();
@@ -199,7 +199,7 @@ void GROUP1_IRQHandler(void)
     switch (DL_Interrupt_getPendingGroup(DL_INTERRUPT_GROUP_1)) {
         case GPIO_SWITCHES_INT_IIDX:
             mode++;
-            if (mode == ADC_READ) {
+            if (mode == ADC_READ + 1) {
                 mode = LED_BLINK;
             }
 

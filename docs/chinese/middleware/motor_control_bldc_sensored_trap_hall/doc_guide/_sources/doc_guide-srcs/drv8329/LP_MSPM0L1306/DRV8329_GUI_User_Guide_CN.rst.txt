@@ -28,7 +28,7 @@ View the `hardware user guide <DRV8329_Hardware_User_Guide_CN.html>`__ for detai
 
 The GUI will automatically program the LaunchPad with the necessary firmware. If everything is successful the bottom left corner of the GUI should say "Hardware connected".
 
-.. figure:: images/Hardware_connected.png
+.. figure:: ../images/Hardware_connected.png
    :alt: 
 
 3. GUI Window
@@ -36,7 +36,7 @@ The GUI will automatically program the LaunchPad with the necessary firmware. If
 
 In the GUI window user can find various controls like nSleep, DRVOFF, Direction control, duty cycle, pwm frequency, deadband, and acceleration rate. Various faults are also indicated using LEDs.
 
-.. figure:: images/GUI_window.png
+.. figure:: ../images/GUI_window.png
    :alt: 
 
 3.1 Motor Control
@@ -44,7 +44,7 @@ In the GUI window user can find various controls like nSleep, DRVOFF, Direction 
 
 Once the hardware connections are done and GUI is connected to device, the motor is ready to spin. All the controls are in defaults. The user can spin the motor by adjusting the duty cycle.
 
-.. figure:: images/motor_control.png
+.. figure:: ../images/motor_control.png
    :alt: 
 
 Note: In DRV8329AEVM the nSleep and DRVOFF pins are default controlled by switches provided on EVM. The user need to modify hardware connections to control nSleep and DRVOFF pins from GUI. Please refer to `hardware user guide <DRV8329_Hardware_User_Guide_CN.html>`__ for modifications.
@@ -72,7 +72,7 @@ Note: In DRV8329AEVM the nSleep and DRVOFF pins are default controlled by switch
 
 The motor can be stopped from GUI without turning off the DRV by using stop button. The motor stops spinning with brake type selected.
 
-.. figure:: images/Braking.png
+.. figure:: ../images/Braking.png
    :alt: 
 
 +----------------+-----------+-------------------------------------------------+
@@ -88,7 +88,7 @@ The motor can be stopped from GUI without turning off the DRV by using stop butt
 
 The DRV8329AEVM has internal current sense amplifier, the gain is controlled with external resistors. A shunt resister and current reference are provided for current measurement. The user need to input all these parameters into GUI.
 
-.. figure:: images/current_settings.png
+.. figure:: ../images/current_settings.png
    :alt: 
 
 +------------+-----------+-----------------------------------------------------------------------------+
@@ -106,7 +106,7 @@ The DRV8329AEVM has internal current sense amplifier, the gain is controlled wit
 
 The firmware continuously monitors the motor parameters, in case of any fault occurred it is indicated by LED. The user can set the voltage and current limits from GUI.
 
-.. figure:: images/Faults.png
+.. figure:: ../images/Faults.png
    :alt: 
 
 +---------+----------------------+-----------------------------------------------------------------+
@@ -126,7 +126,7 @@ The firmware continuously monitors the motor parameters, in case of any fault oc
 
 The user can use 3 different ADC references, which can be changed from GUI.
 
-.. figure:: images/ADC_reference_settings.png
+.. figure:: ../images/ADC_reference_settings.png
    :alt: 
 
 +------------+-------------------------+-------------------------------------------------------------------------------------+
@@ -144,10 +144,10 @@ When VDDA is used as ADC reference the data input in internal reference and exte
 3.6 Voltage and Current Monitoring
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. figure:: images/motor_parameters.png
+.. figure:: ../images/motor_parameters.png
    :alt: 
 
-.. figure:: images/graphs.png
+.. figure:: ../images/graphs.png
    :alt: 
 
 The user can monitor the motor parameters like bus voltage, bus current and phase voltages. The user can see the bus voltage and bus current graphs.
@@ -157,6 +157,6 @@ The user can monitor the motor parameters like bus voltage, bus current and phas
 
 When the motor starts spinning the user can see the motor speed displayed in RPM. The user needs to input the number of poles in the motor used. The user must enter even number of poles failing which the speed calculation go wrong.
 
-.. figure:: images/speed.png
+.. figure:: ../images/speed.png
    :alt: 
 

@@ -84,6 +84,8 @@ extern "C" {
 #define DeviceFamily_ID_MSPM0G320X      23
 #define DeviceFamily_ID_MSPM0G121X      24
 #define DeviceFamily_ID_MSPM0G120X      25
+#define DeviceFamily_ID_MSP32G031CX     26
+#define DeviceFamily_ID_MSP32C031CX     27
 
 /*
  * DeviceFamily_PARENT_XYZ values.
@@ -106,6 +108,8 @@ extern "C" {
 #define DeviceFamily_PARENT_MSPM0L211X_L112X    12
 #define DeviceFamily_PARENT_MSPM0G352X          13
 #define DeviceFamily_PARENT_MSPM0GX218_GX207    14
+#define DeviceFamily_PARENT_MSP32G031CX         15
+#define DeviceFamily_PARENT_MSP32C031CX         16
 
 /*
  * Lookup table that sets DeviceFamily_ID, DeviceFamily_DIRECTORY, and
@@ -259,6 +263,17 @@ extern "C" {
     #define DeviceFamily_ID             DeviceFamily_ID_MSPM0G120X
     #define DeviceFamily_DIRECTORY      msp
     #define DeviceFamily_PARENT         DeviceFamily_PARENT_MSPM0GX218_GX207
+
+#elif defined(DeviceFamily_MSP32G031CX) || defined(__MSP32G031C8__) \
+    || defined(__MSP32G031C6__)
+    #define DeviceFamily_ID             DeviceFamily_ID_MSP32G031CX
+    #define DeviceFamily_DIRECTORY      msp
+    #define DeviceFamily_PARENT         DeviceFamily_PARENT_MSP32G031CX
+
+#elif defined(DeviceFamily_MSP32C031CX) || defined(__MSP32C031C6__)
+    #define DeviceFamily_ID             DeviceFamily_ID_MSP32C031CX
+    #define DeviceFamily_DIRECTORY      msp
+    #define DeviceFamily_PARENT         DeviceFamily_PARENT_MSP32C031CX
 
 
 #else

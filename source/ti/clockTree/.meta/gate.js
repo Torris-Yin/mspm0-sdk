@@ -107,10 +107,14 @@ function validateGates(inst, validation) {
 			*/
 			if(!inst.enable){
 				if(_.endsWith(system.clockTree?.HSCLKMUX?.inputSelect, "USBFLL")){
-					validation.logError("USBFLL must be enabled when used as HSCLK Source", inst, "enable");
+					try{
+						validation.logError("USBFLL must be enabled when used as HSCLK Source", inst, "enable");
+					}catch(e){/* do nothing */}
 				}
 				if(USBMod && _.endsWith(system.clockTree?.USBCLKMUX?.inputSelect, "USBFLL")){
-					validation.logError("USBFLL must be enabled when used as USBCLK Source", inst, "enable");
+					try{
+						validation.logError("USBFLL must be enabled when used as USBCLK Source", inst, "enable");
+					}catch(e){/* do nothing */}
 				}
 			}
 		}

@@ -92,11 +92,11 @@ extern "C" {
 #define LIN_0_INST_INT_IRQN                                       UART0_INT_IRQn
 #define GPIO_LIN_0_RX_PORT                                                 GPIOA
 #define GPIO_LIN_0_TX_PORT                                                 GPIOA
-#define GPIO_LIN_0_RX_PIN                                          DL_GPIO_PIN_9
+#define GPIO_LIN_0_RX_PIN                                         DL_GPIO_PIN_22
 #define GPIO_LIN_0_TX_PIN                                          DL_GPIO_PIN_8
-#define GPIO_LIN_0_IOMUX_RX                                      (IOMUX_PINCM10)
+#define GPIO_LIN_0_IOMUX_RX                                      (IOMUX_PINCM23)
 #define GPIO_LIN_0_IOMUX_TX                                       (IOMUX_PINCM9)
-#define GPIO_LIN_0_IOMUX_RX_FUNC                       IOMUX_PINCM10_PF_UART0_RX
+#define GPIO_LIN_0_IOMUX_RX_FUNC                       IOMUX_PINCM23_PF_UART0_RX
 #define GPIO_LIN_0_IOMUX_TX_FUNC                        IOMUX_PINCM9_PF_UART0_TX
 #define LIN_0_BAUD_RATE                                                  (19200)
 #define LIN_0_IBRD_32_MHZ_19200_BAUD                                       (104)
@@ -110,18 +110,18 @@ extern "C" {
 /* Port definition for Pin Group GPIO_LIN_ENABLE */
 #define GPIO_LIN_ENABLE_PORT                                             (GPIOA)
 
-/* Defines for USER_LIN_ENABLE: GPIOA.22 with pinCMx 23 on package pin 26 */
-#define GPIO_LIN_ENABLE_USER_LIN_ENABLE_PIN                     (DL_GPIO_PIN_22)
-#define GPIO_LIN_ENABLE_USER_LIN_ENABLE_IOMUX                    (IOMUX_PINCM23)
+/* Defines for USER_LIN_ENABLE: GPIOA.1 with pinCMx 2 on package pin 2 */
+#define GPIO_LIN_ENABLE_USER_LIN_ENABLE_PIN                      (DL_GPIO_PIN_1)
+#define GPIO_LIN_ENABLE_USER_LIN_ENABLE_IOMUX                     (IOMUX_PINCM2)
 /* Port definition for Pin Group GPIO_LEDS */
 #define GPIO_LEDS_PORT                                                   (GPIOA)
 
-/* Defines for USER_LED_1: GPIOA.26 with pinCMx 27 on package pin 30 */
-#define GPIO_LEDS_USER_LED_1_PIN                                (DL_GPIO_PIN_26)
-#define GPIO_LEDS_USER_LED_1_IOMUX                               (IOMUX_PINCM27)
-/* Defines for USER_LED_2: GPIOA.27 with pinCMx 28 on package pin 31 */
-#define GPIO_LEDS_USER_LED_2_PIN                                (DL_GPIO_PIN_27)
-#define GPIO_LEDS_USER_LED_2_IOMUX                               (IOMUX_PINCM28)
+/* Defines for USER_LED_1: GPIOA.27 with pinCMx 28 on package pin 31 */
+#define GPIO_LEDS_USER_LED_1_PIN                                (DL_GPIO_PIN_27)
+#define GPIO_LEDS_USER_LED_1_IOMUX                               (IOMUX_PINCM28)
+/* Defines for USER_LED_2: GPIOA.26 with pinCMx 27 on package pin 30 */
+#define GPIO_LEDS_USER_LED_2_PIN                                (DL_GPIO_PIN_26)
+#define GPIO_LEDS_USER_LED_2_IOMUX                               (IOMUX_PINCM27)
 /* Port definition for Pin Group GPIO_SWITCHES1 */
 #define GPIO_SWITCHES1_PORT                                              (GPIOA)
 

@@ -137,7 +137,7 @@ void TIMER_PIR_SERIN_INST_IRQHandler(void)
     switch (DL_Timer_getPendingInterrupt(TIMER_PIR_SERIN_INST)) {
         case DL_TIMER_IIDX_ZERO:
             DL_GPIO_clearPins(GPIO_PIR_PIN_SERIN_PORT, GPIO_PIR_PIN_SERIN_PIN);
-            if (gConfigIndex < 0) {
+            if (gConfigIndex <= 0) {
                 DL_Timer_stopCounter(TIMER_PIR_SERIN_INST);
                 return;
             }

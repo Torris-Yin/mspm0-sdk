@@ -327,11 +327,11 @@ extern "C" {
 /*! Redirects to @ref DL_UART_disableMSBFirst */
 #define DL_UART_Extend_disableMSBFirst                  DL_UART_disableMSBFirst
 /*! Redirects to @ref DL_UART_enableTransmitPinManualControl */
-#define DL_UART_Extend_enableTransmitPinManualContro    DL_UART_enableTransmitPinManualControl
+#define DL_UART_Extend_enableTransmitPinManualControl   DL_UART_enableTransmitPinManualControl
 /*! Redirects to @ref DL_UART_isTransmitPinManualControlEnabled */
-#define DL_UART_Extend_isTransmitPinManualControlEna    DL_UART_isTransmitPinManualControlEnabled
+#define DL_UART_Extend_isTransmitPinManualControlEnabled DL_UART_isTransmitPinManualControlEnabled
 /*! Redirects to @ref DL_UART_disableTransmitPinManualControl */
-#define DL_UART_Extend_disableTransmitPinManualContr    DL_UART_disableTransmitPinManualControl
+#define DL_UART_Extend_disableTransmitPinManualControl   DL_UART_disableTransmitPinManualControl
 /*! Redirects to @ref DL_UART_setTransmitPinManualOutput */
 #define DL_UART_Extend_setTransmitPinManualOutput       DL_UART_setTransmitPinManualOutput
 /*! Redirects to @ref DL_UART_getTransmitPinManualOutput */
@@ -459,9 +459,9 @@ extern "C" {
 /*! Redirects to @ref DL_UART_getEnabledDMATransmitEvent */
 #define DL_UART_Extend_getEnabledDMATransmitEvent       DL_UART_getEnabledDMATransmitEvent
 /*! Redirects to @ref DL_UART_getEnabledDMAReceiveEventStatus */
-#define DL_UART_Extend_getEnabledDMAReceiveEventStat    DL_UART_getEnabledDMAReceiveEventStatus
+#define DL_UART_Extend_getEnabledDMAReceiveEventStatus  DL_UART_getEnabledDMAReceiveEventStatus
 /*! Redirects to @ref DL_UART_getEnabledDMATransmitEventStatus */
-#define DL_UART_Extend_getEnabledDMATransmitEventSta    DL_UART_getEnabledDMATransmitEventStatus
+#define DL_UART_Extend_getEnabledDMATransmitEventStatus DL_UART_getEnabledDMATransmitEventStatus
 /*! Redirects to @ref DL_UART_getRawDMAReceiveEventStatus */
 #define DL_UART_Extend_getRawDMAReceiveEventStatus      DL_UART_getRawDMAReceiveEventStatus
 /*! Redirects to @ref DL_UART_getRawDMATransmitEventStatus */
@@ -477,11 +477,11 @@ extern "C" {
 /*! Redirects to @ref DL_UART_disableLINCounter */
 #define DL_UART_Extend_disableLINCounter                DL_UART_disableLINCounter
 /*! Redirects to @ref DL_UART_enableLINCounterClearOnFallingEdge */
-#define DL_UART_Extend_enableLINCounterClearOnFallin    DL_UART_enableLINCounterClearOnFallingEdge
+#define DL_UART_Extend_enableLINCounterClearOnFallingEdge DL_UART_enableLINCounterClearOnFallingEdge
 /*! Redirects to @ref DL_UART_isLINCounterClearOnFallingEdge */
-#define DL_UART_Extend_isLINCounterClearOnFallingEdg    DL_UART_isLINCounterClearOnFallingEdge
+#define DL_UART_Extend_isLINCounterClearOnFallingEdge   DL_UART_isLINCounterClearOnFallingEdge
 /*! Redirects to @ref DL_UART_disableLINCounterClearOnFallingEdge */
-#define DL_UART_Extend_disableLINCounterClearOnFalli    DL_UART_disableLINCounterClearOnFallingEdge
+#define DL_UART_Extend_disableLINCounterClearOnFallingEdge DL_UART_disableLINCounterClearOnFallingEdge
 /*! Redirects to @ref DL_UART_enableLINCountWhileLow */
 #define DL_UART_Extend_enableLINCountWhileLow           DL_UART_enableLINCountWhileLow
 /*! Redirects to @ref DL_UART_isLINCountWhileLowEnabled */
@@ -491,7 +491,7 @@ extern "C" {
 /*! Redirects to @ref DL_UART_enableLINFallingEdgeCapture */
 #define DL_UART_Extend_enableLINFallingEdgeCapture      DL_UART_enableLINFallingEdgeCapture
 /*! Redirects to @ref DL_UART_isLINFallingEdgeCaptureEnabled */
-#define DL_UART_Extend_isLINFallingEdgeCaptureEnable    DL_UART_isLINFallingEdgeCaptureEnabled
+#define DL_UART_Extend_isLINFallingEdgeCaptureEnabled   DL_UART_isLINFallingEdgeCaptureEnabled
 /*! Redirects to @ref DL_UART_disableLINFallingEdgeCapture */
 #define DL_UART_Extend_disableLINFallingEdgeCapture     DL_UART_disableLINFallingEdgeCapture
 /*! Redirects to @ref DL_UART_enableLINRisingEdgeCapture */
@@ -503,11 +503,11 @@ extern "C" {
 /*! Redirects to @ref DL_UART_enableLINCounterCompareMatch */
 #define DL_UART_Extend_enableLINCounterCompareMatch     DL_UART_enableLINCounterCompareMatch
 /*! Redirects to @ref DL_UART_enableLINSyncFieldValidationCounterControl */
-#define DL_UART_Extend_enableLINSyncFieldValidationC    DL_UART_enableLINSyncFieldValidationCounterControl
+#define DL_UART_Extend_enableLINSyncFieldValidationCounterControl DL_UART_enableLINSyncFieldValidationCounterControl
 /*! Redirects to @ref DL_UART_enableLINReceptionCountControl */
-#define DL_UART_Extend_enableLINReceptionCountContro    DL_UART_enableLINReceptionCountControl
+#define DL_UART_Extend_enableLINReceptionCountControl   DL_UART_enableLINReceptionCountControl
 /*! Redirects to @ref DL_UART_isLINCounterCompareMatchEnabled */
-#define DL_UART_Extend_isLINCounterCompareMatchEnabl    DL_UART_isLINCounterCompareMatchEnabled
+#define DL_UART_Extend_isLINCounterCompareMatchEnabled  DL_UART_isLINCounterCompareMatchEnabled
 /*! Redirects to @ref DL_UART_disableLINCounterCompareMatch */
 #define DL_UART_Extend_disableLINCounterCompareMatch    DL_UART_disableLINCounterCompareMatch
 /*! Redirects to @ref DL_UART_setLINCounterCompareValue */

@@ -187,7 +187,7 @@ void FE_Skip_Normalize(q15_t * inputBuffer, q15_t * outputBuffer, uint8_t varInd
 }
 #endif
 
-#ifdef FE_PIR
+#ifdef FE_PIR_Q15
 /**
  *  @brief      Calculate features for PIR detection application - zero crossings and slope changes
  *  @param[in]  window          A pointer to the input buffer.
@@ -244,8 +244,8 @@ static void FE_PIR_featureSet2(q15_t* window, q15_t* ZCRfeature, q15_t* SlopeFea
 static void FE_PIR_featureSet1(q15_t* window, q15_t* FFTfeatures, q15_t* DomFreqFeatures)
 {
     q15_t windowQ15[WINDOW_SIZE];
-    q15_t mirrWinQ15[FE_PIR_RFFT_SIZE];
-    q15_t fftArr[FE_PIR_RFFT_SIZE << 1],magFft[FE_PIR_RFFT_SIZE << 1];
+    q15_t mirrWinQ15[FE_RFFT_SIZE];
+    q15_t fftArr[FE_RFFT_SIZE << 1],magFft[FE_RFFT_SIZE << 1];
 
     uint8_t freqIndex1 = 0, freqIndex2 = 0;
 
@@ -296,8 +296,8 @@ static void FE_PIR_featureSet1(q15_t* window, q15_t* FFTfeatures, q15_t* DomFreq
         FFTfeatures[i] = (q15_t) binSum;
     }
 
-    DomFreqFeatures[0] = ((freqIndex1 + 1) * SAMPLING_RATE) / (((FE_PIR_RFFT_SIZE >> 1) + 1) << 1);
-    DomFreqFeatures[1] = ((freqIndex2 + 1) * SAMPLING_RATE) / (((FE_PIR_RFFT_SIZE >> 1) + 1) << 1);
+    DomFreqFeatures[0] = ((freqIndex1 + 1) * SAMPLING_RATE) / (((FE_RFFT_SIZE >> 1) + 1) << 1);
+    DomFreqFeatures[1] = ((freqIndex2 + 1) * SAMPLING_RATE) / (((FE_RFFT_SIZE >> 1) + 1) << 1);
 
 
     return;
@@ -330,11 +330,20 @@ static void FE_PIR_Features(q15_t * inputBuffer, q15_t * outputBuffer)
         outputBuffer[featureIndex++] = fftFeatures[i];
     }
 
+    /* Placefolder for Kurtosis (size 4) */
+    for(int i = 0; i < 4; i++)
+    {
+        outputBuffer[featureIndex++] = 0;
+    }
+
     outputBuffer[featureIndex++] = zcrFeature;
     outputBuffer[featureIndex++] = slopeFeature;
 
     outputBuffer[featureIndex++] = domFreqFeatures[0];
     outputBuffer[featureIndex++] = domFreqFeatures[1];
+
+    /* Placeholder for Spectral Entropy */
+    outputBuffer[featureIndex++] = 0;
 
     return;
 }
@@ -347,7 +356,7 @@ void FE_init()
     arm_rfft_init_q15(&varInstRfftQ15, FE_FRAME_SIZE, 0, 1);
     #endif
 
-    #ifdef FE_PIR
+    #ifdef FE_PIR_Q15
     /* Initialize ARM library for real FFT */
     arm_rfft_init_64_q15(&varInstRfftQ15, 0, 1);
     #endif
@@ -357,8 +366,13 @@ void FE_init()
 void FE_process(q15_t* rawInput, int8_t* extractedFeatures, uint8_t varIndex)
 {
 
+    #if defined(FE_RFFT) || defined(FE_COMPLEX_MAG_SCALE) || defined(FE_DC_REM) || defined(FE_MAG) || defined(FE_BIN) ||defined(FE_PIR_Q15)
     q15_t* inputBuffer =  scratchBuffer1;
     q15_t* outputBuffer =  scratchBuffer2;
+    #else
+    q15_t* inputBuffer =  (q15_t*) extractedFeatures;
+    q15_t* outputBuffer =  rawInput;
+    #endif
 
     memcpy(outputBuffer, rawInput, FE_FRAME_SIZE * sizeof(q15_t));
 
@@ -387,7 +401,7 @@ void FE_process(q15_t* rawInput, int8_t* extractedFeatures, uint8_t varIndex)
     FE_COMPUTE_Bin(inputBuffer,outputBuffer);
     #endif
 
-    #ifdef FE_PIR
+    #ifdef FE_PIR_Q15
     FE_swapBuffer(&inputBuffer,&outputBuffer);
     FE_PIR_Features(inputBuffer,outputBuffer);
     #endif

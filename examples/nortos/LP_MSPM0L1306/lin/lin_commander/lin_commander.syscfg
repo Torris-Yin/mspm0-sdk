@@ -29,18 +29,18 @@ GPIO1.portSegment                   = "Upper";
 GPIO1.port                          = "PORTA";
 GPIO1.associatedPins.create(2);
 GPIO1.associatedPins[0].$name       = "USER_LED_1";
-GPIO1.associatedPins[0].assignedPin = "26";
-GPIO1.associatedPins[0].pin.$assign = "PA26";
+GPIO1.associatedPins[0].assignedPin = "27";
+GPIO1.associatedPins[0].pin.$assign = "PA27";
 GPIO1.associatedPins[1].$name       = "USER_LED_2";
-GPIO1.associatedPins[1].assignedPin = "27";
-GPIO1.associatedPins[1].pin.$assign = "PA27";
+GPIO1.associatedPins[1].assignedPin = "26";
+GPIO1.associatedPins[1].pin.$assign = "PA26";
 
 GPIO2.$name                                 = "GPIO_LIN_ENABLE";
 GPIO2.port                                  = "PORTA";
 GPIO2.associatedPins[0].$name               = "USER_LIN_ENABLE";
-GPIO2.associatedPins[0].assignedPin         = "22";
-GPIO2.associatedPins[0].assignedPortSegment = "Upper";
-GPIO2.associatedPins[0].pin.$assign         = "PA22";
+GPIO2.associatedPins[0].assignedPortSegment = "Lower";
+GPIO2.associatedPins[0].assignedPin         = "1";
+GPIO2.associatedPins[0].pin.$assign         = "PA1";
 
 GPIO3.$name                                 = "GPIO_SWITCHES1";
 GPIO3.port                                  = "PORTA";
@@ -61,18 +61,19 @@ GPIO3.associatedPins[1].internalResistor    = "PULL_UP";
 GPIO3.associatedPins[1].polarity            = "FALL";
 GPIO3.associatedPins[1].pin.$assign         = "PA14";
 
-
 TIMER1.$name              = "TIMER_0";
 TIMER1.timerClkSrc        = "LFCLK";
 TIMER1.interrupts         = ["ZERO"];
 TIMER1.peripheral.$assign = "TIMG0";
 
-uartLIN1.$name                    = "LIN_0";
-uartLIN1.targetBaudRate           = 19200;
-uartLIN1.tbitVal                  = 9.5;
-uartLIN1.enableDMARX              = false;
-uartLIN1.enableDMATX              = false;
-uartLIN1.enabledInterrupts        = ["RX"];
-uartLIN1.peripheral.$assign       = "UART0";
-uartLIN1.peripheral.rxPin.$assign = "PA9";
-uartLIN1.peripheral.txPin.$assign = "PA8";
+uartLIN1.$name                        = "LIN_0";
+uartLIN1.targetBaudRate               = 19200;
+uartLIN1.tbitVal                      = 9.5;
+uartLIN1.enableDMARX                  = false;
+uartLIN1.enableDMATX                  = false;
+uartLIN1.enabledInterrupts            = ["RX"];
+uartLIN1.peripheral.$assign           = "UART0";
+uartLIN1.peripheral.rxPin.$assign     = "PA22";
+uartLIN1.peripheral.txPin.$assign     = "PA8";
+uartLIN1.rxPinConfig.enableConfig     = true;
+uartLIN1.rxPinConfig.internalResistor = "PULL_UP";

@@ -37,6 +37,7 @@
  */
 
     let Common = system.getScript("/ti/driverlib/Common.js");
+    let { ClockSignals } = system.getScript("/ti/driverlib/sysctl/SYSCTLMSPM0Clocks.js");
 
     let mod = system.modules["/ti/clockTree/divider.js"];
 
@@ -68,12 +69,7 @@
 
     if(!_.isUndefined(udivInst)){
         if(udivInst.isUDIVEnabled &&
-            !(Common.isDeviceFamily_PARENT_MSPM0L122X_L222X()
-            || Common.isDeviceFamily_PARENT_MSPM0L111X()
-            || Common.isDeviceFamily_PARENT_MSPM0H321X()
-            || Common.isDeviceFamily_PARENT_MSPM0C1105_C1106()
-            || Common.isDeviceFamily_PARENT_MSPM0L211X_L112X()
-            || Common.isDeviceFamily_PARENT_MSPM0L210X())){
+            (ClockSignals.includes("UDIV"))){
             udivStr = "DL_SYSCTL_setULPCLKDivider(DL_SYSCTL_ULPCLK_DIV_" + udivInst.divideValue + ");";
         }
     }

@@ -1,15 +1,31 @@
 ## Example Summary
 
 This empty example is a template for creating an application into which a trained AI/ML model may deployed.
-This example expects a model which is compiled for execution on TI's neural processing unit (NPU) to be added
+This example expects a model which is compiled for execution on TI's TinyEngine™ NPU to be added
 to the project after the project is imported.
- 
-## Peripherals, Pin Functions, MCU Pins, Launchpad Pins
-| Peripheral | Function | MCU Pin | Launchpad Pin | Launchpad Settings |
-| --- | --- | --- | --- | --- |
-| SYSCTL |  |  |  |  |
-| BOARD | Debug Clock | PA20 | J101_16 |  |
-| BOARD | Debug Data In Out | PA19 | J101_14 |  |
+
+## AI Model Information
+
+| Property | Value |
+| --- | --- |
+| Model Architecture | N/A (User-provided) |
+| Number of Parameters | N/A |
+| Input Shape | N/A |
+| Output Classes | N/A |
+| Quantization | N/A |
+
+*Note: This is a template example. Add your trained model to populate these values.*
+
+## AI Performance
+
+| Metric | Value |
+| --- | --- |
+| Accuracy | N/A |
+| Flash Usage | N/A |
+| RAM Usage | N/A |
+| Inference Latency (NPU) | N/A |
+
+*Note: Performance metrics depend on the user-provided model.*
 
 ### Device Migration Recommendations
 This project was developed for a superset device included in the MSPM0 LaunchPad. Please
@@ -23,12 +39,15 @@ pullup/pulldown resistor.
 
 SysConfig allows developers to easily configure unused pins by selecting **Board**→**Configure Unused Pins**.
 
-For more information about jumper configuration to achieve low-power using the
-MSPM0 LaunchPad, please visit the LP-MSPM0G5187 User's Guide.
+For more information about jumper configuration to achieve low-power using the MSPM0 LaunchPad, please visit the [LP-MSPM0G5187 User's Guide](https://www.ti.com/lit/slau967).
+
+## Hardware Requirements
+
+1. LP-MSPM0G5187 LaunchPad
 
 ## Example Usage
 Before building the example, train and compile a machine learning model targeting
-deployment to TI's neural processing unit (NPU).
+deployment to TI's TinyEngine™ NPU.
 See the [Deploying Machine Learning Models on TI MSPM0 Microcontrollers](https://www.ti.com/lit/sdaa039) documentation for
 details on the process for training, compiling, and deploying machine learning models.
 Once a compiled model is available for execution, create a folder called "model" in the project within
@@ -42,6 +61,7 @@ Compile, load and run the example.
 
 ## References
 
+- [ModelZoo Examples](https://github.com/TexasInstruments/tinyml-tensorlab/tree/main/tinyml-modelzoo/examples)
 - MSPM0G5187 Technical Reference Manual [Link](https://www.ti.com/product/MSPM0G5187)
 - [TI Neural Network Compiler Guide](https://software-dl.ti.com/mctools/nnc/mcu/users_guide/)
 - TI Model Training Guide: [tinyml-tensorlab](https://github.com/TexasInstruments/tinyml-tensorlab/tree/main)

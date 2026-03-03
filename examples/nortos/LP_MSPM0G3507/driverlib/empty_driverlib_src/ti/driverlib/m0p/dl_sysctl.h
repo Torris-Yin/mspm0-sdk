@@ -65,7 +65,9 @@
 #include <ti/driverlib/m0p/sysctl/dl_sysctl_mspm0l111x.h>
 #elif (DeviceFamily_PARENT == DeviceFamily_PARENT_MSPM0H321X)
 #include <ti/driverlib/m0p/sysctl/dl_sysctl_mspm0h321x.h>
-#elif (DeviceFamily_PARENT == DeviceFamily_PARENT_MSPM0C1105_C1106)
+#elif (DeviceFamily_PARENT == DeviceFamily_PARENT_MSPM0C1105_C1106) || \
+    (DeviceFamily_PARENT == DeviceFamily_PARENT_MSP32G031CX) ||        \
+    (DeviceFamily_PARENT == DeviceFamily_PARENT_MSP32C031CX)
 #include <ti/driverlib/m0p/sysctl/dl_sysctl_mspm0c1105_c1106.h>
 #elif (DeviceFamily_PARENT == DeviceFamily_PARENT_MSPM0G511X)
 #include <ti/driverlib/m0p/sysctl/dl_sysctl_mspm0g511x.h>

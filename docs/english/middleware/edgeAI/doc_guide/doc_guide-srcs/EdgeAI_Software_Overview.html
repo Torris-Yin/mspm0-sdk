@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Edge AI Software Solution for MSPM0 Devices &mdash; MSPM0 EdgeAI User Guide 1.1.0 documentation</title>
+  <title>Edge AI Software Solution for MSPM0 Devices &mdash; MSPM0 EdgeAI User Guide 1.3.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
@@ -32,7 +32,7 @@
             <a href="index.html" class="icon icon-home"> MSPM0 EdgeAI User Guide
           </a>
               <div class="version">
-                1.1.0
+                1.3.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -44,13 +44,13 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="EdgeAI_Deployment_Guide_CLI.html">Deploying Machine Learning Models on TI MSPM0 Microcontrollers Using CLI Tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="EdgeAI_Deployment_Guide_EdgeAI_Studio.html">Deploying Machine Learning Models on TI MSPM0 Microcontrollers Using EdgeAI Studio GUI Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EdgeAI_Deployment_Guide_EdgeAI_Studio.html">Deploying Machine Learning Models on TI MSPM0 Microcontrollers Using CCStudio™ Edge AI Studio GUI Tools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="EdgeAI_Feature_Extraction_Library.html">Feature Extraction User Guide for EdgeAI Applications on MSPM0</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Edge AI Software Solution for MSPM0 Devices</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#software-components-in-sdk">Software Components in SDK</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#feature-extraction-library">1. Feature Extraction Library</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#neural-processing-unit-npu-driver">2. Neural Processing Unit (NPU) Driver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tinyengine-npu-driver">2. TinyEngine™ NPU Driver</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#device-agent-protocol-optional">3. Device Agent Protocol (Optional)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#examples">4. Examples</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#basic-examples">Basic Examples</a></li>
@@ -65,6 +65,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#development-environment">Development Environment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#development-workflow">Development Workflow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#performance-considerations">Performance Considerations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#related-documentation">Related Documentation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#conclusion">Conclusion</a></li>
 </ul>
 </li>
@@ -113,20 +114,20 @@
 </ul>
 <p>The feature extraction library leverages ARM CMSIS-DSP functions for efficient signal processing operations on MSPM0 devices.</p>
 </section>
-<section id="neural-processing-unit-npu-driver">
-<h3>2. Neural Processing Unit (NPU) Driver<a class="headerlink" href="#neural-processing-unit-npu-driver" title="Permalink to this heading">¶</a></h3>
-<p>The NPU component provides hardware acceleration for neural network inference by interfacing with the MSPM0’s Neural Processing Unit. This driver:</p>
+<section id="tinyengine-npu-driver">
+<h3>2. TinyEngine™ NPU Driver<a class="headerlink" href="#tinyengine-npu-driver" title="Permalink to this heading">¶</a></h3>
+<p>The NPU component provides hardware acceleration for neural network inference by interfacing with MSPM0’s TinyEngine™ NPU. This driver:</p>
 <ul class="simple">
 <li><p>Handles instruction memory management</p></li>
 <li><p>Manages parameter memory</p></li>
 <li><p>Provides control interfaces for NPU operations</p></li>
 <li><p>Optimizes execution of neural network operations</p></li>
 </ul>
-<p>The NPU driver is designed to be called by compiled neural network libraries built using TI’s Neural Network Compiler (NNC) for MCUs. Note the NPU driver is only applicable for MSP devices with NPU.</p>
+<p>The NPU driver is designed to be called by compiled neural network libraries built using TI’s Neural Network Compiler (NNC) for MCUs. Note: The NPU driver is only applicable for MSPM0 devices with NPU.</p>
 </section>
 <section id="device-agent-protocol-optional">
 <h3>3. Device Agent Protocol (Optional)<a class="headerlink" href="#device-agent-protocol-optional" title="Permalink to this heading">¶</a></h3>
-<p>Communication interfaces for device management and data exchange between the MSPM0 device and Model Composer GUI. This is needed for the data capture and live preview features of the Model Composer. The communication interface is implemented using UART and is configurable for different data formats and baud rates.</p>
+<p>Communication interfaces for device management and data exchange between the MSPM0 device and CCStudio™ Edge AI Studio GUI. This is needed for the data capture and live preview features of CCStudio™ Edge AI Studio. The communication interface is implemented using UART and is configurable for different data formats and baud rates.</p>
 </section>
 <section id="examples">
 <h3>4. Examples<a class="headerlink" href="#examples" title="Permalink to this heading">¶</a></h3>
@@ -144,7 +145,10 @@
 <ul class="simple">
 <li><p><strong>Character Recognition</strong>: Basic OCR capabilities</p></li>
 <li><p><strong>Motor Fault AI</strong>: Detection of motor faults through vibration analysis</p></li>
-<li><p><strong>AC Arc Fault Detection</strong>: Safety-critical application for electrical systems</p></li>
+<li><p><strong>ECG Anomaly Detection AI</strong>: Heart rhythm anomaly classification from ECG data (Normal, Mild, Severe, Emergency)</p></li>
+<li><p><strong>Gearbox Fault Diagnosis AI</strong>: Vibration-based gearbox fault detection (Healthy vs Broken Tooth)</p></li>
+<li><p><strong>Linear Actuator Fault AI</strong>: Detection of linear actuator faults (Normal, Spalling, Lack of Lubrication, Backlash)</p></li>
+<li><p><strong>Motor Temperature AI</strong>: PMSM motor temperature prediction using regression model</p></li>
 </ul>
 </section>
 <section id="npu-accelerated-variants">
@@ -154,7 +158,13 @@
 <li><p><strong>Character Recognition NPU</strong>: NPU-accelerated optical character recognition</p></li>
 <li><p><strong>Motor Fault AI NPU</strong>: NPU-accelerated motor fault detection</p></li>
 <li><p><strong>Waveform Classifier AI NPU</strong>: NPU-accelerated waveform classification</p></li>
-<li><p><strong>Non-intrusive Load Monitoring (NILM)</strong>: NPU-accelerated non-intrusive load monitoring (NILM) appliance usage classification</p></li>
+<li><p><strong>AC Arc Fault Detection AI NPU</strong>: Safety-critical arc fault detection for electrical systems (NPU-only)</p></li>
+<li><p><strong>ECG Anomaly Detection AI NPU</strong>: NPU-accelerated ECG anomaly classification</p></li>
+<li><p><strong>Gearbox Fault Diagnosis AI NPU</strong>: NPU-accelerated gearbox fault detection</p></li>
+<li><p><strong>Linear Actuator Fault AI NPU</strong>: NPU-accelerated linear actuator fault detection</p></li>
+<li><p><strong>Motor Temperature AI NPU</strong>: NPU-accelerated motor temperature prediction</p></li>
+<li><p><strong>Electrical Fault AI NPU</strong>: NPU-accelerated power system transmission line fault detection</p></li>
+<li><p><strong>Non-intrusive Load Monitoring (NILM) NPU</strong>: NPU-accelerated appliance usage classification</p></li>
 <li><p><strong>PIR based Motion Detection AI NPU</strong>: NPU-accelerated PIR based motion detection</p></li>
 </ul>
 </section>
@@ -162,10 +172,14 @@
 <h4>Data Collection and Visualization<a class="headerlink" href="#data-collection-and-visualization" title="Permalink to this heading">¶</a></h4>
 <ul class="simple">
 <li><p><strong>AC Arc Fault Data Capture</strong>: Tools for capturing arc fault data for training</p></li>
+<li><p><strong>AC Arc Fault Detection Live Preview</strong>: Real-time visualization of arc fault detection</p></li>
 <li><p><strong>Motor Fault AI Data Capture</strong>: Utilities for collecting motor vibration data</p></li>
 <li><p><strong>Motor Fault AI Live Preview</strong>: Real-time visualization of motor fault detection</p></li>
+<li><p><strong>ECG Anomaly Detection Data Capture</strong>: Tools for capturing ECG data for training</p></li>
+<li><p><strong>ECG Anomaly Detection Live Preview</strong>: Real-time visualization of ECG anomaly detection</p></li>
 <li><p><strong>Time Series Data Capture</strong>: General-purpose time series data collection</p></li>
 <li><p><strong>Time Series Live Preview</strong>: Visualization tools for time series analysis</p></li>
+<li><p><strong>TIDA-010997 Data Capture</strong>: Multi-sensor data capture for TIDA-010997 reference design (PIR, temperature, humidity, pressure, ambient light, microphone, IMU, hall effect sensor)</p></li>
 </ul>
 </section>
 </section>
@@ -175,6 +189,7 @@
 <p>The Edge AI software solution is designed for MSPM0 microcontroller units, currently supporting:</p>
 <ul class="simple">
 <li><p>MSPM0G3507 LaunchPad development kit</p></li>
+<li><p>MSPM0G3519 LaunchPad development kit</p></li>
 <li><p>MSPM0G5187 LaunchPad development kit</p></li>
 </ul>
 </section>
@@ -186,7 +201,7 @@
 <li><p>TI MSPM0 SDK</p></li>
 <li><p>ARM CMSIS-DSP library</p></li>
 <li><p>CLI Tools (Pytorch based framework to train and develop AI/ML Models)</p></li>
-<li><p>Model Composer (EdgeAI Studio GUI which enables accelerated development by enabling data capture)</p></li>
+<li><p>CCStudio™ Edge AI Studio (GUI which enables accelerated development by enabling data capture)</p></li>
 </ul>
 </section>
 <section id="development-workflow">
@@ -210,6 +225,15 @@
 <li><p><strong>NPU Acceleration</strong>: Use NPU-optimized versions for computationally intensive models</p></li>
 <li><p><strong>Real-time Requirements</strong>: Consider sampling rates and processing latency for your application</p></li>
 </ol>
+</section>
+<section id="related-documentation">
+<h2>Related Documentation<a class="headerlink" href="#related-documentation" title="Permalink to this heading">¶</a></h2>
+<p>For detailed deployment instructions, refer to the following guides:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="./EdgeAI_Deployment_Guide_CLI.md">Deploying Models Using CLI Tools</a> - Command-line interface workflow for model training and deployment</p></li>
+<li><p><a class="reference external" href="./EdgeAI_Deployment_Guide_EdgeAI_Studio.md">Deploying Models Using CCStudio™ Edge AI Studio GUI</a> - GUI-based workflow</p></li>
+<li><p><a class="reference external" href="./EdgeAI_Feature_Extraction_Library.md">Feature Extraction Library Guide</a> - Detailed documentation on the feature extraction module</p></li>
+</ul>
 </section>
 <section id="conclusion">
 <h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this heading">¶</a></h2>

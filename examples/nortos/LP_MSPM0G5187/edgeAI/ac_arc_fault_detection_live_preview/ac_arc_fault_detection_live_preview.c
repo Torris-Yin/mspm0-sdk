@@ -130,13 +130,12 @@ int trip_logic(int inf)
     return 0;
 }
 
-/* Scales ADC samples and converts them to Q15 format */
-void adc_q15_scale(int16_t *samples)
+/* Scales log300 data samples*/
+void data_scaling(int16_t *samples)
 {
-    int16_t shift = 2048;
     for(int i = 0; i < ADC_SAMPLE_SIZE; ++i)
 	{
-        samples[i] = ((samples[i] - shift) << 4); // 2^11 
+        samples[i] = ((samples[i] )*8);
     }
 }
 
@@ -248,8 +247,8 @@ int main(void)
         }
         gCheckADC = false;
 
-        /* Convert unsigned ADC samples to signed q15 format */
-		adc_q15_scale(newSamples);
+        /* scale log300 data collected through adc*/
+		data_scaling(newSamples);
 
 		/* Run Feature extraction on the new captured samples */
 		FE_process(newSamples, gNewFeatures,0);

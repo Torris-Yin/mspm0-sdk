@@ -65,7 +65,6 @@
         "
         sourceLookupPath="${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/driverlib"
         description="Comparator using external inputs with hysteresis and output analog filter">
-
         <property name="buildProfile" value="release"/>
         <property name="isHybrid" value="true"/>
         <file path="../comp_analog_filter.c" openOnCreation="false" excludeFromBuild="false" action="copy">

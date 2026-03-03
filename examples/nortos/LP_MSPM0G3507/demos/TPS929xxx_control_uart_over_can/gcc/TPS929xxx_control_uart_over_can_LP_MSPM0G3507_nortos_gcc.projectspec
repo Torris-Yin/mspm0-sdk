@@ -65,7 +65,6 @@
         "
         sourceLookupPath="${COM_TI_MSPM0_SDK_INSTALL_DIR}/source/ti/driverlib"
         description="This example shows the implementation of using MSPM0 to control BQ79616 to detect the battery status.">
-
         <property name="buildProfile" value="release"/>
         <property name="isHybrid" value="true"/>
         <file path="../led_driver/TPS929120.h" openOnCreation="false" excludeFromBuild="false" action="copy" targetDirectory="led_driver">

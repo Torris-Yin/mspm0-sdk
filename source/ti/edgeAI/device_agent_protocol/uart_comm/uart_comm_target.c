@@ -83,7 +83,7 @@ void UART_sendBuffer(BufferInfo *frame)
     DL_DMA_setDestAddr(DMA, DMA_CH1_CHAN_ID, (uint32_t) &UART_DAP_INST->uart->TXDATA);
 #endif
 
-#if defined(__MSPM0_HAS_UART__)
+#if defined(__MSPM0_HAS_UART_MAIN__)
     DL_DMA_setDestAddr(DMA, DMA_CH1_CHAN_ID, (uint32_t) &UART_DAP_INST->TXDATA);
 #endif
 
@@ -102,7 +102,7 @@ void DMA_RX_init(UART_Instance *UART_handle)
     DL_DMA_setSrcAddr(DMA, DMA_CH0_CHAN_ID, (uint32_t) &UART_DAP_INST->uart->RXDATA);
 #endif
 
-#if defined(__MSPM0_HAS_UART__)
+#if defined(__MSPM0_HAS_UART_MAIN__)
     DL_DMA_setSrcAddr(DMA, DMA_CH0_CHAN_ID, (uint32_t) &UART_DAP_INST->RXDATA);
 #endif
 

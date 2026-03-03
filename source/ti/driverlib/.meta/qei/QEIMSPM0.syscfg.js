@@ -443,16 +443,21 @@ let config = [
                                 let powerPolicy = "";
                                 try{
                                     let peripheralIndex = system.deviceData.interfaces.GPTIMER.peripherals.findIndex(object => { return object.name === inst.peripheral.$solution.peripheralName });
-                                    powerPolicy = Common.getAttribute((system.deviceData.interfaces.GPTIMER.peripherals[peripheralIndex]),("power_domain"));
+                                    // (1) Access Updated Power Domain parameter (returns PD0 / PD1)
+                                    powerPolicy = Common.getAttribute((system.deviceData.interfaces.GPTIMER.peripherals[peripheralIndex]),("power_domain_number")); // NAME TBD
+                                    if(powerPolicy == undefined){
+                                        // (2) Access Deprecated Power Domain parameter (returns PD_ULP_AON / PD_ULP_AAON)
+                                        powerPolicy = Common.getAttribute((system.deviceData.interfaces.GPTIMER.peripherals[peripheralIndex]),("power_domain"));
+                                    }
                                 }catch (e) {
                                     // do nothing
                                 }
                                 // Power Domain 0
-                                if(powerPolicy == "PD_ULP_AON"){
+                                if(powerPolicy == "PD_ULP_AON" || powerPolicy == "PD0"){
                                     retVal = "ULPCLK";
                                 }
                                 // Power Domain 1
-                                else if(powerPolicy == "PD_ULP_AAON"){
+                                else if(powerPolicy == "PD_ULP_AAON" || powerPolicy == "PD1"){
                                     retVal = "MCLK"
                                 }
                                 return retVal;

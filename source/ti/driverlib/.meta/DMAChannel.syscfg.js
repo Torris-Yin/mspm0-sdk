@@ -377,7 +377,8 @@ function getLengthOptions() {
         Common.isDeviceFamily_PARENT_MSPM0G511X() ||
         Common.isDeviceFamily_PARENT_MSPM0G518X() ||
         Common.isDeviceFamily_PARENT_MSPM0GX218_GX207() ||
-        Common.isDeviceFamily_PARENT_MSPM0G122X()) {
+        Common.isDeviceFamily_PARENT_MSPM0G122X() ||
+        Common.isDeviceFamily_PARENT_MSPM0C511X()) {
         options.push(
             {name: "LONGLONG", displayName: "Long Long (16 Bytes)"}
         );
@@ -391,7 +392,8 @@ function hasAutomaticEnable() {
         Common.isDeviceFamily_PARENT_MSPM0G511X() ||
         Common.isDeviceFamily_PARENT_MSPM0G518X() ||
         Common.isDeviceFamily_PARENT_MSPM0GX218_GX207() ||
-        Common.isDeviceFamily_PARENT_MSPM0G122X()) {
+        Common.isDeviceFamily_PARENT_MSPM0G122X()||
+        Common.isDeviceFamily_PARENT_MSPM0C511X()) {
         return true;
     }
     return false;
@@ -403,7 +405,8 @@ function hasGatherMode() {
         Common.isDeviceFamily_PARENT_MSPM0G511X() ||
         Common.isDeviceFamily_PARENT_MSPM0G518X() ||
         Common.isDeviceFamily_PARENT_MSPM0GX218_GX207() ||
-        Common.isDeviceFamily_PARENT_MSPM0G122X()) {
+        Common.isDeviceFamily_PARENT_MSPM0G122X()||
+        Common.isDeviceFamily_PARENT_MSPM0C511X()) {
         return true;
     }
     return false;
@@ -415,7 +418,8 @@ function hasLongLongOption() {
         Common.isDeviceFamily_PARENT_MSPM0G511X() ||
         Common.isDeviceFamily_PARENT_MSPM0G518X() ||
         Common.isDeviceFamily_PARENT_MSPM0GX218_GX207() ||
-        Common.isDeviceFamily_PARENT_MSPM0G122X()) {
+        Common.isDeviceFamily_PARENT_MSPM0G122X()||
+        Common.isDeviceFamily_PARENT_MSPM0C511X()) {
         return true;
     }
     return false;

@@ -3041,7 +3041,7 @@ N
 
    <td align="center">
 
-N
+|image36|
 
 .. raw:: html
 
@@ -3109,16 +3109,6 @@ N
 
    <td align="center">
 
-|image36|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image37|
 
 .. raw:: html
@@ -3130,6 +3120,16 @@ N
    <td align="center">
 
 |image38|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image39|
 
 .. raw:: html
 
@@ -3217,16 +3217,6 @@ N
 
    <td align="center">
 
-|image39|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image40|
 
 .. raw:: html
@@ -3247,6 +3237,16 @@ N
 
    <td align="center">
 
+|image42|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
 N
 
 .. raw:: html
@@ -3257,7 +3257,7 @@ N
 
    <td align="center">
 
-|image42|
+|image43|
 
 .. raw:: html
 
@@ -3325,16 +3325,6 @@ N
 
    <td align="center">
 
-|image43|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image44|
 
 .. raw:: html
@@ -3355,6 +3345,16 @@ N
 
    <td align="center">
 
+|image46|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
 N
 
 .. raw:: html
@@ -3365,7 +3365,7 @@ N
 
    <td align="center">
 
-|image46|
+|image47|
 
 .. raw:: html
 
@@ -3433,16 +3433,6 @@ N
 
    <td align="center">
 
-|image47|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image48|
 
 .. raw:: html
@@ -3453,7 +3443,7 @@ N
 
    <td align="center">
 
-N
+|image49|
 
 .. raw:: html
 
@@ -3474,6 +3464,16 @@ N
    <td align="center">
 
 N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image50|
 
 .. raw:: html
 
@@ -3656,26 +3656,6 @@ ADC capture 1024 samples of a single channel at maximum sampling rate using the 
 
    <td align="center">
 
-|image49|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image50|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image51|
 
 .. raw:: html
@@ -3726,6 +3706,26 @@ ADC capture 1024 samples of a single channel at maximum sampling rate using the 
 
    <td align="center">
 
+|image56|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image57|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
 N
 
 .. raw:: html
@@ -3764,7 +3764,7 @@ ADC12 sampling the internal temperature sensor and converts reading to Celsius a
 
    <td align="center">
 
-|image56|
+|image58|
 
 .. raw:: html
 
@@ -3804,7 +3804,7 @@ N
 
    <td align="center">
 
-|image57|
+|image59|
 
 .. raw:: html
 
@@ -3872,26 +3872,6 @@ Capture 1024 samples of a single ADC channel using 12-bit ADC resolution mode at
 
    <td align="center">
 
-|image58|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image59|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image60|
 
 .. raw:: html
@@ -3950,6 +3930,26 @@ Capture 1024 samples of a single ADC channel using 12-bit ADC resolution mode at
 
 .. raw:: html
 
+   <td align="center">
+
+|image66|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image67|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -3971,26 +3971,6 @@ adc12\_max\_freq\_dma\_8bit
    <td>
 
 Capture 1024 samples of a single ADC channel using 8-bit ADC resolution mode at maximum sampling rate using the DMA.
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image66|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image67|
 
 .. raw:: html
 
@@ -4058,6 +4038,26 @@ Capture 1024 samples of a single ADC channel using 8-bit ADC resolution mode at 
 
 .. raw:: html
 
+   <td align="center">
+
+|image74|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image75|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -4079,26 +4079,6 @@ adc12\_monitor\_supply
    <td>
 
 Configure the ADC to perform a repeat single channel conversion to monitor the internal voltage supply monitor
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image74|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image75|
 
 .. raw:: html
 
@@ -4166,6 +4146,26 @@ Configure the ADC to perform a repeat single channel conversion to monitor the i
 
 .. raw:: html
 
+   <td align="center">
+
+|image82|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image83|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -4196,36 +4196,6 @@ Configure the ADC to trigger sequence of conversions on 4 different channels
 
    <td align="center">
 
-|image82|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image83|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image84|
 
 .. raw:: html
@@ -4237,6 +4207,16 @@ N
    <td align="center">
 
 |image85|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
 
 .. raw:: html
 
@@ -4274,6 +4254,26 @@ N
 
 .. raw:: html
 
+   <td align="center">
+
+|image89|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image90|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -4304,76 +4304,6 @@ Configure multiple ADC instances to simultaneously trigger conversions by a Time
 
    <td align="center">
 
-|image89|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image90|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image91|
 
 .. raw:: html
@@ -4382,17 +4312,9 @@ N
 
 .. raw:: html
 
-   </tr>
+   <td align="center">
 
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-adc12\_simultaneous\_trigger\_event\_stop
+N
 
 .. raw:: html
 
@@ -4400,9 +4322,19 @@ adc12\_simultaneous\_trigger\_event\_stop
 
 .. raw:: html
 
-   <td>
+   <td align="center">
 
-Configure multiple ADC instances to simultaneously trigger conversions by a Timer event in low power STOP mode
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
 
 .. raw:: html
 
@@ -4442,16 +4374,6 @@ N
 
    <td align="center">
 
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image93|
 
 .. raw:: html
@@ -4460,9 +4382,17 @@ N
 
 .. raw:: html
 
-   <td align="center">
+   </tr>
 
-N
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td>
+
+adc12\_simultaneous\_trigger\_event\_stop
 
 .. raw:: html
 
@@ -4470,9 +4400,9 @@ N
 
 .. raw:: html
 
-   <td align="center">
+   <td>
 
-N
+Configure multiple ADC instances to simultaneously trigger conversions by a Timer event in low power STOP mode
 
 .. raw:: html
 
@@ -4483,6 +4413,76 @@ N
    <td align="center">
 
 |image94|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image95|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image96|
 
 .. raw:: html
 
@@ -4511,26 +4511,6 @@ adc12\_single\_conversion
    <td>
 
 Configure the ADC to perform a simple single conversion triggered by software
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image95|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image96|
 
 .. raw:: html
 
@@ -4598,6 +4578,26 @@ Configure the ADC to perform a simple single conversion triggered by software
 
 .. raw:: html
 
+   <td align="center">
+
+|image103|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image104|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -4628,36 +4628,6 @@ Configure the ADC to perform a simple single conversion triggered by software us
 
    <td align="center">
 
-|image103|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image104|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image105|
 
 .. raw:: html
@@ -4669,6 +4639,16 @@ N
    <td align="center">
 
 |image106|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
 
 .. raw:: html
 
@@ -4706,6 +4686,26 @@ N
 
 .. raw:: html
 
+   <td align="center">
+
+|image110|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image111|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -4727,26 +4727,6 @@ adc12\_single\_conversion\_vref\_internal
    <td>
 
 Configure the ADC to perform a simple single conversion triggered by software using an internal voltage reference
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image110|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image111|
 
 .. raw:: html
 
@@ -4814,6 +4794,26 @@ Configure the ADC to perform a simple single conversion triggered by software us
 
 .. raw:: html
 
+   <td align="center">
+
+|image118|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image119|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -4835,26 +4835,6 @@ adc12\_triggered\_by\_timer\_event
    <td>
 
 Configure the ADC to perform a simple single conversion triggered by a timer event
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image118|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image119|
 
 .. raw:: html
 
@@ -4922,6 +4902,26 @@ Configure the ADC to perform a simple single conversion triggered by a timer eve
 
 .. raw:: html
 
+   <td align="center">
+
+|image126|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image127|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -4943,26 +4943,6 @@ adc12\_triggered\_by\_timer\_event\_stop
    <td>
 
 Configure the ADC to perform a simple single conversion triggered by a timer event in low power STOP mode
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image126|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image127|
 
 .. raw:: html
 
@@ -5030,6 +5010,26 @@ Configure the ADC to perform a simple single conversion triggered by a timer eve
 
 .. raw:: html
 
+   <td align="center">
+
+|image134|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image135|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -5051,26 +5051,6 @@ adc12\_window\_comparator
    <td>
 
 ADC12 single conversion in repeat mode using window comparator feature
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image134|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image135|
 
 .. raw:: html
 
@@ -5138,13 +5118,286 @@ ADC12 single conversion in repeat mode using window comparator feature
 
 .. raw:: html
 
+   <td align="center">
+
+|image142|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image143|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
 
    </table>
 
-2.2.4 Basic Timer
+2.2.4 Assembly
+^^^^^^^^^^^^^^
+
+.. raw:: html
+
+   <table class="docutils align-default">
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <th rowspan="2">
+
+Project Name
+
+.. raw:: html
+
+   </th>
+
+.. raw:: html
+
+   <th rowspan="2">
+
+Description
+
+.. raw:: html
+
+   </th>
+
+.. raw:: html
+
+   <th colspan="2">
+
+.. raw:: html
+
+   <p style="text-align: center;">
+
+EVM
+
+.. raw:: html
+
+   </p>
+
+.. raw:: html
+
+   </th>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <th>
+
+LP\_MSPM0G3507
+
+.. raw:: html
+
+   </th>
+
+.. raw:: html
+
+   <th>
+
+LP\_MSPM0L1306
+
+.. raw:: html
+
+   </th>
+
+.. raw:: html
+
+   <th>
+
+LP\_MSPM0C1104
+
+.. raw:: html
+
+   </th>
+
+.. raw:: html
+
+   <th>
+
+LP\_MSPM0L2228
+
+.. raw:: html
+
+   </th>
+
+.. raw:: html
+
+   <th>
+
+LP\_MSPM0G3519
+
+.. raw:: html
+
+   </th>
+
+.. raw:: html
+
+   <th>
+
+LP\_MSPM0L1117
+
+.. raw:: html
+
+   </th>
+
+.. raw:: html
+
+   <th>
+
+LP\_MSPM0H3216
+
+.. raw:: html
+
+   </th>
+
+.. raw:: html
+
+   <th>
+
+LP\_MSPM0G3218
+
+.. raw:: html
+
+   </th>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td>
+
+blinky\_asm
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td>
+
+This example demonstrates how to blink LED0 (pin PA0) using assembly
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+Y
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+Y
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+Y
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+Y
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+Y
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+Y
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+Y
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   </table>
+
+2.2.5 Basic Timer
 ^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -5383,7 +5636,7 @@ N
 
    <td align="center">
 
-|image142|
+|image144|
 
 .. raw:: html
 
@@ -5491,7 +5744,7 @@ N
 
    <td align="center">
 
-|image143|
+|image145|
 
 .. raw:: html
 
@@ -5505,7 +5758,7 @@ N
 
    </table>
 
-2.2.5 Beeper
+2.2.6 Beeper
 ^^^^^^^^^^^^
 
 .. raw:: html
@@ -5694,7 +5947,7 @@ N
 
    <td align="center">
 
-|image144|
+|image146|
 
 .. raw:: html
 
@@ -5734,7 +5987,7 @@ N
 
    <td align="center">
 
-|image145|
+|image147|
 
 .. raw:: html
 
@@ -5758,7 +6011,7 @@ N
 
    </table>
 
-2.2.6 CRCP
+2.2.7 CRCP
 ^^^^^^^^^^
 
 .. raw:: html
@@ -5957,27 +6210,27 @@ N
 
    <td align="center">
 
-|image146|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image147|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image148|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image149|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image150|
 
 .. raw:: html
 
@@ -5997,7 +6250,7 @@ N
 
    <td align="center">
 
-|image149|
+|image151|
 
 .. raw:: html
 
@@ -6065,27 +6318,27 @@ N
 
    <td align="center">
 
-|image150|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image151|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image152|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image153|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image154|
 
 .. raw:: html
 
@@ -6105,7 +6358,7 @@ N
 
    <td align="center">
 
-|image153|
+|image155|
 
 .. raw:: html
 
@@ -6119,7 +6372,7 @@ N
 
    </table>
 
-2.2.7 Comparator (COMP)
+2.2.8 Comparator (COMP)
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -6288,36 +6541,6 @@ Comparator using external inputs with hysteresis and output analog filter
 
    <td align="center">
 
-|image154|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image155|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image156|
 
 .. raw:: html
@@ -6348,6 +6571,26 @@ N
 
    <td align="center">
 
+|image158|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image159|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
 N
 
 .. raw:: html
@@ -6358,7 +6601,17 @@ N
 
    <td align="center">
 
-|image158|
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image160|
 
 .. raw:: html
 
@@ -6387,36 +6640,6 @@ comp\_dac\_to\_timer\_event
    <td>
 
 Comparator output using 8-bit DAC triggers a timer event to measure timing
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image159|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image160|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
 
 .. raw:: html
 
@@ -6456,6 +6679,26 @@ N
 
    <td align="center">
 
+|image163|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image164|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
 N
 
 .. raw:: html
@@ -6466,7 +6709,17 @@ N
 
    <td align="center">
 
-|image163|
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image165|
 
 .. raw:: html
 
@@ -6495,36 +6748,6 @@ comp\_hs\_dac\_vref\_external
    <td>
 
 Comparator in high-speed mode using 8-bit DAC with external VREF
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image164|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image165|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
 
 .. raw:: html
 
@@ -6564,45 +6787,7 @@ N
 
    <td align="center">
 
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image168|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-comp\_hs\_tima\_pwm\_fault
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Comparator in high-speed mode triggers a PWM fault
 
 .. raw:: html
 
@@ -6642,47 +6827,7 @@ N
 
    <td align="center">
 
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image170|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image171|
 
 .. raw:: html
 
@@ -6700,7 +6845,7 @@ N
 
    <td>
 
-comp\_lp\_dac\_vref\_internal
+comp\_hs\_tima\_pwm\_fault
 
 .. raw:: html
 
@@ -6710,7 +6855,47 @@ comp\_lp\_dac\_vref\_internal
 
    <td>
 
-Comparator in low-power mode using 8-bit DAC with internal VREF
+Comparator in high-speed mode triggers a PWM fault
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image171|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
 
 .. raw:: html
 
@@ -6750,16 +6935,6 @@ N
 
    <td align="center">
 
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image173|
 
 .. raw:: html
@@ -6768,9 +6943,17 @@ N
 
 .. raw:: html
 
-   <td align="center">
+   </tr>
 
-N
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td>
+
+comp\_lp\_dac\_vref\_internal
 
 .. raw:: html
 
@@ -6778,9 +6961,9 @@ N
 
 .. raw:: html
 
-   <td align="center">
+   <td>
 
-N
+Comparator in low-power mode using 8-bit DAC with internal VREF
 
 .. raw:: html
 
@@ -6798,13 +6981,83 @@ N
 
 .. raw:: html
 
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image175|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image176|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
 
    </table>
 
-2.2.8 Controller Area Network (CAN)
+2.2.9 Controller Area Network (CAN)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -6973,76 +7226,6 @@ MCAN transmits and receives messages using loopback mode
 
    <td align="center">
 
-|image175|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image176|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image177|
 
 .. raw:: html
@@ -7051,17 +7234,9 @@ N
 
 .. raw:: html
 
-   </tr>
+   <td align="center">
 
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-mcan\_message\_rx
+N
 
 .. raw:: html
 
@@ -7069,9 +7244,19 @@ mcan\_message\_rx
 
 .. raw:: html
 
-   <td>
+   <td align="center">
 
-MCAN configured to receive CAN Classic and CAN-FD frames
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
 
 .. raw:: html
 
@@ -7111,47 +7296,7 @@ N
 
    <td align="center">
 
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image179|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image180|
 
 .. raw:: html
 
@@ -7169,7 +7314,7 @@ N
 
    <td>
 
-mcan\_message\_rx\_tcan114x
+mcan\_message\_rx
 
 .. raw:: html
 
@@ -7179,7 +7324,47 @@ mcan\_message\_rx\_tcan114x
 
    <td>
 
-MCAN configured to receive CAN and CAN-FD frames using BOOSTXL-TCAN1145 boosterpack.
+MCAN configured to receive CAN Classic and CAN-FD frames
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image180|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
 
 .. raw:: html
 
@@ -7219,47 +7404,7 @@ N
 
    <td align="center">
 
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image182|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
 
 .. raw:: html
 
@@ -7277,7 +7422,7 @@ N
 
    <td>
 
-mcan\_multi\_message\_tx
+mcan\_message\_rx\_tcan114x
 
 .. raw:: html
 
@@ -7287,7 +7432,7 @@ mcan\_multi\_message\_tx
 
    <td>
 
-CAN-FD transmits two messages with unique ID on GPIO interrupt
+MCAN configured to receive CAN and CAN-FD frames using BOOSTXL-TCAN1145 boosterpack.
 
 .. raw:: html
 
@@ -7367,7 +7512,7 @@ N
 
    <td align="center">
 
-|image185|
+N
 
 .. raw:: html
 
@@ -7385,7 +7530,7 @@ N
 
    <td>
 
-mcan\_multi\_message\_tx\_tcan114x
+mcan\_multi\_message\_tx
 
 .. raw:: html
 
@@ -7395,7 +7540,47 @@ mcan\_multi\_message\_tx\_tcan114x
 
    <td>
 
-CAN-FD transmits two messages with unique ID on GPIO interrupt using BOOSTXL-TCAN1145 boosterpack.
+CAN-FD transmits two messages with unique ID on GPIO interrupt
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image185|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
 
 .. raw:: html
 
@@ -7435,47 +7620,7 @@ N
 
    <td align="center">
 
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image187|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
 
 .. raw:: html
 
@@ -7493,7 +7638,7 @@ N
 
    <td>
 
-mcan\_single\_message\_tx
+mcan\_multi\_message\_tx\_tcan114x
 
 .. raw:: html
 
@@ -7503,7 +7648,7 @@ mcan\_single\_message\_tx
 
    <td>
 
-CAN-FD transmits a single message on GPIO interrupt
+CAN-FD transmits two messages with unique ID on GPIO interrupt using BOOSTXL-TCAN1145 boosterpack.
 
 .. raw:: html
 
@@ -7583,7 +7728,115 @@ N
 
    <td align="center">
 
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td>
+
+mcan\_single\_message\_tx
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td>
+
+CAN-FD transmits a single message on GPIO interrupt
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
 |image190|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image191|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image192|
 
 .. raw:: html
 
@@ -7597,8 +7850,8 @@ N
 
    </table>
 
-2.2.9 Cyclic Redundancy Check (CRC)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2.2.10 Cyclic Redundancy Check (CRC)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
 
@@ -7766,26 +8019,6 @@ CRC checksum calculation of a memory block
 
    <td align="center">
 
-|image191|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image192|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image193|
 
 .. raw:: html
@@ -7796,37 +8029,57 @@ CRC checksum calculation of a memory block
 
    <td align="center">
 
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image194|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image195|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image196|
 
 .. raw:: html
 
@@ -7874,26 +8127,6 @@ CRC checksum calculation of a memory block using DMA block transfer
 
    <td align="center">
 
-|image195|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image196|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image197|
 
 .. raw:: html
@@ -7904,37 +8137,57 @@ CRC checksum calculation of a memory block using DMA block transfer
 
    <td align="center">
 
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image198|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image199|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image200|
 
 .. raw:: html
 
@@ -7958,7 +8211,7 @@ N
 
    </table>
 
-2.2.10 Digital-to-Analog Converter (DAC)
+2.2.11 Digital-to-Analog Converter (DAC)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -8127,114 +8380,6 @@ DAC12 using DMA with sample time generator to generate sine wave
 
    <td align="center">
 
-|image199|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image200|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-dac12\_fifo\_sampletimegen
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-DAC12 sending repetitive signal using FIFO and sample timer generator
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image201|
 
 .. raw:: html
@@ -8323,7 +8468,7 @@ N
 
    <td>
 
-dac12\_fifo\_timer\_event
+dac12\_fifo\_sampletimegen
 
 .. raw:: html
 
@@ -8333,7 +8478,7 @@ dac12\_fifo\_timer\_event
 
    <td>
 
-DAC12 sending a sawtooth signal using FIFO and triggered by a Timer event
+DAC12 sending repetitive signal using FIFO and sample timer generator
 
 .. raw:: html
 
@@ -8431,7 +8576,7 @@ N
 
    <td>
 
-dac12\_fixed\_voltage\_vref\_internal
+dac12\_fifo\_timer\_event
 
 .. raw:: html
 
@@ -8441,7 +8586,7 @@ dac12\_fixed\_voltage\_vref\_internal
 
    <td>
 
-DAC12 setting a fixed voltage output using the internal VREF
+DAC12 sending a sawtooth signal using FIFO and triggered by a Timer event
 
 .. raw:: html
 
@@ -8533,9 +8678,117 @@ N
 
 .. raw:: html
 
+   <tr>
+
+.. raw:: html
+
+   <td>
+
+dac12\_fixed\_voltage\_vref\_internal
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td>
+
+DAC12 setting a fixed voltage output using the internal VREF
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image207|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image208|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
    </table>
 
-2.2.11 Direct Memory Access (DMA)
+2.2.12 Direct Memory Access (DMA)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -8704,26 +8957,6 @@ DMA using block transfer to copy data from Flash main memory to SRAM memory
 
    <td align="center">
 
-|image207|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image208|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image209|
 
 .. raw:: html
@@ -8782,6 +9015,26 @@ DMA using block transfer to copy data from Flash main memory to SRAM memory
 
 .. raw:: html
 
+   <td align="center">
+
+|image215|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image216|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -8812,36 +9065,6 @@ DMA using a fill data trasnfer to fill SRAM with data
 
    <td align="center">
 
-|image215|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image216|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image217|
 
 .. raw:: html
@@ -8853,6 +9076,16 @@ N
    <td align="center">
 
 |image218|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
 
 .. raw:: html
 
@@ -8890,6 +9123,26 @@ N
 
 .. raw:: html
 
+   <td align="center">
+
+|image222|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image223|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -8920,36 +9173,6 @@ DMA example with a table distributed to SRAM memory via DMA, triggered by softwa
 
    <td align="center">
 
-|image222|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image223|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image224|
 
 .. raw:: html
@@ -8961,6 +9184,16 @@ N
    <td align="center">
 
 |image225|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
 
 .. raw:: html
 
@@ -8998,13 +9231,33 @@ N
 
 .. raw:: html
 
+   <td align="center">
+
+|image229|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image230|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
 
    </table>
 
-2.2.12 Events Manager
+2.2.13 Events Manager
 ^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -9173,26 +9426,6 @@ Demonstrate how to publish and subscribe to Events to toggle an LED when a switc
 
    <td align="center">
 
-|image229|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image230|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image231|
 
 .. raw:: html
@@ -9251,13 +9484,33 @@ Demonstrate how to publish and subscribe to Events to toggle an LED when a switc
 
 .. raw:: html
 
+   <td align="center">
+
+|image237|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image238|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
 
    </table>
 
-2.2.13 GPIO
+2.2.14 GPIO
 ^^^^^^^^^^^
 
 .. raw:: html
@@ -9426,26 +9679,6 @@ GPIO triggers interrupt by input capture pin to toggle an LED
 
    <td align="center">
 
-|image237|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image238|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image239|
 
 .. raw:: html
@@ -9504,6 +9737,26 @@ GPIO triggers interrupt by input capture pin to toggle an LED
 
 .. raw:: html
 
+   <td align="center">
+
+|image245|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image246|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -9534,7 +9787,7 @@ Demonstrates how to simultaneously service three GPIO interrupts
 
    <td align="center">
 
-|image245|
+|image247|
 
 .. raw:: html
 
@@ -9574,7 +9827,7 @@ N
 
    <td align="center">
 
-|image246|
+|image248|
 
 .. raw:: html
 
@@ -9642,26 +9895,6 @@ GPIO output based on a digital input read in a polling software loop to toggle a
 
    <td align="center">
 
-|image247|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image248|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image249|
 
 .. raw:: html
@@ -9720,6 +9953,26 @@ GPIO output based on a digital input read in a polling software loop to toggle a
 
 .. raw:: html
 
+   <td align="center">
+
+|image255|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image256|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -9741,26 +9994,6 @@ gpio\_toggle\_output
    <td>
 
 GPIO toggling output pins to toggle the RGB LED
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image255|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image256|
 
 .. raw:: html
 
@@ -9828,6 +10061,26 @@ GPIO toggling output pins to toggle the RGB LED
 
 .. raw:: html
 
+   <td align="center">
+
+|image263|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image264|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -9858,36 +10111,6 @@ GPIO toggling output pins to toggle the RGB LED using C++
 
    <td align="center">
 
-|image263|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image264|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image265|
 
 .. raw:: html
@@ -9899,6 +10122,16 @@ N
    <td align="center">
 
 |image266|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
 
 .. raw:: html
 
@@ -9936,6 +10169,26 @@ N
 
 .. raw:: html
 
+   <td align="center">
+
+|image270|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image271|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -9957,26 +10210,6 @@ gpio\_toggle\_output\_hiz
    <td>
 
 GPIO toggling an output pin configured as Hi-Z to toggle an LED
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image270|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image271|
 
 .. raw:: html
 
@@ -10044,13 +10277,33 @@ GPIO toggling an output pin configured as Hi-Z to toggle an LED
 
 .. raw:: html
 
+   <td align="center">
+
+|image278|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image279|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
 
    </table>
 
-2.2.14 General-Purpose Amplifier (GPAMP)
+2.2.15 General-Purpose Amplifier (GPAMP)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -10219,7 +10472,7 @@ GPAMP configured in buffer mode with output to ADC
 
    <td align="center">
 
-|image278|
+|image280|
 
 .. raw:: html
 
@@ -10229,7 +10482,7 @@ GPAMP configured in buffer mode with output to ADC
 
    <td align="center">
 
-|image279|
+|image281|
 
 .. raw:: html
 
@@ -10327,7 +10580,7 @@ GPAMP configured in general purpose Rail-to-Rail mode
 
    <td align="center">
 
-|image280|
+|image282|
 
 .. raw:: html
 
@@ -10337,7 +10590,7 @@ GPAMP configured in general purpose Rail-to-Rail mode
 
    <td align="center">
 
-|image281|
+|image283|
 
 .. raw:: html
 
@@ -10411,7 +10664,7 @@ N
 
    </table>
 
-2.2.15 I2S
+2.2.16 I2S
 ^^^^^^^^^^
 
 .. raw:: html
@@ -10664,7 +10917,7 @@ N
 
    </table>
 
-2.2.16 IWDT
+2.2.17 IWDT
 ^^^^^^^^^^^
 
 .. raw:: html
@@ -10863,26 +11116,6 @@ N
 
    <td align="center">
 
-|image282|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image283|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image284|
 
 .. raw:: html
@@ -10911,13 +11144,33 @@ N
 
 .. raw:: html
 
+   <td align="center">
+
+|image287|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image288|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
 
    </table>
 
-2.2.17 Inter-Integrated Circuit (I2C)
+2.2.18 Inter-Integrated Circuit (I2C)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -11086,26 +11339,6 @@ I2C Controller reading and writing multiple bytes using interrupts with FIFO
 
    <td align="center">
 
-|image287|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image288|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image289|
 
 .. raw:: html
@@ -11164,6 +11397,26 @@ I2C Controller reading and writing multiple bytes using interrupts with FIFO
 
 .. raw:: html
 
+   <td align="center">
+
+|image295|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image296|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -11185,26 +11438,6 @@ i2c\_controller\_rw\_multibyte\_fifo\_poll
    <td>
 
 I2C Controller reading and writing multiple bytes polling FIFO
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image295|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image296|
 
 .. raw:: html
 
@@ -11272,6 +11505,26 @@ I2C Controller reading and writing multiple bytes polling FIFO
 
 .. raw:: html
 
+   <td align="center">
+
+|image303|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image304|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -11302,7 +11555,7 @@ I2C Controller reading and writing multiple bytes using interrupts with FIFO
 
    <td align="center">
 
-|image303|
+|image305|
 
 .. raw:: html
 
@@ -11410,26 +11663,6 @@ I2C dynamic switching between Controller and Target modes
 
    <td align="center">
 
-|image304|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image305|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image306|
 
 .. raw:: html
@@ -11480,6 +11713,26 @@ I2C dynamic switching between Controller and Target modes
 
    <td align="center">
 
+|image311|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image312|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
 N
 
 .. raw:: html
@@ -11509,26 +11762,6 @@ i2c\_multicontroller\_arbitration
    <td>
 
 I2C Controller detecting arbitration error in a multi-controller bus
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image311|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image312|
 
 .. raw:: html
 
@@ -11588,6 +11821,26 @@ I2C Controller detecting arbitration error in a multi-controller bus
 
    <td align="center">
 
+|image318|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image319|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
 N
 
 .. raw:: html
@@ -11617,26 +11870,6 @@ i2c\_target\_rw\_multibyte\_fifo\_interrupts
    <td>
 
 I2C Target reading and writing multiple bytes using interrupts
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image318|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image319|
 
 .. raw:: html
 
@@ -11704,6 +11937,26 @@ I2C Target reading and writing multiple bytes using interrupts
 
 .. raw:: html
 
+   <td align="center">
+
+|image326|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image327|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -11725,26 +11978,6 @@ i2c\_target\_rw\_multibyte\_fifo\_interrupts\_stop
    <td>
 
 I2C Target reading and writing multiple bytes using interrupts while in low power STOP mode
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image326|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image327|
 
 .. raw:: html
 
@@ -11812,6 +12045,26 @@ I2C Target reading and writing multiple bytes using interrupts while in low powe
 
 .. raw:: html
 
+   <td align="center">
+
+|image334|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image335|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -11833,26 +12086,6 @@ i2c\_target\_rw\_multibyte\_fifo\_poll
    <td>
 
 I2C Target reading and writing multiple bytes polling FIFO
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image334|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image335|
 
 .. raw:: html
 
@@ -11920,13 +12153,33 @@ I2C Target reading and writing multiple bytes polling FIFO
 
 .. raw:: html
 
+   <td align="center">
+
+|image342|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image343|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
 
    </table>
 
-2.2.18 LCD
+2.2.19 LCD
 ^^^^^^^^^^
 
 .. raw:: html
@@ -12125,7 +12378,7 @@ N
 
    <td align="center">
 
-|image342|
+|image344|
 
 .. raw:: html
 
@@ -12179,7 +12432,7 @@ N
 
    </table>
 
-2.2.19 Math Accelerator (MATHACL)
+2.2.20 Math Accelerator (MATHACL)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -12348,76 +12601,6 @@ Math accelerator (MATHACL) implementation of trigonometric functions
 
    <td align="center">
 
-|image343|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image344|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image345|
 
 .. raw:: html
@@ -12426,17 +12609,9 @@ N
 
 .. raw:: html
 
-   </tr>
+   <td align="center">
 
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-mathacl\_trig\_op
+N
 
 .. raw:: html
 
@@ -12444,9 +12619,19 @@ mathacl\_trig\_op
 
 .. raw:: html
 
-   <td>
+   <td align="center">
 
-Math accelerator (MATHACL) implementation of multiple and divide fixed point operations
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
 
 .. raw:: html
 
@@ -12486,16 +12671,6 @@ N
 
    <td align="center">
 
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image347|
 
 .. raw:: html
@@ -12504,9 +12679,17 @@ N
 
 .. raw:: html
 
-   <td align="center">
+   </tr>
 
-N
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td>
+
+mathacl\_trig\_op
 
 .. raw:: html
 
@@ -12514,9 +12697,9 @@ N
 
 .. raw:: html
 
-   <td align="center">
+   <td>
 
-N
+Math accelerator (MATHACL) implementation of multiple and divide fixed point operations
 
 .. raw:: html
 
@@ -12534,13 +12717,83 @@ N
 
 .. raw:: html
 
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image349|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image350|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
 
    </table>
 
-2.2.20 Non-Volatile Memory (FLASHCTL)
+2.2.21 Non-Volatile Memory (FLASHCTL)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -12709,26 +12962,6 @@ Demonstration of usage of the Flash controller blank verify command, to verify i
 
    <td align="center">
 
-|image349|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image350|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image351|
 
 .. raw:: html
@@ -12787,6 +13020,26 @@ Demonstration of usage of the Flash controller blank verify command, to verify i
 
 .. raw:: html
 
+   <td align="center">
+
+|image357|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image358|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -12808,26 +13061,6 @@ flashctl\_dynamic\_memory\_protection
    <td>
 
 Flash controller dynamic protection against program and erase operations
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image357|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image358|
 
 .. raw:: html
 
@@ -12895,6 +13128,26 @@ Flash controller dynamic protection against program and erase operations
 
 .. raw:: html
 
+   <td align="center">
+
+|image365|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image366|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -12916,46 +13169,6 @@ flashctl\_ecc\_error\_injection
    <td>
 
 Flash ECC testing and SEC and DED error detection
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image365|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image366|
 
 .. raw:: html
 
@@ -13003,6 +13216,46 @@ N
 
 .. raw:: html
 
+   <td align="center">
+
+|image369|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image370|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -13024,26 +13277,6 @@ flashctl\_multiple\_size\_read\_verify
    <td>
 
 Demonstate usage of Flash controller read verify commands on multiple data sizes, with and without ECC
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image369|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image370|
 
 .. raw:: html
 
@@ -13111,6 +13344,26 @@ Demonstate usage of Flash controller read verify commands on multiple data sizes
 
 .. raw:: html
 
+   <td align="center">
+
+|image377|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image378|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -13132,26 +13385,6 @@ flashctl\_multiple\_size\_write
    <td>
 
 Demonstrate programming Flash with multiple data sizes (8/16/32/64-bit)
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image377|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image378|
 
 .. raw:: html
 
@@ -13219,6 +13452,26 @@ Demonstrate programming Flash with multiple data sizes (8/16/32/64-bit)
 
 .. raw:: html
 
+   <td align="center">
+
+|image385|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image386|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -13240,26 +13493,6 @@ flashctl\_nonmain\_memory\_write
    <td>
 
 Safely read and write to the boot code routine (BCR) and bootstrap loader (BSL) of NONMAIN Flash memory
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image385|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image386|
 
 .. raw:: html
 
@@ -13319,6 +13552,26 @@ Safely read and write to the boot code routine (BCR) and bootstrap loader (BSL) 
 
    <td align="center">
 
+|image392|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image393|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
 N
 
 .. raw:: html
@@ -13348,46 +13601,6 @@ flashctl\_program\_with\_ecc
    <td>
 
 Demonstrate programming Flash with 64-bit data with ECC
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image392|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image393|
 
 .. raw:: html
 
@@ -13435,13 +13648,53 @@ N
 
 .. raw:: html
 
+   <td align="center">
+
+|image396|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image397|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
 
    </table>
 
-2.2.21 Operational Amplifier (OPA)
+2.2.22 Operational Amplifier (OPA)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -13610,7 +13863,7 @@ OPA in buffer mode enabling burnout current source to ADC
 
    <td align="center">
 
-|image396|
+|image398|
 
 .. raw:: html
 
@@ -13620,7 +13873,7 @@ OPA in buffer mode enabling burnout current source to ADC
 
    <td align="center">
 
-|image397|
+|image399|
 
 .. raw:: html
 
@@ -13718,7 +13971,7 @@ OPA in output buffer mode using 8-bit DAC
 
    <td align="center">
 
-|image398|
+|image400|
 
 .. raw:: html
 
@@ -13728,7 +13981,7 @@ OPA in output buffer mode using 8-bit DAC
 
    <td align="center">
 
-|image399|
+|image401|
 
 .. raw:: html
 
@@ -13826,7 +14079,7 @@ OPA in general purpose mode with Rail-to-Rail configuration
 
    <td align="center">
 
-|image400|
+|image402|
 
 .. raw:: html
 
@@ -13836,7 +14089,7 @@ OPA in general purpose mode with Rail-to-Rail configuration
 
    <td align="center">
 
-|image401|
+|image403|
 
 .. raw:: html
 
@@ -13934,7 +14187,7 @@ OPA in inverting PGA configuration using DAC12 as bias
 
    <td align="center">
 
-|image402|
+|image404|
 
 .. raw:: html
 
@@ -14042,7 +14295,7 @@ OPA in non-inverting PGA configuration
 
    <td align="center">
 
-|image403|
+|image405|
 
 .. raw:: html
 
@@ -14052,7 +14305,7 @@ OPA in non-inverting PGA configuration
 
    <td align="center">
 
-|image404|
+|image406|
 
 .. raw:: html
 
@@ -14150,7 +14403,7 @@ Two OPAs configured in TIA and PGA, connected to ADC
 
    <td align="center">
 
-|image405|
+|image407|
 
 .. raw:: html
 
@@ -14234,7 +14487,7 @@ N
 
    </table>
 
-2.2.22 Other
+2.2.23 Other
 ^^^^^^^^^^^^
 
 .. raw:: html
@@ -14403,26 +14656,6 @@ Bypass CINIT skipping variable initialization
 
    <td align="center">
 
-|image406|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image407|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image408|
 
 .. raw:: html
@@ -14473,6 +14706,26 @@ Bypass CINIT skipping variable initialization
 
    <td align="center">
 
+|image413|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image414|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
 N
 
 .. raw:: html
@@ -14502,26 +14755,6 @@ empty
    <td>
 
 Empty example with SysConfig enabled to be used as a starting point for new development
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image413|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image414|
 
 .. raw:: html
 
@@ -14589,6 +14822,134 @@ Empty example with SysConfig enabled to be used as a starting point for new deve
 
 .. raw:: html
 
+   <td align="center">
+
+|image421|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image422|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td>
+
+empty\_asm
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td>
+
+Empty example with assembly file to be used as a starting point for new development
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+Y
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+Y
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+Y
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+Y
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+Y
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+Y
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+Y
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -14619,36 +14980,6 @@ Empty example with SysConfig enabled to be used as a starting point for C++ new 
 
    <td align="center">
 
-|image421|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image422|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image423|
 
 .. raw:: html
@@ -14660,6 +14991,16 @@ N
    <td align="center">
 
 |image424|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
 
 .. raw:: html
 
@@ -14690,6 +15031,26 @@ N
    <td align="center">
 
 |image427|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image428|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image429|
 
 .. raw:: html
 
@@ -14835,26 +15196,6 @@ Empty start-up project with SysConfig enabled that includes a copy of the Driver
 
    <td align="center">
 
-|image428|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image429|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image430|
 
 .. raw:: html
@@ -14906,6 +15247,26 @@ Empty start-up project with SysConfig enabled that includes a copy of the Driver
    <td align="center">
 
 |image435|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image436|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image437|
 
 .. raw:: html
 
@@ -15051,26 +15412,6 @@ NVIC used to demonstrate best approach to disable interrupts
 
    <td align="center">
 
-|image436|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image437|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image438|
 
 .. raw:: html
@@ -15129,6 +15470,26 @@ NVIC used to demonstrate best approach to disable interrupts
 
 .. raw:: html
 
+   <td align="center">
+
+|image444|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image445|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -15150,26 +15511,6 @@ nvic\_interrupt\_grouping
    <td>
 
 NVIC configuration and use of interrupt grouping
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image444|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image445|
 
 .. raw:: html
 
@@ -15219,6 +15560,26 @@ NVIC configuration and use of interrupt grouping
 
    <td align="center">
 
+|image450|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image451|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
 N
 
 .. raw:: html
@@ -15229,7 +15590,7 @@ N
 
    <td align="center">
 
-|image450|
+|image452|
 
 .. raw:: html
 
@@ -15267,47 +15628,27 @@ Initializes and uses Parity SRAM
 
    <td align="center">
 
-|image451|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image452|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image453|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
 
 .. raw:: html
 
@@ -15328,6 +15669,26 @@ N
    <td align="center">
 
 |image455|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image456|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image457|
 
 .. raw:: html
 
@@ -15375,36 +15736,6 @@ SysTick generates periodic interrupt
 
    <td align="center">
 
-|image456|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image457|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image458|
 
 .. raw:: html
@@ -15416,6 +15747,16 @@ N
    <td align="center">
 
 |image459|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
 
 .. raw:: html
 
@@ -15453,13 +15794,33 @@ N
 
 .. raw:: html
 
+   <td align="center">
+
+|image463|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image464|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
 
    </table>
 
-2.2.23 Real-Time Clock (RTC)
+2.2.24 Real-Time Clock (RTC)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -15658,7 +16019,7 @@ N
 
    <td align="center">
 
-|image463|
+|image465|
 
 .. raw:: html
 
@@ -15776,26 +16137,6 @@ N
 
    <td align="center">
 
-|image464|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image465|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image466|
 
 .. raw:: html
@@ -15807,6 +16148,26 @@ N
    <td align="center">
 
 |image467|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image468|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image469|
 
 .. raw:: html
 
@@ -15884,26 +16245,6 @@ N
 
    <td align="center">
 
-|image468|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image469|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image470|
 
 .. raw:: html
@@ -15915,6 +16256,26 @@ N
    <td align="center">
 
 |image471|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image472|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image473|
 
 .. raw:: html
 
@@ -15952,7 +16313,7 @@ RTC sets calendar alarm and toggles GPIO when alarm is triggered in low power ST
 
    <td align="center">
 
-|image472|
+|image474|
 
 .. raw:: html
 
@@ -16060,114 +16421,6 @@ RTC offset correction of crystal
 
    <td align="center">
 
-|image473|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image474|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-rtc\_periodic\_alarm\_lfosc\_standby
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-RTC implementation of periodic alarm in low power STANDBY mode using LFOSC
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image475|
 
 .. raw:: html
@@ -16256,6 +16509,114 @@ N
 
    <td>
 
+rtc\_periodic\_alarm\_lfosc\_standby
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td>
+
+RTC implementation of periodic alarm in low power STANDBY mode using LFOSC
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image477|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image478|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td>
+
 rtc\_periodic\_alarm\_lfxt\_standby
 
 .. raw:: html
@@ -16276,7 +16637,7 @@ RTC implementation of periodic alarm in low power STANDBY mode using LFXT
 
    <td align="center">
 
-|image477|
+|image479|
 
 .. raw:: html
 
@@ -16360,7 +16721,7 @@ N
 
    </table>
 
-2.2.24 Scratchpad
+2.2.25 Scratchpad
 ^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -16559,7 +16920,7 @@ N
 
    <td align="center">
 
-|image478|
+|image480|
 
 .. raw:: html
 
@@ -16667,7 +17028,7 @@ N
 
    <td align="center">
 
-|image479|
+|image481|
 
 .. raw:: html
 
@@ -16721,7 +17082,7 @@ N
 
    </table>
 
-2.2.25 Serial Peripheral Interface (SPI)
+2.2.26 Serial Peripheral Interface (SPI)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -16890,26 +17251,6 @@ SPI Controller transmit using command data (CD) control
 
    <td align="center">
 
-|image480|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image481|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image482|
 
 .. raw:: html
@@ -16968,6 +17309,26 @@ SPI Controller transmit using command data (CD) control
 
 .. raw:: html
 
+   <td align="center">
+
+|image488|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image489|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -16989,26 +17350,6 @@ spi\_controller\_echo\_interrupts
    <td>
 
 SPI Controller RX/TX echo data using interrupts
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image488|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image489|
 
 .. raw:: html
 
@@ -17076,6 +17417,26 @@ SPI Controller RX/TX echo data using interrupts
 
 .. raw:: html
 
+   <td align="center">
+
+|image496|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image497|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -17106,57 +17467,7 @@ SPI Controller transmit and receive multiple bytes using interrupts and DMA
 
    <td align="center">
 
-|image496|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image497|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image498|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
 
 .. raw:: html
 
@@ -17176,7 +17487,57 @@ N
 
    <td align="center">
 
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
 |image500|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image501|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image502|
 
 .. raw:: html
 
@@ -17205,26 +17566,6 @@ spi\_controller\_internal\_loopback\_poll
    <td>
 
 SPI Controller with internal loopback using polling
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image501|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image502|
 
 .. raw:: html
 
@@ -17292,6 +17633,26 @@ SPI Controller with internal loopback using polling
 
 .. raw:: html
 
+   <td align="center">
+
+|image509|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image510|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -17313,26 +17674,6 @@ spi\_controller\_multibyte\_fifo\_poll
    <td>
 
 SPI Controller transmit and receive multiple bytes through polling
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image509|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image510|
 
 .. raw:: html
 
@@ -17400,6 +17741,26 @@ SPI Controller transmit and receive multiple bytes through polling
 
 .. raw:: html
 
+   <td align="center">
+
+|image517|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image518|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -17421,26 +17782,6 @@ spi\_controller\_register\_format
    <td>
 
 SPI Controller transmit and receive data using register format
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image517|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image518|
 
 .. raw:: html
 
@@ -17508,6 +17849,26 @@ SPI Controller transmit and receive data using register format
 
 .. raw:: html
 
+   <td align="center">
+
+|image525|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image526|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -17538,36 +17899,6 @@ SPI Controller transmit and receive multiple bytes using interrupts and DMA ever
 
    <td align="center">
 
-|image525|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image526|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image527|
 
 .. raw:: html
@@ -17579,6 +17910,16 @@ N
    <td align="center">
 
 |image528|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
 
 .. raw:: html
 
@@ -17616,6 +17957,26 @@ N
 
 .. raw:: html
 
+   <td align="center">
+
+|image532|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image533|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -17637,26 +17998,6 @@ spi\_peripheral\_echo\_interrupts
    <td>
 
 SPI Peripheral transmits and echoes received data using interrupts
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image532|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image533|
 
 .. raw:: html
 
@@ -17724,6 +18065,26 @@ SPI Peripheral transmits and echoes received data using interrupts
 
 .. raw:: html
 
+   <td align="center">
+
+|image540|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image541|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -17754,57 +18115,7 @@ SPI Peripheral transmits and receives multiple bytes using interrupts and DMA
 
    <td align="center">
 
-|image540|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image541|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image542|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
 
 .. raw:: html
 
@@ -17824,7 +18135,57 @@ N
 
    <td align="center">
 
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
 |image544|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image545|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image546|
 
 .. raw:: html
 
@@ -17853,26 +18214,6 @@ spi\_peripheral\_multibyte\_fifo\_poll
    <td>
 
 SPI Peripheral transmits and receives multiple bytes through polling
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image545|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image546|
 
 .. raw:: html
 
@@ -17940,6 +18281,26 @@ SPI Peripheral transmits and receives multiple bytes through polling
 
 .. raw:: html
 
+   <td align="center">
+
+|image553|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image554|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -17961,26 +18322,6 @@ spi\_peripheral\_register\_format
    <td>
 
 SPI Peripheral transmit and receives data using register format
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image553|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image554|
 
 .. raw:: html
 
@@ -18048,6 +18389,26 @@ SPI Peripheral transmit and receives data using register format
 
 .. raw:: html
 
+   <td align="center">
+
+|image561|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image562|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -18078,36 +18439,6 @@ SPI Peripheral transmits and receives multiple bytes using interrupts and DMA
 
    <td align="center">
 
-|image561|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image562|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image563|
 
 .. raw:: html
@@ -18119,6 +18450,16 @@ N
    <td align="center">
 
 |image564|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
 
 .. raw:: html
 
@@ -18156,13 +18497,33 @@ N
 
 .. raw:: html
 
+   <td align="center">
+
+|image568|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image569|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
 
    </table>
 
-2.2.26 System Controller (SYSCTL)
+2.2.27 System Controller (SYSCTL)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -18331,26 +18692,6 @@ Use Frequency Clock Counter (FCC) to monitor if SYSOSC is in expected frequency 
 
    <td align="center">
 
-|image568|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image569|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image570|
 
 .. raw:: html
@@ -18409,6 +18750,26 @@ Use Frequency Clock Counter (FCC) to monitor if SYSOSC is in expected frequency 
 
 .. raw:: html
 
+   <td align="center">
+
+|image576|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image577|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -18439,47 +18800,17 @@ Sets external HFXT as source to HSCLK and MCLK (48MHz)
 
    <td align="center">
 
-|image576|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image577|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image578|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
 
 .. raw:: html
 
@@ -18517,6 +18848,36 @@ N
 
 .. raw:: html
 
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image581|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image582|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -18547,47 +18908,27 @@ Sets LFXT as source to LFCLK (32kHz) and low power policy in STANDBY0
 
    <td align="center">
 
-|image581|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image582|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image583|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
 
 .. raw:: html
 
@@ -18625,6 +18966,26 @@ N
 
 .. raw:: html
 
+   <td align="center">
+
+|image587|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image588|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -18655,77 +19016,77 @@ Sets MCLK to run from SYSPLL (80MHz)
 
    <td align="center">
 
-|image587|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image588|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image589|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image590|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image591|
 
 .. raw:: html
 
@@ -18754,26 +19115,6 @@ sysctl\_power\_policy\_sleep\_to\_standby
    <td>
 
 SYSCTL switches the power policy between SLEEP mode and STANDBY mode
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image590|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image591|
 
 .. raw:: html
 
@@ -18841,6 +19182,26 @@ SYSCTL switches the power policy between SLEEP mode and STANDBY mode
 
 .. raw:: html
 
+   <td align="center">
+
+|image598|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image599|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -18862,26 +19223,6 @@ sysctl\_power\_policy\_sleep\_to\_stop
    <td>
 
 SYSCTL switches the power policy between SLEEP mode and STOP modes
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image598|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image599|
 
 .. raw:: html
 
@@ -18949,6 +19290,26 @@ SYSCTL switches the power policy between SLEEP mode and STOP modes
 
 .. raw:: html
 
+   <td align="center">
+
+|image606|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image607|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -18970,26 +19331,6 @@ sysctl\_shutdown
    <td>
 
 Show correct wake-up mechanism for different power policies after SHUTDOWN vs STOP, STANDBY and SLEEP
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image606|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image607|
 
 .. raw:: html
 
@@ -19057,13 +19398,33 @@ Show correct wake-up mechanism for different power policies after SHUTDOWN vs ST
 
 .. raw:: html
 
+   <td align="center">
+
+|image614|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image615|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
 
    </table>
 
-2.2.27 Tamper IO
+2.2.28 Tamper IO
 ^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -19262,7 +19623,7 @@ N
 
    <td align="center">
 
-|image614|
+|image616|
 
 .. raw:: html
 
@@ -19316,7 +19677,7 @@ N
 
    </table>
 
-2.2.28 Timer - Advanced (TIMA)
+2.2.29 Timer - Advanced (TIMA)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -19485,7 +19846,7 @@ TimerA in periodic mode using repeat-count feature
 
    <td align="center">
 
-|image615|
+|image617|
 
 .. raw:: html
 
@@ -19496,26 +19857,6 @@ TimerA in periodic mode using repeat-count feature
    <td align="center">
 
 N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image616|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image617|
 
 .. raw:: html
 
@@ -19563,6 +19904,26 @@ N
 
 .. raw:: html
 
+   <td align="center">
+
+|image622|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image623|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -19593,7 +19954,7 @@ TimerA outputs PWM signals with dead band insertion
 
    <td align="center">
 
-|image622|
+|image624|
 
 .. raw:: html
 
@@ -19604,26 +19965,6 @@ TimerA outputs PWM signals with dead band insertion
    <td align="center">
 
 N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image623|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image624|
 
 .. raw:: html
 
@@ -19671,6 +20012,26 @@ N
 
 .. raw:: html
 
+   <td align="center">
+
+|image629|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image630|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -19701,7 +20062,7 @@ TimerA demonstrating fault detection feature
 
    <td align="center">
 
-|image629|
+|image631|
 
 .. raw:: html
 
@@ -19712,26 +20073,6 @@ TimerA demonstrating fault detection feature
    <td align="center">
 
 N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image630|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image631|
 
 .. raw:: html
 
@@ -19779,13 +20120,33 @@ N
 
 .. raw:: html
 
+   <td align="center">
+
+|image636|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image637|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
 
    </table>
 
-2.2.29 Timer - General Purpose (TIMG)
+2.2.30 Timer - General Purpose (TIMG)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -19954,114 +20315,6 @@ timg\_32bit\_timer\_mode\_periodic\_sleep
 
    <td align="center">
 
-|image636|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image637|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-timg\_32bit\_timer\_mode\_pwm\_edge\_sleep
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-32-bit timer in PWM edge aligned mode while device is in SLEEP mode
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image638|
 
 .. raw:: html
@@ -20150,7 +20403,7 @@ N
 
    <td>
 
-timg\_qei\_mode
+timg\_32bit\_timer\_mode\_pwm\_edge\_sleep
 
 .. raw:: html
 
@@ -20160,7 +20413,7 @@ timg\_qei\_mode
 
    <td>
 
-TimerG uses QEI to decode relative position output of a quadrature encoder
+32-bit timer in PWM edge aligned mode while device is in SLEEP mode
 
 .. raw:: html
 
@@ -20171,6 +20424,26 @@ TimerG uses QEI to decode relative position output of a quadrature encoder
    <td align="center">
 
 |image640|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
 
 .. raw:: html
 
@@ -20210,7 +20483,95 @@ N
 
    <td align="center">
 
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td>
+
+timg\_qei\_mode
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td>
+
+TimerG uses QEI to decode relative position output of a quadrature encoder
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
 |image642|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image643|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image644|
 
 .. raw:: html
 
@@ -20254,7 +20615,7 @@ N
 
    </table>
 
-2.2.30 Timer - Generic (TIMx)
+2.2.31 Timer - Generic (TIMx)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -20423,26 +20784,6 @@ Timer in combined capture mode to calculate a PWM signal's period and duty cycle
 
    <td align="center">
 
-|image643|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image644|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image645|
 
 .. raw:: html
@@ -20501,6 +20842,26 @@ Timer in combined capture mode to calculate a PWM signal's period and duty cycle
 
 .. raw:: html
 
+   <td align="center">
+
+|image651|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image652|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -20522,26 +20883,6 @@ timx\_timer\_mode\_capture\_edge\_capture
    <td>
 
 Timer capture mode for edge time detection
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image651|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image652|
 
 .. raw:: html
 
@@ -20609,6 +20950,26 @@ Timer capture mode for edge time detection
 
 .. raw:: html
 
+   <td align="center">
+
+|image659|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image660|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -20630,26 +20991,6 @@ timx\_timer\_mode\_compare\_edge\_count
    <td>
 
 Timer in edge count mode to detect rising edges
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image659|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image660|
 
 .. raw:: html
 
@@ -20717,6 +21058,26 @@ Timer in edge count mode to detect rising edges
 
 .. raw:: html
 
+   <td align="center">
+
+|image667|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image668|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -20738,26 +21099,6 @@ timx\_timer\_mode\_one\_shot\_standby
    <td>
 
 Timer in one-shot mode while device is in STANDBY low power mode
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image667|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image668|
 
 .. raw:: html
 
@@ -20825,6 +21166,26 @@ Timer in one-shot mode while device is in STANDBY low power mode
 
 .. raw:: html
 
+   <td align="center">
+
+|image675|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image676|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -20846,26 +21207,6 @@ timx\_timer\_mode\_periodic\_sleep
    <td>
 
 Timer in periodic mode while device is in SLEEP mode
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image675|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image676|
 
 .. raw:: html
 
@@ -20933,6 +21274,26 @@ Timer in periodic mode while device is in SLEEP mode
 
 .. raw:: html
 
+   <td align="center">
+
+|image683|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image684|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -20954,26 +21315,6 @@ timx\_timer\_mode\_periodic\_standby
    <td>
 
 Timer in periodic mode while device is in STANDBY low power mode
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image683|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image684|
 
 .. raw:: html
 
@@ -21041,6 +21382,26 @@ Timer in periodic mode while device is in STANDBY low power mode
 
 .. raw:: html
 
+   <td align="center">
+
+|image691|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image692|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -21062,26 +21423,6 @@ timx\_timer\_mode\_periodic\_stop
    <td>
 
 Timer in periodic mode while device is in STOP low power mode
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image691|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image692|
 
 .. raw:: html
 
@@ -21149,6 +21490,26 @@ Timer in periodic mode while device is in STOP low power mode
 
 .. raw:: html
 
+   <td align="center">
+
+|image699|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image700|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -21170,26 +21531,6 @@ timx\_timer\_mode\_pwm\_center\_stop
    <td>
 
 Timer in PWM center aligned mode while device is in STOP low power mode
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image699|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image700|
 
 .. raw:: html
 
@@ -21257,6 +21598,26 @@ Timer in PWM center aligned mode while device is in STOP low power mode
 
 .. raw:: html
 
+   <td align="center">
+
+|image707|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image708|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -21278,26 +21639,6 @@ timx\_timer\_mode\_pwm\_edge\_sleep
    <td>
 
 Timer in PWM edge aligned mode while device is in SLEEP mode
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image707|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image708|
 
 .. raw:: html
 
@@ -21365,6 +21706,26 @@ Timer in PWM edge aligned mode while device is in SLEEP mode
 
 .. raw:: html
 
+   <td align="center">
+
+|image715|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image716|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -21386,26 +21747,6 @@ timx\_timer\_mode\_pwm\_edge\_sleep\_shadow
    <td>
 
 Timer updating PWM duty cycle using shadow load and shadow capture compare features
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image715|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image716|
 
 .. raw:: html
 
@@ -21473,6 +21814,26 @@ Timer updating PWM duty cycle using shadow load and shadow capture compare featu
 
 .. raw:: html
 
+   <td align="center">
+
+|image723|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image724|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -21503,7 +21864,7 @@ Timer in PWM mode after coming out of STOP low power with retention in software
 
    <td align="center">
 
-|image723|
+|image725|
 
 .. raw:: html
 
@@ -21543,7 +21904,7 @@ N
 
    <td align="center">
 
-|image724|
+|image726|
 
 .. raw:: html
 
@@ -21587,7 +21948,7 @@ N
 
    </table>
 
-2.2.31 True Random Number Generator (TRNG)
+2.2.32 True Random Number Generator (TRNG)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -21756,114 +22117,6 @@ TRNG sampling to fill a buffer with random data
 
    <td align="center">
 
-|image725|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image726|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-trng\_sample\_stop\_restore
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-TRNG sample random data after coming out of STOP low power mode with retention in software
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image727|
 
 .. raw:: html
@@ -21946,9 +22199,117 @@ N
 
 .. raw:: html
 
+   <tr>
+
+.. raw:: html
+
+   <td>
+
+trng\_sample\_stop\_restore
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td>
+
+TRNG sample random data after coming out of STOP low power mode with retention in software
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image729|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image730|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
    </table>
 
-2.2.32 Universal Asynchronous Receiver-Transmitter (UART)
+2.2.33 Universal Asynchronous Receiver-Transmitter (UART)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -22117,26 +22478,6 @@ UART RX/TX echo data using interrupts while device is in STANDBY low power mode
 
    <td align="center">
 
-|image729|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image730|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image731|
 
 .. raw:: html
@@ -22195,6 +22536,26 @@ UART RX/TX echo data using interrupts while device is in STANDBY low power mode
 
 .. raw:: html
 
+   <td align="center">
+
+|image737|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image738|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -22216,114 +22577,6 @@ uart\_extend\_irda\_receive\_packet
    <td>
 
 UART Extend instance using IrDA encoding to receive a packet of data
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image737|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image738|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-uart\_extend\_irda\_send\_packet
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-UART Extend instace using IrDA encoding to send packet of data
 
 .. raw:: html
 
@@ -22421,7 +22674,7 @@ N
 
    <td>
 
-uart\_extend\_manchester\_echo
+uart\_extend\_irda\_send\_packet
 
 .. raw:: html
 
@@ -22431,7 +22684,7 @@ uart\_extend\_manchester\_echo
 
    <td>
 
-UART Extend instance using Manchester encoding, echo received packet
+UART Extend instace using IrDA encoding to send packet of data
 
 .. raw:: html
 
@@ -22451,7 +22704,95 @@ UART Extend instance using Manchester encoding, echo received packet
 
    <td align="center">
 
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
 |image742|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td>
+
+uart\_extend\_manchester\_echo
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td>
+
+UART Extend instance using Manchester encoding, echo received packet
 
 .. raw:: html
 
@@ -22519,6 +22860,26 @@ UART Extend instance using Manchester encoding, echo received packet
 
 .. raw:: html
 
+   <td align="center">
+
+|image749|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image750|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -22540,26 +22901,6 @@ uart\_extend\_manchester\_send\_packet
    <td>
 
 UART Extend instance using Manchester encoding and decoding, send a packet of data
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image749|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image750|
 
 .. raw:: html
 
@@ -22627,6 +22968,26 @@ UART Extend instance using Manchester encoding and decoding, send a packet of da
 
 .. raw:: html
 
+   <td align="center">
+
+|image757|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image758|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -22648,26 +23009,6 @@ uart\_external\_loopback\_interrupt
    <td>
 
 UART RX/TX external loopback using interrupts
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image757|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image758|
 
 .. raw:: html
 
@@ -22735,6 +23076,26 @@ UART RX/TX external loopback using interrupts
 
 .. raw:: html
 
+   <td align="center">
+
+|image765|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image766|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -22756,114 +23117,6 @@ uart\_internal\_loopback\_standby\_restore
    <td>
 
 UART internal loopback after coming out of STANDBY low power mode with retention in software
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image765|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image766|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-uart\_rs485\_receive\_packet
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Demonstrate UART in RS485 mode, receive a packet of data
 
 .. raw:: html
 
@@ -22961,7 +23214,7 @@ N
 
    <td>
 
-uart\_rs485\_send\_packet
+uart\_rs485\_receive\_packet
 
 .. raw:: html
 
@@ -22971,7 +23224,7 @@ uart\_rs485\_send\_packet
 
    <td>
 
-Demonstrate UART in RS485 mode, send a packet of data
+Demonstrate UART in RS485 mode, receive a packet of data
 
 .. raw:: html
 
@@ -23069,7 +23322,7 @@ N
 
    <td>
 
-uart\_rw\_multibyte\_fifo\_poll
+uart\_rs485\_send\_packet
 
 .. raw:: html
 
@@ -23079,7 +23332,7 @@ uart\_rw\_multibyte\_fifo\_poll
 
    <td>
 
-UART receive and transmit multiple bytes of data using FIFOs with polling
+Demonstrate UART in RS485 mode, send a packet of data
 
 .. raw:: html
 
@@ -23099,7 +23352,95 @@ UART receive and transmit multiple bytes of data using FIFOs with polling
 
    <td align="center">
 
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
 |image772|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td>
+
+uart\_rw\_multibyte\_fifo\_poll
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td>
+
+UART receive and transmit multiple bytes of data using FIFOs with polling
 
 .. raw:: html
 
@@ -23167,6 +23508,26 @@ UART receive and transmit multiple bytes of data using FIFOs with polling
 
 .. raw:: html
 
+   <td align="center">
+
+|image779|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image780|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -23188,26 +23549,6 @@ uart\_rx\_hw\_flow\_control
    <td>
 
 UART RX of data using hardware flow control
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image779|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image780|
 
 .. raw:: html
 
@@ -23275,6 +23616,26 @@ UART RX of data using hardware flow control
 
 .. raw:: html
 
+   <td align="center">
+
+|image787|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image788|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -23305,36 +23666,6 @@ UART receive multiple bytes of data using a DMA trigger and interrupts
 
    <td align="center">
 
-|image787|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image788|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image789|
 
 .. raw:: html
@@ -23346,6 +23677,16 @@ N
    <td align="center">
 
 |image790|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
 
 .. raw:: html
 
@@ -23383,6 +23724,26 @@ N
 
 .. raw:: html
 
+   <td align="center">
+
+|image794|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image795|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -23413,36 +23774,6 @@ UART transmit of multiple bytes of data to a console using a continous DMA trigg
 
    <td align="center">
 
-|image794|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image795|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image796|
 
 .. raw:: html
@@ -23454,6 +23785,16 @@ N
    <td align="center">
 
 |image797|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
 
 .. raw:: html
 
@@ -23491,6 +23832,26 @@ N
 
 .. raw:: html
 
+   <td align="center">
+
+|image801|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image802|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -23512,26 +23873,6 @@ uart\_tx\_hw\_flow\_control
    <td>
 
 UART TX using hardware flow control
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image801|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image802|
 
 .. raw:: html
 
@@ -23599,6 +23940,26 @@ UART TX using hardware flow control
 
 .. raw:: html
 
+   <td align="center">
+
+|image809|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image810|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -23629,36 +23990,6 @@ UART transmit of multiple bytes of data using a DMA trigger and interrupts
 
    <td align="center">
 
-|image809|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image810|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image811|
 
 .. raw:: html
@@ -23670,6 +24001,16 @@ N
    <td align="center">
 
 |image812|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
 
 .. raw:: html
 
@@ -23707,13 +24048,33 @@ N
 
 .. raw:: html
 
+   <td align="center">
+
+|image816|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image817|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
 
    </table>
 
-2.2.33 Window Watchdog Timer (WWDT)
+2.2.34 Window Watchdog Timer (WWDT)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -23882,26 +24243,6 @@ WWDT interval timer mode using LFOSC while device is in STANDBY low power mode
 
    <td align="center">
 
-|image816|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image817|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image818|
 
 .. raw:: html
@@ -23960,6 +24301,26 @@ WWDT interval timer mode using LFOSC while device is in STANDBY low power mode
 
 .. raw:: html
 
+   <td align="center">
+
+|image824|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image825|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -23990,47 +24351,27 @@ WWDT interval timer mode using LFXT while device is in STANDBY low power mode
 
    <td align="center">
 
-|image824|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image825|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image826|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
 
 .. raw:: html
 
@@ -24068,6 +24409,26 @@ N
 
 .. raw:: html
 
+   <td align="center">
+
+|image830|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image831|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    </tr>
 
 .. raw:: html
@@ -24089,26 +24450,6 @@ wwdt\_window\_mode\_periodic\_reset
    <td>
 
 WWDT Window watchdog mode with periodic reset
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image830|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image831|
 
 .. raw:: html
 
@@ -24169,6 +24510,26 @@ WWDT Window watchdog mode with periodic reset
    <td align="center">
 
 |image837|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image838|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image839|
 
 .. raw:: html
 
@@ -25946,7 +26307,7 @@ This example implements a Level2 gauge solution using BQ76952
 
    <td align="center">
 
-|image838|
+|image840|
 
 .. raw:: html
 
@@ -26064,7 +26425,7 @@ N
 
    <td align="center">
 
-|image839|
+|image841|
 
 .. raw:: html
 
@@ -26417,7 +26778,7 @@ Sample GPIO toggle image for Boot Image Manager (BIM)
 
    <td align="center">
 
-|image840|
+|image842|
 
 .. raw:: html
 
@@ -26427,7 +26788,7 @@ Sample GPIO toggle image for Boot Image Manager (BIM)
 
    <td align="center">
 
-|image841|
+|image843|
 
 .. raw:: html
 
@@ -26525,7 +26886,7 @@ Boot Image Manager Using MCUBoot
 
    <td align="center">
 
-|image842|
+|image844|
 
 .. raw:: html
 
@@ -26535,7 +26896,7 @@ Boot Image Manager Using MCUBoot
 
    <td align="center">
 
-|image843|
+|image845|
 
 .. raw:: html
 
@@ -26663,105 +27024,7 @@ N
 
    <td align="center">
 
-|image844|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image845|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image846|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-customer\_secure\_image\_with\_bootloader
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Sample GPIO toggle image for Customer Secure Code
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
 
 .. raw:: html
 
@@ -26791,27 +27054,17 @@ N
 
    <td align="center">
 
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
 |image849|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
 
 .. raw:: html
 
@@ -26829,7 +27082,7 @@ N
 
    <td>
 
-customer\_secure\_sample\_image
+customer\_secure\_image\_with\_bootloader
 
 .. raw:: html
 
@@ -26919,7 +27172,115 @@ N
 
    <td align="center">
 
+|image853|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td>
+
+customer\_secure\_sample\_image
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td>
+
+Sample GPIO toggle image for Customer Secure Code
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
 N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image854|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image855|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image856|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image857|
 
 .. raw:: html
 
@@ -27214,7 +27575,7 @@ Shows an implementation of a BSL CAN Flash interface
 
    <td align="center">
 
-|image853|
+|image858|
 
 .. raw:: html
 
@@ -27254,7 +27615,7 @@ N
 
    <td align="center">
 
-|image854|
+|image859|
 
 .. raw:: html
 
@@ -27558,7 +27919,7 @@ N
 
    <td align="center">
 
-|image855|
+|image860|
 
 .. raw:: html
 
@@ -27666,7 +28027,7 @@ N
 
    <td align="center">
 
-|image856|
+|image861|
 
 .. raw:: html
 
@@ -27754,7 +28115,7 @@ Demonstrate how to program a MSPM0 MCU using a LP-MSPM0G3507 as host by BSL CAN 
 
    <td align="center">
 
-|image857|
+|image862|
 
 .. raw:: html
 
@@ -27862,7 +28223,7 @@ Demonstrate how to program a MSPM0 MCU using a LP-MSPM0G3507 as host by BSL I2C 
 
    <td align="center">
 
-|image858|
+|image863|
 
 .. raw:: html
 
@@ -27970,7 +28331,7 @@ Demonstrate how to program a MSPM0 MCU using a LP-MSPM0G3507 as host by BSL SPI 
 
    <td align="center">
 
-|image859|
+|image864|
 
 .. raw:: html
 
@@ -28078,7 +28439,7 @@ Demonstrate how to program a MSPM0 MCU using a LP-MSPM0G3507 as host by BSL UART
 
    <td align="center">
 
-|image860|
+|image865|
 
 .. raw:: html
 
@@ -28226,7 +28587,7 @@ N
 
    <td align="center">
 
-|image861|
+|image866|
 
 .. raw:: html
 
@@ -28334,7 +28695,7 @@ N
 
    <td align="center">
 
-|image862|
+|image867|
 
 .. raw:: html
 
@@ -28442,7 +28803,7 @@ N
 
    <td align="center">
 
-|image863|
+|image868|
 
 .. raw:: html
 
@@ -28550,7 +28911,7 @@ N
 
    <td align="center">
 
-|image864|
+|image869|
 
 .. raw:: html
 
@@ -28678,7 +29039,7 @@ N
 
    <td align="center">
 
-|image865|
+|image870|
 
 .. raw:: html
 
@@ -28786,7 +29147,7 @@ N
 
    <td align="center">
 
-|image866|
+|image871|
 
 .. raw:: html
 
@@ -28884,7 +29245,7 @@ N
 
    <td align="center">
 
-|image867|
+|image872|
 
 .. raw:: html
 
@@ -28992,7 +29353,7 @@ N
 
    <td align="center">
 
-|image868|
+|image873|
 
 .. raw:: html
 
@@ -29100,7 +29461,7 @@ N
 
    <td align="center">
 
-|image869|
+|image874|
 
 .. raw:: html
 
@@ -29168,7 +29529,7 @@ N
 
    <td align="center">
 
-|image870|
+|image875|
 
 .. raw:: html
 
@@ -29276,7 +29637,7 @@ N
 
    <td align="center">
 
-|image871|
+|image876|
 
 .. raw:: html
 
@@ -29384,7 +29745,7 @@ N
 
    <td align="center">
 
-|image872|
+|image877|
 
 .. raw:: html
 
@@ -29512,7 +29873,7 @@ N
 
    <td align="center">
 
-|image873|
+|image878|
 
 .. raw:: html
 
@@ -29620,7 +29981,7 @@ N
 
    <td align="center">
 
-|image874|
+|image879|
 
 .. raw:: html
 
@@ -29728,7 +30089,7 @@ N
 
    <td align="center">
 
-|image875|
+|image880|
 
 .. raw:: html
 
@@ -29806,7 +30167,7 @@ Shows an implementation of BSL I2C Flash interface
 
    <td align="center">
 
-|image876|
+|image881|
 
 .. raw:: html
 
@@ -29816,7 +30177,7 @@ Shows an implementation of BSL I2C Flash interface
 
    <td align="center">
 
-|image877|
+|image882|
 
 .. raw:: html
 
@@ -29836,7 +30197,7 @@ N
 
    <td align="center">
 
-|image878|
+|image883|
 
 .. raw:: html
 
@@ -29846,7 +30207,7 @@ N
 
    <td align="center">
 
-|image879|
+|image884|
 
 .. raw:: html
 
@@ -29856,7 +30217,7 @@ N
 
    <td align="center">
 
-|image880|
+|image885|
 
 .. raw:: html
 
@@ -29914,7 +30275,7 @@ Demonstrates an application request to reset the device and jump to the ROM boot
 
    <td align="center">
 
-|image881|
+|image886|
 
 .. raw:: html
 
@@ -29954,7 +30315,7 @@ N
 
    <td align="center">
 
-|image882|
+|image887|
 
 .. raw:: html
 
@@ -30022,56 +30383,6 @@ Demonstrates an application request to reset the device and jump to the ROM boot
 
    <td align="center">
 
-|image883|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image884|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image885|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image886|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image887|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image888|
 
 .. raw:: html
@@ -30083,6 +30394,56 @@ Demonstrates an application request to reset the device and jump to the ROM boot
    <td align="center">
 
 |image889|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image890|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image891|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image892|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image893|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image894|
 
 .. raw:: html
 
@@ -30130,7 +30491,7 @@ Demonstrates an application request to reset the device and jump to the ROM boot
 
    <td align="center">
 
-|image890|
+|image895|
 
 .. raw:: html
 
@@ -30140,7 +30501,7 @@ Demonstrates an application request to reset the device and jump to the ROM boot
 
    <td align="center">
 
-|image891|
+|image896|
 
 .. raw:: html
 
@@ -30160,7 +30521,7 @@ N
 
    <td align="center">
 
-|image892|
+|image897|
 
 .. raw:: html
 
@@ -30170,7 +30531,7 @@ N
 
    <td align="center">
 
-|image893|
+|image898|
 
 .. raw:: html
 
@@ -30180,7 +30541,7 @@ N
 
    <td align="center">
 
-|image894|
+|image899|
 
 .. raw:: html
 
@@ -30238,56 +30599,6 @@ Demonstrates an application request to reset the device and jump to the ROM boot
 
    <td align="center">
 
-|image895|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image896|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image897|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image898|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image899|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image900|
 
 .. raw:: html
@@ -30308,44 +30619,6 @@ Demonstrates an application request to reset the device and jump to the ROM boot
 
    <td align="center">
 
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-bsl\_spi\_flash\_interface
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Shows an implementation of a BSL SPI Flash interface
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image902|
 
 .. raw:: html
@@ -30357,16 +30630,6 @@ Shows an implementation of a BSL SPI Flash interface
    <td align="center">
 
 |image903|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
 
 .. raw:: html
 
@@ -30414,16 +30677,6 @@ N
 
 .. raw:: html
 
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
    </tr>
 
 .. raw:: html
@@ -30434,7 +30687,7 @@ N
 
    <td>
 
-bsl\_uart\_flash\_interface
+bsl\_spi\_flash\_interface
 
 .. raw:: html
 
@@ -30444,7 +30697,7 @@ bsl\_uart\_flash\_interface
 
    <td>
 
-Shows an implementation of a BSL UART Flash interface
+Shows an implementation of a BSL SPI Flash interface
 
 .. raw:: html
 
@@ -30542,6 +30795,114 @@ N
 
    <td>
 
+bsl\_uart\_flash\_interface
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td>
+
+Shows an implementation of a BSL UART Flash interface
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image912|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image913|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image914|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image915|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image916|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td>
+
 flash\_bsl
 
 .. raw:: html
@@ -30582,7 +30943,7 @@ N
 
    <td align="center">
 
-|image912|
+|image917|
 
 .. raw:: html
 
@@ -30622,7 +30983,7 @@ N
 
    <td align="center">
 
-|image913|
+|image918|
 
 .. raw:: html
 
@@ -30670,7 +31031,7 @@ Implements a secondary bootloader in Main overriding the ROM BSL through a CAN i
 
    <td align="center">
 
-|image914|
+|image919|
 
 .. raw:: html
 
@@ -30710,7 +31071,7 @@ N
 
    <td align="center">
 
-|image915|
+|image920|
 
 .. raw:: html
 
@@ -30769,114 +31130,6 @@ secondary\_bsl\_i2c
    <td>
 
 Implements a secondary bootloader in Main overriding the ROM BSL through an I2C interface
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image916|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image917|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image918|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image919|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image920|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-secondary\_bsl\_spi
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-Implements a secondary bootloader in Main overriding the ROM BSL through a SPI interface
 
 .. raw:: html
 
@@ -30974,7 +31227,7 @@ N
 
    <td>
 
-secondary\_bsl\_uart
+secondary\_bsl\_spi
 
 .. raw:: html
 
@@ -30984,7 +31237,7 @@ secondary\_bsl\_uart
 
    <td>
 
-Implements a secondary bootloader in Main overriding the ROM BSL through a UART interface
+Implements a secondary bootloader in Main overriding the ROM BSL through a SPI interface
 
 .. raw:: html
 
@@ -31045,6 +31298,114 @@ N
    <td align="center">
 
 |image930|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td>
+
+secondary\_bsl\_uart
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td>
+
+Implements a secondary bootloader in Main overriding the ROM BSL through a UART interface
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image931|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image932|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image933|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image934|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image935|
 
 .. raw:: html
 
@@ -31251,105 +31612,7 @@ Empty example using CMSIS-DSP
 
    <td align="center">
 
-|image931|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image932|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image933|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image934|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image935|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 |image936|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   </tr>
-
-.. raw:: html
-
-   <tr>
-
-.. raw:: html
-
-   <td>
-
-cmsis\_dsp\_fft\_q15
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td>
-
-FFT of fixed point array using CMSIS-DSP
 
 .. raw:: html
 
@@ -31369,27 +31632,27 @@ FFT of fixed point array using CMSIS-DSP
 
    <td align="center">
 
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
 |image938|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
 
 .. raw:: html
 
@@ -31427,9 +31690,107 @@ N
 
 .. raw:: html
 
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td>
+
+cmsis\_dsp\_fft\_q15
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td>
+
+FFT of fixed point array using CMSIS-DSP
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
    <td align="center">
 
 |image942|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image943|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image944|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image945|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image946|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image947|
 
 .. raw:: html
 
@@ -31616,7 +31977,7 @@ Generic I2C Communication Module - Controller code
 
    <td align="center">
 
-|image943|
+|image948|
 
 .. raw:: html
 
@@ -31656,7 +32017,7 @@ N
 
    <td align="center">
 
-|image944|
+|image949|
 
 .. raw:: html
 
@@ -31724,7 +32085,7 @@ Generic I2C Communication Module - Target code
 
    <td align="center">
 
-|image945|
+|image950|
 
 .. raw:: html
 
@@ -31764,7 +32125,7 @@ N
 
    <td align="center">
 
-|image946|
+|image951|
 
 .. raw:: html
 
@@ -31832,7 +32193,7 @@ Generic UART Communication Module - Controller code
 
    <td align="center">
 
-|image947|
+|image952|
 
 .. raw:: html
 
@@ -31872,7 +32233,7 @@ N
 
    <td align="center">
 
-|image948|
+|image953|
 
 .. raw:: html
 
@@ -31940,7 +32301,7 @@ Generic UART Communication Module - Target code
 
    <td align="center">
 
-|image949|
+|image954|
 
 .. raw:: html
 
@@ -31980,7 +32341,7 @@ N
 
    <td align="center">
 
-|image950|
+|image955|
 
 .. raw:: html
 
@@ -32207,7 +32568,7 @@ N
 
    <td align="center">
 
-|image951|
+|image956|
 
 .. raw:: html
 
@@ -32227,7 +32588,7 @@ N
 
    <td align="center">
 
-|image952|
+|image957|
 
 .. raw:: html
 
@@ -32257,7 +32618,7 @@ N
 
    <td align="center">
 
-|image953|
+|image958|
 
 .. raw:: html
 
@@ -32267,7 +32628,7 @@ N
 
    <td align="center">
 
-|image954|
+|image959|
 
 .. raw:: html
 
@@ -32305,7 +32666,7 @@ Demonstrates usage of DALI Input Device with Occupancy Sensor (PIR)
 
    <td align="center">
 
-|image955|
+|image960|
 
 .. raw:: html
 
@@ -32413,7 +32774,7 @@ Demonstrates usage of DALI Application Controller by sending commands during run
 
    <td align="center">
 
-|image956|
+|image961|
 
 .. raw:: html
 
@@ -32992,6 +33353,114 @@ Demonstrates implementation of character recognition on MSPM0 device
 
    <td align="center">
 
+|image962|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image963|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td>
+
+character\_recognition\_npu
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td>
+
+Demonstrates implementation of character recognition on MSPM0 device
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
 N
 
 .. raw:: html
@@ -33080,7 +33549,7 @@ N
 
    <td>
 
-character\_recognition\_npu
+ecg\_anomaly\_detection\_ai
 
 .. raw:: html
 
@@ -33090,7 +33559,439 @@ character\_recognition\_npu
 
    <td>
 
-Demonstrates implementation of character recognition on MSPM0 device
+Demonstrates basic implementation of ECG anomaly detection using AI on MSPM0 device
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image964|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image965|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td>
+
+ecg\_anomaly\_detection\_ai\_npu
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td>
+
+Demonstrates basic implementation of ECG anomaly detection using AI (with NPU hardware) on MSPM0 device
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td>
+
+ecg\_anomaly\_detection\_data\_capture
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td>
+
+Example to demonstrate Live Data Capture on EdgeAI Studio for ECG Anomaly detection application on MSPM0
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image966|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image967|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td>
+
+ecg\_anomaly\_detection\_live\_preview
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td>
+
+Example to demonstrate Live Preview on EdgeAI Studio for ECG Anomaly detection application on MSPM0 (with NPU hardware)
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td>
+
+electrical\_fault\_ai\_npu
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td>
+
+Demonstrates basic implementation of AI on MSPM0 devices with NPU
 
 .. raw:: html
 
@@ -33296,6 +34197,330 @@ N
 
    <td>
 
+gearbox\_fault\_diagnosis\_ai
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td>
+
+Demonstrates basic implementation of AI on MSPM0 device
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image968|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image969|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td>
+
+gearbox\_fault\_diagnosis\_ai\_npu
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td>
+
+Demonstrates basic implementation of AI on MSPM0 devices with NPU
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td>
+
+glass\_break\_detection\_ai\_npu
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td>
+
+Demonstrates basic implementation of AI on MSPM0 devices with NPU
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td>
+
 hello\_world\_ai
 
 .. raw:: html
@@ -33316,7 +34541,7 @@ Demonstrates basic implementation of AI on MSPM0 device
 
    <td align="center">
 
-|image957|
+|image970|
 
 .. raw:: html
 
@@ -33356,7 +34581,7 @@ N
 
    <td align="center">
 
-N
+|image971|
 
 .. raw:: html
 
@@ -33512,6 +34737,222 @@ N
 
    <td>
 
+linear\_actuator\_fault\_ai
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td>
+
+Demonstrates basic implementation of AI on MSPM0 device
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image972|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td>
+
+linear\_actuator\_fault\_ai\_npu
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td>
+
+Demonstrates basic implementation of AI on MSPM0 devices with NPU
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td>
+
 motor\_fault\_ai
 
 .. raw:: html
@@ -33532,7 +34973,7 @@ Demonstrates basic implementation motor fault detection using AI on MSPM0 device
 
    <td align="center">
 
-N
+|image973|
 
 .. raw:: html
 
@@ -33572,7 +35013,7 @@ N
 
    <td align="center">
 
-N
+|image974|
 
 .. raw:: html
 
@@ -33748,6 +35189,114 @@ Example to demonstrate Live Data Capture on EdgeAI Studio for motor fault detect
 
    <td align="center">
 
+|image975|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image976|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td>
+
+motor\_fault\_live\_preview
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td>
+
+Example to demonstrate Live Preview on EdgeAI Studio for motor fault detection application on MSPM0 (with NPU hardware)
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
 N
 
 .. raw:: html
@@ -33836,7 +35385,7 @@ N
 
    <td>
 
-motor\_fault\_live\_preview
+motor\_temperature\_ai
 
 .. raw:: html
 
@@ -33846,7 +35395,115 @@ motor\_fault\_live\_preview
 
    <td>
 
-Example to demonstrate Live Preview on EdgeAI Studio for motor fault detection application on MSPM0 (with NPU hardware)
+Demonstrates basic implementation of AI on MSPM0 device
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image977|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td>
+
+motor\_temperature\_ai\_npu
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td>
+
+Demonstrates basic implementation of AI on MSPM0 devices with NPU
 
 .. raw:: html
 
@@ -34052,6 +35709,114 @@ N
 
    <td>
 
+pir\_detection\_ai
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td>
+
+Demonstrates an end-to-end AI application for PIR detection on MSPM0 devices
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image978|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image979|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td>
+
 pir\_detection\_ai\_npu
 
 .. raw:: html
@@ -34063,6 +35828,330 @@ pir\_detection\_ai\_npu
    <td>
 
 Demonstrates an end-to-end AI application for PIR detection on MSPM0 devices with NPU
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td>
+
+pir\_detection\_data\_capture
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td>
+
+Example to capture PIR sensor data from TIDA-010997 Boosterpack on EdgeAI Studio
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image980|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image981|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td>
+
+pir\_detection\_live\_preview
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td>
+
+Example to demonstrate live preview on EdgeAI studio for pir detection application on MSPM0
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td>
+
+tida\_010997\_data\_capture
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td>
+
+Multi-sensor data capture example for TIDA-010997 reference design with MSPM0
 
 .. raw:: html
 
@@ -34180,7 +36269,7 @@ Example to demonstrate data capture on EdgeAI studio for timeseries applications
 
    <td align="center">
 
-N
+|image982|
 
 .. raw:: html
 
@@ -34220,7 +36309,7 @@ N
 
    <td align="center">
 
-N
+|image983|
 
 .. raw:: html
 
@@ -34376,6 +36465,114 @@ N
 
    <td>
 
+washer\_load\_ai
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td>
+
+Demonstrates regression based washing machine load prediction on MSPM0 device
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image984|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   </tr>
+
+.. raw:: html
+
+   <tr>
+
+.. raw:: html
+
+   <td>
+
 waveform\_classifier\_ai
 
 .. raw:: html
@@ -34396,7 +36593,7 @@ Demonstrates a basic end-to-end AI application for waveform classification on MS
 
    <td align="center">
 
-|image958|
+|image985|
 
 .. raw:: html
 
@@ -34436,7 +36633,7 @@ N
 
    <td align="center">
 
-N
+|image986|
 
 .. raw:: html
 
@@ -34831,7 +37028,7 @@ Y
 
    <td align="center">
 
-N
+Y
 
 .. raw:: html
 
@@ -34939,7 +37136,7 @@ Y
 
    <td align="center">
 
-N
+Y
 
 .. raw:: html
 
@@ -35047,7 +37244,7 @@ Y
 
    <td align="center">
 
-N
+Y
 
 .. raw:: html
 
@@ -35155,7 +37352,7 @@ Y
 
    <td align="center">
 
-N
+Y
 
 .. raw:: html
 
@@ -35372,7 +37569,7 @@ N
 
    <td align="center">
 
-|image959|
+|image987|
 
 .. raw:: html
 
@@ -35450,7 +37647,7 @@ Firmware for Split phase measurement using MSPM0G3507, ADS131M02 and AMC131M03
 
    <td align="center">
 
-|image960|
+|image988|
 
 .. raw:: html
 
@@ -35558,7 +37755,7 @@ Firmware for 3 phase measurement on ADS131M08MET\_EVM
 
    <td align="center">
 
-|image961|
+|image989|
 
 .. raw:: html
 
@@ -35666,7 +37863,7 @@ Firmware for 3 phase measurement using MSPM0G3507 and ADS131M08
 
    <td align="center">
 
-|image962|
+|image990|
 
 .. raw:: html
 
@@ -35774,7 +37971,7 @@ Firmware for 3 phase measurement using MSPM0G3507 and 4xAMC131M03
 
    <td align="center">
 
-|image963|
+|image991|
 
 .. raw:: html
 
@@ -36031,7 +38228,7 @@ Demonstrates basic usage of GUI Composer communication using JSON-formatted stri
 
    <td align="center">
 
-|image964|
+|image992|
 
 .. raw:: html
 
@@ -36041,17 +38238,7 @@ Demonstrates basic usage of GUI Composer communication using JSON-formatted stri
 
    <td align="center">
 
-|image965|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
+|image993|
 
 .. raw:: html
 
@@ -36071,37 +38258,47 @@ N
 
    <td align="center">
 
-|image966|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image967|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image968|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image994|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image995|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image996|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image997|
 
 .. raw:: html
 
@@ -36139,7 +38336,7 @@ Demonstrates basic usage of GUI Composer communication using MessagePack protoco
 
    <td align="center">
 
-|image969|
+|image998|
 
 .. raw:: html
 
@@ -36149,17 +38346,7 @@ Demonstrates basic usage of GUI Composer communication using MessagePack protoco
 
    <td align="center">
 
-|image970|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
+|image999|
 
 .. raw:: html
 
@@ -36179,37 +38366,47 @@ N
 
    <td align="center">
 
-|image971|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image972|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image973|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
 N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image1000|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image1001|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image1002|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image1003|
 
 .. raw:: html
 
@@ -36396,7 +38593,7 @@ Implements various fixed-point operations leveraging the MathACL implementation 
 
    <td align="center">
 
-|image974|
+|image1004|
 
 .. raw:: html
 
@@ -36436,7 +38633,7 @@ N
 
    <td align="center">
 
-|image975|
+|image1005|
 
 .. raw:: html
 
@@ -36466,7 +38663,7 @@ N
 
    <td align="center">
 
-|image976|
+|image1006|
 
 .. raw:: html
 
@@ -36504,7 +38701,7 @@ Implements various fixed-point operations leveraging the RTS implementation of I
 
    <td align="center">
 
-|image977|
+|image1007|
 
 .. raw:: html
 
@@ -36514,7 +38711,7 @@ Implements various fixed-point operations leveraging the RTS implementation of I
 
    <td align="center">
 
-|image978|
+|image1008|
 
 .. raw:: html
 
@@ -36534,7 +38731,7 @@ N
 
    <td align="center">
 
-|image979|
+|image1009|
 
 .. raw:: html
 
@@ -36544,7 +38741,7 @@ N
 
    <td align="center">
 
-|image980|
+|image1010|
 
 .. raw:: html
 
@@ -36554,7 +38751,7 @@ N
 
    <td align="center">
 
-|image981|
+|image1011|
 
 .. raw:: html
 
@@ -36564,7 +38761,7 @@ N
 
    <td align="center">
 
-|image982|
+|image1012|
 
 .. raw:: html
 
@@ -36574,7 +38771,7 @@ N
 
    <td align="center">
 
-|image983|
+|image1013|
 
 .. raw:: html
 
@@ -36759,7 +38956,7 @@ Simple FreeRTOS LED blinky demo using two tasks
 
    <td align="center">
 
-|image984|
+|image1014|
 
 .. raw:: html
 
@@ -36789,7 +38986,7 @@ N
 
    <td align="center">
 
-|image985|
+|image1015|
 
 .. raw:: html
 
@@ -36799,7 +38996,7 @@ N
 
    <td align="center">
 
-|image986|
+|image1016|
 
 .. raw:: html
 
@@ -36809,7 +39006,7 @@ N
 
    <td align="center">
 
-|image987|
+|image1017|
 
 .. raw:: html
 
@@ -36867,7 +39064,7 @@ Simple Posix FreeRTOS blinky LED demo
 
    <td align="center">
 
-|image988|
+|image1018|
 
 .. raw:: html
 
@@ -36897,7 +39094,7 @@ N
 
    <td align="center">
 
-|image989|
+|image1019|
 
 .. raw:: html
 
@@ -36907,7 +39104,7 @@ N
 
    <td align="center">
 
-|image990|
+|image1020|
 
 .. raw:: html
 
@@ -36917,7 +39114,7 @@ N
 
    <td align="center">
 
-|image991|
+|image1021|
 
 .. raw:: html
 
@@ -37124,7 +39321,7 @@ Demonstrates basic implementation of LIN commander to transmit and receive LIN 2
 
    <td align="center">
 
-|image992|
+|image1022|
 
 .. raw:: html
 
@@ -37134,7 +39331,7 @@ Demonstrates basic implementation of LIN commander to transmit and receive LIN 2
 
    <td align="center">
 
-|image993|
+|image1023|
 
 .. raw:: html
 
@@ -37144,47 +39341,7 @@ Demonstrates basic implementation of LIN commander to transmit and receive LIN 2
 
    <td align="center">
 
-|image994|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image995|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image996|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image997|
+|image1024|
 
 .. raw:: html
 
@@ -37195,6 +39352,46 @@ N
    <td align="center">
 
 N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image1025|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image1026|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image1027|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image1028|
 
 .. raw:: html
 
@@ -37232,7 +39429,7 @@ Demonstrates basic implementation of LIN responder to transmit and receive LIN 2
 
    <td align="center">
 
-|image998|
+|image1029|
 
 .. raw:: html
 
@@ -37242,7 +39439,7 @@ Demonstrates basic implementation of LIN responder to transmit and receive LIN 2
 
    <td align="center">
 
-|image999|
+|image1030|
 
 .. raw:: html
 
@@ -37252,47 +39449,7 @@ Demonstrates basic implementation of LIN responder to transmit and receive LIN 2
 
    <td align="center">
 
-|image1000|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image1001|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image1002|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-|image1003|
+|image1031|
 
 .. raw:: html
 
@@ -37303,6 +39460,46 @@ N
    <td align="center">
 
 N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image1032|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image1033|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image1034|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image1035|
 
 .. raw:: html
 
@@ -37489,7 +39686,7 @@ Modbus controller example demonstrating all Modbus function codes
 
    <td align="center">
 
-|image1004|
+|image1036|
 
 .. raw:: html
 
@@ -37597,7 +39794,7 @@ Modbus target example
 
    <td align="center">
 
-|image1005|
+|image1037|
 
 .. raw:: html
 
@@ -37854,7 +40051,7 @@ Firmware for LP\_MSPM0G3507 and drv8300drge EVM GUI
 
    <td align="center">
 
-|image1006|
+|image1038|
 
 .. raw:: html
 
@@ -37962,7 +40159,7 @@ Firmware for LP\_MSPM0G3507 and drv8311h EVM GUI
 
    <td align="center">
 
-|image1007|
+|image1039|
 
 .. raw:: html
 
@@ -38070,7 +40267,7 @@ Firmware for LP\_MSPM0G3507 and DRV8316R EVM GUI
 
    <td align="center">
 
-|image1008|
+|image1040|
 
 .. raw:: html
 
@@ -38178,7 +40375,7 @@ Firmware for LP\_MSPM0G3507 and drv8317h EVM GUI
 
    <td align="center">
 
-|image1009|
+|image1041|
 
 .. raw:: html
 
@@ -38286,7 +40483,7 @@ Firmware for LP\_MSPM0G3507 and drv8323rh EVM GUI
 
    <td align="center">
 
-|image1010|
+|image1042|
 
 .. raw:: html
 
@@ -38394,7 +40591,7 @@ Firmware for LP\_MSPM0G3507 and DRV8328A EVM GUI
 
    <td align="center">
 
-|image1011|
+|image1043|
 
 .. raw:: html
 
@@ -38502,7 +40699,7 @@ Firmware for DRV8329A EVM GUI
 
    <td align="center">
 
-|image1012|
+|image1044|
 
 .. raw:: html
 
@@ -38512,17 +40709,7 @@ Firmware for DRV8329A EVM GUI
 
    <td align="center">
 
-|image1013|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
+|image1045|
 
 .. raw:: html
 
@@ -38542,7 +40729,17 @@ N
 
    <td align="center">
 
-|image1014|
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image1046|
 
 .. raw:: html
 
@@ -38562,7 +40759,7 @@ N
 
    <td align="center">
 
-|image1015|
+|image1047|
 
 .. raw:: html
 
@@ -38572,7 +40769,7 @@ N
 
    <td align="center">
 
-N
+|image1048|
 
 .. raw:: html
 
@@ -38610,7 +40807,7 @@ Firmware for LP\_MSPM0G3507 and drv8353rh EVM GUI
 
    <td align="center">
 
-|image1016|
+|image1049|
 
 .. raw:: html
 
@@ -38718,7 +40915,7 @@ Firmware for LP\_MSPM0G1507 and DRV8328 motor driver
 
    <td align="center">
 
-|image1017|
+|image1050|
 
 .. raw:: html
 
@@ -38985,7 +41182,7 @@ N
 
    <td align="center">
 
-|image1018|
+|image1051|
 
 .. raw:: html
 
@@ -39035,7 +41232,7 @@ N
 
    <td align="center">
 
-|image1019|
+|image1052|
 
 .. raw:: html
 
@@ -39232,7 +41429,7 @@ Sensorless FOC code for MSPM0Gx5xx and DRV8316REVM
 
    <td align="center">
 
-|image1020|
+|image1053|
 
 .. raw:: html
 
@@ -39272,7 +41469,7 @@ N
 
    <td align="center">
 
-|image1021|
+|image1054|
 
 .. raw:: html
 
@@ -39340,7 +41537,7 @@ Sensorless FOC code for TIDA010251 reference design
 
    <td align="center">
 
-|image1022|
+|image1055|
 
 .. raw:: html
 
@@ -39597,7 +41794,7 @@ Sensorless FOC code for LP\_MSPM0G35xx and DRV8316REVM
 
    <td align="center">
 
-|image1023|
+|image1056|
 
 .. raw:: html
 
@@ -39637,7 +41834,7 @@ N
 
    <td align="center">
 
-|image1024|
+|image1057|
 
 .. raw:: html
 
@@ -39703,7 +41900,7 @@ sensorless-foc\_DRV8323RS
 
    <td align="center">
 
-|image1025|
+|image1058|
 
 .. raw:: html
 
@@ -39743,7 +41940,7 @@ N
 
    <td align="center">
 
-|image1026|
+|image1059|
 
 .. raw:: html
 
@@ -39811,7 +42008,7 @@ Sensorless FOC code for LP\_MSPM0G35xx and DRV8329AEVM
 
    <td align="center">
 
-|image1027|
+|image1060|
 
 .. raw:: html
 
@@ -39851,7 +42048,7 @@ N
 
    <td align="center">
 
-|image1028|
+|image1061|
 
 .. raw:: html
 
@@ -39919,7 +42116,7 @@ Sensorless FOC code for TIDA010250 reference design
 
    <td align="center">
 
-|image1029|
+|image1062|
 
 .. raw:: html
 
@@ -40186,7 +42383,7 @@ N
 
    <td align="center">
 
-|image1030|
+|image1063|
 
 .. raw:: html
 
@@ -40294,7 +42491,7 @@ N
 
    <td align="center">
 
-|image1031|
+|image1064|
 
 .. raw:: html
 
@@ -40344,7 +42541,7 @@ N
 
    <td align="center">
 
-|image1032|
+|image1065|
 
 .. raw:: html
 
@@ -40354,7 +42551,7 @@ N
 
    <td align="center">
 
-N
+|image1066|
 
 .. raw:: html
 
@@ -40539,7 +42736,7 @@ universal-foc\_DRV8316
 
    <td align="center">
 
-|image1033|
+|image1067|
 
 .. raw:: html
 
@@ -40579,7 +42776,7 @@ N
 
    <td align="center">
 
-|image1034|
+|image1068|
 
 .. raw:: html
 
@@ -40647,7 +42844,7 @@ Sensorless FOC code for LP\_MSPM0G35xx and BOOSTXL-DRV8323RS
 
    <td align="center">
 
-|image1035|
+|image1069|
 
 .. raw:: html
 
@@ -40687,7 +42884,7 @@ N
 
    <td align="center">
 
-|image1036|
+|image1070|
 
 .. raw:: html
 
@@ -40755,7 +42952,7 @@ Sensorless FOC code for LP\_MSPM0G35xx and DRV8329AEVM
 
    <td align="center">
 
-|image1037|
+|image1071|
 
 .. raw:: html
 
@@ -40795,7 +42992,7 @@ N
 
    <td align="center">
 
-|image1038|
+|image1072|
 
 .. raw:: html
 
@@ -40863,7 +43060,7 @@ Sensorless FOC code for TIDA010250 reference design
 
    <td align="center">
 
-|image1039|
+|image1073|
 
 .. raw:: html
 
@@ -41120,7 +43317,7 @@ This example can help to test the M-PESTI Target
 
    <td align="center">
 
-|image1040|
+|image1074|
 
 .. raw:: html
 
@@ -41228,7 +43425,7 @@ This example tests the basic functionality of M-PESTI target
 
    <td align="center">
 
-|image1041|
+|image1075|
 
 .. raw:: html
 
@@ -41485,7 +43682,7 @@ Capture ADC data into 2 (ping-pong) buffers
 
    <td align="center">
 
-|image1042|
+|image1076|
 
 .. raw:: html
 
@@ -41495,7 +43692,7 @@ Capture ADC data into 2 (ping-pong) buffers
 
    <td align="center">
 
-|image1043|
+|image1077|
 
 .. raw:: html
 
@@ -41515,7 +43712,7 @@ N
 
    <td align="center">
 
-|image1044|
+|image1078|
 
 .. raw:: html
 
@@ -41525,7 +43722,7 @@ N
 
    <td align="center">
 
-|image1045|
+|image1079|
 
 .. raw:: html
 
@@ -41535,7 +43732,7 @@ N
 
    <td align="center">
 
-|image1046|
+|image1080|
 
 .. raw:: html
 
@@ -41593,7 +43790,7 @@ Simultaneously capture data from 2 ADCs into respective buffers
 
    <td align="center">
 
-|image1047|
+|image1081|
 
 .. raw:: html
 
@@ -41633,7 +43830,7 @@ N
 
    <td align="center">
 
-|image1048|
+|image1082|
 
 .. raw:: html
 
@@ -41701,7 +43898,7 @@ Sample ADC and respond to I2C commands sent by a controller
 
    <td align="center">
 
-|image1049|
+|image1083|
 
 .. raw:: html
 
@@ -41711,17 +43908,7 @@ Sample ADC and respond to I2C commands sent by a controller
 
    <td align="center">
 
-|image1050|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
+|image1084|
 
 .. raw:: html
 
@@ -41741,7 +43928,7 @@ N
 
    <td align="center">
 
-|image1051|
+N
 
 .. raw:: html
 
@@ -41751,7 +43938,17 @@ N
 
    <td align="center">
 
-|image1052|
+|image1085|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image1086|
 
 .. raw:: html
 
@@ -41809,7 +44006,7 @@ Convert analog voltage to PWM
 
    <td align="center">
 
-|image1053|
+|image1087|
 
 .. raw:: html
 
@@ -41819,7 +44016,7 @@ Convert analog voltage to PWM
 
    <td align="center">
 
-|image1054|
+|image1088|
 
 .. raw:: html
 
@@ -41839,7 +44036,7 @@ N
 
    <td align="center">
 
-|image1055|
+|image1089|
 
 .. raw:: html
 
@@ -41849,7 +44046,7 @@ N
 
    <td align="center">
 
-|image1056|
+|image1090|
 
 .. raw:: html
 
@@ -41859,7 +44056,7 @@ N
 
    <td align="center">
 
-|image1057|
+|image1091|
 
 .. raw:: html
 
@@ -41917,7 +44114,7 @@ Sample ADC and respond to SPI commands sent by a controller
 
    <td align="center">
 
-|image1058|
+|image1092|
 
 .. raw:: html
 
@@ -41927,17 +44124,7 @@ Sample ADC and respond to SPI commands sent by a controller
 
    <td align="center">
 
-|image1059|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
+|image1093|
 
 .. raw:: html
 
@@ -41957,7 +44144,7 @@ N
 
    <td align="center">
 
-|image1060|
+N
 
 .. raw:: html
 
@@ -41967,7 +44154,17 @@ N
 
    <td align="center">
 
-|image1061|
+|image1094|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image1095|
 
 .. raw:: html
 
@@ -42025,7 +44222,7 @@ Configures the ADC0 to trigger single conversion and send the ADC data through U
 
    <td align="center">
 
-|image1062|
+|image1096|
 
 .. raw:: html
 
@@ -42035,7 +44232,7 @@ Configures the ADC0 to trigger single conversion and send the ADC data through U
 
    <td align="center">
 
-|image1063|
+|image1097|
 
 .. raw:: html
 
@@ -42055,7 +44252,7 @@ N
 
    <td align="center">
 
-|image1064|
+|image1098|
 
 .. raw:: html
 
@@ -42065,7 +44262,7 @@ N
 
    <td align="center">
 
-|image1065|
+|image1099|
 
 .. raw:: html
 
@@ -42075,7 +44272,7 @@ N
 
    <td align="center">
 
-|image1066|
+|image1100|
 
 .. raw:: html
 
@@ -42133,7 +44330,7 @@ Bridge between CAN interface and I2C controller interface
 
    <td align="center">
 
-|image1067|
+|image1101|
 
 .. raw:: html
 
@@ -42241,7 +44438,7 @@ Bridge between CAN interface and I2C target interface
 
    <td align="center">
 
-|image1068|
+|image1102|
 
 .. raw:: html
 
@@ -42349,7 +44546,7 @@ Bridge between CAN interface and SPI controller interface
 
    <td align="center">
 
-|image1069|
+|image1103|
 
 .. raw:: html
 
@@ -42457,7 +44654,7 @@ Bridge between CAN interface and SPI target interface
 
    <td align="center">
 
-|image1070|
+|image1104|
 
 .. raw:: html
 
@@ -42565,7 +44762,7 @@ Bridge between CAN interface and UART interface
 
    <td align="center">
 
-|image1071|
+|image1105|
 
 .. raw:: html
 
@@ -42673,7 +44870,7 @@ Generates waveform using DAC8 with the DMA
 
    <td align="center">
 
-|image1072|
+|image1106|
 
 .. raw:: html
 
@@ -42683,7 +44880,7 @@ Generates waveform using DAC8 with the DMA
 
    <td align="center">
 
-|image1073|
+|image1107|
 
 .. raw:: html
 
@@ -42781,7 +44978,7 @@ This example reads all the sensors on the BP-BASSENSORSMKI using I2C then transm
 
    <td align="center">
 
-|image1074|
+|image1108|
 
 .. raw:: html
 
@@ -42899,7 +45096,7 @@ N
 
    <td align="center">
 
-|image1075|
+|image1109|
 
 .. raw:: html
 
@@ -42939,7 +45136,7 @@ N
 
    <td align="center">
 
-|image1076|
+|image1110|
 
 .. raw:: html
 
@@ -43007,7 +45204,7 @@ N
 
    <td align="center">
 
-|image1077|
+|image1111|
 
 .. raw:: html
 
@@ -43047,7 +45244,7 @@ N
 
    <td align="center">
 
-|image1078|
+|image1112|
 
 .. raw:: html
 
@@ -43105,7 +45302,7 @@ Applies digital FIR low-pass filter to sampled ADC signals
 
    <td align="center">
 
-|image1079|
+|image1113|
 
 .. raw:: html
 
@@ -43145,7 +45342,7 @@ N
 
    <td align="center">
 
-|image1080|
+|image1114|
 
 .. raw:: html
 
@@ -43223,7 +45420,7 @@ N
 
    <td align="center">
 
-|image1081|
+|image1115|
 
 .. raw:: html
 
@@ -43321,7 +45518,7 @@ Remove DC drift and prevent output saturation
 
    <td align="center">
 
-|image1082|
+|image1116|
 
 .. raw:: html
 
@@ -43459,7 +45656,7 @@ N
 
    <td align="center">
 
-|image1083|
+|image1117|
 
 .. raw:: html
 
@@ -43547,7 +45744,7 @@ N
 
    <td align="center">
 
-|image1084|
+|image1118|
 
 .. raw:: html
 
@@ -43645,7 +45842,7 @@ Example I2C IO expander and I2C host controller
 
    <td align="center">
 
-|image1085|
+|image1119|
 
 .. raw:: html
 
@@ -43655,7 +45852,7 @@ Example I2C IO expander and I2C host controller
 
    <td align="center">
 
-|image1086|
+|image1120|
 
 .. raw:: html
 
@@ -43773,7 +45970,7 @@ N
 
    <td align="center">
 
-|image1087|
+|image1121|
 
 .. raw:: html
 
@@ -43861,7 +46058,7 @@ Example I2C IO expander and I2C host controller
 
    <td align="center">
 
-|image1088|
+|image1122|
 
 .. raw:: html
 
@@ -43871,7 +46068,7 @@ Example I2C IO expander and I2C host controller
 
    <td align="center">
 
-|image1089|
+|image1123|
 
 .. raw:: html
 
@@ -43969,7 +46166,7 @@ Implements an I2C to SPI Bridge using an M0 MCU
 
    <td align="center">
 
-|image1090|
+|image1124|
 
 .. raw:: html
 
@@ -44077,7 +46274,7 @@ I2C Target receives I2C transmissions and passes them on via UART
 
    <td align="center">
 
-|image1091|
+|image1125|
 
 .. raw:: html
 
@@ -44107,7 +46304,7 @@ N
 
    <td align="center">
 
-|image1092|
+|image1126|
 
 .. raw:: html
 
@@ -44185,7 +46382,7 @@ Applies digital IIR filter to sampled ADC signals
 
    <td align="center">
 
-|image1093|
+|image1127|
 
 .. raw:: html
 
@@ -44225,7 +46422,7 @@ N
 
    <td align="center">
 
-|image1094|
+|image1128|
 
 .. raw:: html
 
@@ -44293,7 +46490,7 @@ Example I2C host controller
 
    <td align="center">
 
-|image1095|
+|image1129|
 
 .. raw:: html
 
@@ -44303,7 +46500,7 @@ Example I2C host controller
 
    <td align="center">
 
-|image1096|
+|image1130|
 
 .. raw:: html
 
@@ -44313,7 +46510,7 @@ Example I2C host controller
 
    <td align="center">
 
-|image1097|
+|image1131|
 
 .. raw:: html
 
@@ -44333,7 +46530,7 @@ N
 
    <td align="center">
 
-|image1098|
+|image1132|
 
 .. raw:: html
 
@@ -44401,7 +46598,7 @@ Example I2C IO expander target
 
    <td align="center">
 
-|image1099|
+|image1133|
 
 .. raw:: html
 
@@ -44411,7 +46608,7 @@ Example I2C IO expander target
 
    <td align="center">
 
-|image1100|
+|image1134|
 
 .. raw:: html
 
@@ -44421,7 +46618,7 @@ Example I2C IO expander target
 
    <td align="center">
 
-|image1101|
+|image1135|
 
 .. raw:: html
 
@@ -44441,7 +46638,7 @@ N
 
    <td align="center">
 
-|image1102|
+|image1136|
 
 .. raw:: html
 
@@ -44519,7 +46716,7 @@ N
 
    <td align="center">
 
-|image1103|
+|image1137|
 
 .. raw:: html
 
@@ -44559,7 +46756,7 @@ N
 
    <td align="center">
 
-|image1104|
+|image1138|
 
 .. raw:: html
 
@@ -44627,7 +46824,7 @@ N
 
    <td align="center">
 
-|image1105|
+|image1139|
 
 .. raw:: html
 
@@ -44637,17 +46834,7 @@ N
 
    <td align="center">
 
-|image1106|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
+|image1140|
 
 .. raw:: html
 
@@ -44667,7 +46854,17 @@ N
 
    <td align="center">
 
-|image1107|
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image1141|
 
 .. raw:: html
 
@@ -44725,7 +46922,7 @@ This sub system allows for different pins/applications be turned on/off in a seq
 
    <td align="center">
 
-|image1108|
+|image1142|
 
 .. raw:: html
 
@@ -44735,17 +46932,7 @@ This sub system allows for different pins/applications be turned on/off in a seq
 
    <td align="center">
 
-|image1109|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
+|image1143|
 
 .. raw:: html
 
@@ -44765,7 +46952,7 @@ N
 
    <td align="center">
 
-|image1110|
+N
 
 .. raw:: html
 
@@ -44775,7 +46962,17 @@ N
 
    <td align="center">
 
-|image1111|
+|image1144|
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image1145|
 
 .. raw:: html
 
@@ -44843,7 +47040,7 @@ N
 
    <td align="center">
 
-|image1112|
+|image1146|
 
 .. raw:: html
 
@@ -44951,7 +47148,7 @@ N
 
    <td align="center">
 
-|image1113|
+|image1147|
 
 .. raw:: html
 
@@ -45049,7 +47246,7 @@ This example demonstrates using the two switches on the MSPM0 Launchpad to chang
 
    <td align="center">
 
-|image1114|
+|image1148|
 
 .. raw:: html
 
@@ -45079,7 +47276,7 @@ N
 
    <td align="center">
 
-|image1115|
+|image1149|
 
 .. raw:: html
 
@@ -45089,7 +47286,7 @@ N
 
    <td align="center">
 
-|image1116|
+|image1150|
 
 .. raw:: html
 
@@ -45167,7 +47364,7 @@ N
 
    <td align="center">
 
-|image1117|
+|image1151|
 
 .. raw:: html
 
@@ -45207,7 +47404,7 @@ N
 
    <td align="center">
 
-|image1118|
+|image1152|
 
 .. raw:: html
 
@@ -45265,7 +47462,7 @@ Create a pulsating LED effect using timers
 
    <td align="center">
 
-|image1119|
+|image1153|
 
 .. raw:: html
 
@@ -45275,7 +47472,7 @@ Create a pulsating LED effect using timers
 
    <td align="center">
 
-|image1120|
+|image1154|
 
 .. raw:: html
 
@@ -45295,7 +47492,7 @@ N
 
    <td align="center">
 
-|image1121|
+|image1155|
 
 .. raw:: html
 
@@ -45305,7 +47502,7 @@ N
 
    <td align="center">
 
-|image1122|
+|image1156|
 
 .. raw:: html
 
@@ -45315,7 +47512,7 @@ N
 
    <td align="center">
 
-|image1123|
+|image1157|
 
 .. raw:: html
 
@@ -45383,7 +47580,7 @@ N
 
    <td align="center">
 
-|image1124|
+|image1158|
 
 .. raw:: html
 
@@ -45481,7 +47678,7 @@ OPA supports two different sensor input voltages and uses common ADC channel
 
    <td align="center">
 
-|image1125|
+|image1159|
 
 .. raw:: html
 
@@ -45589,7 +47786,7 @@ Demonstrate SPI to CAN bridge
 
    <td align="center">
 
-|image1126|
+|image1160|
 
 .. raw:: html
 
@@ -45697,7 +47894,7 @@ Implements an SPI to I2C Bridge using an M0 MCU
 
    <td align="center">
 
-|image1127|
+|image1161|
 
 .. raw:: html
 
@@ -45805,7 +48002,7 @@ A simple run to completion task scheduler
 
    <td align="center">
 
-|image1128|
+|image1162|
 
 .. raw:: html
 
@@ -45815,17 +48012,7 @@ A simple run to completion task scheduler
 
    <td align="center">
 
-|image1129|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
+|image1163|
 
 .. raw:: html
 
@@ -45845,7 +48032,17 @@ N
 
    <td align="center">
 
-|image1130|
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image1164|
 
 .. raw:: html
 
@@ -45923,7 +48120,7 @@ N
 
    <td align="center">
 
-|image1131|
+|image1165|
 
 .. raw:: html
 
@@ -46031,7 +48228,7 @@ N
 
    <td align="center">
 
-|image1132|
+|image1166|
 
 .. raw:: html
 
@@ -46129,7 +48326,7 @@ Along with an external circuit this code amplifies the difference between two vo
 
    <td align="center">
 
-|image1133|
+|image1167|
 
 .. raw:: html
 
@@ -46139,7 +48336,7 @@ Along with an external circuit this code amplifies the difference between two vo
 
    <td align="center">
 
-|image1134|
+|image1168|
 
 .. raw:: html
 
@@ -46237,7 +48434,7 @@ Translates UART packets to multiple I2C devices
 
    <td align="center">
 
-|image1135|
+|image1169|
 
 .. raw:: html
 
@@ -46247,7 +48444,7 @@ Translates UART packets to multiple I2C devices
 
    <td align="center">
 
-|image1136|
+|image1170|
 
 .. raw:: html
 
@@ -46267,7 +48464,7 @@ N
 
    <td align="center">
 
-|image1137|
+|image1171|
 
 .. raw:: html
 
@@ -46277,7 +48474,7 @@ N
 
    <td align="center">
 
-|image1138|
+|image1172|
 
 .. raw:: html
 
@@ -46287,7 +48484,7 @@ N
 
    <td align="center">
 
-|image1139|
+|image1173|
 
 .. raw:: html
 
@@ -46345,7 +48542,7 @@ UART device receives packets and passes them on or executes reads in SPI format
 
    <td align="center">
 
-|image1140|
+|image1174|
 
 .. raw:: html
 
@@ -46375,7 +48572,7 @@ N
 
    <td align="center">
 
-|image1141|
+|image1175|
 
 .. raw:: html
 
@@ -46385,7 +48582,7 @@ N
 
    <td align="center">
 
-|image1142|
+|image1176|
 
 .. raw:: html
 
@@ -46473,7 +48670,7 @@ N
 
    <td align="center">
 
-|image1143|
+|image1177|
 
 .. raw:: html
 
@@ -46710,7 +48907,7 @@ PMBus controller example
 
    <td align="center">
 
-|image1144|
+|image1178|
 
 .. raw:: html
 
@@ -46750,7 +48947,7 @@ N
 
    <td align="center">
 
-|image1145|
+|image1179|
 
 .. raw:: html
 
@@ -46770,7 +48967,7 @@ N
 
    <td align="center">
 
-|image1146|
+|image1180|
 
 .. raw:: html
 
@@ -46780,7 +48977,7 @@ N
 
    <td align="center">
 
-|image1147|
+|image1181|
 
 .. raw:: html
 
@@ -46818,7 +49015,7 @@ PMBus controller example with group command
 
    <td align="center">
 
-|image1148|
+|image1182|
 
 .. raw:: html
 
@@ -46858,7 +49055,7 @@ N
 
    <td align="center">
 
-|image1149|
+|image1183|
 
 .. raw:: html
 
@@ -46878,7 +49075,7 @@ N
 
    <td align="center">
 
-|image1150|
+|image1184|
 
 .. raw:: html
 
@@ -46888,7 +49085,7 @@ N
 
    <td align="center">
 
-|image1151|
+|image1185|
 
 .. raw:: html
 
@@ -46926,7 +49123,7 @@ PMBus target example
 
    <td align="center">
 
-|image1152|
+|image1186|
 
 .. raw:: html
 
@@ -46966,7 +49163,7 @@ N
 
    <td align="center">
 
-|image1153|
+|image1187|
 
 .. raw:: html
 
@@ -46986,7 +49183,7 @@ N
 
    <td align="center">
 
-|image1154|
+|image1188|
 
 .. raw:: html
 
@@ -46996,7 +49193,7 @@ N
 
    <td align="center">
 
-|image1155|
+|image1189|
 
 .. raw:: html
 
@@ -47558,7 +49755,7 @@ N
 
    <td align="center">
 
-|image1156|
+|image1190|
 
 .. raw:: html
 
@@ -47608,7 +49805,7 @@ N
 
    <td align="center">
 
-|image1157|
+|image1191|
 
 .. raw:: html
 
@@ -47618,7 +49815,7 @@ N
 
    <td align="center">
 
-|image1158|
+|image1192|
 
 .. raw:: html
 
@@ -47805,7 +50002,7 @@ Demonstrates basic implementation of SMBus Controller testing all SMBus 2.0 prot
 
    <td align="center">
 
-|image1159|
+|image1193|
 
 .. raw:: html
 
@@ -47815,17 +50012,7 @@ Demonstrates basic implementation of SMBus Controller testing all SMBus 2.0 prot
 
    <td align="center">
 
-|image1160|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
+|image1194|
 
 .. raw:: html
 
@@ -47845,7 +50032,17 @@ N
 
    <td align="center">
 
-|image1161|
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image1195|
 
 .. raw:: html
 
@@ -47865,7 +50062,7 @@ N
 
    <td align="center">
 
-|image1162|
+|image1196|
 
 .. raw:: html
 
@@ -47875,7 +50072,7 @@ N
 
    <td align="center">
 
-|image1163|
+|image1197|
 
 .. raw:: html
 
@@ -47913,7 +50110,7 @@ Demonstrates basic implementation of SMBus Controller testing ARP commands as pe
 
    <td align="center">
 
-|image1164|
+|image1198|
 
 .. raw:: html
 
@@ -47923,17 +50120,7 @@ Demonstrates basic implementation of SMBus Controller testing ARP commands as pe
 
    <td align="center">
 
-|image1165|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
+|image1199|
 
 .. raw:: html
 
@@ -47953,7 +50140,17 @@ N
 
    <td align="center">
 
-|image1166|
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image1200|
 
 .. raw:: html
 
@@ -47973,7 +50170,7 @@ N
 
    <td align="center">
 
-|image1167|
+|image1201|
 
 .. raw:: html
 
@@ -47983,7 +50180,7 @@ N
 
    <td align="center">
 
-|image1168|
+|image1202|
 
 .. raw:: html
 
@@ -48021,7 +50218,7 @@ Demonstrates implementation of SMBus Host Notify function on a Controller
 
    <td align="center">
 
-|image1169|
+|image1203|
 
 .. raw:: html
 
@@ -48031,17 +50228,7 @@ Demonstrates implementation of SMBus Host Notify function on a Controller
 
    <td align="center">
 
-|image1170|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
+|image1204|
 
 .. raw:: html
 
@@ -48061,7 +50248,17 @@ N
 
    <td align="center">
 
-|image1171|
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image1205|
 
 .. raw:: html
 
@@ -48081,7 +50278,7 @@ N
 
    <td align="center">
 
-|image1172|
+|image1206|
 
 .. raw:: html
 
@@ -48129,7 +50326,7 @@ Demonstrates basic implementation of SMBus Target testing all SMBus 2.0 protocol
 
    <td align="center">
 
-|image1173|
+|image1207|
 
 .. raw:: html
 
@@ -48139,17 +50336,7 @@ Demonstrates basic implementation of SMBus Target testing all SMBus 2.0 protocol
 
    <td align="center">
 
-|image1174|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
+|image1208|
 
 .. raw:: html
 
@@ -48169,7 +50356,17 @@ N
 
    <td align="center">
 
-|image1175|
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image1209|
 
 .. raw:: html
 
@@ -48189,7 +50386,7 @@ N
 
    <td align="center">
 
-|image1176|
+|image1210|
 
 .. raw:: html
 
@@ -48199,7 +50396,7 @@ N
 
    <td align="center">
 
-|image1177|
+|image1211|
 
 .. raw:: html
 
@@ -48237,7 +50434,7 @@ Demonstrates basic implementation of SMBus Target with ARP Support according SMB
 
    <td align="center">
 
-|image1178|
+|image1212|
 
 .. raw:: html
 
@@ -48247,17 +50444,7 @@ Demonstrates basic implementation of SMBus Target with ARP Support according SMB
 
    <td align="center">
 
-|image1179|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
+|image1213|
 
 .. raw:: html
 
@@ -48277,7 +50464,17 @@ N
 
    <td align="center">
 
-|image1180|
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image1214|
 
 .. raw:: html
 
@@ -48297,7 +50494,7 @@ N
 
    <td align="center">
 
-|image1181|
+|image1215|
 
 .. raw:: html
 
@@ -48307,7 +50504,7 @@ N
 
    <td align="center">
 
-|image1182|
+|image1216|
 
 .. raw:: html
 
@@ -48345,7 +50542,7 @@ Demonstrates implementation of SMBus Host Notify function on a Target
 
    <td align="center">
 
-|image1183|
+|image1217|
 
 .. raw:: html
 
@@ -48355,17 +50552,7 @@ Demonstrates implementation of SMBus Host Notify function on a Target
 
    <td align="center">
 
-|image1184|
-
-.. raw:: html
-
-   </td>
-
-.. raw:: html
-
-   <td align="center">
-
-N
+|image1218|
 
 .. raw:: html
 
@@ -48385,7 +50572,17 @@ N
 
    <td align="center">
 
-|image1185|
+N
+
+.. raw:: html
+
+   </td>
+
+.. raw:: html
+
+   <td align="center">
+
+|image1219|
 
 .. raw:: html
 
@@ -48405,7 +50602,7 @@ N
 
    <td align="center">
 
-|image1186|
+|image1220|
 
 .. raw:: html
 
@@ -51707,4 +53904,38 @@ N
 .. |image1184| image:: ./images/examples_guide/ex_sysconfig.png
 .. |image1185| image:: ./images/examples_guide/ex_sysconfig.png
 .. |image1186| image:: ./images/examples_guide/ex_sysconfig.png
+.. |image1187| image:: ./images/examples_guide/ex_sysconfig.png
+.. |image1188| image:: ./images/examples_guide/ex_sysconfig.png
+.. |image1189| image:: ./images/examples_guide/ex_sysconfig.png
+.. |image1190| image:: ./images/examples_guide/ex_sysconfig.png
+.. |image1191| image:: ./images/examples_guide/ex_sysconfig.png
+.. |image1192| image:: ./images/examples_guide/ex_sysconfig.png
+.. |image1193| image:: ./images/examples_guide/ex_sysconfig.png
+.. |image1194| image:: ./images/examples_guide/ex_sysconfig.png
+.. |image1195| image:: ./images/examples_guide/ex_sysconfig.png
+.. |image1196| image:: ./images/examples_guide/ex_sysconfig.png
+.. |image1197| image:: ./images/examples_guide/ex_sysconfig.png
+.. |image1198| image:: ./images/examples_guide/ex_sysconfig.png
+.. |image1199| image:: ./images/examples_guide/ex_sysconfig.png
+.. |image1200| image:: ./images/examples_guide/ex_sysconfig.png
+.. |image1201| image:: ./images/examples_guide/ex_sysconfig.png
+.. |image1202| image:: ./images/examples_guide/ex_sysconfig.png
+.. |image1203| image:: ./images/examples_guide/ex_sysconfig.png
+.. |image1204| image:: ./images/examples_guide/ex_sysconfig.png
+.. |image1205| image:: ./images/examples_guide/ex_sysconfig.png
+.. |image1206| image:: ./images/examples_guide/ex_sysconfig.png
+.. |image1207| image:: ./images/examples_guide/ex_sysconfig.png
+.. |image1208| image:: ./images/examples_guide/ex_sysconfig.png
+.. |image1209| image:: ./images/examples_guide/ex_sysconfig.png
+.. |image1210| image:: ./images/examples_guide/ex_sysconfig.png
+.. |image1211| image:: ./images/examples_guide/ex_sysconfig.png
+.. |image1212| image:: ./images/examples_guide/ex_sysconfig.png
+.. |image1213| image:: ./images/examples_guide/ex_sysconfig.png
+.. |image1214| image:: ./images/examples_guide/ex_sysconfig.png
+.. |image1215| image:: ./images/examples_guide/ex_sysconfig.png
+.. |image1216| image:: ./images/examples_guide/ex_sysconfig.png
+.. |image1217| image:: ./images/examples_guide/ex_sysconfig.png
+.. |image1218| image:: ./images/examples_guide/ex_sysconfig.png
+.. |image1219| image:: ./images/examples_guide/ex_sysconfig.png
+.. |image1220| image:: ./images/examples_guide/ex_sysconfig.png
 
